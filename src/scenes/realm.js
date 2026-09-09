@@ -2,6 +2,8 @@ import { fitCanvas, cssPoint } from '../render/canvas.js';
 import { reducedMotion } from '../util.js';
 import { blOf } from '../rules/economy.js';
 import { remainingMs } from '../rules/builds.js';
+import { AGES } from '../data/index.js';
+import { ensureAtlas, drawFrame } from '../render/atlas.js';
 
 const PLOTS = [
   { id: 'townhall', x: 3, y: 3, label: 'Town Hall' },
@@ -16,11 +18,18 @@ const PLOTS = [
   { id: 'walls', x: 3, y: 6, label: 'Walls' },
 ];
 
+function ageArtKey(age) {
+  return (AGES[age]?.n || 'Stone Age').split(' ')[0].toLowerCase();
+}
+
 export function initRealmScene(canvas, api) {
   let raf = 0;
   let last = performance.now();
   let running = true;
+  let buildingAtlas = null;
   const TILE = 7;
+
+  ensureAtlas('building').then((a) => { buildingAtlas = a; });
 
   function project(gx, gy, originX, originY, tw, th) {
     return {
@@ -71,28 +80,38 @@ export function initRealmScene(canvas, api) {
 
     // Buildings
     const sorted = [...PLOTS].sort((a, b) => (a.x + a.y) - (b.x + b.y));
+    const artAge = ageArtKey(state.age);
     for (const plot of sorted) {
       const lvl = blOf(state.bld, plot.id);
       const p = project(plot.x, plot.y, originX, originY, tw, th);
       const bh = 18 + lvl * 10;
-      ctx.fillStyle = lvl > 0 ? '#3a4558' : 'rgba(90,100,120,0.25)';
-      ctx.beginPath();
-      ctx.moveTo(p.x, p.y - bh);
-      ctx.lineTo(p.x + tw * 0.28, p.y - bh + th * 0.35);
-      ctx.lineTo(p.x + tw * 0.28, p.y + th * 0.2);
-      ctx.lineTo(p.x, p.y + th * 0.45);
-      ctx.lineTo(p.x - tw * 0.28, p.y + th * 0.2);
-      ctx.lineTo(p.x - tw * 0.28, p.y - bh + th * 0.35);
-      ctx.closePath();
-      ctx.fill();
-      ctx.fillStyle = lvl > 0 ? '#c9a227' : '#6e788a';
-      ctx.beginPath();
-      ctx.moveTo(p.x, p.y - bh - 8);
-      ctx.lineTo(p.x + tw * 0.28, p.y - bh + th * 0.2);
-      ctx.lineTo(p.x, p.y - bh + th * 0.45);
-      ctx.lineTo(p.x - tw * 0.28, p.y - bh + th * 0.2);
-      ctx.closePath();
-      ctx.fill();
+      const frameId = `bld-${plot.id}-${artAge}`;
+      const hasFrame = buildingAtlas
+        && (buildingAtlas.frameImages?.[frameId] || buildingAtlas.frames?.[frameId]);
+
+      if (lvl > 0 && hasFrame) {
+        const size = tw * 0.85;
+        drawFrame(ctx, buildingAtlas, frameId, p.x - size / 2, p.y - size * 0.85, size, size);
+      } else {
+        ctx.fillStyle = lvl > 0 ? '#3a4558' : 'rgba(90,100,120,0.25)';
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y - bh);
+        ctx.lineTo(p.x + tw * 0.28, p.y - bh + th * 0.35);
+        ctx.lineTo(p.x + tw * 0.28, p.y + th * 0.2);
+        ctx.lineTo(p.x, p.y + th * 0.45);
+        ctx.lineTo(p.x - tw * 0.28, p.y + th * 0.2);
+        ctx.lineTo(p.x - tw * 0.28, p.y - bh + th * 0.35);
+        ctx.closePath();
+        ctx.fill();
+        ctx.fillStyle = lvl > 0 ? '#c9a227' : '#6e788a';
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y - bh - 8);
+        ctx.lineTo(p.x + tw * 0.28, p.y - bh + th * 0.2);
+        ctx.lineTo(p.x, p.y - bh + th * 0.45);
+        ctx.lineTo(p.x - tw * 0.28, p.y - bh + th * 0.2);
+        ctx.closePath();
+        ctx.fill();
+      }
 
       if (lvl === 0) {
         ctx.fillStyle = '#9aa3b2';

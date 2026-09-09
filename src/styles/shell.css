@@ -5,6 +5,11 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+/* display:flex overlays must not defeat the HTML hidden attribute */
+[hidden] {
+  display: none !important;
+}
+
 html,
 body {
   height: 100%;

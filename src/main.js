@@ -1,4 +1,6 @@
 import { CLASSES, AGES, STORY, CREATURES } from './data/index.js';
+import { chapterBody } from './state/storyFlags.js';
+import { rivalSpeech } from './state/rival.js';
 import { newGame } from './state/factory.js';
 import { tutorialPending } from './state/tutorial.js';
 import {
@@ -17,10 +19,14 @@ import { paintNavIcons } from './ui/icons.js';
 import {
   renderHost, renderMap, renderWar, renderMore, renderBuildingsSheet, agePrompt, resBarHtml,
 } from './ui/views.js';
-import { playSfx, playTheme, isMuted, setMuted, stopAll } from './audio/index.js';
+import { playSfx, playTheme, isMuted, setMuted, stopAll, setMusicEnabled, setSfxEnabled } from './audio/index.js';
 import { haptic, setHapticsEnabled } from './platform/haptics.js';
-import { downloadText } from './platform/files.js';
+import { downloadText, shareText } from './platform/files.js';
 import { esc, makeRng, uid } from './util.js';
+
+function blOfQuarry(state) {
+  return state?.bld?.quarry?.l || 0;
+}
 
 let storage;
 let S = null;
@@ -62,16 +68,54 @@ function applyEffects(effects) {
       toast(`Build complete: ${e.buildingId}`);
     }
     if (e.type === 'offline-grant') {
+      const g = e.grant || {};
       openSheet(`<h3>While you were away</h3>
-        <p>Food +${e.grant.food}, Wood +${e.grant.wood}, Stone +${e.grant.stone}, Gold +${e.grant.gold}</p>
+        <p>Food +${g.food || 0}, Wood +${g.wood || 0}, Stone +${g.stone || 0}, Gold +${g.gold || 0}</p>
         <button type="button" class="btn gold" id="collect">Collect</button>`);
       el('sheet').querySelector('#collect').onclick = () => closeSheet();
     }
-    if (e.type === 'start-fight') battle.start(e.foes, { boss: e.boss });
-    if (e.type === 'start-siege') siege.start({ mode: e.mode || 'site' });
+    if (e.type === 'start-fight') battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex });
+    if (e.type === 'start-siege') siege.start({ mode: e.mode || 'site', nodeIndex: e.nodeIndex });
     if (e.type === 'chapter') openChapter(e.index);
     if (e.type === 'victory') toast('Victory');
     if (e.type === 'defeat') toast('Defeat');
+    if (e.type === 'tutorial') {
+      openSheet(`<h3>${esc(e.title)}</h3><p>${esc(e.text)}</p>
+        <button type="button" class="btn gold" id="tutOk">Continue</button>`);
+      el('sheet').querySelector('#tutOk')?.addEventListener('click', closeSheet);
+    }
+    if (e.type === 'dwelling-offer') {
+      openSheet(`<h3>Dwelling</h3><p>${esc(e.line || '')}</p>
+        <p>Hire ${e.count} ${esc(e.creatureType)} for ${Object.entries(e.cost || {}).map(([k, v]) => `${v} ${k}`).join(', ')}</p>
+        <button type="button" class="btn gold" id="hire">Hire</button>
+        <button type="button" class="btn" id="skip">Leave</button>`);
+      el('sheet').querySelector('#hire').onclick = () => {
+        closeSheet();
+        doDispatch({
+          type: 'hire-dwelling',
+          creatureType: e.creatureType,
+          count: e.count,
+          nodeIndex: e.nodeIndex,
+        });
+      };
+      el('sheet').querySelector('#skip').onclick = closeSheet;
+    }
+    if (e.type === 'event-choices') {
+      const ev = e.event || {};
+      openSheet(`<h3>${esc(ev.t || 'Event')}</h3><p>${esc(ev.d || '')}</p>
+        <button type="button" class="btn gold" id="evA" style="width:100%;margin:6px 0">${esc(ev.feedLabel || 'Feed')}</button>
+        <button type="button" class="btn" id="evB" style="width:100%;margin:6px 0">${esc(ev.otherLabel || 'Conscript')}</button>`);
+      el('sheet').querySelector('#evA').onclick = () => {
+        closeSheet();
+        doDispatch({ type: 'event-choice', choice: 'feed', nodeIndex: e.nodeIndex });
+      };
+      el('sheet').querySelector('#evB').onclick = () => {
+        closeSheet();
+        doDispatch({ type: 'event-choice', choice: 'conscript', nodeIndex: e.nodeIndex });
+      };
+    }
+    if (e.type === 'rival-speech') toast(e.message);
+    if (e.type === 'milestone-ready') toast(`Milestone ready: ${e.name || e.id}`);
   }
 }
 
@@ -79,6 +123,11 @@ function doDispatch(action) {
   if (!S) return;
   const { state, effects } = dispatch(S, action);
   S = state;
+  if (action.type === 'set-pref') {
+    if (action.key === 'music') setMusicEnabled(action.value);
+    if (action.key === 'sfx') setSfxEnabled(action.value);
+    if (action.key === 'haptics') setHapticsEnabled(action.value);
+  }
   applyEffects(effects);
   requestSave();
   render();
@@ -87,7 +136,8 @@ function doDispatch(action) {
 function openChapter(index) {
   const ch = STORY[index];
   if (!ch) return;
-  openSheet(`<h3>${esc(ch.t)}</h3><p>${esc(ch.d)}</p>
+  const body = chapterBody(ch, S?.story?.flags || {}, index);
+  openSheet(`<h3>${esc(ch.t)}</h3><p>${esc(body)}</p>
     ${ch.ch.map((c, i) => `<button type="button" class="btn" data-i="${i}" style="width:100%;margin:6px 0;min-height:44px">${esc(c.t)}</button>`).join('')}`);
   el('sheet').querySelectorAll('[data-i]').forEach((b) => {
     b.onclick = () => { closeSheet(); doDispatch({ type: 'story-choice', index: Number(b.dataset.i) }); };
@@ -119,7 +169,12 @@ async function boot() {
     getState: () => S,
     toast,
     haptic,
-    onBattleEnd: (result, armyAfter) => doDispatch({ type: 'apply-battle-result', result, armyAfter }),
+    onBattleEnd: (result, armyAfter, meta = {}) => doDispatch({
+      type: 'apply-battle-result',
+      result,
+      armyAfter,
+      nodeIndex: meta.nodeIndex,
+    }),
   });
 
   siege = createSiegeController({
@@ -135,18 +190,8 @@ async function boot() {
   }, {
     getState: () => S,
     toast,
-    onSiegeEnd: (result) => {
-      if (!S) return;
-      if (result.won) {
-        S = {
-          ...S,
-          res: { ...S.res, gold: S.res.gold + (result.gold || 0) },
-          endlessBest: Math.max(S.endlessBest || 0, result.waves || 0),
-        };
-        toast(`Siege held — wave ${result.waves}`);
-      } else toast('The core fell');
-      requestSave();
-      render();
+    onSiegeEnd: (result, meta = {}) => {
+      doDispatch({ type: 'apply-siege-result', result, nodeIndex: meta.nodeIndex });
     },
   });
 
@@ -246,6 +291,8 @@ async function openSavesSheet() {
 function enterGame(state) {
   S = state;
   setHapticsEnabled(S.uiPrefs?.haptics !== false);
+  setMusicEnabled(S.uiPrefs?.music !== false);
+  setSfxEnabled(S.uiPrefs?.sfx !== false);
   el('title').hidden = true;
   el('app').hidden = false;
   titleScene?.stop();
@@ -256,7 +303,10 @@ function enterGame(state) {
   const tut = tutorialPending(S.tutorial);
   if (tut?.trigger === 'boot') {
     openSheet(`<h3>Welcome</h3><p>${esc(tut.text)}</p><button type="button" class="btn gold" id="tutOk">To the realm</button>`);
-    el('sheet').querySelector('#tutOk')?.addEventListener('click', closeSheet);
+    el('sheet').querySelector('#tutOk')?.addEventListener('click', () => {
+      closeSheet();
+      doDispatch({ type: 'tutorial-ack', id: 'welcome' });
+    });
   }
   requestSave();
 }
@@ -271,6 +321,11 @@ function stopTick() {
   tickTimer = null;
 }
 
+/** Resume the economy loop if it was stopped while the tab falsely stayed hidden. */
+function ensureTick() {
+  if (S && !tickTimer) startTick();
+}
+
 function render() {
   if (!S) return;
   const C = CLASSES[S.hero.cls];
@@ -279,7 +334,7 @@ function render() {
 
   const unlocked = {
     realm: true,
-    host: (S.profile.battles || 0) > 0 || S.age > 0,
+    host: (S.profile.battles || 0) > 0 || S.age > 0 || blOfQuarry(S) > 0,
     map: true,
     war: (S.profile.battles || 0) > 0 || S.age > 0,
     more: (S.profile.battles || 0) > 0 || S.age > 0,
@@ -327,6 +382,7 @@ function render() {
     if (tab === 'map') renderMap(view, S, { dispatch: doDispatch });
     if (tab === 'war') {
       renderWar(view, S, {
+        dispatch: doDispatch,
         startSiege: (o) => siege.start(o),
         startDuel: () => {
           const rng = makeRng(Date.now());
@@ -336,6 +392,10 @@ function render() {
             age: S.age, count: 6 + S.age, rank: 0, xp: 0,
           }];
           battle.start(foes);
+        },
+        shareDuel: async (code) => {
+          const ok = await shareText('Ages of Dominion duel', `AOD1.${code}`);
+          toast(ok ? 'Seed shared' : 'Could not share');
         },
         replaySeed: (code) => {
           try {
@@ -355,6 +415,11 @@ function render() {
           await downloadText('ages-of-dominion-backup.json', exportBackup(S));
           toast('Exported');
         },
+        shareStanding: async () => {
+          const text = `${S.hero.name} · Day ${S.day} · ${AGES[S.age]?.n} · ${S.profile.wins || 0} wins · Rival: ${S.rival?.name || 'none'}`;
+          const ok = await shareText('Ages of Dominion', text);
+          toast(ok ? 'Shared' : 'Could not share');
+        },
         toTitle: () => returnToTitle(),
       });
     }
@@ -363,6 +428,7 @@ function render() {
 
 function wireChrome() {
   el('nav').addEventListener('click', (e) => {
+    ensureTick();
     const b = e.target.closest('button[data-t]');
     if (!b || b.disabled) return;
     closeSheet();
@@ -370,13 +436,15 @@ function wireChrome() {
     render();
   });
   el('realmBuildings').onclick = () => {
+    ensureTick();
     openSheet(renderBuildingsSheet(S));
     el('sheet').querySelectorAll('[data-build]').forEach((b) => {
       b.onclick = () => { closeSheet(); doDispatch({ type: 'build', buildingId: b.dataset.build }); };
     });
   };
-  el('realmAgeUp').onclick = () => doDispatch({ type: 'age-up' });
+  el('realmAgeUp').onclick = () => { ensureTick(); doDispatch({ type: 'age-up' }); };
   el('realmNext').onclick = () => {
+    ensureTick();
     const na = nextAction(S);
     if (na.action) doDispatch(na.action);
     else if (na.tab) { tab = na.tab; render(); }
@@ -387,7 +455,8 @@ function wireChrome() {
   };
 }
 
-function returnToTitle() {
+async function returnToTitle() {
+  await saveNow();
   stopTick();
   realmScene?.destroy();
   realmScene = null;
@@ -395,7 +464,7 @@ function returnToTitle() {
   el('app').hidden = true;
   el('title').hidden = false;
   titleScene = initTitleScene(el('titlecv'));
-  renderTitle();
+  await renderTitle();
 }
 
 function initMobileLifecycle() {
@@ -412,7 +481,13 @@ function initMobileLifecycle() {
     }
   });
 
+  // Embedded / backgrounded WebViews can stay "hidden" while still interactive.
+  document.addEventListener('pointerdown', () => {
+    if (S) ensureTick();
+  }, { passive: true });
+
   import('@capacitor/app').then(({ App }) => {
+    App.addListener('pause', () => { saveNow(); });
     App.addListener('backButton', () => {
       if (!el('modal').hidden) { closeSheet(); return; }
       if (battle.active()) { el('fQuit').click(); return; }

@@ -5,4 +5,4 @@ export { TOWERS } from './towers.js';
 export { TERRAIN, WEATHER } from './world.js';
 export { PRIMARIES, CLASSES, SKILLS, SPELLS } from './hero.js';
 export { SLOTS, GEAR, QUAL, ARTIFACTS } from './gear.js';
-export { STORY, QUEST_TEMPLATES } from './story.js';
+export { STORY, QUEST_TEMPLATES, MILESTONES } from './story.js';

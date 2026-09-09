@@ -64,3 +64,14 @@ export const QUEST_TEMPLATES = [
   { id: 'q5', n: 'Equip a full set of gear',   need: 'gear',     v: 4,  done: false, rw: { gold: 400 } },
   { id: 'q6', n: 'Survive 10 endless waves',   need: 'best',     v: 10, done: false, rw: { gold: 500, stone: 300 } },
 ];
+
+/** Achievement milestones (claim via claim-milestone). */
+export const MILESTONES = [
+  { id: 'first_quarry', n: 'First Quarry', need: 'quarry', v: 1, rw: { stone: 100, gold: 50 } },
+  { id: 'first_battle', n: 'First Victory', need: 'wins', v: 1, rw: { gold: 120 } },
+  { id: 'bronze_age', n: 'Bronze Age', need: 'age', v: 1, rw: { gold: 200, stone: 150 } },
+  { id: 'full_roster', n: 'Full Roster', need: 'roster', v: 1, rw: { food: 150, gold: 100 } },
+  { id: 'first_siege', n: 'First Siege', need: 'siege', v: 1, rw: { stone: 200, gold: 150 } },
+  { id: 'rival_met', n: 'Rival Met', need: 'rival', v: 1, rw: { gold: 250 } },
+  { id: 'modern_crown', n: 'Modern Crown', need: 'final', v: 1, rw: { gold: 5000, stone: 2000 } },
+];

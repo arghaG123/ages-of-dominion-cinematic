@@ -1,5 +1,5 @@
 /**
- * Tutorial progression: welcome → first-build → first-recruit → first-battle.
+ * Tutorial progression: welcome → first-build → first-recruit → first-travel → first-battle.
  */
 
 export const TUTORIAL_STEPS = [
@@ -22,6 +22,12 @@ export const TUTORIAL_STEPS = [
     text: 'You already command stacks. Your hero\'s attack and defense are added to every one of them.\n\nReinforce from the Army tab, or take what you have onto the Map.',
   },
   {
+    id: 'first-travel',
+    trigger: 'first-travel',
+    title: 'The Open Road',
+    text: 'Linked sites cost one move. Towns restore your steps; caches and dens fill the stores the village cannot.\n\nAmbush and garrison sites open a siege lane. Creatures and warlords start a tactical fight.',
+  },
+  {
     id: 'first-battle',
     trigger: 'first-battle',
     title: 'Holding the Line',
@@ -31,6 +37,7 @@ export const TUTORIAL_STEPS = [
 
 /**
  * If the active step matches `trigger`, return it; otherwise null.
+ * Mutating form kept for legacy callers — prefer immutable advanceTutorial in dispatch.
  */
 export function triggerTutorial(state, trigger) {
   if (!state?.tutorial || state.tutorial.done) return null;
@@ -66,46 +73,57 @@ export const checkTutorial = triggerTutorial;
 
 export function tutorialPending(tutorial) {
   if (!tutorial || tutorial.done) return null;
-  return TUTORIAL_STEPS[tutorial.step] || null;
+  const seen = tutorial.seen || [];
+  return TUTORIAL_STEPS.find((s, i) => i >= (tutorial.step || 0) && !seen.includes(s.id))
+    || TUTORIAL_STEPS[tutorial.step]
+    || null;
 }
 
 /**
  * Advance tutorial.
- * - advanceTutorial(gameState, stepId) mutates state.tutorial
- * - advanceTutorial(tutorialObj, trigger) returns a new tutorial object (dispatch)
+ * - advanceTutorial(tutorialObj, trigger|id) returns a new tutorial object (dispatch)
+ * - advanceTutorial(gameState, stepId) mutates state.tutorial (legacy)
  */
 export function advanceTutorial(stateOrTutorial, stepIdOrTrigger) {
   // Immutable tutorial-object form used by dispatch
   if (stateOrTutorial && typeof stateOrTutorial.step === 'number' && !stateOrTutorial.bld) {
     const tutorial = stateOrTutorial;
     if (!tutorial || tutorial.done) return tutorial;
-    const cur = TUTORIAL_STEPS[tutorial.step];
-    if (!cur) return tutorial;
-    const triggerMatch = cur.trigger === stepIdOrTrigger || cur.id === stepIdOrTrigger;
-    if (!triggerMatch) return tutorial;
-    const seen = [...(tutorial.seen || []), cur.id];
-    const next = tutorial.step + 1;
-    if (next >= TUTORIAL_STEPS.length) return { ...tutorial, step: next, done: true, seen };
-    return { ...tutorial, step: next, seen };
+    const seen = tutorial.seen || [];
+    const match = TUTORIAL_STEPS.find((s) => (
+      !seen.includes(s.id)
+      && (s.trigger === stepIdOrTrigger || s.id === stepIdOrTrigger)
+    ));
+    if (!match) return tutorial;
+    const newSeen = [...seen, match.id];
+    let step = 0;
+    while (step < TUTORIAL_STEPS.length && newSeen.includes(TUTORIAL_STEPS[step].id)) step += 1;
+    if (step >= TUTORIAL_STEPS.length) {
+      return { ...tutorial, step, done: true, seen: newSeen };
+    }
+    return { ...tutorial, step, seen: newSeen };
   }
 
   const state = stateOrTutorial;
   if (!state?.tutorial) return;
   state.tutorial.seen = state.tutorial.seen || [];
-  const current = TUTORIAL_STEPS[state.tutorial.step || 0];
-  const idToAdd = stepIdOrTrigger || current?.id;
+  const match = TUTORIAL_STEPS.find((s) => (
+    !state.tutorial.seen.includes(s.id)
+    && (s.trigger === stepIdOrTrigger || s.id === stepIdOrTrigger)
+  ));
+  const idToAdd = match?.id || stepIdOrTrigger;
   if (idToAdd && !state.tutorial.seen.includes(idToAdd)) {
     state.tutorial.seen.push(idToAdd);
   }
   while (
-    state.tutorial.step < TUTORIAL_STEPS.length &&
-    state.tutorial.seen.includes(TUTORIAL_STEPS[state.tutorial.step].id)
+    state.tutorial.step < TUTORIAL_STEPS.length
+    && state.tutorial.seen.includes(TUTORIAL_STEPS[state.tutorial.step].id)
   ) {
     state.tutorial.step++;
   }
   if (
-    state.tutorial.step >= TUTORIAL_STEPS.length ||
-    TUTORIAL_STEPS.every((s) => state.tutorial.seen.includes(s.id))
+    state.tutorial.step >= TUTORIAL_STEPS.length
+    || TUTORIAL_STEPS.every((s) => state.tutorial.seen.includes(s.id))
   ) {
     state.tutorial.done = true;
   }

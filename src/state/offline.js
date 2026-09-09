@@ -44,7 +44,11 @@ export function pendingOffline(state, now = Date.now()) {
   const cap = offlineCapSeconds(state.age);
   const capped = dt > cap;
   if (dt > cap) dt = cap;
-  const r = rates(state.bld);
+  const preview = structuredClone
+    ? structuredClone(state)
+    : JSON.parse(JSON.stringify(state));
+  resolveBuilds(preview, now);
+  const r = rates(preview.bld);
   const gained = {};
   for (const k of ['food', 'wood', 'stone', 'gold']) {
     const amt = Math.floor((r[k] || 0) * dt);

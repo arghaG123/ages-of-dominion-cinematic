@@ -41,7 +41,7 @@ export function newGame(name, banner, cls) {
     v: SCHEMA_VERSION,
     profile: {
       name: name || 'Warlord',
-      banner: banner || '🦅',
+      banner: banner || 'banner',
       created: Date.now(),
       wins: 0,
       losses: 0,
@@ -82,7 +82,7 @@ export function newGame(name, banner, cls) {
     builds: [],
     rival: initRival(),
     tutorial: { step: 0, done: false, seen: [] },
-    uiPrefs: { haptics: true },
+    uiPrefs: { haptics: true, music: true, sfx: true },
     meta: newMeta(),
   };
 }

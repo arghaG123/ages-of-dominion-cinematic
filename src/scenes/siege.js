@@ -42,8 +42,9 @@ export function createSiegeController(dom, api) {
       running: false,
       speed: 1,
       sel: null,
-      roster: S.towers.map((t, i) => ({ ...t, i, used: false })),
+      roster: (S.towers || []).map((t, i) => ({ ...t, i, used: false })),
       mode: opts.mode || 'skirmish',
+      nodeIndex: opts.nodeIndex,
       spawnTimer: 0,
       paused: false,
     };
@@ -69,7 +70,33 @@ export function createSiegeController(dom, api) {
       return `<button type="button" class="rc ${t.used ? 'used' : ''} ${B.sel === i ? 'sel' : ''}" data-t="${i}">${d?.names?.[t.tier || 0] || t.fam}</button>`;
     }).join('');
     dom.speed.textContent = `${B.speed}×`;
-    dom.hint.textContent = B.running ? 'Defend the core. Tap a tower to see range.' : 'Place towers beside the road, then Begin.';
+    if (B.awaitingNext) {
+      dom.hint.textContent = 'Wave clear. Call the next wave for a small gold reward (capped), or quit.';
+      if (!dom.roster.querySelector('#callNext')) {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'btn gold';
+        btn.id = 'callNext';
+        btn.textContent = 'Call next wave';
+        btn.onclick = () => {
+          if (!B) return;
+          const calls = B.nextCalls || 0;
+          if (calls < 3) {
+            B.nextCalls = calls + 1;
+            api.toast?.(`+${15 + B.wave * 5} gold (call reward)`);
+            // Gold applied via onSiegeEnd only at end; track pending
+            B.pendingGold = (B.pendingGold || 0) + 15 + B.wave * 5;
+          }
+          B.awaitingNext = false;
+          B.running = true;
+          B.spawnTimer = 0.2;
+          renderChrome();
+        };
+        dom.roster.appendChild(btn);
+      }
+    } else {
+      dom.hint.textContent = B.running ? 'Defend the core. Tap a tower to see range.' : 'Place towers beside the road, then Begin.';
+    }
   }
 
   function step(dt) {
@@ -99,7 +126,7 @@ export function createSiegeController(dom, api) {
         B.core -= e.dmg;
         e.dead = true;
         if (B.core <= 0) {
-          api.onSiegeEnd({ won: false, waves: B.wave });
+          api.onSiegeEnd({ won: false, waves: B.wave, gold: B.pendingGold || 0 }, { nodeIndex: B.nodeIndex });
           end();
           return;
         }
@@ -141,8 +168,16 @@ export function createSiegeController(dom, api) {
     if (B.enemies.length && B.enemies.every((e) => e.dead) && B.spawnTimer < -2) {
       B.wave += 1;
       B.enemies = [];
-      if (B.wave >= 5 && B.mode !== 'endless') {
-        api.onSiegeEnd({ won: true, waves: B.wave, gold: 40 + B.wave * 10 });
+      const winAt = B.mode === 'site' ? 3 : B.mode === 'skirmish' ? 4 : 5;
+      if (B.mode === 'endless') {
+        B.awaitingNext = true;
+        B.running = false;
+        B.callRewardCap = Math.min(3, (B.callRewardCap || 0));
+        renderChrome();
+        return;
+      }
+      if (B.wave >= winAt) {
+        api.onSiegeEnd({ won: true, waves: B.wave, gold: 40 + B.wave * 10 }, { nodeIndex: B.nodeIndex });
         end();
       }
     }

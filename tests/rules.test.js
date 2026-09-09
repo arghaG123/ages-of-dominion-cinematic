@@ -82,6 +82,142 @@ describe('rules', () => {
     expect(s.army.length).toBe(before);
     expect(s.army.find((x) => x.type === 'melee').count).toBe(17);
   });
+
+  it('tutorial advances past welcome on ack then first-build', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = dispatch(s, { type: 'tutorial-ack', id: 'welcome' }).state;
+    expect(s.tutorial.seen).toContain('welcome');
+    expect(s.tutorial.step).toBe(1);
+    const built = dispatch(s, { type: 'build', buildingId: 'quarry' });
+    expect(built.state.tutorial.seen).toContain('first-build');
+    expect(built.effects.some((e) => e.type === 'tutorial' && e.id === 'first-build')).toBe(true);
+  });
+
+  it('winning battle clears map node via apply-battle-result', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = dispatch(s, { type: 'gen-map' }).state;
+    const idx = s.map.nodes.findIndex((n) => n.type === 'creature');
+    expect(idx).toBeGreaterThanOrEqual(0);
+    s = {
+      ...s,
+      map: { ...s.map, at: idx },
+    };
+    const after = dispatch(s, {
+      type: 'apply-battle-result',
+      result: { winner: 'p' },
+      nodeIndex: idx,
+      armyAfter: s.army,
+    }).state;
+    expect(after.map.nodes[idx].cleared).toBe(true);
+  });
+
+  it('siege rewards go through apply-siege-result', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    const goldBefore = s.res.gold;
+    const after = dispatch(s, {
+      type: 'apply-siege-result',
+      result: { won: true, waves: 5, gold: 90 },
+    }).state;
+    expect(after.res.gold).toBe(goldBefore + 90);
+    expect(after.endlessBest).toBe(5);
+    expect(after.profile.sieges).toBe(1);
+  });
+
+  it('claim-milestone grants reward when met', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = { ...s, profile: { ...s.profile, wins: 1 }, bld: { ...s.bld, quarry: { l: 1 } } };
+    const goldBefore = s.res.gold;
+    const r = dispatch(s, { type: 'claim-milestone', id: 'first_battle' });
+    expect(r.state.claimedMilestones).toContain('first_battle');
+    expect(r.state.res.gold).toBeGreaterThan(goldBefore);
+  });
+
+  it('market-trade swaps 100 for 80 after bronze', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = { ...s, age: 1, res: { ...s.res, food: 200, wood: 50 } };
+    const r = dispatch(s, { type: 'market-trade', from: 'food', to: 'wood' });
+    expect(r.state.res.food).toBe(100);
+    expect(r.state.res.wood).toBe(130);
+  });
+
+  it('forge and equip put gear on hero', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = {
+      ...s,
+      bld: { ...s.bld, armory: { l: 1 } },
+      res: { ...s.res, wood: 500, stone: 500, gold: 500 },
+    };
+    const forged = dispatch(s, { type: 'forge', slot: 'weapon' });
+    expect(forged.state.hero.bag.length).toBe(1);
+    const equipped = dispatch(forged.state, { type: 'equip', index: 0 });
+    expect(equipped.state.hero.equip.weapon).toBeTruthy();
+    expect(equipped.state.hero.bag.length).toBe(0);
+  });
+
+  it('apply-battle-result completes win quest and grants army xp', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    const beforeXp = s.army[0].xp || 0;
+    const r = dispatch(s, {
+      type: 'apply-battle-result',
+      result: { winner: 'p' },
+      armyAfter: s.army,
+      reward: { gold: 10 },
+      opts: { rival: false },
+    });
+    expect(r.state.profile.wins).toBe(1);
+    expect(r.state.army[0].xp).toBeGreaterThan(beforeXp);
+    const q1 = r.state.quests.find((q) => q.id === 'q1');
+    expect(q1.done).toBe(true);
+  });
+
+  it('spend-stat and learn-skill consume hero points', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = { ...s, hero: { ...s.hero, pts: 2 } };
+    const atk = s.hero.atk;
+    s = dispatch(s, { type: 'spend-stat', stat: 'atk' }).state;
+    expect(s.hero.atk).toBe(atk + 1);
+    expect(s.hero.pts).toBe(1);
+    s = dispatch(s, { type: 'learn-skill', skill: 'offense' }).state;
+    expect(s.hero.skills.offense).toBe(1);
+    expect(s.hero.pts).toBe(0);
+  });
+
+  it('travel advances first-travel tutorial', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = dispatch(s, { type: 'tutorial-ack', id: 'welcome' }).state;
+    s = dispatch(s, { type: 'tutorial-ack', id: 'first-build' }).state;
+    s = dispatch(s, { type: 'tutorial-ack', id: 'first-recruit' }).state;
+    s = dispatch(s, { type: 'gen-map' }).state;
+    const dest = s.map.links[s.map.at][0];
+    const r = dispatch(s, { type: 'travel', nodeIndex: dest });
+    expect(r.state.tutorial.seen).toContain('first-travel');
+  });
+
+  it('event-choice feed spends food and marks generous', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = { ...s, res: { ...s.res, food: 200 } };
+    const r = dispatch(s, { type: 'event-choice', choice: 'feed' });
+    expect(r.state.res.food).toBeLessThan(200);
+    expect(r.state.story.flags.generous).toBe(true);
+  });
+
+  it('hire-dwelling adds a creature stack', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = { ...s, res: { ...s.res, food: 500, gold: 500 }, bld: { ...s.bld, barracks: { l: 3 } } };
+    const before = s.army.length;
+    const r = dispatch(s, { type: 'hire-dwelling', creatureType: 'wolf', count: 5 });
+    expect(r.state.army.length).toBe(before + 1);
+    expect(r.state.army.some((a) => a.kind === 'creature' && a.type === 'wolf')).toBe(true);
+    expect(r.state.story.flags.creature).toBe(true);
+  });
+
+  it('rival-duel emits start-fight and bumps encounters', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    const before = s.rival.encounters || 0;
+    const r = dispatch(s, { type: 'rival-duel' });
+    expect(r.state.rival.encounters).toBe(before + 1);
+    expect(r.effects.some((e) => e.type === 'start-fight' && e.rival)).toBe(true);
+  });
 });
 
 describe('geometry', () => {

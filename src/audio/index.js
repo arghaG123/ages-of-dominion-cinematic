@@ -1,6 +1,8 @@
 /** Local audio — samples when present, procedural fallback. No network. */
 let ctx = null;
 let muted = false;
+let musicOn = true;
+let sfxOn = true;
 
 function ac() {
   if (!ctx) {
@@ -13,21 +15,25 @@ function ac() {
 
 export function isMuted() { return muted; }
 export function setMuted(v) { muted = !!v; }
+export function setMusicEnabled(v) { musicOn = !!v; }
+export function setSfxEnabled(v) { sfxOn = !!v; }
 
-export async function playSample(name) {
+export async function playSample(name, { music = false } = {}) {
   if (muted) return;
+  if (music && !musicOn) return;
+  if (!music && !sfxOn) return;
   try {
     const audio = new Audio(`./audio/${name}.wav`);
-    audio.volume = 0.7;
+    audio.volume = music ? 0.35 : 0.7;
     await audio.play();
   } catch {
-    beep(name);
+    if (!music) beep(name);
   }
 }
 
 function beep(kind) {
   const a = ac();
-  if (!a || muted) return;
+  if (!a || muted || !sfxOn) return;
   const o = a.createOscillator();
   const g = a.createGain();
   o.type = kind === 'kill' ? 'sawtooth' : 'triangle';
@@ -39,13 +45,16 @@ function beep(kind) {
 }
 
 export function playSfx(kind) {
-  const map = { upgrade: 'sfx-upgrade', recruit: 'sfx-recruit', ageup: 'sfx-ageup', kill: 'sfx-kill', hammer: 'sfx-hammer' };
+  const map = {
+    upgrade: 'sfx-upgrade', recruit: 'sfx-recruit', ageup: 'sfx-ageup',
+    kill: 'sfx-kill', hammer: 'sfx-hammer', coin: 'sfx-upgrade',
+  };
   if (map[kind]) playSample(map[kind]);
   else beep(kind);
 }
 
 export function playTheme() {
-  playSample('theme-title');
+  playSample('theme-title', { music: true });
 }
 
 export function stopAll() {
