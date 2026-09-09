@@ -1,0 +1,850 @@
+{
+  "id": "building",
+  "image": null,
+  "width": 2040,
+  "height": 204,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "bld-townhall-stone": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-stone.svg",
+      "extruded": 2
+    },
+    "bld-farm-stone": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-stone.svg",
+      "extruded": 2
+    },
+    "bld-lumber-stone": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-stone.svg",
+      "extruded": 2
+    },
+    "bld-quarry-stone": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-stone.svg",
+      "extruded": 2
+    },
+    "bld-mine-stone": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-stone.svg",
+      "extruded": 2
+    },
+    "bld-barracks-stone": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-stone.svg",
+      "extruded": 2
+    },
+    "bld-workshop-stone": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-stone.svg",
+      "extruded": 2
+    },
+    "bld-hall-stone": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-stone.svg",
+      "extruded": 2
+    },
+    "bld-armory-stone": {
+      "x": 546,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-stone.svg",
+      "extruded": 2
+    },
+    "bld-walls-stone": {
+      "x": 614,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-stone.svg",
+      "extruded": 2
+    },
+    "bld-townhall-bronze": {
+      "x": 682,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-bronze.svg",
+      "extruded": 2
+    },
+    "bld-farm-bronze": {
+      "x": 750,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-bronze.svg",
+      "extruded": 2
+    },
+    "bld-lumber-bronze": {
+      "x": 818,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-bronze.svg",
+      "extruded": 2
+    },
+    "bld-quarry-bronze": {
+      "x": 886,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-bronze.svg",
+      "extruded": 2
+    },
+    "bld-mine-bronze": {
+      "x": 954,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-bronze.svg",
+      "extruded": 2
+    },
+    "bld-barracks-bronze": {
+      "x": 1022,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-bronze.svg",
+      "extruded": 2
+    },
+    "bld-workshop-bronze": {
+      "x": 1090,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-bronze.svg",
+      "extruded": 2
+    },
+    "bld-hall-bronze": {
+      "x": 1158,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-bronze.svg",
+      "extruded": 2
+    },
+    "bld-armory-bronze": {
+      "x": 1226,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-bronze.svg",
+      "extruded": 2
+    },
+    "bld-walls-bronze": {
+      "x": 1294,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-bronze.svg",
+      "extruded": 2
+    },
+    "bld-townhall-iron": {
+      "x": 1362,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-iron.svg",
+      "extruded": 2
+    },
+    "bld-farm-iron": {
+      "x": 1430,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-iron.svg",
+      "extruded": 2
+    },
+    "bld-lumber-iron": {
+      "x": 1498,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-iron.svg",
+      "extruded": 2
+    },
+    "bld-quarry-iron": {
+      "x": 1566,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-iron.svg",
+      "extruded": 2
+    },
+    "bld-mine-iron": {
+      "x": 1634,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-iron.svg",
+      "extruded": 2
+    },
+    "bld-barracks-iron": {
+      "x": 1702,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-iron.svg",
+      "extruded": 2
+    },
+    "bld-workshop-iron": {
+      "x": 1770,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-iron.svg",
+      "extruded": 2
+    },
+    "bld-hall-iron": {
+      "x": 1838,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-iron.svg",
+      "extruded": 2
+    },
+    "bld-armory-iron": {
+      "x": 1906,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-iron.svg",
+      "extruded": 2
+    },
+    "bld-walls-iron": {
+      "x": 1974,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-iron.svg",
+      "extruded": 2
+    },
+    "bld-townhall-medieval": {
+      "x": 2,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-medieval.svg",
+      "extruded": 2
+    },
+    "bld-farm-medieval": {
+      "x": 70,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-medieval.svg",
+      "extruded": 2
+    },
+    "bld-lumber-medieval": {
+      "x": 138,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-medieval.svg",
+      "extruded": 2
+    },
+    "bld-quarry-medieval": {
+      "x": 206,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-medieval.svg",
+      "extruded": 2
+    },
+    "bld-mine-medieval": {
+      "x": 274,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-medieval.svg",
+      "extruded": 2
+    },
+    "bld-barracks-medieval": {
+      "x": 342,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-medieval.svg",
+      "extruded": 2
+    },
+    "bld-workshop-medieval": {
+      "x": 410,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-medieval.svg",
+      "extruded": 2
+    },
+    "bld-hall-medieval": {
+      "x": 478,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-medieval.svg",
+      "extruded": 2
+    },
+    "bld-armory-medieval": {
+      "x": 546,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-medieval.svg",
+      "extruded": 2
+    },
+    "bld-walls-medieval": {
+      "x": 614,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-medieval.svg",
+      "extruded": 2
+    },
+    "bld-townhall-gunpowder": {
+      "x": 682,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-farm-gunpowder": {
+      "x": 750,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-lumber-gunpowder": {
+      "x": 818,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-quarry-gunpowder": {
+      "x": 886,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-mine-gunpowder": {
+      "x": 954,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-barracks-gunpowder": {
+      "x": 1022,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-workshop-gunpowder": {
+      "x": 1090,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-hall-gunpowder": {
+      "x": 1158,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-armory-gunpowder": {
+      "x": 1226,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-walls-gunpowder": {
+      "x": 1294,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-gunpowder.svg",
+      "extruded": 2
+    },
+    "bld-townhall-industrial": {
+      "x": 1362,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-industrial.svg",
+      "extruded": 2
+    },
+    "bld-farm-industrial": {
+      "x": 1430,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-industrial.svg",
+      "extruded": 2
+    },
+    "bld-lumber-industrial": {
+      "x": 1498,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-industrial.svg",
+      "extruded": 2
+    },
+    "bld-quarry-industrial": {
+      "x": 1566,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-industrial.svg",
+      "extruded": 2
+    },
+    "bld-mine-industrial": {
+      "x": 1634,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-industrial.svg",
+      "extruded": 2
+    },
+    "bld-barracks-industrial": {
+      "x": 1702,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-industrial.svg",
+      "extruded": 2
+    },
+    "bld-workshop-industrial": {
+      "x": 1770,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-industrial.svg",
+      "extruded": 2
+    },
+    "bld-hall-industrial": {
+      "x": 1838,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-industrial.svg",
+      "extruded": 2
+    },
+    "bld-armory-industrial": {
+      "x": 1906,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-industrial.svg",
+      "extruded": 2
+    },
+    "bld-walls-industrial": {
+      "x": 1974,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-industrial.svg",
+      "extruded": 2
+    },
+    "bld-townhall-modern": {
+      "x": 2,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/townhall-modern.svg",
+      "extruded": 2
+    },
+    "bld-farm-modern": {
+      "x": 70,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/farm-modern.svg",
+      "extruded": 2
+    },
+    "bld-lumber-modern": {
+      "x": 138,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/lumber-modern.svg",
+      "extruded": 2
+    },
+    "bld-quarry-modern": {
+      "x": 206,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/quarry-modern.svg",
+      "extruded": 2
+    },
+    "bld-mine-modern": {
+      "x": 274,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/mine-modern.svg",
+      "extruded": 2
+    },
+    "bld-barracks-modern": {
+      "x": 342,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/barracks-modern.svg",
+      "extruded": 2
+    },
+    "bld-workshop-modern": {
+      "x": 410,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/workshop-modern.svg",
+      "extruded": 2
+    },
+    "bld-hall-modern": {
+      "x": 478,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/hall-modern.svg",
+      "extruded": 2
+    },
+    "bld-armory-modern": {
+      "x": 546,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/armory-modern.svg",
+      "extruded": 2
+    },
+    "bld-walls-modern": {
+      "x": 614,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "buildings/walls-modern.svg",
+      "extruded": 2
+    }
+  }
+}

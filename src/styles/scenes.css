@@ -1,0 +1,63 @@
+/* Scene-specific polish for cinematic surfaces */
+
+.unit-card {
+  min-width: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(26, 31, 41, 0.9);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.unit-card .power {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.map-node-card {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(18, 21, 27, 0.94);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+}
+
+.verdict-easy { color: var(--ok); }
+.verdict-even { color: var(--gold); }
+.verdict-risky { color: #d4a06a; }
+.verdict-deadly { color: var(--danger); }
+
+.rc {
+  min-width: 70px;
+  min-height: 70px;
+  border-radius: 10px;
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  background: #1a2030;
+  color: var(--text);
+  padding: 6px;
+}
+
+.rc.used {
+  opacity: 0.4;
+}
+
+.rc.sel {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 1px var(--gold-glow);
+}
+
+.core-bar {
+  height: 10px;
+  border-radius: 99px;
+  background: #2a3140;
+  overflow: hidden;
+}
+
+.core-bar > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #8a3028, #c9a227);
+}

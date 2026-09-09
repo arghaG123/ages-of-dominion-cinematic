@@ -1,0 +1,106 @@
+{
+  "id": "battleground",
+  "image": null,
+  "width": 544,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "battle-plains": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/plains.svg",
+      "extruded": 2
+    },
+    "battle-forest": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/forest.svg",
+      "extruded": 2
+    },
+    "battle-hills": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/hills.svg",
+      "extruded": 2
+    },
+    "battle-swamp": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/swamp.svg",
+      "extruded": 2
+    },
+    "battle-desert": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/desert.svg",
+      "extruded": 2
+    },
+    "battle-snow": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/snow.svg",
+      "extruded": 2
+    },
+    "battle-waste": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/waste.svg",
+      "extruded": 2
+    },
+    "battle-ruins": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "battle/ruins.svg",
+      "extruded": 2
+    }
+  }
+}

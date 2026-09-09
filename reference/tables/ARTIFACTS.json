@@ -1,0 +1,84 @@
+{
+  "wolfamulet": {
+    "n": "Amulet of the Wolf",
+    "ic": "🐺",
+    "b": {
+      "morale": 2
+    },
+    "d": "+2 morale"
+  },
+  "bloodstone": {
+    "n": "Bloodstone",
+    "ic": "🔴",
+    "b": {
+      "atk": 3
+    },
+    "d": "+3 attack"
+  },
+  "aegis": {
+    "n": "Aegis Shard",
+    "ic": "🔷",
+    "b": {
+      "def": 3
+    },
+    "d": "+3 defense"
+  },
+  "codex": {
+    "n": "Sage's Codex",
+    "ic": "📜",
+    "b": {
+      "kno": 4
+    },
+    "d": "+4 knowledge"
+  },
+  "orb": {
+    "n": "Orb of Storms",
+    "ic": "🔮",
+    "b": {
+      "pow": 3
+    },
+    "d": "+3 power"
+  },
+  "clover": {
+    "n": "Iron Clover",
+    "ic": "🍀",
+    "b": {
+      "luck": 2
+    },
+    "d": "+2 luck"
+  },
+  "lens": {
+    "n": "Eagle Eye Lens",
+    "ic": "🔭",
+    "b": {
+      "shootBon": 0.25
+    },
+    "d": "+25% shooter damage"
+  },
+  "vitality": {
+    "n": "Ring of Vitality",
+    "ic": "💍",
+    "b": {
+      "hpBon": 0.15
+    },
+    "d": "+15% troop HP"
+  },
+  "swiftboots": {
+    "n": "Winged Spurs",
+    "ic": "🪶",
+    "b": {
+      "spdBon": 2
+    },
+    "d": "+2 speed to all stacks"
+  },
+  "banner": {
+    "n": "Ancient Banner",
+    "ic": "🚩",
+    "b": {
+      "morale": 1,
+      "atk": 1,
+      "def": 1
+    },
+    "d": "+1 morale, attack, defense"
+  }
+}

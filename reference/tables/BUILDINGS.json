@@ -1,0 +1,103 @@
+{
+  "townhall": {
+    "n": "Town Hall",
+    "ic": "🏛️",
+    "c": {
+      "wood": 60,
+      "stone": 40
+    },
+    "g": 1.75,
+    "d": "Seat of your realm. Its level gates the next age."
+  },
+  "farm": {
+    "n": "Farm",
+    "ic": "🌾",
+    "c": {
+      "wood": 35
+    },
+    "g": 1.5,
+    "d": "+0.55 food/s per level"
+  },
+  "lumber": {
+    "n": "Lumber Camp",
+    "ic": "🪓",
+    "c": {
+      "wood": 25,
+      "stone": 15
+    },
+    "g": 1.5,
+    "d": "+0.45 wood/s per level"
+  },
+  "quarry": {
+    "n": "Quarry",
+    "ic": "⛏️",
+    "c": {
+      "wood": 45,
+      "stone": 15
+    },
+    "g": 1.55,
+    "d": "+0.35 stone/s per level"
+  },
+  "mine": {
+    "n": "Gold Mine",
+    "ic": "💰",
+    "c": {
+      "wood": 70,
+      "stone": 50
+    },
+    "g": 1.6,
+    "d": "+0.25 gold/s per level"
+  },
+  "barracks": {
+    "n": "Barracks",
+    "ic": "⚔️",
+    "c": {
+      "wood": 90,
+      "stone": 45
+    },
+    "g": 1.6,
+    "d": "Army roster slots: 2 + level"
+  },
+  "workshop": {
+    "n": "Siege Workshop",
+    "ic": "🔧",
+    "c": {
+      "wood": 70,
+      "stone": 95
+    },
+    "g": 1.6,
+    "d": "Tower slots: 2 + level"
+  },
+  "hall": {
+    "n": "Hero Hall",
+    "ic": "🎖️",
+    "c": {
+      "wood": 110,
+      "stone": 70,
+      "gold": 60
+    },
+    "g": 1.7,
+    "d": "+15% hero XP per level"
+  },
+  "armory": {
+    "n": "Armory",
+    "ic": "🛠️",
+    "c": {
+      "wood": 120,
+      "stone": 120,
+      "gold": 80
+    },
+    "g": 1.7,
+    "d": "Forges hero equipment. Higher level = better quality."
+  },
+  "walls": {
+    "n": "Walls",
+    "ic": "🧱",
+    "c": {
+      "stone": 120,
+      "wood": 40
+    },
+    "g": 1.6,
+    "d": "+180 castle core HP per level"
+  }
+}

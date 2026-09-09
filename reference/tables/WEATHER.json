@@ -1,0 +1,61 @@
+{
+  "clear": {
+    "n": "Clear",
+    "ic": "☀️",
+    "mods": {}
+  },
+  "rain": {
+    "n": "Rain",
+    "ic": "🌧️",
+    "mods": {
+      "towerRng": -0.1,
+      "enemySpd": -0.08,
+      "shootPen": 0.15
+    }
+  },
+  "fog": {
+    "n": "Fog",
+    "ic": "🌫️",
+    "mods": {
+      "towerRng": -0.25,
+      "shootPen": 0.25
+    }
+  },
+  "storm": {
+    "n": "Storm",
+    "ic": "⛈️",
+    "mods": {
+      "towerDmg": -0.1,
+      "enemyDmg": 0.1,
+      "moraleMinus": 1
+    }
+  },
+  "blizz": {
+    "n": "Blizzard",
+    "ic": "❄️",
+    "mods": {
+      "enemySpd": -0.22,
+      "unitRate": 0.15,
+      "towerRng": -0.1,
+      "moveMinus": 1
+    }
+  },
+  "sand": {
+    "n": "Sandstorm",
+    "ic": "🌪️",
+    "mods": {
+      "towerRng": -0.18,
+      "enemyHp": 0.08,
+      "shootPen": 0.2
+    }
+  },
+  "heat": {
+    "n": "Heatwave",
+    "ic": "🔥",
+    "mods": {
+      "unitRate": 0.15,
+      "enemySpd": 0.08,
+      "moveMinus": 1
+    }
+  }
+}

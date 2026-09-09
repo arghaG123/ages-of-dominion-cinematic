@@ -1,0 +1,56 @@
+{
+  "knight": {
+    "n": "Knight",
+    "ic": "🛡️",
+    "d": "Might hero. Fast attack/defense growth, strong troops.",
+    "g": {
+      "atk": 0.35,
+      "def": 0.35,
+      "pow": 0.15,
+      "kno": 0.15
+    },
+    "start": {
+      "atk": 3,
+      "def": 3,
+      "pow": 1,
+      "kno": 1
+    },
+    "spell": "bless"
+  },
+  "ranger": {
+    "n": "Ranger",
+    "ic": "🏹",
+    "d": "Balanced. Shooters and map movement.",
+    "g": {
+      "atk": 0.3,
+      "def": 0.2,
+      "pow": 0.25,
+      "kno": 0.25
+    },
+    "start": {
+      "atk": 2,
+      "def": 2,
+      "pow": 2,
+      "kno": 2
+    },
+    "spell": "haste"
+  },
+  "warlock": {
+    "n": "Warlock",
+    "ic": "🔮",
+    "d": "Magic hero. Big spells, weaker troops.",
+    "g": {
+      "atk": 0.15,
+      "def": 0.15,
+      "pow": 0.35,
+      "kno": 0.35
+    },
+    "start": {
+      "atk": 1,
+      "def": 1,
+      "pow": 3,
+      "kno": 3
+    },
+    "spell": "arrow"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "k": "weapon",
+    "n": "Weapon",
+    "ic": "⚔️"
+  },
+  {
+    "k": "armor",
+    "n": "Armor",
+    "ic": "🥋"
+  },
+  {
+    "k": "helm",
+    "n": "Helm",
+    "ic": "⛑️"
+  },
+  {
+    "k": "boots",
+    "n": "Boots",
+    "ic": "🥾"
+  },
+  {
+    "k": "art1",
+    "n": "Artifact",
+    "ic": "💍"
+  },
+  {
+    "k": "art2",
+    "n": "Artifact",
+    "ic": "📿"
+  }
+]

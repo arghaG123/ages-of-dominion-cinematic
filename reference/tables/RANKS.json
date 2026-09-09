@@ -1,0 +1,22 @@
+[
+  {
+    "n": "RECRUIT",
+    "c": "#9aa4b2"
+  },
+  {
+    "n": "VETERAN",
+    "c": "#5ec27a"
+  },
+  {
+    "n": "ELITE",
+    "c": "#4aa8ff"
+  },
+  {
+    "n": "CHAMPION",
+    "c": "#b06bff"
+  },
+  {
+    "n": "LEGEND",
+    "c": "#f0a92e"
+  }
+]

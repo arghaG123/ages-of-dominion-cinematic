@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover" />
+  <meta name="theme-color" content="#12151B" />
+  <meta name="color-scheme" content="dark" />
+  <title>Ages of Dominion</title>
+  <link rel="stylesheet" href="/src/styles/tokens.css" />
+  <link rel="stylesheet" href="/src/styles/shell.css" />
+  <link rel="stylesheet" href="/src/styles/scenes.css" />
+</head>
+<body>
+  <div id="toast" aria-live="polite"></div>
+
+  <div id="title" class="titlescreen" role="dialog" aria-label="Title screen">
+    <canvas id="titlecv" aria-hidden="true"></canvas>
+    <div class="title-ui">
+      <h1 class="brand">Ages of Dominion</h1>
+      <p class="tagline">Seven ages. One banner. No mercy from the dark.</p>
+      <div id="titleActions" class="title-actions"></div>
+    </div>
+  </div>
+
+  <div id="classSelect" class="class-select-ov" hidden role="dialog" aria-modal="true" aria-label="Choose your hero">
+    <div class="class-select-panel">
+      <h2>Choose your commander</h2>
+      <label class="name-field">Name
+        <input id="heroName" type="text" maxlength="18" placeholder="Kael" autocomplete="off" />
+      </label>
+      <div id="classCarousel" class="class-carousel" role="tablist"></div>
+      <button type="button" id="classChoose" class="btn gold">Choose</button>
+      <button type="button" id="classCancel" class="btn ghost">Back</button>
+    </div>
+  </div>
+
+  <div id="app" hidden>
+    <header>
+      <div id="topIdentity" class="identity"></div>
+      <div id="resBar" class="resbar" role="group" aria-label="Resources"></div>
+      <button type="button" id="muteBtn" class="icon-btn" aria-label="Mute audio">Mute</button>
+    </header>
+
+    <main>
+      <section id="realmHost" class="scene-host" data-scene="realm">
+        <canvas id="realmcv"></canvas>
+        <div class="realmbar">
+          <button type="button" id="realmBuildings" class="btn">Buildings</button>
+          <button type="button" id="realmNext" class="btn gold next-action">
+            <span class="ab-title">Next</span>
+            <span class="ab-sub"></span>
+          </button>
+          <button type="button" id="realmAgeUp" class="btn">
+            <span class="ab-title">Advance Age</span>
+            <span class="ab-sub"></span>
+          </button>
+        </div>
+      </section>
+
+      <section id="view" class="view" hidden></section>
+    </main>
+
+    <nav id="nav" aria-label="Primary">
+      <button type="button" data-t="realm" class="on" aria-label="Realm"><span class="nav-ico" data-icon="realm"></span><span class="nav-label">Realm</span></button>
+      <button type="button" data-t="host" aria-label="Host"><span class="nav-ico" data-icon="host"></span><span class="nav-label">Host</span></button>
+      <button type="button" data-t="map" aria-label="Map"><span class="nav-ico" data-icon="map"></span><span class="nav-label">Map</span></button>
+      <button type="button" data-t="war" aria-label="War"><span class="nav-ico" data-icon="war"></span><span class="nav-label">War</span></button>
+      <button type="button" data-t="more" aria-label="More"><span class="nav-ico" data-icon="more"></span><span class="nav-label">More</span></button>
+    </nav>
+  </div>
+
+  <div id="fight" class="ov" hidden>
+    <div class="otop">
+      <button type="button" id="fQuit" class="icon-btn" aria-label="Quit battle">✕</button>
+      <div id="fInfo" class="ov-info"></div>
+      <button type="button" id="fResolve" class="btn sm">Resolve</button>
+      <button type="button" id="fGo" class="btn gold">Begin</button>
+    </div>
+    <div id="fstage" class="ostage">
+      <div id="fOrder" class="forder" aria-label="Initiative"></div>
+      <canvas id="fcv"></canvas>
+      <div id="flog" class="flog"></div>
+    </div>
+    <div class="obot">
+      <div id="fHint" class="ohint"></div>
+      <div id="froster" class="roster"></div>
+      <div id="fActions" class="oactions"></div>
+    </div>
+  </div>
+
+  <div id="battle" class="ov" hidden>
+    <div class="otop">
+      <button type="button" id="bQuit" class="icon-btn" aria-label="Quit siege">✕</button>
+      <div id="bInfo" class="ov-info"></div>
+      <button type="button" id="bSpeed" class="btn sm">1×</button>
+      <button type="button" id="bGo" class="btn gold">Begin</button>
+    </div>
+    <div id="bstage" class="ostage">
+      <canvas id="bcv"></canvas>
+    </div>
+    <div class="obot">
+      <div id="bHint" class="ohint"></div>
+      <div id="roster" class="roster"></div>
+    </div>
+  </div>
+
+  <div id="modal" class="sheet" hidden role="dialog" aria-modal="true">
+    <div class="sheet-handle" aria-hidden="true"></div>
+    <div id="sheet" class="sheet-body"></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "q1",
+    "n": "Win your first battle",
+    "need": "wins",
+    "v": 1,
+    "done": false,
+    "rw": {
+      "gold": 120
+    }
+  },
+  {
+    "id": "q2",
+    "n": "Reach the Bronze Age",
+    "need": "age",
+    "v": 1,
+    "done": false,
+    "rw": {
+      "gold": 200,
+      "stone": 150
+    }
+  },
+  {
+    "id": "q3",
+    "n": "Recruit a wild creature",
+    "need": "creature",
+    "v": 1,
+    "done": false,
+    "rw": {
+      "food": 200,
+      "gold": 150
+    }
+  },
+  {
+    "id": "q4",
+    "n": "Rank a stack to Veteran",
+    "need": "rank",
+    "v": 1,
+    "done": false,
+    "rw": {
+      "gold": 250
+    }
+  },
+  {
+    "id": "q5",
+    "n": "Equip a full set of gear",
+    "need": "gear",
+    "v": 4,
+    "done": false,
+    "rw": {
+      "gold": 400
+    }
+  },
+  {
+    "id": "q6",
+    "n": "Survive 10 endless waves",
+    "need": "best",
+    "v": 10,
+    "done": false,
+    "rw": {
+      "gold": 500,
+      "stone": 300
+    }
+  }
+]

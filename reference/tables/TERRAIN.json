@@ -1,0 +1,77 @@
+{
+  "plains": {
+    "n": "Plains",
+    "ic": "🌿",
+    "c": "#3a4a34",
+    "mods": {}
+  },
+  "forest": {
+    "n": "Forest",
+    "ic": "🌲",
+    "c": "#2c3f2e",
+    "mods": {
+      "towerRng": -0.12,
+      "enemySpd": -0.1,
+      "shootPen": 0.1
+    }
+  },
+  "hills": {
+    "n": "Hills",
+    "ic": "⛰️",
+    "c": "#4a4335",
+    "mods": {
+      "towerRng": 0.16,
+      "enemyHp": 0.05,
+      "shootBon": 0.1
+    }
+  },
+  "swamp": {
+    "n": "Swamp",
+    "ic": "🪱",
+    "c": "#2f3a35",
+    "mods": {
+      "enemySpd": -0.25,
+      "unitRate": 0.12,
+      "moveMinus": 1
+    }
+  },
+  "desert": {
+    "n": "Desert",
+    "ic": "🏜️",
+    "c": "#544427",
+    "mods": {
+      "enemyHp": 0.12,
+      "towerRng": 0.05
+    }
+  },
+  "snow": {
+    "n": "Snowfield",
+    "ic": "🏔️",
+    "c": "#39424e",
+    "mods": {
+      "enemySpd": -0.15,
+      "unitRate": 0.1,
+      "moveMinus": 1
+    }
+  },
+  "waste": {
+    "n": "Wasteland",
+    "ic": "🌋",
+    "c": "#4a2f2c",
+    "mods": {
+      "enemyDmg": 0.2,
+      "towerDmg": 0.08,
+      "atkBon": 1
+    }
+  },
+  "ruins": {
+    "n": "Ruins",
+    "ic": "🏚️",
+    "c": "#3d3a44",
+    "mods": {
+      "towerDmg": 0.12,
+      "enemyHp": 0.08,
+      "defBon": 1
+    }
+  }
+}

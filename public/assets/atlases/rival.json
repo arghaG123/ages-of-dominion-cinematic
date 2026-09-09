@@ -1,0 +1,22 @@
+{
+  "id": "rival",
+  "image": null,
+  "width": 68,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "rival-portrait": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "rival/portrait.svg",
+      "extruded": 2
+    }
+  }
+}

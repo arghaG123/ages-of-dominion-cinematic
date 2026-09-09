@@ -1,0 +1,1270 @@
+{
+  "id": "unit",
+  "image": null,
+  "width": 2040,
+  "height": 272,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "unit-melee-stone-idle": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-stone-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-stone-move": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-stone-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-stone-attack": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-stone-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-stone-hit": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-stone-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-stone-death": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-stone-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-stone-idle": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-stone-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-stone-move": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-stone-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-stone-attack": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-stone-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-stone-hit": {
+      "x": 546,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-stone-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-stone-death": {
+      "x": 614,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-stone-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-stone-idle": {
+      "x": 682,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-stone-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-stone-move": {
+      "x": 750,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-stone-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-stone-attack": {
+      "x": 818,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-stone-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-stone-hit": {
+      "x": 886,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-stone-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-stone-death": {
+      "x": 954,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-stone-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-bronze-idle": {
+      "x": 1022,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-bronze-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-bronze-move": {
+      "x": 1090,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-bronze-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-bronze-attack": {
+      "x": 1158,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-bronze-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-bronze-hit": {
+      "x": 1226,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-bronze-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-bronze-death": {
+      "x": 1294,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-bronze-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-bronze-idle": {
+      "x": 1362,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-bronze-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-bronze-move": {
+      "x": 1430,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-bronze-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-bronze-attack": {
+      "x": 1498,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-bronze-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-bronze-hit": {
+      "x": 1566,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-bronze-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-bronze-death": {
+      "x": 1634,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-bronze-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-bronze-idle": {
+      "x": 1702,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-bronze-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-bronze-move": {
+      "x": 1770,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-bronze-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-bronze-attack": {
+      "x": 1838,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-bronze-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-bronze-hit": {
+      "x": 1906,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-bronze-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-bronze-death": {
+      "x": 1974,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-bronze-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-iron-idle": {
+      "x": 2,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-iron-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-iron-move": {
+      "x": 70,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-iron-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-iron-attack": {
+      "x": 138,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-iron-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-iron-hit": {
+      "x": 206,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-iron-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-iron-death": {
+      "x": 274,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-iron-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-iron-idle": {
+      "x": 342,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-iron-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-iron-move": {
+      "x": 410,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-iron-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-iron-attack": {
+      "x": 478,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-iron-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-iron-hit": {
+      "x": 546,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-iron-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-iron-death": {
+      "x": 614,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-iron-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-iron-idle": {
+      "x": 682,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-iron-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-iron-move": {
+      "x": 750,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-iron-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-iron-attack": {
+      "x": 818,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-iron-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-iron-hit": {
+      "x": 886,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-iron-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-iron-death": {
+      "x": 954,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-iron-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-medieval-idle": {
+      "x": 1022,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-medieval-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-medieval-move": {
+      "x": 1090,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-medieval-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-medieval-attack": {
+      "x": 1158,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-medieval-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-medieval-hit": {
+      "x": 1226,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-medieval-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-medieval-death": {
+      "x": 1294,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-medieval-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-medieval-idle": {
+      "x": 1362,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-medieval-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-medieval-move": {
+      "x": 1430,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-medieval-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-medieval-attack": {
+      "x": 1498,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-medieval-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-medieval-hit": {
+      "x": 1566,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-medieval-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-medieval-death": {
+      "x": 1634,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-medieval-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-medieval-idle": {
+      "x": 1702,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-medieval-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-medieval-move": {
+      "x": 1770,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-medieval-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-medieval-attack": {
+      "x": 1838,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-medieval-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-medieval-hit": {
+      "x": 1906,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-medieval-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-medieval-death": {
+      "x": 1974,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-medieval-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-gunpowder-idle": {
+      "x": 2,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-gunpowder-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-gunpowder-move": {
+      "x": 70,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-gunpowder-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-gunpowder-attack": {
+      "x": 138,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-gunpowder-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-gunpowder-hit": {
+      "x": 206,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-gunpowder-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-gunpowder-death": {
+      "x": 274,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-gunpowder-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-gunpowder-idle": {
+      "x": 342,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-gunpowder-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-gunpowder-move": {
+      "x": 410,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-gunpowder-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-gunpowder-attack": {
+      "x": 478,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-gunpowder-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-gunpowder-hit": {
+      "x": 546,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-gunpowder-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-gunpowder-death": {
+      "x": 614,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-gunpowder-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-gunpowder-idle": {
+      "x": 682,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-gunpowder-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-gunpowder-move": {
+      "x": 750,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-gunpowder-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-gunpowder-attack": {
+      "x": 818,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-gunpowder-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-gunpowder-hit": {
+      "x": 886,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-gunpowder-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-gunpowder-death": {
+      "x": 954,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-gunpowder-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-industrial-idle": {
+      "x": 1022,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-industrial-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-industrial-move": {
+      "x": 1090,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-industrial-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-industrial-attack": {
+      "x": 1158,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-industrial-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-industrial-hit": {
+      "x": 1226,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-industrial-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-industrial-death": {
+      "x": 1294,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-industrial-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-industrial-idle": {
+      "x": 1362,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-industrial-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-industrial-move": {
+      "x": 1430,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-industrial-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-industrial-attack": {
+      "x": 1498,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-industrial-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-industrial-hit": {
+      "x": 1566,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-industrial-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-industrial-death": {
+      "x": 1634,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-industrial-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-industrial-idle": {
+      "x": 1702,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-industrial-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-industrial-move": {
+      "x": 1770,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-industrial-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-industrial-attack": {
+      "x": 1838,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-industrial-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-industrial-hit": {
+      "x": 1906,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-industrial-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-industrial-death": {
+      "x": 1974,
+      "y": 138,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-industrial-death.svg",
+      "extruded": 2
+    },
+    "unit-melee-modern-idle": {
+      "x": 2,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-modern-idle.svg",
+      "extruded": 2
+    },
+    "unit-melee-modern-move": {
+      "x": 70,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-modern-move.svg",
+      "extruded": 2
+    },
+    "unit-melee-modern-attack": {
+      "x": 138,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-modern-attack.svg",
+      "extruded": 2
+    },
+    "unit-melee-modern-hit": {
+      "x": 206,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-modern-hit.svg",
+      "extruded": 2
+    },
+    "unit-melee-modern-death": {
+      "x": 274,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/melee-modern-death.svg",
+      "extruded": 2
+    },
+    "unit-ranged-modern-idle": {
+      "x": 342,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-modern-idle.svg",
+      "extruded": 2
+    },
+    "unit-ranged-modern-move": {
+      "x": 410,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-modern-move.svg",
+      "extruded": 2
+    },
+    "unit-ranged-modern-attack": {
+      "x": 478,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-modern-attack.svg",
+      "extruded": 2
+    },
+    "unit-ranged-modern-hit": {
+      "x": 546,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-modern-hit.svg",
+      "extruded": 2
+    },
+    "unit-ranged-modern-death": {
+      "x": 614,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/ranged-modern-death.svg",
+      "extruded": 2
+    },
+    "unit-heavy-modern-idle": {
+      "x": 682,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-modern-idle.svg",
+      "extruded": 2
+    },
+    "unit-heavy-modern-move": {
+      "x": 750,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-modern-move.svg",
+      "extruded": 2
+    },
+    "unit-heavy-modern-attack": {
+      "x": 818,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-modern-attack.svg",
+      "extruded": 2
+    },
+    "unit-heavy-modern-hit": {
+      "x": 886,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-modern-hit.svg",
+      "extruded": 2
+    },
+    "unit-heavy-modern-death": {
+      "x": 954,
+      "y": 206,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "units/heavy-modern-death.svg",
+      "extruded": 2
+    }
+  }
+}

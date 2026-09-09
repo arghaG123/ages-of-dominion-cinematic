@@ -1,0 +1,70 @@
+{
+  "id": "benchmark",
+  "image": null,
+  "width": 340,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "bench-hero-knight": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "benchmarks/hero-knight.svg",
+      "extruded": 2
+    },
+    "bench-bld-townhall": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "benchmarks/bld-townhall.svg",
+      "extruded": 2
+    },
+    "bench-battle-plains": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "benchmarks/battle-plains.svg",
+      "extruded": 2
+    },
+    "bench-unit-clubman": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "benchmarks/unit-clubman.svg",
+      "extruded": 2
+    },
+    "bench-ui-panel": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "benchmarks/ui-panel.svg",
+      "extruded": 2
+    }
+  }
+}

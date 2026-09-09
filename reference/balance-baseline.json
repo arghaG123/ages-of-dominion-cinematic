@@ -1,0 +1,56 @@
+{
+  "source": "ages-of-dominion balance-sim 7 Sep 2026",
+  "matrix": "50 battles per age, competent hero",
+  "ages": [
+    {
+      "age": 0,
+      "name": "Stone",
+      "winRate": 1,
+      "avgRounds": 1,
+      "avgCasualties": 0.187
+    },
+    {
+      "age": 1,
+      "name": "Bronze",
+      "winRate": 1,
+      "avgRounds": 2,
+      "avgCasualties": 0.436
+    },
+    {
+      "age": 2,
+      "name": "Iron",
+      "winRate": 1,
+      "avgRounds": 1.9,
+      "avgCasualties": 0.266
+    },
+    {
+      "age": 3,
+      "name": "Medieval",
+      "winRate": 1,
+      "avgRounds": 2.5,
+      "avgCasualties": 0.356
+    },
+    {
+      "age": 4,
+      "name": "Gunpowder",
+      "winRate": 1,
+      "avgRounds": 3,
+      "avgCasualties": 0.667
+    },
+    {
+      "age": 5,
+      "name": "Industrial",
+      "winRate": 1,
+      "avgRounds": 3.9,
+      "avgCasualties": 0.785
+    },
+    {
+      "age": 6,
+      "name": "Modern",
+      "winRate": 1,
+      "avgRounds": 5.7,
+      "avgCasualties": 0.895
+    }
+  ],
+  "note": "No src/data retune. Baseline for cinematic rebuild parity."
+}

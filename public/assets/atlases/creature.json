@@ -1,0 +1,490 @@
+{
+  "id": "creature",
+  "image": null,
+  "width": 2040,
+  "height": 136,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "enemy-wolf-idle": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wolf-idle.svg",
+      "extruded": 2
+    },
+    "enemy-wolf-move": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wolf-move.svg",
+      "extruded": 2
+    },
+    "enemy-wolf-attack": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wolf-attack.svg",
+      "extruded": 2
+    },
+    "enemy-wolf-hit": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wolf-hit.svg",
+      "extruded": 2
+    },
+    "enemy-wolf-death": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wolf-death.svg",
+      "extruded": 2
+    },
+    "enemy-bandit-idle": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bandit-idle.svg",
+      "extruded": 2
+    },
+    "enemy-bandit-move": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bandit-move.svg",
+      "extruded": 2
+    },
+    "enemy-bandit-attack": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bandit-attack.svg",
+      "extruded": 2
+    },
+    "enemy-bandit-hit": {
+      "x": 546,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bandit-hit.svg",
+      "extruded": 2
+    },
+    "enemy-bandit-death": {
+      "x": 614,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bandit-death.svg",
+      "extruded": 2
+    },
+    "enemy-bear-idle": {
+      "x": 682,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bear-idle.svg",
+      "extruded": 2
+    },
+    "enemy-bear-move": {
+      "x": 750,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bear-move.svg",
+      "extruded": 2
+    },
+    "enemy-bear-attack": {
+      "x": 818,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bear-attack.svg",
+      "extruded": 2
+    },
+    "enemy-bear-hit": {
+      "x": 886,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bear-hit.svg",
+      "extruded": 2
+    },
+    "enemy-bear-death": {
+      "x": 954,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/bear-death.svg",
+      "extruded": 2
+    },
+    "enemy-harpy-idle": {
+      "x": 1022,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/harpy-idle.svg",
+      "extruded": 2
+    },
+    "enemy-harpy-move": {
+      "x": 1090,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/harpy-move.svg",
+      "extruded": 2
+    },
+    "enemy-harpy-attack": {
+      "x": 1158,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/harpy-attack.svg",
+      "extruded": 2
+    },
+    "enemy-harpy-hit": {
+      "x": 1226,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/harpy-hit.svg",
+      "extruded": 2
+    },
+    "enemy-harpy-death": {
+      "x": 1294,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/harpy-death.svg",
+      "extruded": 2
+    },
+    "enemy-golem-idle": {
+      "x": 1362,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/golem-idle.svg",
+      "extruded": 2
+    },
+    "enemy-golem-move": {
+      "x": 1430,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/golem-move.svg",
+      "extruded": 2
+    },
+    "enemy-golem-attack": {
+      "x": 1498,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/golem-attack.svg",
+      "extruded": 2
+    },
+    "enemy-golem-hit": {
+      "x": 1566,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/golem-hit.svg",
+      "extruded": 2
+    },
+    "enemy-golem-death": {
+      "x": 1634,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/golem-death.svg",
+      "extruded": 2
+    },
+    "enemy-griffin-idle": {
+      "x": 1702,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/griffin-idle.svg",
+      "extruded": 2
+    },
+    "enemy-griffin-move": {
+      "x": 1770,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/griffin-move.svg",
+      "extruded": 2
+    },
+    "enemy-griffin-attack": {
+      "x": 1838,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/griffin-attack.svg",
+      "extruded": 2
+    },
+    "enemy-griffin-hit": {
+      "x": 1906,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/griffin-hit.svg",
+      "extruded": 2
+    },
+    "enemy-griffin-death": {
+      "x": 1974,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/griffin-death.svg",
+      "extruded": 2
+    },
+    "enemy-wyvern-idle": {
+      "x": 2,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wyvern-idle.svg",
+      "extruded": 2
+    },
+    "enemy-wyvern-move": {
+      "x": 70,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wyvern-move.svg",
+      "extruded": 2
+    },
+    "enemy-wyvern-attack": {
+      "x": 138,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wyvern-attack.svg",
+      "extruded": 2
+    },
+    "enemy-wyvern-hit": {
+      "x": 206,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wyvern-hit.svg",
+      "extruded": 2
+    },
+    "enemy-wyvern-death": {
+      "x": 274,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/wyvern-death.svg",
+      "extruded": 2
+    },
+    "enemy-drone-idle": {
+      "x": 342,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/drone-idle.svg",
+      "extruded": 2
+    },
+    "enemy-drone-move": {
+      "x": 410,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/drone-move.svg",
+      "extruded": 2
+    },
+    "enemy-drone-attack": {
+      "x": 478,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/drone-attack.svg",
+      "extruded": 2
+    },
+    "enemy-drone-hit": {
+      "x": 546,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/drone-hit.svg",
+      "extruded": 2
+    },
+    "enemy-drone-death": {
+      "x": 614,
+      "y": 70,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "creatures/drone-death.svg",
+      "extruded": 2
+    }
+  }
+}

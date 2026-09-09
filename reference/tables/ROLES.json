@@ -1,0 +1,106 @@
+{
+  "melee": {
+    "n": "Melee",
+    "ic": [
+      "🪨",
+      "🗡️",
+      "🛡️",
+      "⚔️",
+      "🔫",
+      "🪖",
+      "🎖️"
+    ],
+    "names": [
+      "Clubman",
+      "Axeman",
+      "Legionary",
+      "Man-at-Arms",
+      "Grenadier",
+      "Rifleman",
+      "Assault Trooper"
+    ],
+    "atk": 4,
+    "def": 5,
+    "hp": 11,
+    "dmin": 2,
+    "dmax": 4,
+    "spd": 5,
+    "rng": 0,
+    "shots": 0,
+    "block": 3,
+    "cost": {
+      "food": 45,
+      "gold": 10
+    }
+  },
+  "ranged": {
+    "n": "Shooter",
+    "ic": [
+      "🪃",
+      "🏹",
+      "🎯",
+      "🏹",
+      "🔭",
+      "🎯",
+      "📡"
+    ],
+    "names": [
+      "Slinger",
+      "Archer",
+      "Crossbowman",
+      "Longbowman",
+      "Musketeer",
+      "Sharpshooter",
+      "Marksman"
+    ],
+    "atk": 6,
+    "def": 3,
+    "hp": 8,
+    "dmin": 3,
+    "dmax": 5,
+    "spd": 4,
+    "rng": 6,
+    "shots": 14,
+    "block": 0,
+    "cost": {
+      "food": 30,
+      "wood": 25,
+      "gold": 15
+    }
+  },
+  "heavy": {
+    "n": "Heavy",
+    "ic": [
+      "🦣",
+      "🐎",
+      "🐘",
+      "🐴",
+      "💣",
+      "🚂",
+      "🛡️"
+    ],
+    "names": [
+      "Bone Crusher",
+      "Charioteer",
+      "War Elephant",
+      "Siege Knight",
+      "Cannon Crew",
+      "Steam Walker",
+      "Battle Tank"
+    ],
+    "atk": 8,
+    "def": 8,
+    "hp": 28,
+    "dmin": 6,
+    "dmax": 10,
+    "spd": 3,
+    "rng": 0,
+    "shots": 0,
+    "block": 2,
+    "cost": {
+      "food": 70,
+      "wood": 30,
+      "gold": 35
+    }
+  }
+}

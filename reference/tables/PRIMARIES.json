@@ -1,0 +1,26 @@
+[
+  {
+    "k": "atk",
+    "n": "Attack",
+    "ic": "⚔️",
+    "d": "+5% troop damage per point over enemy defense"
+  },
+  {
+    "k": "def",
+    "n": "Defense",
+    "ic": "🛡️",
+    "d": "-2.5% damage taken per point over enemy attack (max 70%)"
+  },
+  {
+    "k": "pow",
+    "n": "Power",
+    "ic": "✨",
+    "d": "Scales spell damage, healing and duration"
+  },
+  {
+    "k": "kno",
+    "n": "Knowledge",
+    "ic": "📘",
+    "d": "Mana = knowledge × 10"
+  }
+]

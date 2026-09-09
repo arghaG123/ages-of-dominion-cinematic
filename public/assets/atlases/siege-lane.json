@@ -1,0 +1,82 @@
+{
+  "id": "siege-lane",
+  "image": null,
+  "width": 408,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "siege-lane-lowlands": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-lowlands.svg",
+      "extruded": 2
+    },
+    "siege-lane-forest": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-forest.svg",
+      "extruded": 2
+    },
+    "siege-lane-swamp": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-swamp.svg",
+      "extruded": 2
+    },
+    "siege-lane-desert": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-desert.svg",
+      "extruded": 2
+    },
+    "siege-lane-snow": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-snow.svg",
+      "extruded": 2
+    },
+    "siege-lane-darklands": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "siege/lane-darklands.svg",
+      "extruded": 2
+    }
+  }
+}

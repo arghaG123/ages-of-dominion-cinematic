@@ -1,0 +1,36 @@
+{
+  "name": "ages-of-dominion-cinematic",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "description": "Ages of Dominion — cinematic dark-fantasy rebuild. Offline Android strategy.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "export:reference": "node scripts/export-reference.mjs",
+    "assets:atlas": "node scripts/build-atlases.mjs",
+    "assets:placeholders": "node scripts/generate-placeholders.mjs",
+    "assets:validate": "node scripts/validate-assets.mjs",
+    "cap:sync": "npx cap sync",
+    "build:android": "vite build && npx cap sync android"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^7.6.9",
+    "@capacitor/cli": "^7.6.9",
+    "playwright": "^1.49.0",
+    "sharp": "^0.33.5",
+    "vite": "^6.0.0",
+    "vitest": "^2.1.0"
+  },
+  "dependencies": {
+    "@capacitor/app": "^7.1.2",
+    "@capacitor/core": "^7.6.9",
+    "@capacitor/filesystem": "^7.1.8",
+    "@capacitor/haptics": "^7.0.5",
+    "@capacitor/preferences": "^7.0.4",
+    "@capacitor/share": "^7.0.4"
+  }
+}

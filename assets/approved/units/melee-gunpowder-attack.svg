@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="100%" height="100%" fill="#12151b"/>
+  <rect x="8" y="8" width="240" height="240" rx="12" fill="#2a3140" stroke="#c9a227" stroke-width="3"/>
+  <text x="50%" y="50%" fill="#e8e4d9" font-family="Georgia, serif" font-size="14" text-anchor="middle" dominant-baseline="middle">melee gunpowder attack</text>
+  <text x="50%" y="236" fill="#6e788a" font-size="11" text-anchor="middle">placeholder-ship</text>
+</svg>

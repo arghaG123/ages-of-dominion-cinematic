@@ -1,0 +1,118 @@
+{
+  "id": "hero",
+  "image": null,
+  "width": 612,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "hero-knight-portrait": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/knight-portrait.svg",
+      "extruded": 2
+    },
+    "hero-knight-idle": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/knight-idle.svg",
+      "extruded": 2
+    },
+    "hero-knight-turn": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/knight-turn.svg",
+      "extruded": 2
+    },
+    "hero-ranger-portrait": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/ranger-portrait.svg",
+      "extruded": 2
+    },
+    "hero-ranger-idle": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/ranger-idle.svg",
+      "extruded": 2
+    },
+    "hero-ranger-turn": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/ranger-turn.svg",
+      "extruded": 2
+    },
+    "hero-warlock-portrait": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/warlock-portrait.svg",
+      "extruded": 2
+    },
+    "hero-warlock-idle": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/warlock-idle.svg",
+      "extruded": 2
+    },
+    "hero-warlock-turn": {
+      "x": 546,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "hero/warlock-turn.svg",
+      "extruded": 2
+    }
+  }
+}

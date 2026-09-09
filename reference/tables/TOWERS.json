@@ -1,0 +1,93 @@
+{
+  "arrow": {
+    "n": "Arrow",
+    "ic": "🏹",
+    "dmg": 10,
+    "rate": 0.7,
+    "rng": 2.9,
+    "hp": 150,
+    "cost": {
+      "wood": 70,
+      "stone": 30,
+      "gold": 25
+    },
+    "names": [
+      "Sling Post",
+      "Archer Nest",
+      "Ballista Tower",
+      "Arrow Turret",
+      "Musket Tower",
+      "Gatling Nest",
+      "Missile Turret"
+    ]
+  },
+  "splash": {
+    "n": "Splash",
+    "ic": "💥",
+    "dmg": 18,
+    "rate": 1.9,
+    "rng": 3.3,
+    "splash": 1.15,
+    "hp": 130,
+    "cost": {
+      "wood": 80,
+      "stone": 90,
+      "gold": 45
+    },
+    "names": [
+      "Rock Chucker",
+      "Catapult",
+      "Onager",
+      "Trebuchet",
+      "Mortar",
+      "Howitzer",
+      "Artillery Bay"
+    ]
+  },
+  "slow": {
+    "n": "Control",
+    "ic": "❄️",
+    "dmg": 3,
+    "rate": 1.1,
+    "rng": 2.3,
+    "slow": 0.45,
+    "hp": 120,
+    "cost": {
+      "wood": 50,
+      "stone": 70,
+      "gold": 25
+    },
+    "names": [
+      "Tar Pit",
+      "Caltrop Field",
+      "Oil Cauldron",
+      "Barbed Snare",
+      "Chain Trap",
+      "Steam Vent",
+      "Cryo Emitter"
+    ]
+  },
+  "support": {
+    "n": "Support",
+    "ic": "📯",
+    "dmg": 0,
+    "rate": 0,
+    "rng": 3.1,
+    "aura": 0.22,
+    "hp": 110,
+    "cost": {
+      "wood": 80,
+      "stone": 50,
+      "gold": 60
+    },
+    "names": [
+      "Drum Totem",
+      "War Horn",
+      "Signal Fire",
+      "Banner Post",
+      "Bugle Post",
+      "Telegraph Mast",
+      "Radio Mast"
+    ]
+  }
+}

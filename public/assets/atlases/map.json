@@ -1,0 +1,82 @@
+{
+  "id": "map",
+  "image": null,
+  "width": 408,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "map-lowlands": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/lowlands.svg",
+      "extruded": 2
+    },
+    "map-forest": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/forest.svg",
+      "extruded": 2
+    },
+    "map-swamp": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/swamp.svg",
+      "extruded": 2
+    },
+    "map-desert": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/desert.svg",
+      "extruded": 2
+    },
+    "map-snow": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/snow.svg",
+      "extruded": 2
+    },
+    "map-darklands": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "map/darklands.svg",
+      "extruded": 2
+    }
+  }
+}

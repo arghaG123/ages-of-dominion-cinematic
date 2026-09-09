@@ -1,0 +1,157 @@
+{
+  "v": 99,
+  "profile": {
+    "name": "Kael",
+    "banner": "banner",
+    "created": 1700000000000,
+    "wins": 1,
+    "losses": 0,
+    "battles": 1,
+    "duels": 0
+  },
+  "age": 0,
+  "t": 1700000000000,
+  "res": {
+    "food": 250,
+    "wood": 250,
+    "stone": 160,
+    "gold": 150
+  },
+  "bld": {
+    "townhall": {
+      "l": 1
+    },
+    "farm": {
+      "l": 1
+    },
+    "lumber": {
+      "l": 1
+    },
+    "quarry": {
+      "l": 0
+    },
+    "mine": {
+      "l": 0
+    },
+    "barracks": {
+      "l": 1
+    },
+    "workshop": {
+      "l": 1
+    },
+    "hall": {
+      "l": 0
+    },
+    "armory": {
+      "l": 0
+    },
+    "walls": {
+      "l": 1
+    }
+  },
+  "army": [
+    {
+      "id": "a1",
+      "kind": "role",
+      "type": "melee",
+      "age": 0,
+      "count": 12,
+      "rank": 0,
+      "xp": 0
+    },
+    {
+      "id": "a2",
+      "kind": "role",
+      "type": "ranged",
+      "age": 0,
+      "count": 8,
+      "rank": 0,
+      "xp": 0
+    }
+  ],
+  "towers": [
+    {
+      "id": "t1",
+      "fam": "arrow",
+      "tier": 0,
+      "rank": 0,
+      "xp": 0
+    },
+    {
+      "id": "t2",
+      "fam": "slow",
+      "tier": 0,
+      "rank": 0,
+      "xp": 0
+    }
+  ],
+  "hero": {
+    "name": "Kael",
+    "cls": "ranger",
+    "lvl": 1,
+    "xp": 0,
+    "pts": 0,
+    "atk": 2,
+    "def": 2,
+    "pow": 2,
+    "kno": 2,
+    "mana": 20,
+    "skills": {},
+    "spells": [
+      "haste",
+      "arrow"
+    ],
+    "equip": {
+      "weapon": null,
+      "armor": null,
+      "helm": null,
+      "boots": null,
+      "art1": null,
+      "art2": null
+    },
+    "bag": [],
+    "mp": 5,
+    "mpMax": 5
+  },
+  "map": null,
+  "day": 1,
+  "story": {
+    "ch": 0,
+    "log": [],
+    "flags": {}
+  },
+  "quests": [
+    {
+      "id": "q1",
+      "n": "Win your first battle",
+      "need": "wins",
+      "v": 1,
+      "done": false,
+      "rw": {
+        "gold": 120
+      }
+    }
+  ],
+  "claimedMilestones": [],
+  "campaign": {
+    "cleared": 0
+  },
+  "endlessBest": 0,
+  "builds": [],
+  "rival": {
+    "name": "Varric the Ash",
+    "portrait": "rival",
+    "defeated": false,
+    "encounters": 0,
+    "remembers": []
+  },
+  "tutorial": {
+    "step": 0,
+    "done": false
+  },
+  "meta": {
+    "playtime": 120,
+    "savedAt": 1700000000000,
+    "createdAt": 1700000000000
+  }
+}

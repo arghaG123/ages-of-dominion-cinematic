@@ -1,0 +1,50 @@
+:root {
+  /* Cinematic dark-fantasy tokens — glass/metal UI, subtle gold */
+  --bg-deep: #0b0d12;
+  --bg: #12151b;
+  --bg-elev: #1a1f29;
+  --panel: rgba(26, 31, 41, 0.88);
+  --panel-solid: #1a1f29;
+  --glass: rgba(36, 44, 58, 0.72);
+  --metal: #2a3140;
+  --leather: #3a2e24;
+  --parchment: #c4b79a;
+  --iron: #6e788a;
+  --gold: #c9a227;
+  --gold-dim: #8a7020;
+  --gold-glow: rgba(201, 162, 39, 0.35);
+  --text: #e8e4d9;
+  --text-dim: #9aa3b2;
+  --danger: #c45c4a;
+  --ok: #5a9a6a;
+  --focus: #d4b84a;
+
+  --font-display: "Cinzel", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+
+  --fs-body: clamp(14px, 2.8vw, 16px);
+  --fs-secondary: clamp(12px, 2.4vw, 13px);
+  --fs-title: clamp(22px, 5vw, 34px);
+  --fs-brand: clamp(28px, 7vw, 44px);
+
+  --space-1: clamp(4px, 1vw, 6px);
+  --space-2: clamp(8px, 2vw, 12px);
+  --space-3: clamp(12px, 3vw, 18px);
+  --space-4: clamp(16px, 4vw, 24px);
+
+  --tap: 44px;
+  --radius: 10px;
+  --header-h: calc(56px + env(safe-area-inset-top, 0px));
+  --nav-h: calc(56px + env(safe-area-inset-bottom, 0px));
+  --z-toast: 200;
+  --z-sheet: 80;
+  --z-ov: 90;
+  --z-title: 120;
+  --z-class: 125;
+}
+
+@font-face {
+  font-family: "Cinzel";
+  src: local("Cinzel"), local("Georgia");
+  font-display: swap;
+}

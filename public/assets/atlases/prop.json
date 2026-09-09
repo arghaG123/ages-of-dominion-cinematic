@@ -1,0 +1,22 @@
+{
+  "id": "prop",
+  "image": null,
+  "width": 68,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "fx-scaffold": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "props/scaffold.svg",
+      "extruded": 2
+    }
+  }
+}

@@ -1,0 +1,1284 @@
+{
+  "game": "Ages of Dominion",
+  "exportedFrom": "C:/dev/ages-of-dominion",
+  "generated": "2026-09-09T13:47:03.466Z",
+  "tables": {
+    "AGES": [
+      {
+        "n": "Stone Age",
+        "ic": "🪨"
+      },
+      {
+        "n": "Bronze Age",
+        "ic": "🗡️"
+      },
+      {
+        "n": "Iron Age",
+        "ic": "⚒️"
+      },
+      {
+        "n": "Medieval Age",
+        "ic": "🏰"
+      },
+      {
+        "n": "Gunpowder Age",
+        "ic": "💣"
+      },
+      {
+        "n": "Industrial Age",
+        "ic": "⚙️"
+      },
+      {
+        "n": "Modern Age",
+        "ic": "🚀"
+      }
+    ],
+    "ARTIFACTS": {
+      "wolfamulet": {
+        "n": "Amulet of the Wolf",
+        "ic": "🐺",
+        "b": {
+          "morale": 2
+        },
+        "d": "+2 morale"
+      },
+      "bloodstone": {
+        "n": "Bloodstone",
+        "ic": "🔴",
+        "b": {
+          "atk": 3
+        },
+        "d": "+3 attack"
+      },
+      "aegis": {
+        "n": "Aegis Shard",
+        "ic": "🔷",
+        "b": {
+          "def": 3
+        },
+        "d": "+3 defense"
+      },
+      "codex": {
+        "n": "Sage's Codex",
+        "ic": "📜",
+        "b": {
+          "kno": 4
+        },
+        "d": "+4 knowledge"
+      },
+      "orb": {
+        "n": "Orb of Storms",
+        "ic": "🔮",
+        "b": {
+          "pow": 3
+        },
+        "d": "+3 power"
+      },
+      "clover": {
+        "n": "Iron Clover",
+        "ic": "🍀",
+        "b": {
+          "luck": 2
+        },
+        "d": "+2 luck"
+      },
+      "lens": {
+        "n": "Eagle Eye Lens",
+        "ic": "🔭",
+        "b": {
+          "shootBon": 0.25
+        },
+        "d": "+25% shooter damage"
+      },
+      "vitality": {
+        "n": "Ring of Vitality",
+        "ic": "💍",
+        "b": {
+          "hpBon": 0.15
+        },
+        "d": "+15% troop HP"
+      },
+      "swiftboots": {
+        "n": "Winged Spurs",
+        "ic": "🪶",
+        "b": {
+          "spdBon": 2
+        },
+        "d": "+2 speed to all stacks"
+      },
+      "banner": {
+        "n": "Ancient Banner",
+        "ic": "🚩",
+        "b": {
+          "morale": 1,
+          "atk": 1,
+          "def": 1
+        },
+        "d": "+1 morale, attack, defense"
+      }
+    },
+    "BUILDINGS": {
+      "townhall": {
+        "n": "Town Hall",
+        "ic": "🏛️",
+        "c": {
+          "wood": 60,
+          "stone": 40
+        },
+        "g": 1.75,
+        "d": "Seat of your realm. Its level gates the next age."
+      },
+      "farm": {
+        "n": "Farm",
+        "ic": "🌾",
+        "c": {
+          "wood": 35
+        },
+        "g": 1.5,
+        "d": "+0.55 food/s per level"
+      },
+      "lumber": {
+        "n": "Lumber Camp",
+        "ic": "🪓",
+        "c": {
+          "wood": 25,
+          "stone": 15
+        },
+        "g": 1.5,
+        "d": "+0.45 wood/s per level"
+      },
+      "quarry": {
+        "n": "Quarry",
+        "ic": "⛏️",
+        "c": {
+          "wood": 45,
+          "stone": 15
+        },
+        "g": 1.55,
+        "d": "+0.35 stone/s per level"
+      },
+      "mine": {
+        "n": "Gold Mine",
+        "ic": "💰",
+        "c": {
+          "wood": 70,
+          "stone": 50
+        },
+        "g": 1.6,
+        "d": "+0.25 gold/s per level"
+      },
+      "barracks": {
+        "n": "Barracks",
+        "ic": "⚔️",
+        "c": {
+          "wood": 90,
+          "stone": 45
+        },
+        "g": 1.6,
+        "d": "Army roster slots: 2 + level"
+      },
+      "workshop": {
+        "n": "Siege Workshop",
+        "ic": "🔧",
+        "c": {
+          "wood": 70,
+          "stone": 95
+        },
+        "g": 1.6,
+        "d": "Tower slots: 2 + level"
+      },
+      "hall": {
+        "n": "Hero Hall",
+        "ic": "🎖️",
+        "c": {
+          "wood": 110,
+          "stone": 70,
+          "gold": 60
+        },
+        "g": 1.7,
+        "d": "+15% hero XP per level"
+      },
+      "armory": {
+        "n": "Armory",
+        "ic": "🛠️",
+        "c": {
+          "wood": 120,
+          "stone": 120,
+          "gold": 80
+        },
+        "g": 1.7,
+        "d": "Forges hero equipment. Higher level = better quality."
+      },
+      "walls": {
+        "n": "Walls",
+        "ic": "🧱",
+        "c": {
+          "stone": 120,
+          "wood": 40
+        },
+        "g": 1.6,
+        "d": "+180 castle core HP per level"
+      }
+    },
+    "CLASSES": {
+      "knight": {
+        "n": "Knight",
+        "ic": "🛡️",
+        "d": "Might hero. Fast attack/defense growth, strong troops.",
+        "g": {
+          "atk": 0.35,
+          "def": 0.35,
+          "pow": 0.15,
+          "kno": 0.15
+        },
+        "start": {
+          "atk": 3,
+          "def": 3,
+          "pow": 1,
+          "kno": 1
+        },
+        "spell": "bless"
+      },
+      "ranger": {
+        "n": "Ranger",
+        "ic": "🏹",
+        "d": "Balanced. Shooters and map movement.",
+        "g": {
+          "atk": 0.3,
+          "def": 0.2,
+          "pow": 0.25,
+          "kno": 0.25
+        },
+        "start": {
+          "atk": 2,
+          "def": 2,
+          "pow": 2,
+          "kno": 2
+        },
+        "spell": "haste"
+      },
+      "warlock": {
+        "n": "Warlock",
+        "ic": "🔮",
+        "d": "Magic hero. Big spells, weaker troops.",
+        "g": {
+          "atk": 0.15,
+          "def": 0.15,
+          "pow": 0.35,
+          "kno": 0.35
+        },
+        "start": {
+          "atk": 1,
+          "def": 1,
+          "pow": 3,
+          "kno": 3
+        },
+        "spell": "arrow"
+      }
+    },
+    "CREATURES": {
+      "wolf": {
+        "n": "Dire Wolf",
+        "ic": "🐺",
+        "t": 1,
+        "atk": 6,
+        "def": 3,
+        "hp": 10,
+        "dmin": 2,
+        "dmax": 5,
+        "spd": 7,
+        "rng": 0,
+        "shots": 0,
+        "block": 2,
+        "cost": {
+          "food": 40,
+          "gold": 35
+        }
+      },
+      "bandit": {
+        "n": "Bandit",
+        "ic": "🏴",
+        "t": 1,
+        "atk": 5,
+        "def": 4,
+        "hp": 12,
+        "dmin": 2,
+        "dmax": 4,
+        "spd": 5,
+        "rng": 5,
+        "shots": 10,
+        "block": 1,
+        "cost": {
+          "food": 25,
+          "gold": 50
+        }
+      },
+      "bear": {
+        "n": "Cave Bear",
+        "ic": "🐻",
+        "t": 2,
+        "atk": 8,
+        "def": 6,
+        "hp": 26,
+        "dmin": 5,
+        "dmax": 9,
+        "spd": 4,
+        "rng": 0,
+        "shots": 0,
+        "block": 3,
+        "cost": {
+          "food": 80,
+          "gold": 70
+        }
+      },
+      "harpy": {
+        "n": "Harpy",
+        "ic": "🦅",
+        "t": 2,
+        "atk": 7,
+        "def": 4,
+        "hp": 16,
+        "dmin": 3,
+        "dmax": 6,
+        "spd": 8,
+        "rng": 0,
+        "shots": 0,
+        "block": 1,
+        "fly": 1,
+        "cost": {
+          "food": 50,
+          "gold": 90
+        }
+      },
+      "golem": {
+        "n": "Stone Golem",
+        "ic": "🗿",
+        "t": 3,
+        "atk": 9,
+        "def": 12,
+        "hp": 52,
+        "dmin": 7,
+        "dmax": 12,
+        "spd": 3,
+        "rng": 0,
+        "shots": 0,
+        "block": 4,
+        "cost": {
+          "stone": 120,
+          "gold": 160
+        }
+      },
+      "griffin": {
+        "n": "Griffin",
+        "ic": "🦁",
+        "t": 3,
+        "atk": 11,
+        "def": 9,
+        "hp": 38,
+        "dmin": 6,
+        "dmax": 14,
+        "spd": 9,
+        "rng": 0,
+        "shots": 0,
+        "block": 2,
+        "fly": 1,
+        "cost": {
+          "food": 120,
+          "gold": 180
+        }
+      },
+      "wyvern": {
+        "n": "Wyvern",
+        "ic": "🐉",
+        "t": 4,
+        "atk": 14,
+        "def": 12,
+        "hp": 70,
+        "dmin": 12,
+        "dmax": 20,
+        "spd": 9,
+        "rng": 0,
+        "shots": 0,
+        "block": 3,
+        "fly": 1,
+        "cost": {
+          "food": 200,
+          "gold": 320
+        }
+      },
+      "drone": {
+        "n": "Drone Swarm",
+        "ic": "🛸",
+        "t": 4,
+        "atk": 13,
+        "def": 8,
+        "hp": 44,
+        "dmin": 10,
+        "dmax": 16,
+        "spd": 10,
+        "rng": 8,
+        "shots": 16,
+        "block": 0,
+        "fly": 1,
+        "cost": {
+          "gold": 400,
+          "stone": 80
+        }
+      }
+    },
+    "GEAR": {
+      "weapon": {
+        "ic": "⚔️",
+        "main": "atk",
+        "names": [
+          "Flint Club",
+          "Bronze Sword",
+          "Iron Gladius",
+          "Knight's Longsword",
+          "Flintlock Brace",
+          "Repeating Carbine",
+          "Pulse Rifle"
+        ]
+      },
+      "armor": {
+        "ic": "🥋",
+        "main": "def",
+        "names": [
+          "Hide Wrap",
+          "Bronze Cuirass",
+          "Iron Lorica",
+          "Plate Harness",
+          "Musketeer Coat",
+          "Riveted Vest",
+          "Composite Plate"
+        ]
+      },
+      "helm": {
+        "ic": "⛑️",
+        "main": "kno",
+        "names": [
+          "Bone Circlet",
+          "Bronze Helm",
+          "Iron Sallet",
+          "Great Helm",
+          "Tricorn Hat",
+          "Field Cap",
+          "Combat Visor"
+        ]
+      },
+      "boots": {
+        "ic": "🥾",
+        "main": "move",
+        "names": [
+          "Hide Wraps",
+          "Leather Sandals",
+          "Studded Caligae",
+          "Steel Sabatons",
+          "Riding Boots",
+          "Marching Boots",
+          "Assault Boots"
+        ]
+      }
+    },
+    "PRIMARIES": [
+      {
+        "k": "atk",
+        "n": "Attack",
+        "ic": "⚔️",
+        "d": "+5% troop damage per point over enemy defense"
+      },
+      {
+        "k": "def",
+        "n": "Defense",
+        "ic": "🛡️",
+        "d": "-2.5% damage taken per point over enemy attack (max 70%)"
+      },
+      {
+        "k": "pow",
+        "n": "Power",
+        "ic": "✨",
+        "d": "Scales spell damage, healing and duration"
+      },
+      {
+        "k": "kno",
+        "n": "Knowledge",
+        "ic": "📘",
+        "d": "Mana = knowledge × 10"
+      }
+    ],
+    "QUAL": [
+      {
+        "n": "Crude",
+        "m": 1
+      },
+      {
+        "n": "Fine",
+        "m": 1.8
+      },
+      {
+        "n": "Master",
+        "m": 2.8
+      },
+      {
+        "n": "Relic",
+        "m": 4
+      }
+    ],
+    "QUEST_TEMPLATES": [
+      {
+        "id": "q1",
+        "n": "Win your first battle",
+        "need": "wins",
+        "v": 1,
+        "done": false,
+        "rw": {
+          "gold": 120
+        }
+      },
+      {
+        "id": "q2",
+        "n": "Reach the Bronze Age",
+        "need": "age",
+        "v": 1,
+        "done": false,
+        "rw": {
+          "gold": 200,
+          "stone": 150
+        }
+      },
+      {
+        "id": "q3",
+        "n": "Recruit a wild creature",
+        "need": "creature",
+        "v": 1,
+        "done": false,
+        "rw": {
+          "food": 200,
+          "gold": 150
+        }
+      },
+      {
+        "id": "q4",
+        "n": "Rank a stack to Veteran",
+        "need": "rank",
+        "v": 1,
+        "done": false,
+        "rw": {
+          "gold": 250
+        }
+      },
+      {
+        "id": "q5",
+        "n": "Equip a full set of gear",
+        "need": "gear",
+        "v": 4,
+        "done": false,
+        "rw": {
+          "gold": 400
+        }
+      },
+      {
+        "id": "q6",
+        "n": "Survive 10 endless waves",
+        "need": "best",
+        "v": 10,
+        "done": false,
+        "rw": {
+          "gold": 500,
+          "stone": 300
+        }
+      }
+    ],
+    "RANKS": [
+      {
+        "n": "RECRUIT",
+        "c": "#9aa4b2"
+      },
+      {
+        "n": "VETERAN",
+        "c": "#5ec27a"
+      },
+      {
+        "n": "ELITE",
+        "c": "#4aa8ff"
+      },
+      {
+        "n": "CHAMPION",
+        "c": "#b06bff"
+      },
+      {
+        "n": "LEGEND",
+        "c": "#f0a92e"
+      }
+    ],
+    "RANKXP": [
+      0,
+      60,
+      180,
+      420,
+      900
+    ],
+    "RES": [
+      {
+        "k": "food",
+        "ic": "🍖",
+        "n": "Food"
+      },
+      {
+        "k": "wood",
+        "ic": "🪵",
+        "n": "Wood"
+      },
+      {
+        "k": "stone",
+        "ic": "🪨",
+        "n": "Stone"
+      },
+      {
+        "k": "gold",
+        "ic": "🪙",
+        "n": "Gold"
+      }
+    ],
+    "ROLES": {
+      "melee": {
+        "n": "Melee",
+        "ic": [
+          "🪨",
+          "🗡️",
+          "🛡️",
+          "⚔️",
+          "🔫",
+          "🪖",
+          "🎖️"
+        ],
+        "names": [
+          "Clubman",
+          "Axeman",
+          "Legionary",
+          "Man-at-Arms",
+          "Grenadier",
+          "Rifleman",
+          "Assault Trooper"
+        ],
+        "atk": 4,
+        "def": 5,
+        "hp": 11,
+        "dmin": 2,
+        "dmax": 4,
+        "spd": 5,
+        "rng": 0,
+        "shots": 0,
+        "block": 3,
+        "cost": {
+          "food": 45,
+          "gold": 10
+        }
+      },
+      "ranged": {
+        "n": "Shooter",
+        "ic": [
+          "🪃",
+          "🏹",
+          "🎯",
+          "🏹",
+          "🔭",
+          "🎯",
+          "📡"
+        ],
+        "names": [
+          "Slinger",
+          "Archer",
+          "Crossbowman",
+          "Longbowman",
+          "Musketeer",
+          "Sharpshooter",
+          "Marksman"
+        ],
+        "atk": 6,
+        "def": 3,
+        "hp": 8,
+        "dmin": 3,
+        "dmax": 5,
+        "spd": 4,
+        "rng": 6,
+        "shots": 14,
+        "block": 0,
+        "cost": {
+          "food": 30,
+          "wood": 25,
+          "gold": 15
+        }
+      },
+      "heavy": {
+        "n": "Heavy",
+        "ic": [
+          "🦣",
+          "🐎",
+          "🐘",
+          "🐴",
+          "💣",
+          "🚂",
+          "🛡️"
+        ],
+        "names": [
+          "Bone Crusher",
+          "Charioteer",
+          "War Elephant",
+          "Siege Knight",
+          "Cannon Crew",
+          "Steam Walker",
+          "Battle Tank"
+        ],
+        "atk": 8,
+        "def": 8,
+        "hp": 28,
+        "dmin": 6,
+        "dmax": 10,
+        "spd": 3,
+        "rng": 0,
+        "shots": 0,
+        "block": 2,
+        "cost": {
+          "food": 70,
+          "wood": 30,
+          "gold": 35
+        }
+      }
+    },
+    "SKILLS": {
+      "offense": {
+        "n": "Offense",
+        "ic": "⚔️",
+        "d": "+10/20/30% melee damage"
+      },
+      "archery": {
+        "n": "Archery",
+        "ic": "🏹",
+        "d": "+10/25/50% shooter damage"
+      },
+      "armorer": {
+        "n": "Armorer",
+        "ic": "🛡️",
+        "d": "-5/10/15% damage taken"
+      },
+      "wisdom": {
+        "n": "Wisdom",
+        "ic": "📖",
+        "d": "Unlocks level 2/3/4 spells"
+      },
+      "leadership": {
+        "n": "Leadership",
+        "ic": "🎺",
+        "d": "+1/2/3 morale (chance of extra turn)"
+      },
+      "luck": {
+        "n": "Luck",
+        "ic": "🍀",
+        "d": "+1/2/3 luck (chance of double damage)"
+      },
+      "tactics": {
+        "n": "Tactics",
+        "ic": "📐",
+        "d": "+1/2/3 deployment rows"
+      },
+      "logistics": {
+        "n": "Logistics",
+        "ic": "🥾",
+        "d": "+1/2/3 moves on the region map"
+      },
+      "firstaid": {
+        "n": "First Aid",
+        "ic": "⛑️",
+        "d": "Recover 15/30/45% of losses after a won battle"
+      }
+    },
+    "SLOTS": [
+      {
+        "k": "weapon",
+        "n": "Weapon",
+        "ic": "⚔️"
+      },
+      {
+        "k": "armor",
+        "n": "Armor",
+        "ic": "🥋"
+      },
+      {
+        "k": "helm",
+        "n": "Helm",
+        "ic": "⛑️"
+      },
+      {
+        "k": "boots",
+        "n": "Boots",
+        "ic": "🥾"
+      },
+      {
+        "k": "art1",
+        "n": "Artifact",
+        "ic": "💍"
+      },
+      {
+        "k": "art2",
+        "n": "Artifact",
+        "ic": "📿"
+      }
+    ],
+    "SPELLS": {
+      "arrow": {
+        "n": "Magic Arrow",
+        "ic": "🔸",
+        "lv": 1,
+        "mana": 5,
+        "type": "dmg",
+        "_fn_f": "p => 10 + 10 * p",
+        "d": "10 + 10×Power damage"
+      },
+      "bless": {
+        "n": "Bless",
+        "ic": "✨",
+        "lv": 1,
+        "mana": 5,
+        "type": "buff",
+        "d": "Friendly stack always rolls max damage"
+      },
+      "haste": {
+        "n": "Haste",
+        "ic": "💨",
+        "lv": 1,
+        "mana": 6,
+        "type": "buff",
+        "d": "+3 speed to a friendly stack"
+      },
+      "cure": {
+        "n": "Cure",
+        "ic": "💚",
+        "lv": 1,
+        "mana": 6,
+        "type": "heal",
+        "_fn_f": "p => 10 + 10 * p",
+        "d": "Heals 10 + 10×Power"
+      },
+      "slow": {
+        "n": "Slow",
+        "ic": "🐌",
+        "lv": 2,
+        "mana": 8,
+        "type": "debuff",
+        "d": "-3 speed to an enemy stack"
+      },
+      "bolt": {
+        "n": "Lightning Bolt",
+        "ic": "⚡",
+        "lv": 2,
+        "mana": 10,
+        "type": "dmg",
+        "_fn_f": "p => 10 + 25 * p",
+        "d": "10 + 25×Power damage"
+      },
+      "fireball": {
+        "n": "Fireball",
+        "ic": "🔥",
+        "lv": 3,
+        "mana": 14,
+        "type": "aoe",
+        "_fn_f": "p => 10 + 20 * p",
+        "d": "10 + 20×Power to a stack and its neighbours"
+      },
+      "resurrect": {
+        "n": "Resurrection",
+        "ic": "🕊️",
+        "lv": 4,
+        "mana": 20,
+        "type": "res",
+        "_fn_f": "p => 50 * p",
+        "d": "Restores 50×Power HP of losses"
+      }
+    },
+    "STORY": [
+      {
+        "t": "Chapter I — The First Fire",
+        "d": "Your people huddle in a cave mouth while something wet and heavy moves in the dark outside. You have flint, forty spears, and a name people will follow.\n\nThe fire is small. It will not last both the night and the strangers at the treeline.",
+        "ch": [
+          {
+            "t": "Share the fire",
+            "fx": {
+              "food": 120
+            },
+            "flag": "generous",
+            "log": "You shared the first fire. The strangers stayed, and they remembered."
+          },
+          {
+            "t": "Take their flint by force",
+            "fx": {
+              "gold": 100,
+              "stone": 120
+            },
+            "flag": "ruthless",
+            "log": "You took the flint. The strangers did not stay, but your stores grew."
+          }
+        ]
+      },
+      {
+        "t": "Chapter II — Metal and Debt",
+        "d": "The smelters work day and night. A trader from downriver offers a shipment on credit, with terms you cannot read.",
+        "ch": [
+          {
+            "t": "Sign the terms",
+            "fx": {
+              "wood": 400,
+              "stone": 400
+            },
+            "flag": "indebted",
+            "log": "The bronze arrived. So did the debt."
+          },
+          {
+            "t": "Mine your own",
+            "fx": {
+              "food": 250
+            },
+            "flag": "independent",
+            "log": "You dug your own ore. Slower, but yours."
+          }
+        ]
+      },
+      {
+        "t": "Chapter III — The Iron Road",
+        "d": "Iron changes what a border means. Scouts return with maps of three valleys and the names of the warlords who hold them.",
+        "ch": [
+          {
+            "t": "Fortify the passes",
+            "fx": {
+              "stone": 600
+            },
+            "flag": "defender",
+            "log": "You chose walls over marches."
+          },
+          {
+            "t": "Strike the nearest warlord",
+            "fx": {
+              "gold": 500
+            },
+            "flag": "conqueror",
+            "log": "You struck first, and the valley learned your banner."
+          }
+        ]
+      },
+      {
+        "t": "Chapter IV — Crown and Keep",
+        "d": "They call you sovereign now, mostly to your face. The old families want a council; your captains want a throne.",
+        "ch": [
+          {
+            "t": "Seat a council",
+            "fx": {
+              "food": 800,
+              "wood": 800
+            },
+            "flag": "council",
+            "log": "A council sits. Slower decisions, deeper roots."
+          },
+          {
+            "t": "Take the throne alone",
+            "fx": {
+              "gold": 900
+            },
+            "flag": "crown",
+            "log": "You took the crown alone. No one argued twice."
+          }
+        ]
+      },
+      {
+        "t": "Chapter V — Powder and Consequence",
+        "d": "A monk brings you a jar of black grain that turns stone into gravel. Walls that took a century to raise now have a countdown on them.",
+        "ch": [
+          {
+            "t": "Arm the towers with it",
+            "fx": {
+              "gold": 1200
+            },
+            "flag": "gunline",
+            "log": "Your towers speak thunder now."
+          },
+          {
+            "t": "Bury the recipe",
+            "fx": {
+              "food": 1500,
+              "stone": 1200
+            },
+            "flag": "cautious",
+            "log": "You buried it. Someone else will dig it up."
+          }
+        ]
+      },
+      {
+        "t": "Chapter VI — Smoke Over the Valley",
+        "d": "Rail and furnace. Your realm fields in a week what once took a season.",
+        "ch": [
+          {
+            "t": "Push production to the limit",
+            "fx": {
+              "gold": 2500,
+              "stone": 2000
+            },
+            "flag": "industry",
+            "log": "The furnaces never cooled."
+          },
+          {
+            "t": "Protect the old valleys",
+            "fx": {
+              "food": 3000
+            },
+            "flag": "green",
+            "log": "You spared the valleys. Your rivals did not."
+          }
+        ]
+      },
+      {
+        "t": "Chapter VII — The Modern Crown",
+        "d": "Satellites, not scouts. Your hero — once a spear-carrier at a cave mouth — commands from a screen. One banner on the map is still not yours.",
+        "ch": [
+          {
+            "t": "End it",
+            "fx": {
+              "gold": 5000
+            },
+            "flag": "final",
+            "log": "The last banner came down. The age is yours."
+          }
+        ]
+      }
+    ],
+    "TERRAIN": {
+      "plains": {
+        "n": "Plains",
+        "ic": "🌿",
+        "c": "#3a4a34",
+        "mods": {}
+      },
+      "forest": {
+        "n": "Forest",
+        "ic": "🌲",
+        "c": "#2c3f2e",
+        "mods": {
+          "towerRng": -0.12,
+          "enemySpd": -0.1,
+          "shootPen": 0.1
+        }
+      },
+      "hills": {
+        "n": "Hills",
+        "ic": "⛰️",
+        "c": "#4a4335",
+        "mods": {
+          "towerRng": 0.16,
+          "enemyHp": 0.05,
+          "shootBon": 0.1
+        }
+      },
+      "swamp": {
+        "n": "Swamp",
+        "ic": "🪱",
+        "c": "#2f3a35",
+        "mods": {
+          "enemySpd": -0.25,
+          "unitRate": 0.12,
+          "moveMinus": 1
+        }
+      },
+      "desert": {
+        "n": "Desert",
+        "ic": "🏜️",
+        "c": "#544427",
+        "mods": {
+          "enemyHp": 0.12,
+          "towerRng": 0.05
+        }
+      },
+      "snow": {
+        "n": "Snowfield",
+        "ic": "🏔️",
+        "c": "#39424e",
+        "mods": {
+          "enemySpd": -0.15,
+          "unitRate": 0.1,
+          "moveMinus": 1
+        }
+      },
+      "waste": {
+        "n": "Wasteland",
+        "ic": "🌋",
+        "c": "#4a2f2c",
+        "mods": {
+          "enemyDmg": 0.2,
+          "towerDmg": 0.08,
+          "atkBon": 1
+        }
+      },
+      "ruins": {
+        "n": "Ruins",
+        "ic": "🏚️",
+        "c": "#3d3a44",
+        "mods": {
+          "towerDmg": 0.12,
+          "enemyHp": 0.08,
+          "defBon": 1
+        }
+      }
+    },
+    "TOWERS": {
+      "arrow": {
+        "n": "Arrow",
+        "ic": "🏹",
+        "dmg": 10,
+        "rate": 0.7,
+        "rng": 2.9,
+        "hp": 150,
+        "cost": {
+          "wood": 70,
+          "stone": 30,
+          "gold": 25
+        },
+        "names": [
+          "Sling Post",
+          "Archer Nest",
+          "Ballista Tower",
+          "Arrow Turret",
+          "Musket Tower",
+          "Gatling Nest",
+          "Missile Turret"
+        ]
+      },
+      "splash": {
+        "n": "Splash",
+        "ic": "💥",
+        "dmg": 18,
+        "rate": 1.9,
+        "rng": 3.3,
+        "splash": 1.15,
+        "hp": 130,
+        "cost": {
+          "wood": 80,
+          "stone": 90,
+          "gold": 45
+        },
+        "names": [
+          "Rock Chucker",
+          "Catapult",
+          "Onager",
+          "Trebuchet",
+          "Mortar",
+          "Howitzer",
+          "Artillery Bay"
+        ]
+      },
+      "slow": {
+        "n": "Control",
+        "ic": "❄️",
+        "dmg": 3,
+        "rate": 1.1,
+        "rng": 2.3,
+        "slow": 0.45,
+        "hp": 120,
+        "cost": {
+          "wood": 50,
+          "stone": 70,
+          "gold": 25
+        },
+        "names": [
+          "Tar Pit",
+          "Caltrop Field",
+          "Oil Cauldron",
+          "Barbed Snare",
+          "Chain Trap",
+          "Steam Vent",
+          "Cryo Emitter"
+        ]
+      },
+      "support": {
+        "n": "Support",
+        "ic": "📯",
+        "dmg": 0,
+        "rate": 0,
+        "rng": 3.1,
+        "aura": 0.22,
+        "hp": 110,
+        "cost": {
+          "wood": 80,
+          "stone": 50,
+          "gold": 60
+        },
+        "names": [
+          "Drum Totem",
+          "War Horn",
+          "Signal Fire",
+          "Banner Post",
+          "Bugle Post",
+          "Telegraph Mast",
+          "Radio Mast"
+        ]
+      }
+    },
+    "WEATHER": {
+      "clear": {
+        "n": "Clear",
+        "ic": "☀️",
+        "mods": {}
+      },
+      "rain": {
+        "n": "Rain",
+        "ic": "🌧️",
+        "mods": {
+          "towerRng": -0.1,
+          "enemySpd": -0.08,
+          "shootPen": 0.15
+        }
+      },
+      "fog": {
+        "n": "Fog",
+        "ic": "🌫️",
+        "mods": {
+          "towerRng": -0.25,
+          "shootPen": 0.25
+        }
+      },
+      "storm": {
+        "n": "Storm",
+        "ic": "⛈️",
+        "mods": {
+          "towerDmg": -0.1,
+          "enemyDmg": 0.1,
+          "moraleMinus": 1
+        }
+      },
+      "blizz": {
+        "n": "Blizzard",
+        "ic": "❄️",
+        "mods": {
+          "enemySpd": -0.22,
+          "unitRate": 0.15,
+          "towerRng": -0.1,
+          "moveMinus": 1
+        }
+      },
+      "sand": {
+        "n": "Sandstorm",
+        "ic": "🌪️",
+        "mods": {
+          "towerRng": -0.18,
+          "enemyHp": 0.08,
+          "shootPen": 0.2
+        }
+      },
+      "heat": {
+        "n": "Heatwave",
+        "ic": "🔥",
+        "mods": {
+          "unitRate": 0.15,
+          "enemySpd": 0.08,
+          "moveMinus": 1
+        }
+      }
+    }
+  }
+}

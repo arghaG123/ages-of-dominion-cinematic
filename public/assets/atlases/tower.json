@@ -1,0 +1,346 @@
+{
+  "id": "tower",
+  "image": null,
+  "width": 1904,
+  "height": 68,
+  "maxSize": 2048,
+  "extrusion": 2,
+  "frames": {
+    "tower-arrow-stone": {
+      "x": 2,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-stone.svg",
+      "extruded": 2
+    },
+    "tower-splash-stone": {
+      "x": 70,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-stone.svg",
+      "extruded": 2
+    },
+    "tower-slow-stone": {
+      "x": 138,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-stone.svg",
+      "extruded": 2
+    },
+    "tower-support-stone": {
+      "x": 206,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-stone.svg",
+      "extruded": 2
+    },
+    "tower-arrow-bronze": {
+      "x": 274,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-bronze.svg",
+      "extruded": 2
+    },
+    "tower-splash-bronze": {
+      "x": 342,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-bronze.svg",
+      "extruded": 2
+    },
+    "tower-slow-bronze": {
+      "x": 410,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-bronze.svg",
+      "extruded": 2
+    },
+    "tower-support-bronze": {
+      "x": 478,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-bronze.svg",
+      "extruded": 2
+    },
+    "tower-arrow-iron": {
+      "x": 546,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-iron.svg",
+      "extruded": 2
+    },
+    "tower-splash-iron": {
+      "x": 614,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-iron.svg",
+      "extruded": 2
+    },
+    "tower-slow-iron": {
+      "x": 682,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-iron.svg",
+      "extruded": 2
+    },
+    "tower-support-iron": {
+      "x": 750,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-iron.svg",
+      "extruded": 2
+    },
+    "tower-arrow-medieval": {
+      "x": 818,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-medieval.svg",
+      "extruded": 2
+    },
+    "tower-splash-medieval": {
+      "x": 886,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-medieval.svg",
+      "extruded": 2
+    },
+    "tower-slow-medieval": {
+      "x": 954,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-medieval.svg",
+      "extruded": 2
+    },
+    "tower-support-medieval": {
+      "x": 1022,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-medieval.svg",
+      "extruded": 2
+    },
+    "tower-arrow-gunpowder": {
+      "x": 1090,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-gunpowder.svg",
+      "extruded": 2
+    },
+    "tower-splash-gunpowder": {
+      "x": 1158,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-gunpowder.svg",
+      "extruded": 2
+    },
+    "tower-slow-gunpowder": {
+      "x": 1226,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-gunpowder.svg",
+      "extruded": 2
+    },
+    "tower-support-gunpowder": {
+      "x": 1294,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-gunpowder.svg",
+      "extruded": 2
+    },
+    "tower-arrow-industrial": {
+      "x": 1362,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-industrial.svg",
+      "extruded": 2
+    },
+    "tower-splash-industrial": {
+      "x": 1430,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-industrial.svg",
+      "extruded": 2
+    },
+    "tower-slow-industrial": {
+      "x": 1498,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-industrial.svg",
+      "extruded": 2
+    },
+    "tower-support-industrial": {
+      "x": 1566,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-industrial.svg",
+      "extruded": 2
+    },
+    "tower-arrow-modern": {
+      "x": 1634,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/arrow-modern.svg",
+      "extruded": 2
+    },
+    "tower-splash-modern": {
+      "x": 1702,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/splash-modern.svg",
+      "extruded": 2
+    },
+    "tower-slow-modern": {
+      "x": 1770,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/slow-modern.svg",
+      "extruded": 2
+    },
+    "tower-support-modern": {
+      "x": 1838,
+      "y": 2,
+      "w": 64,
+      "h": 64,
+      "pivot": {
+        "x": 0.5,
+        "y": 1
+      },
+      "source": "towers/support-modern.svg",
+      "extruded": 2
+    }
+  }
+}

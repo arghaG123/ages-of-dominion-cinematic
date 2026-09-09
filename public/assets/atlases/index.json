@@ -1,0 +1,88 @@
+{
+  "atlases": [
+    {
+      "id": "benchmark",
+      "frames": 5,
+      "width": 340,
+      "height": 68
+    },
+    {
+      "id": "hero",
+      "frames": 9,
+      "width": 612,
+      "height": 68
+    },
+    {
+      "id": "unit",
+      "frames": 105,
+      "width": 2040,
+      "height": 272
+    },
+    {
+      "id": "building",
+      "frames": 70,
+      "width": 2040,
+      "height": 204
+    },
+    {
+      "id": "tower",
+      "frames": 28,
+      "width": 1904,
+      "height": 68
+    },
+    {
+      "id": "creature",
+      "frames": 40,
+      "width": 2040,
+      "height": 136
+    },
+    {
+      "id": "siege-enemy",
+      "frames": 5,
+      "width": 340,
+      "height": 68
+    },
+    {
+      "id": "rival",
+      "frames": 1,
+      "width": 68,
+      "height": 68
+    },
+    {
+      "id": "map",
+      "frames": 6,
+      "width": 408,
+      "height": 68
+    },
+    {
+      "id": "siege-lane",
+      "frames": 6,
+      "width": 408,
+      "height": 68
+    },
+    {
+      "id": "battleground",
+      "frames": 8,
+      "width": 544,
+      "height": 68
+    },
+    {
+      "id": "vfx",
+      "frames": 11,
+      "width": 748,
+      "height": 68
+    },
+    {
+      "id": "ui",
+      "frames": 4,
+      "width": 272,
+      "height": 68
+    },
+    {
+      "id": "prop",
+      "frames": 1,
+      "width": 68,
+      "height": 68
+    }
+  ]
+}

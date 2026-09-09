@@ -1,0 +1,71 @@
+{
+  "arrow": {
+    "n": "Magic Arrow",
+    "ic": "🔸",
+    "lv": 1,
+    "mana": 5,
+    "type": "dmg",
+    "_fn_f": "p => 10 + 10 * p",
+    "d": "10 + 10×Power damage"
+  },
+  "bless": {
+    "n": "Bless",
+    "ic": "✨",
+    "lv": 1,
+    "mana": 5,
+    "type": "buff",
+    "d": "Friendly stack always rolls max damage"
+  },
+  "haste": {
+    "n": "Haste",
+    "ic": "💨",
+    "lv": 1,
+    "mana": 6,
+    "type": "buff",
+    "d": "+3 speed to a friendly stack"
+  },
+  "cure": {
+    "n": "Cure",
+    "ic": "💚",
+    "lv": 1,
+    "mana": 6,
+    "type": "heal",
+    "_fn_f": "p => 10 + 10 * p",
+    "d": "Heals 10 + 10×Power"
+  },
+  "slow": {
+    "n": "Slow",
+    "ic": "🐌",
+    "lv": 2,
+    "mana": 8,
+    "type": "debuff",
+    "d": "-3 speed to an enemy stack"
+  },
+  "bolt": {
+    "n": "Lightning Bolt",
+    "ic": "⚡",
+    "lv": 2,
+    "mana": 10,
+    "type": "dmg",
+    "_fn_f": "p => 10 + 25 * p",
+    "d": "10 + 25×Power damage"
+  },
+  "fireball": {
+    "n": "Fireball",
+    "ic": "🔥",
+    "lv": 3,
+    "mana": 14,
+    "type": "aoe",
+    "_fn_f": "p => 10 + 20 * p",
+    "d": "10 + 20×Power to a stack and its neighbours"
+  },
+  "resurrect": {
+    "n": "Resurrection",
+    "ic": "🕊️",
+    "lv": 4,
+    "mana": 20,
+    "type": "res",
+    "_fn_f": "p => 50 * p",
+    "d": "Restores 50×Power HP of losses"
+  }
+}

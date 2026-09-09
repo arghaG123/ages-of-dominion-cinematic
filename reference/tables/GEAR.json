@@ -1,0 +1,54 @@
+{
+  "weapon": {
+    "ic": "⚔️",
+    "main": "atk",
+    "names": [
+      "Flint Club",
+      "Bronze Sword",
+      "Iron Gladius",
+      "Knight's Longsword",
+      "Flintlock Brace",
+      "Repeating Carbine",
+      "Pulse Rifle"
+    ]
+  },
+  "armor": {
+    "ic": "🥋",
+    "main": "def",
+    "names": [
+      "Hide Wrap",
+      "Bronze Cuirass",
+      "Iron Lorica",
+      "Plate Harness",
+      "Musketeer Coat",
+      "Riveted Vest",
+      "Composite Plate"
+    ]
+  },
+  "helm": {
+    "ic": "⛑️",
+    "main": "kno",
+    "names": [
+      "Bone Circlet",
+      "Bronze Helm",
+      "Iron Sallet",
+      "Great Helm",
+      "Tricorn Hat",
+      "Field Cap",
+      "Combat Visor"
+    ]
+  },
+  "boots": {
+    "ic": "🥾",
+    "main": "move",
+    "names": [
+      "Hide Wraps",
+      "Leather Sandals",
+      "Studded Caligae",
+      "Steel Sabatons",
+      "Riding Boots",
+      "Marching Boots",
+      "Assault Boots"
+    ]
+  }
+}

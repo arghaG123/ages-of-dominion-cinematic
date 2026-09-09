@@ -1,0 +1,30 @@
+[
+  {
+    "n": "Stone Age",
+    "ic": "🪨"
+  },
+  {
+    "n": "Bronze Age",
+    "ic": "🗡️"
+  },
+  {
+    "n": "Iron Age",
+    "ic": "⚒️"
+  },
+  {
+    "n": "Medieval Age",
+    "ic": "🏰"
+  },
+  {
+    "n": "Gunpowder Age",
+    "ic": "💣"
+  },
+  {
+    "n": "Industrial Age",
+    "ic": "⚙️"
+  },
+  {
+    "n": "Modern Age",
+    "ic": "🚀"
+  }
+]
