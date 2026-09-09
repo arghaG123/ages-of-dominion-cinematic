@@ -14,6 +14,8 @@ android/key.properties
 google-services.json
 assets/review/
 assets/source/.cache/
+assets/source/raw/
+.claude/
 *.tmp
 .vite/
 coverage/

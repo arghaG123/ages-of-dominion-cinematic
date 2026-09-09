@@ -15,7 +15,7 @@
 - [x] `npm test` passing
 - [x] Playwright viewport smoke (`npm run test:e2e`)
 - [x] `npm run build` production bundle
-- [ ] `npx cap sync android` + debug APK on device
+- [x] `npx cap sync android` + debug APK built (`android/app/build/outputs/apk/debug/app-debug.apk`, 4.2 MB); on-device install still pending
 - [ ] Signed AAB only after keystore ownership confirmed (see `android-key.properties.example`)
 - [ ] Physical gesture-nav safe-area pass
 - [ ] Budget-device FPS profile (realm 30 / combat 60)

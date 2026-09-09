@@ -8,7 +8,7 @@
     {
       "id": "bench-hero-knight",
       "category": "benchmark",
-      "file": "benchmarks/hero-knight.svg",
+      "file": "benchmarks/hero-knight.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -20,24 +20,24 @@
         256
       ],
       "sourceSize": [
-        768,
+        1024,
         1024
       ],
       "age": null,
       "faction": "player",
       "animation": null,
-      "prompt": "Masterpiece cinematic dark-fantasy oil painting… magenta #FF00FF…",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a might-focused Knight hero in burnished plate armor with sword and heater shield, heroic bust-up three-quarter portrait, noble determined expression. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d673763eb75e7a9b",
+      "checksum": "e5e8924ec01faf0e",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bench-bld-townhall",
       "category": "benchmark",
-      "file": "benchmarks/bld-townhall.svg",
+      "file": "benchmarks/bld-townhall.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -49,24 +49,24 @@
         128
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 0,
       "faction": "neutral",
       "animation": null,
-      "prompt": "Masterpiece cinematic dark-fantasy oil painting… magenta #FF00FF…",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Age civic chieftain town hall, rough-hewn timber, animal hide, bone fetishes, stacked fieldstone, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8429b6d47ad88b53",
+      "checksum": "b8c817d473feae75",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bench-battle-plains",
       "category": "benchmark",
-      "file": "benchmarks/battle-plains.svg",
+      "file": "benchmarks/battle-plains.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -78,24 +78,24 @@
         250
       ],
       "sourceSize": [
-        1280,
-        853
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "Masterpiece cinematic dark-fantasy oil painting… magenta #FF00FF…",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a wide grassy tactical battlefield with rolling terrain, seamless wide perspective for isometric tactical combat. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9f2b902c456a55cb",
+      "checksum": "89c1b16e4b6a3316",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bench-unit-clubman",
       "category": "benchmark",
-      "file": "benchmarks/unit-clubman.svg",
+      "file": "benchmarks/unit-clubman.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -107,24 +107,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "Masterpiece cinematic dark-fantasy oil painting… magenta #FF00FF…",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Age Clubman melee warrior gripping a crude stone club and hide shield, mid-swing attacking pose, weapon at the peak of a strike. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f2abc5caba28ee0b",
+      "checksum": "bcacbae2535c12f7",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bench-ui-panel",
       "category": "benchmark",
-      "file": "benchmarks/ui-panel.svg",
+      "file": "benchmarks/ui-panel.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -136,24 +136,24 @@
         80
       ],
       "sourceSize": [
-        640,
-        160
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "Masterpiece cinematic dark-fantasy oil painting… magenta #FF00FF…",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: brushed charcoal gunmetal UI panel material with subtle gold hairline trim, dark smoked glass inlay. Seamless tileable material swatch, flat-on view, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "4c2db2f2bd0b6421",
+      "checksum": "584fc63c2e4d3a26",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "hero-knight-portrait",
       "category": "hero",
-      "file": "hero/knight-portrait.svg",
+      "file": "hero/knight-portrait.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -165,24 +165,24 @@
         256
       ],
       "sourceSize": [
-        768,
+        1024,
         1024
       ],
       "age": null,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a might-focused Knight hero in burnished plate armor with sword and heater shield, noble bearing, heroic bust-up three-quarter portrait, dramatic character study. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "59f542ae09a448a3",
+      "checksum": "f061cafd7105f094",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "hero-knight-idle",
       "category": "hero",
-      "file": "hero/knight-idle.svg",
+      "file": "hero/knight-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -194,24 +194,24 @@
         128
       ],
       "sourceSize": [
-        768,
-        512
+        1024,
+        1024
       ],
       "age": null,
       "faction": "player",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a might-focused Knight hero in burnished plate armor with sword and heater shield, noble bearing, full-body standing combat-ready idle pose. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5b057a334be3d159",
+      "checksum": "aea62426960cdf21",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "hero-knight-turn",
       "category": "hero",
-      "file": "hero/knight-turn.svg",
+      "file": "hero/knight-turn.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -223,24 +223,24 @@
         256
       ],
       "sourceSize": [
-        768,
+        1024,
         1024
       ],
       "age": null,
       "faction": "player",
       "animation": "turn",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a might-focused Knight hero in burnished plate armor with sword and heater shield, noble bearing, full-body dynamic action pose showing motion and cape/cloak flow. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2b3b65c17771b5f2",
+      "checksum": "43d1d0a4d05e3250",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "hero-ranger-portrait",
       "category": "hero",
-      "file": "hero/ranger-portrait.svg",
+      "file": "hero/ranger-portrait.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -252,24 +252,24 @@
         256
       ],
       "sourceSize": [
-        768,
+        1024,
         1024
       ],
       "age": null,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Ranger hero in hooded leather and cloak, longbow in hand, watchful forest-wanderer look, heroic bust-up three-quarter portrait, dramatic character study. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "184f4eb88789245a",
+      "checksum": "789a0da6478d8b60",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "hero-ranger-idle",
       "category": "hero",
-      "file": "hero/ranger-idle.svg",
+      "file": "hero/ranger-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -281,18 +281,18 @@
         128
       ],
       "sourceSize": [
-        768,
-        512
+        1024,
+        1024
       ],
       "age": null,
       "faction": "player",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Ranger hero in hooded leather and cloak, longbow in hand, watchful forest-wanderer look, full-body standing combat-ready idle pose. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "249037baa2c64206",
+      "checksum": "5c2aa27c17b8c6da",
       "approvalStatus": "placeholder-ship"
     },
     {
