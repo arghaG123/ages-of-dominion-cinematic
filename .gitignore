@@ -16,6 +16,9 @@ assets/review/
 assets/source/.cache/
 assets/source/raw/
 .claude/
+__pycache__/
+assets/approved/**/_*.jpg
+assets/approved/**/_*.png
 *.tmp
 .vite/
 coverage/
