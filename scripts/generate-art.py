@@ -444,6 +444,48 @@ def punch_alpha(img, feather=2, halo_reach=18):
                     depth[nidx] = d + 1
                     q2.append((nx, ny, d + 1))
 
+    # Pass 3 — enclosed islands. A background patch fully surrounded by subject
+    # (visible through a gap between wings/limbs) is topologically disconnected
+    # from the border, so passes 1-2 can never reach it no matter how deep the
+    # growth allowance — flood-fill only follows pixel connectivity. Any pixel
+    # that still strictly reads as the requested magenta almost certainly isn't
+    # actual subject material (real materials never hit that hue+darkness
+    # combination — that's exactly why pass 1's strict test is safe as a seed).
+    # But unlike pass 1, this has no border to anchor on, so a handful of dark
+    # feather/fur shadow flecks scattered through the subject can individually
+    # pass the same test — gate by connected-component SIZE, not just color, so
+    # only a substantial enclosed hole (dozens+ of contiguous pixels) gets
+    # punched, and small texture noise is left alone.
+    island_min_pixels = 40
+    island_ratio = 0.72
+    island_visited = bytearray(w * h)
+    for y0 in range(h):
+        for x0 in range(w):
+            idx0 = y0 * w + x0
+            if bg_mask[idx0] or island_visited[idx0]:
+                continue
+            r, g, b, _a = pixels[x0, y0]
+            if not _is_magenta_hue(r, g, b, ratio=island_ratio):
+                island_visited[idx0] = 1
+                continue
+            comp = [idx0]
+            island_visited[idx0] = 1
+            qi = collections.deque([(x0, y0)])
+            while qi:
+                x, y = qi.popleft()
+                for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if 0 <= nx < w and 0 <= ny < h:
+                        nidx = ny * w + nx
+                        if not bg_mask[nidx] and not island_visited[nidx]:
+                            island_visited[nidx] = 1
+                            nr, ng, nb, _na = pixels[nx, ny]
+                            if _is_magenta_hue(nr, ng, nb, ratio=island_ratio):
+                                comp.append(nidx)
+                                qi.append((nx, ny))
+            if len(comp) >= island_min_pixels:
+                for cidx in comp:
+                    bg_mask[cidx] = 1
+
     mask_img = Image.frombytes('L', (w, h), bytes(255 if not v else 0 for v in bg_mask))
     if feather:
         mask_img = mask_img.filter(ImageFilter.GaussianBlur(feather))
