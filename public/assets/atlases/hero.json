@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/knight-portrait.svg",
+      "source": "hero/knight-portrait.png",
       "extruded": 2
     },
     "hero-knight-idle": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/knight-idle.svg",
+      "source": "hero/knight-idle.png",
       "extruded": 2
     },
     "hero-knight-turn": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/knight-turn.svg",
+      "source": "hero/knight-turn.png",
       "extruded": 2
     },
     "hero-ranger-portrait": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/ranger-portrait.svg",
+      "source": "hero/ranger-portrait.png",
       "extruded": 2
     },
     "hero-ranger-idle": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/ranger-idle.svg",
+      "source": "hero/ranger-idle.png",
       "extruded": 2
     },
     "hero-ranger-turn": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/ranger-turn.svg",
+      "source": "hero/ranger-turn.png",
       "extruded": 2
     },
     "hero-warlock-portrait": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/warlock-portrait.svg",
+      "source": "hero/warlock-portrait.png",
       "extruded": 2
     },
     "hero-warlock-idle": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/warlock-idle.svg",
+      "source": "hero/warlock-idle.png",
       "extruded": 2
     },
     "hero-warlock-turn": {
@@ -111,7 +111,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "hero/warlock-turn.svg",
+      "source": "hero/warlock-turn.png",
       "extruded": 2
     }
   }

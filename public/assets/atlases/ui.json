@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/metal.svg",
+      "source": "ui/metal.jpg",
       "extruded": 2
     },
     "ui-leather": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/leather.svg",
+      "source": "ui/leather.jpg",
       "extruded": 2
     },
     "ui-parchment": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/parchment.svg",
+      "source": "ui/parchment.jpg",
       "extruded": 2
     },
     "ui-glass": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/glass.svg",
+      "source": "ui/glass.jpg",
       "extruded": 2
     }
   }

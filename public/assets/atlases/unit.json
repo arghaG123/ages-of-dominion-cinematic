@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-stone-idle.svg",
+      "source": "units/melee-stone-idle.png",
       "extruded": 2
     },
     "unit-melee-stone-move": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-stone-move.svg",
+      "source": "units/melee-stone-move.png",
       "extruded": 2
     },
     "unit-melee-stone-attack": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-stone-attack.svg",
+      "source": "units/melee-stone-attack.png",
       "extruded": 2
     },
     "unit-melee-stone-hit": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-stone-hit.svg",
+      "source": "units/melee-stone-hit.png",
       "extruded": 2
     },
     "unit-melee-stone-death": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-stone-death.svg",
+      "source": "units/melee-stone-death.png",
       "extruded": 2
     },
     "unit-ranged-stone-idle": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-stone-idle.svg",
+      "source": "units/ranged-stone-idle.png",
       "extruded": 2
     },
     "unit-ranged-stone-move": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-stone-move.svg",
+      "source": "units/ranged-stone-move.png",
       "extruded": 2
     },
     "unit-ranged-stone-attack": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-stone-attack.svg",
+      "source": "units/ranged-stone-attack.png",
       "extruded": 2
     },
     "unit-ranged-stone-hit": {
@@ -111,7 +111,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-stone-hit.svg",
+      "source": "units/ranged-stone-hit.png",
       "extruded": 2
     },
     "unit-ranged-stone-death": {
@@ -123,7 +123,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-stone-death.svg",
+      "source": "units/ranged-stone-death.png",
       "extruded": 2
     },
     "unit-heavy-stone-idle": {
@@ -135,7 +135,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-stone-idle.svg",
+      "source": "units/heavy-stone-idle.png",
       "extruded": 2
     },
     "unit-heavy-stone-move": {
@@ -147,7 +147,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-stone-move.svg",
+      "source": "units/heavy-stone-move.png",
       "extruded": 2
     },
     "unit-heavy-stone-attack": {
@@ -159,7 +159,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-stone-attack.svg",
+      "source": "units/heavy-stone-attack.png",
       "extruded": 2
     },
     "unit-heavy-stone-hit": {
@@ -171,7 +171,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-stone-hit.svg",
+      "source": "units/heavy-stone-hit.png",
       "extruded": 2
     },
     "unit-heavy-stone-death": {
@@ -183,7 +183,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-stone-death.svg",
+      "source": "units/heavy-stone-death.png",
       "extruded": 2
     },
     "unit-melee-bronze-idle": {
@@ -195,7 +195,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-bronze-idle.svg",
+      "source": "units/melee-bronze-idle.png",
       "extruded": 2
     },
     "unit-melee-bronze-move": {
@@ -207,7 +207,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-bronze-move.svg",
+      "source": "units/melee-bronze-move.png",
       "extruded": 2
     },
     "unit-melee-bronze-attack": {
@@ -219,7 +219,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-bronze-attack.svg",
+      "source": "units/melee-bronze-attack.png",
       "extruded": 2
     },
     "unit-melee-bronze-hit": {
@@ -231,7 +231,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-bronze-hit.svg",
+      "source": "units/melee-bronze-hit.png",
       "extruded": 2
     },
     "unit-melee-bronze-death": {
@@ -243,7 +243,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-bronze-death.svg",
+      "source": "units/melee-bronze-death.png",
       "extruded": 2
     },
     "unit-ranged-bronze-idle": {
@@ -255,7 +255,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-bronze-idle.svg",
+      "source": "units/ranged-bronze-idle.png",
       "extruded": 2
     },
     "unit-ranged-bronze-move": {
@@ -267,7 +267,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-bronze-move.svg",
+      "source": "units/ranged-bronze-move.png",
       "extruded": 2
     },
     "unit-ranged-bronze-attack": {
@@ -279,7 +279,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-bronze-attack.svg",
+      "source": "units/ranged-bronze-attack.png",
       "extruded": 2
     },
     "unit-ranged-bronze-hit": {
@@ -291,7 +291,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-bronze-hit.svg",
+      "source": "units/ranged-bronze-hit.png",
       "extruded": 2
     },
     "unit-ranged-bronze-death": {
@@ -303,7 +303,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-bronze-death.svg",
+      "source": "units/ranged-bronze-death.png",
       "extruded": 2
     },
     "unit-heavy-bronze-idle": {
@@ -315,7 +315,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-bronze-idle.svg",
+      "source": "units/heavy-bronze-idle.png",
       "extruded": 2
     },
     "unit-heavy-bronze-move": {
@@ -327,7 +327,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-bronze-move.svg",
+      "source": "units/heavy-bronze-move.png",
       "extruded": 2
     },
     "unit-heavy-bronze-attack": {
@@ -339,7 +339,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-bronze-attack.svg",
+      "source": "units/heavy-bronze-attack.png",
       "extruded": 2
     },
     "unit-heavy-bronze-hit": {
@@ -351,7 +351,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-bronze-hit.svg",
+      "source": "units/heavy-bronze-hit.png",
       "extruded": 2
     },
     "unit-heavy-bronze-death": {
@@ -363,7 +363,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-bronze-death.svg",
+      "source": "units/heavy-bronze-death.png",
       "extruded": 2
     },
     "unit-melee-iron-idle": {
@@ -375,7 +375,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-iron-idle.svg",
+      "source": "units/melee-iron-idle.png",
       "extruded": 2
     },
     "unit-melee-iron-move": {
@@ -387,7 +387,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-iron-move.svg",
+      "source": "units/melee-iron-move.png",
       "extruded": 2
     },
     "unit-melee-iron-attack": {
@@ -399,7 +399,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-iron-attack.svg",
+      "source": "units/melee-iron-attack.png",
       "extruded": 2
     },
     "unit-melee-iron-hit": {
@@ -411,7 +411,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-iron-hit.svg",
+      "source": "units/melee-iron-hit.png",
       "extruded": 2
     },
     "unit-melee-iron-death": {
@@ -423,7 +423,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-iron-death.svg",
+      "source": "units/melee-iron-death.png",
       "extruded": 2
     },
     "unit-ranged-iron-idle": {
@@ -435,7 +435,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-iron-idle.svg",
+      "source": "units/ranged-iron-idle.png",
       "extruded": 2
     },
     "unit-ranged-iron-move": {
@@ -447,7 +447,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-iron-move.svg",
+      "source": "units/ranged-iron-move.png",
       "extruded": 2
     },
     "unit-ranged-iron-attack": {
@@ -459,7 +459,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-iron-attack.svg",
+      "source": "units/ranged-iron-attack.png",
       "extruded": 2
     },
     "unit-ranged-iron-hit": {
@@ -471,7 +471,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-iron-hit.svg",
+      "source": "units/ranged-iron-hit.png",
       "extruded": 2
     },
     "unit-ranged-iron-death": {
@@ -483,7 +483,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-iron-death.svg",
+      "source": "units/ranged-iron-death.png",
       "extruded": 2
     },
     "unit-heavy-iron-idle": {
@@ -495,7 +495,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-iron-idle.svg",
+      "source": "units/heavy-iron-idle.png",
       "extruded": 2
     },
     "unit-heavy-iron-move": {
@@ -507,7 +507,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-iron-move.svg",
+      "source": "units/heavy-iron-move.png",
       "extruded": 2
     },
     "unit-heavy-iron-attack": {
@@ -519,7 +519,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-iron-attack.svg",
+      "source": "units/heavy-iron-attack.png",
       "extruded": 2
     },
     "unit-heavy-iron-hit": {
@@ -531,7 +531,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-iron-hit.svg",
+      "source": "units/heavy-iron-hit.png",
       "extruded": 2
     },
     "unit-heavy-iron-death": {
@@ -543,7 +543,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-iron-death.svg",
+      "source": "units/heavy-iron-death.png",
       "extruded": 2
     },
     "unit-melee-medieval-idle": {
@@ -555,7 +555,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-medieval-idle.svg",
+      "source": "units/melee-medieval-idle.png",
       "extruded": 2
     },
     "unit-melee-medieval-move": {
@@ -567,7 +567,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-medieval-move.svg",
+      "source": "units/melee-medieval-move.png",
       "extruded": 2
     },
     "unit-melee-medieval-attack": {
@@ -579,7 +579,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-medieval-attack.svg",
+      "source": "units/melee-medieval-attack.png",
       "extruded": 2
     },
     "unit-melee-medieval-hit": {
@@ -591,7 +591,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-medieval-hit.svg",
+      "source": "units/melee-medieval-hit.png",
       "extruded": 2
     },
     "unit-melee-medieval-death": {
@@ -603,7 +603,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-medieval-death.svg",
+      "source": "units/melee-medieval-death.png",
       "extruded": 2
     },
     "unit-ranged-medieval-idle": {
@@ -615,7 +615,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-medieval-idle.svg",
+      "source": "units/ranged-medieval-idle.png",
       "extruded": 2
     },
     "unit-ranged-medieval-move": {
@@ -627,7 +627,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-medieval-move.svg",
+      "source": "units/ranged-medieval-move.png",
       "extruded": 2
     },
     "unit-ranged-medieval-attack": {
@@ -639,7 +639,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-medieval-attack.svg",
+      "source": "units/ranged-medieval-attack.png",
       "extruded": 2
     },
     "unit-ranged-medieval-hit": {
@@ -651,7 +651,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-medieval-hit.svg",
+      "source": "units/ranged-medieval-hit.png",
       "extruded": 2
     },
     "unit-ranged-medieval-death": {
@@ -663,7 +663,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-medieval-death.svg",
+      "source": "units/ranged-medieval-death.png",
       "extruded": 2
     },
     "unit-heavy-medieval-idle": {
@@ -675,7 +675,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-medieval-idle.svg",
+      "source": "units/heavy-medieval-idle.png",
       "extruded": 2
     },
     "unit-heavy-medieval-move": {
@@ -687,7 +687,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-medieval-move.svg",
+      "source": "units/heavy-medieval-move.png",
       "extruded": 2
     },
     "unit-heavy-medieval-attack": {
@@ -699,7 +699,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-medieval-attack.svg",
+      "source": "units/heavy-medieval-attack.png",
       "extruded": 2
     },
     "unit-heavy-medieval-hit": {
@@ -711,7 +711,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-medieval-hit.svg",
+      "source": "units/heavy-medieval-hit.png",
       "extruded": 2
     },
     "unit-heavy-medieval-death": {
@@ -723,7 +723,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-medieval-death.svg",
+      "source": "units/heavy-medieval-death.png",
       "extruded": 2
     },
     "unit-melee-gunpowder-idle": {
@@ -735,7 +735,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-gunpowder-idle.svg",
+      "source": "units/melee-gunpowder-idle.png",
       "extruded": 2
     },
     "unit-melee-gunpowder-move": {
@@ -747,7 +747,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-gunpowder-move.svg",
+      "source": "units/melee-gunpowder-move.png",
       "extruded": 2
     },
     "unit-melee-gunpowder-attack": {
@@ -759,7 +759,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-gunpowder-attack.svg",
+      "source": "units/melee-gunpowder-attack.png",
       "extruded": 2
     },
     "unit-melee-gunpowder-hit": {
@@ -771,7 +771,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-gunpowder-hit.svg",
+      "source": "units/melee-gunpowder-hit.png",
       "extruded": 2
     },
     "unit-melee-gunpowder-death": {
@@ -783,7 +783,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-gunpowder-death.svg",
+      "source": "units/melee-gunpowder-death.png",
       "extruded": 2
     },
     "unit-ranged-gunpowder-idle": {
@@ -795,7 +795,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-gunpowder-idle.svg",
+      "source": "units/ranged-gunpowder-idle.png",
       "extruded": 2
     },
     "unit-ranged-gunpowder-move": {
@@ -807,7 +807,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-gunpowder-move.svg",
+      "source": "units/ranged-gunpowder-move.png",
       "extruded": 2
     },
     "unit-ranged-gunpowder-attack": {
@@ -819,7 +819,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-gunpowder-attack.svg",
+      "source": "units/ranged-gunpowder-attack.png",
       "extruded": 2
     },
     "unit-ranged-gunpowder-hit": {
@@ -831,7 +831,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-gunpowder-hit.svg",
+      "source": "units/ranged-gunpowder-hit.png",
       "extruded": 2
     },
     "unit-ranged-gunpowder-death": {
@@ -843,7 +843,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-gunpowder-death.svg",
+      "source": "units/ranged-gunpowder-death.png",
       "extruded": 2
     },
     "unit-heavy-gunpowder-idle": {
@@ -855,7 +855,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-gunpowder-idle.svg",
+      "source": "units/heavy-gunpowder-idle.png",
       "extruded": 2
     },
     "unit-heavy-gunpowder-move": {
@@ -867,7 +867,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-gunpowder-move.svg",
+      "source": "units/heavy-gunpowder-move.png",
       "extruded": 2
     },
     "unit-heavy-gunpowder-attack": {
@@ -879,7 +879,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-gunpowder-attack.svg",
+      "source": "units/heavy-gunpowder-attack.png",
       "extruded": 2
     },
     "unit-heavy-gunpowder-hit": {
@@ -891,7 +891,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-gunpowder-hit.svg",
+      "source": "units/heavy-gunpowder-hit.png",
       "extruded": 2
     },
     "unit-heavy-gunpowder-death": {
@@ -903,7 +903,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-gunpowder-death.svg",
+      "source": "units/heavy-gunpowder-death.png",
       "extruded": 2
     },
     "unit-melee-industrial-idle": {
@@ -915,7 +915,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-industrial-idle.svg",
+      "source": "units/melee-industrial-idle.png",
       "extruded": 2
     },
     "unit-melee-industrial-move": {
@@ -927,7 +927,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-industrial-move.svg",
+      "source": "units/melee-industrial-move.png",
       "extruded": 2
     },
     "unit-melee-industrial-attack": {
@@ -939,7 +939,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-industrial-attack.svg",
+      "source": "units/melee-industrial-attack.png",
       "extruded": 2
     },
     "unit-melee-industrial-hit": {
@@ -951,7 +951,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-industrial-hit.svg",
+      "source": "units/melee-industrial-hit.png",
       "extruded": 2
     },
     "unit-melee-industrial-death": {
@@ -963,7 +963,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-industrial-death.svg",
+      "source": "units/melee-industrial-death.png",
       "extruded": 2
     },
     "unit-ranged-industrial-idle": {
@@ -975,7 +975,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-industrial-idle.svg",
+      "source": "units/ranged-industrial-idle.png",
       "extruded": 2
     },
     "unit-ranged-industrial-move": {
@@ -987,7 +987,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-industrial-move.svg",
+      "source": "units/ranged-industrial-move.png",
       "extruded": 2
     },
     "unit-ranged-industrial-attack": {
@@ -999,7 +999,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-industrial-attack.svg",
+      "source": "units/ranged-industrial-attack.png",
       "extruded": 2
     },
     "unit-ranged-industrial-hit": {
@@ -1011,7 +1011,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-industrial-hit.svg",
+      "source": "units/ranged-industrial-hit.png",
       "extruded": 2
     },
     "unit-ranged-industrial-death": {
@@ -1023,7 +1023,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-industrial-death.svg",
+      "source": "units/ranged-industrial-death.png",
       "extruded": 2
     },
     "unit-heavy-industrial-idle": {
@@ -1035,7 +1035,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-industrial-idle.svg",
+      "source": "units/heavy-industrial-idle.png",
       "extruded": 2
     },
     "unit-heavy-industrial-move": {
@@ -1047,7 +1047,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-industrial-move.svg",
+      "source": "units/heavy-industrial-move.png",
       "extruded": 2
     },
     "unit-heavy-industrial-attack": {
@@ -1059,7 +1059,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-industrial-attack.svg",
+      "source": "units/heavy-industrial-attack.png",
       "extruded": 2
     },
     "unit-heavy-industrial-hit": {
@@ -1071,7 +1071,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-industrial-hit.svg",
+      "source": "units/heavy-industrial-hit.png",
       "extruded": 2
     },
     "unit-heavy-industrial-death": {
@@ -1083,7 +1083,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-industrial-death.svg",
+      "source": "units/heavy-industrial-death.png",
       "extruded": 2
     },
     "unit-melee-modern-idle": {
@@ -1095,7 +1095,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-modern-idle.svg",
+      "source": "units/melee-modern-idle.png",
       "extruded": 2
     },
     "unit-melee-modern-move": {
@@ -1107,7 +1107,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-modern-move.svg",
+      "source": "units/melee-modern-move.png",
       "extruded": 2
     },
     "unit-melee-modern-attack": {
@@ -1119,7 +1119,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-modern-attack.svg",
+      "source": "units/melee-modern-attack.png",
       "extruded": 2
     },
     "unit-melee-modern-hit": {
@@ -1131,7 +1131,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-modern-hit.svg",
+      "source": "units/melee-modern-hit.png",
       "extruded": 2
     },
     "unit-melee-modern-death": {
@@ -1143,7 +1143,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/melee-modern-death.svg",
+      "source": "units/melee-modern-death.png",
       "extruded": 2
     },
     "unit-ranged-modern-idle": {
@@ -1155,7 +1155,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-modern-idle.svg",
+      "source": "units/ranged-modern-idle.png",
       "extruded": 2
     },
     "unit-ranged-modern-move": {
@@ -1167,7 +1167,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-modern-move.svg",
+      "source": "units/ranged-modern-move.png",
       "extruded": 2
     },
     "unit-ranged-modern-attack": {
@@ -1179,7 +1179,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-modern-attack.svg",
+      "source": "units/ranged-modern-attack.png",
       "extruded": 2
     },
     "unit-ranged-modern-hit": {
@@ -1191,7 +1191,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-modern-hit.svg",
+      "source": "units/ranged-modern-hit.png",
       "extruded": 2
     },
     "unit-ranged-modern-death": {
@@ -1203,7 +1203,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/ranged-modern-death.svg",
+      "source": "units/ranged-modern-death.png",
       "extruded": 2
     },
     "unit-heavy-modern-idle": {
@@ -1215,7 +1215,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-modern-idle.svg",
+      "source": "units/heavy-modern-idle.png",
       "extruded": 2
     },
     "unit-heavy-modern-move": {
@@ -1227,7 +1227,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-modern-move.svg",
+      "source": "units/heavy-modern-move.png",
       "extruded": 2
     },
     "unit-heavy-modern-attack": {
@@ -1239,7 +1239,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-modern-attack.svg",
+      "source": "units/heavy-modern-attack.png",
       "extruded": 2
     },
     "unit-heavy-modern-hit": {
@@ -1251,7 +1251,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-modern-hit.svg",
+      "source": "units/heavy-modern-hit.png",
       "extruded": 2
     },
     "unit-heavy-modern-death": {
@@ -1263,7 +1263,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "units/heavy-modern-death.svg",
+      "source": "units/heavy-modern-death.png",
       "extruded": 2
     }
   }

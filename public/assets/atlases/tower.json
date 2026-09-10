@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-stone.svg",
+      "source": "towers/arrow-stone.png",
       "extruded": 2
     },
     "tower-splash-stone": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-stone.svg",
+      "source": "towers/splash-stone.png",
       "extruded": 2
     },
     "tower-slow-stone": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-stone.svg",
+      "source": "towers/slow-stone.png",
       "extruded": 2
     },
     "tower-support-stone": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-stone.svg",
+      "source": "towers/support-stone.png",
       "extruded": 2
     },
     "tower-arrow-bronze": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-bronze.svg",
+      "source": "towers/arrow-bronze.png",
       "extruded": 2
     },
     "tower-splash-bronze": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-bronze.svg",
+      "source": "towers/splash-bronze.png",
       "extruded": 2
     },
     "tower-slow-bronze": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-bronze.svg",
+      "source": "towers/slow-bronze.png",
       "extruded": 2
     },
     "tower-support-bronze": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-bronze.svg",
+      "source": "towers/support-bronze.png",
       "extruded": 2
     },
     "tower-arrow-iron": {
@@ -111,7 +111,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-iron.svg",
+      "source": "towers/arrow-iron.png",
       "extruded": 2
     },
     "tower-splash-iron": {
@@ -123,7 +123,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-iron.svg",
+      "source": "towers/splash-iron.png",
       "extruded": 2
     },
     "tower-slow-iron": {
@@ -135,7 +135,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-iron.svg",
+      "source": "towers/slow-iron.png",
       "extruded": 2
     },
     "tower-support-iron": {
@@ -147,7 +147,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-iron.svg",
+      "source": "towers/support-iron.png",
       "extruded": 2
     },
     "tower-arrow-medieval": {
@@ -159,7 +159,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-medieval.svg",
+      "source": "towers/arrow-medieval.png",
       "extruded": 2
     },
     "tower-splash-medieval": {
@@ -171,7 +171,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-medieval.svg",
+      "source": "towers/splash-medieval.png",
       "extruded": 2
     },
     "tower-slow-medieval": {
@@ -183,7 +183,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-medieval.svg",
+      "source": "towers/slow-medieval.png",
       "extruded": 2
     },
     "tower-support-medieval": {
@@ -195,7 +195,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-medieval.svg",
+      "source": "towers/support-medieval.png",
       "extruded": 2
     },
     "tower-arrow-gunpowder": {
@@ -207,7 +207,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-gunpowder.svg",
+      "source": "towers/arrow-gunpowder.png",
       "extruded": 2
     },
     "tower-splash-gunpowder": {
@@ -219,7 +219,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-gunpowder.svg",
+      "source": "towers/splash-gunpowder.png",
       "extruded": 2
     },
     "tower-slow-gunpowder": {
@@ -231,7 +231,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-gunpowder.svg",
+      "source": "towers/slow-gunpowder.png",
       "extruded": 2
     },
     "tower-support-gunpowder": {
@@ -243,7 +243,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-gunpowder.svg",
+      "source": "towers/support-gunpowder.png",
       "extruded": 2
     },
     "tower-arrow-industrial": {
@@ -255,7 +255,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-industrial.svg",
+      "source": "towers/arrow-industrial.png",
       "extruded": 2
     },
     "tower-splash-industrial": {
@@ -267,7 +267,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-industrial.svg",
+      "source": "towers/splash-industrial.png",
       "extruded": 2
     },
     "tower-slow-industrial": {
@@ -279,7 +279,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-industrial.svg",
+      "source": "towers/slow-industrial.png",
       "extruded": 2
     },
     "tower-support-industrial": {
@@ -291,7 +291,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-industrial.svg",
+      "source": "towers/support-industrial.png",
       "extruded": 2
     },
     "tower-arrow-modern": {
@@ -303,7 +303,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-modern.svg",
+      "source": "towers/arrow-modern.png",
       "extruded": 2
     },
     "tower-splash-modern": {
@@ -315,7 +315,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-modern.svg",
+      "source": "towers/splash-modern.png",
       "extruded": 2
     },
     "tower-slow-modern": {
@@ -327,7 +327,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-modern.svg",
+      "source": "towers/slow-modern.png",
       "extruded": 2
     },
     "tower-support-modern": {
@@ -339,7 +339,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-modern.svg",
+      "source": "towers/support-modern.png",
       "extruded": 2
     }
   }

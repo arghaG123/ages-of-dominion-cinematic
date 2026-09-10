@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-brute.svg",
+      "source": "siege/enemy-brute.png",
       "extruded": 2
     },
     "siege-enemy-runner": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-runner.svg",
+      "source": "siege/enemy-runner.png",
       "extruded": 2
     },
     "siege-enemy-archer": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-archer.svg",
+      "source": "siege/enemy-archer.png",
       "extruded": 2
     },
     "siege-enemy-sapper": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-sapper.svg",
+      "source": "siege/enemy-sapper.png",
       "extruded": 2
     },
     "siege-enemy-shaman": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-shaman.svg",
+      "source": "siege/enemy-shaman.png",
       "extruded": 2
     }
   }

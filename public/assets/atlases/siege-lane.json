@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-lowlands.svg",
+      "source": "siege/lane-lowlands.jpg",
       "extruded": 2
     },
     "siege-lane-forest": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-forest.svg",
+      "source": "siege/lane-forest.jpg",
       "extruded": 2
     },
     "siege-lane-swamp": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-swamp.svg",
+      "source": "siege/lane-swamp.jpg",
       "extruded": 2
     },
     "siege-lane-desert": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-desert.svg",
+      "source": "siege/lane-desert.jpg",
       "extruded": 2
     },
     "siege-lane-snow": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-snow.svg",
+      "source": "siege/lane-snow.jpg",
       "extruded": 2
     },
     "siege-lane-darklands": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/lane-darklands.svg",
+      "source": "siege/lane-darklands.jpg",
       "extruded": 2
     }
   }

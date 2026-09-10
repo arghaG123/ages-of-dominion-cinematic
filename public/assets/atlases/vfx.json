@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/fire.svg",
+      "source": "vfx/fire.png",
       "extruded": 2
     },
     "vfx-ice": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/ice.svg",
+      "source": "vfx/ice.png",
       "extruded": 2
     },
     "vfx-arrows": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/arrows.svg",
+      "source": "vfx/arrows.png",
       "extruded": 2
     },
     "vfx-melee": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/melee.svg",
+      "source": "vfx/melee.png",
       "extruded": 2
     },
     "vfx-heal": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/heal.svg",
+      "source": "vfx/heal.png",
       "extruded": 2
     },
     "vfx-smoke": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/smoke.svg",
+      "source": "vfx/smoke.png",
       "extruded": 2
     },
     "vfx-lightning": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/lightning.svg",
+      "source": "vfx/lightning.png",
       "extruded": 2
     },
     "vfx-death": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/death.svg",
+      "source": "vfx/death.png",
       "extruded": 2
     },
     "vfx-dust": {
@@ -111,7 +111,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/dust.svg",
+      "source": "vfx/dust.png",
       "extruded": 2
     },
     "vfx-rain": {
@@ -123,7 +123,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/rain.svg",
+      "source": "vfx/rain.png",
       "extruded": 2
     },
     "vfx-spell": {
@@ -135,7 +135,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/spell.svg",
+      "source": "vfx/spell.png",
       "extruded": 2
     }
   }

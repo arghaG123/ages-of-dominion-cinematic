@@ -20,7 +20,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -31,7 +31,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e5e8924ec01faf0e",
+      "checksum": "fa6fd6e9a4eee162",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -49,8 +49,8 @@
         128
       ],
       "sourceSize": [
-        1024,
-        1024
+        512,
+        512
       ],
       "age": 0,
       "faction": "neutral",
@@ -60,7 +60,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b8c817d473feae75",
+      "checksum": "898179f05e42135a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -78,8 +78,8 @@
         250
       ],
       "sourceSize": [
-        1024,
-        1024
+        1280,
+        853
       ],
       "age": null,
       "faction": "neutral",
@@ -89,7 +89,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "89c1b16e4b6a3316",
+      "checksum": "eb84e89ab332af9e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -107,8 +107,8 @@
         64
       ],
       "sourceSize": [
-        1024,
-        1024
+        256,
+        256
       ],
       "age": null,
       "faction": "neutral",
@@ -118,7 +118,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bcacbae2535c12f7",
+      "checksum": "a6975cdc5c1e2fa8",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -136,8 +136,8 @@
         80
       ],
       "sourceSize": [
-        1024,
-        1024
+        640,
+        160
       ],
       "age": null,
       "faction": "neutral",
@@ -147,7 +147,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "584fc63c2e4d3a26",
+      "checksum": "a3e4448b768656bd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -165,7 +165,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -176,7 +176,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f061cafd7105f094",
+      "checksum": "f17eabb3f2b3217b",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -194,8 +194,8 @@
         128
       ],
       "sourceSize": [
-        1024,
-        1024
+        768,
+        512
       ],
       "age": null,
       "faction": "player",
@@ -205,7 +205,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "aea62426960cdf21",
+      "checksum": "67794eed77cd227d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -223,7 +223,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -234,7 +234,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "43d1d0a4d05e3250",
+      "checksum": "dbc083af2b2e32a4",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -252,7 +252,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -263,7 +263,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "789a0da6478d8b60",
+      "checksum": "6f5942ecfac650c2",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -281,8 +281,8 @@
         128
       ],
       "sourceSize": [
-        1024,
-        1024
+        768,
+        512
       ],
       "age": null,
       "faction": "player",
@@ -292,7 +292,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5c2aa27c17b8c6da",
+      "checksum": "8924f51bb626fa87",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -310,7 +310,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -321,7 +321,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d5046416e0546eed",
+      "checksum": "40b9220034786410",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -339,7 +339,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -350,7 +350,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8e0d1aef7763a553",
+      "checksum": "979d2e30a0cfd168",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -368,8 +368,8 @@
         128
       ],
       "sourceSize": [
-        1024,
-        1024
+        768,
+        512
       ],
       "age": null,
       "faction": "player",
@@ -379,7 +379,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "58e629498b1ba653",
+      "checksum": "cfc3237086220dfd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -397,7 +397,7 @@
         256
       ],
       "sourceSize": [
-        1024,
+        768,
         1024
       ],
       "age": null,
@@ -408,7 +408,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "37dc2e2fbbfe4d12",
+      "checksum": "7a4db5ae26556661",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -466,7 +466,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ca2dba9a0659f8c4",
+      "checksum": "1966b34c92fa4a4c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -495,7 +495,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a97ed432724924f9",
+      "checksum": "90e93a4f24bce4d3",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -524,7 +524,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "18317d8c8f03af74",
+      "checksum": "4b61cafa09c24c34",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -553,7 +553,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "157de34294fe04a0",
+      "checksum": "06d47e102b50db25",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -582,7 +582,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "68bd342154933a9f",
+      "checksum": "e754ab9bd271a11e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -611,7 +611,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "504c60d9358dbae5",
+      "checksum": "76dc54b5f1d14c40",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -640,7 +640,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f35a9aa1faf788fe",
+      "checksum": "f7feef8fc6a46c17",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -669,7 +669,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "efaee58a3fe524f7",
+      "checksum": "475b060bbc5ca704",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -698,7 +698,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "007f555077de8da0",
+      "checksum": "c2fe466e1f858d8f",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -727,7 +727,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "1e019cae89b5a46e",
+      "checksum": "53c981f17c23f402",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -756,7 +756,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2bb83ef0ecd58167",
+      "checksum": "8770f59daa32d7a0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -785,7 +785,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9b8eb9980d841e2a",
+      "checksum": "6e1518da02bb52e6",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -814,7 +814,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "064886cd83ec54cd",
+      "checksum": "66416a4a4135b46e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -843,7 +843,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f6a1bc171d789d81",
+      "checksum": "1b19bd55243cad4d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -872,7 +872,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "24a7997e86316c9a",
+      "checksum": "7465c0f8e1832dc3",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -901,7 +901,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "51c2b15abf8da9b7",
+      "checksum": "876f3500e6ca3f4c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -930,7 +930,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "45a4d17af25d8f9e",
+      "checksum": "cb925dc2c0a698be",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -959,7 +959,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "91a6dc5167ca0b18",
+      "checksum": "3f804a832bbf7d60",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -988,7 +988,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "65e23837047cf6b7",
+      "checksum": "397bbf8e3e49314b",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1017,7 +1017,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0a01847085f28526",
+      "checksum": "2b2a26ef3fe8f4c6",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1046,7 +1046,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6f3037b632460d77",
+      "checksum": "476faacda1a29911",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1075,7 +1075,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5825c820ba9b8dc4",
+      "checksum": "0f6245aa7fefbfd0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1104,7 +1104,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ec7f1496718ad8ad",
+      "checksum": "ca7d34aa9034257c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1133,7 +1133,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f6f948e94b81a4a2",
+      "checksum": "dc0e6da038ba51ef",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1162,7 +1162,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "80eb1be82e5f27b6",
+      "checksum": "46350efa0406ee25",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1191,7 +1191,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "943e0a5ba6766932",
+      "checksum": "035f39d9659136e4",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1220,7 +1220,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b8cdf316d191f961",
+      "checksum": "f515a5e5b6fa17db",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1249,7 +1249,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "4fc05accc873375e",
+      "checksum": "319d1b8bbf0f9e05",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1278,7 +1278,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f308833faa11ab02",
+      "checksum": "252f46ff581cf602",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1307,7 +1307,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "db7eb6a43f2cd7f8",
+      "checksum": "a8b181e89f79d268",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1336,13 +1336,13 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "de4ae7de181d6c80",
+      "checksum": "fe06e9c2e6a93990",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "unit-melee-bronze-hit",
       "category": "unit",
-      "file": "units/melee-bronze-hit.svg",
+      "file": "units/melee-bronze-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -1354,18 +1354,18 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": 1,
       "faction": "player",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a frontline melee warrior gripping a close-combat weapon and shield of the Bronze Age, wearing gear made of hammered bronze plates with green patina, leather bindings, early dressed masonry, staggering hit-reaction pose, flinching from a wound, full-body, facing right, grounded warrior silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "856fe9c846a9c481",
+      "checksum": "9dfe1e315b0ebd5e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1394,7 +1394,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6b1ed57548b4f88d",
+      "checksum": "683def0e8c28836e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1423,7 +1423,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "03837d93d1190bba",
+      "checksum": "d5f5541b8fc56fe5",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1452,7 +1452,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "50c7b834153dab2d",
+      "checksum": "bbb9a2ab4b2f3069",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1481,7 +1481,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8c9d302bf6fd5894",
+      "checksum": "71698b489cbcecb5",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1510,7 +1510,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6c4af548378c263d",
+      "checksum": "c797d1170e75dcb2",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1539,7 +1539,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "598d5bb9a5fd6f28",
+      "checksum": "549e48e2a4f5254d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1568,7 +1568,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "637973edbf9c6a08",
+      "checksum": "f164e5fdb573c3ab",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1597,7 +1597,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0bd94fe2137d8f19",
+      "checksum": "21ba7ce2ee7a9034",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1626,7 +1626,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6115c2a8c6bc53a9",
+      "checksum": "f221d61d5e2c36bc",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1655,7 +1655,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "edff706251b75add",
+      "checksum": "d824c99c48115654",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1684,7 +1684,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "92313aae15a2a083",
+      "checksum": "10e58f190c262047",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1713,7 +1713,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a34d5b0b45373d9b",
+      "checksum": "57a35c5164d45ce8",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1742,7 +1742,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "28f1dbb11531c3b2",
+      "checksum": "10ad5dd6615030ac",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1858,7 +1858,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "51e74730918d2126",
+      "checksum": "6569929360b34d03",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1887,7 +1887,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "3d49307244ea5989",
+      "checksum": "03dfd647c9683f89",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -1945,7 +1945,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6b754bfe3e709b3e",
+      "checksum": "72befd4d9a8da34d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2003,7 +2003,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b1678366c05ef8d8",
+      "checksum": "b8d275540ca27cd4",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2032,7 +2032,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "3aa48e915df14cf5",
+      "checksum": "ab3f85058c71a762",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2061,7 +2061,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5d7e19401e468b64",
+      "checksum": "6142f2e26efc6ae8",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2090,7 +2090,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "30acad934cb77a03",
+      "checksum": "2b9fcd5dce87b544",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2119,7 +2119,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e021edd6984c9938",
+      "checksum": "e2f6a15c1d1c3ca3",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2148,7 +2148,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ca0b457e0d3b5d71",
+      "checksum": "d75b5202a6b25f33",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2177,7 +2177,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d875247044ee86b1",
+      "checksum": "19770c1c770ce458",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2206,7 +2206,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "fddf5a4870297fc8",
+      "checksum": "bf2bc4aa26ae2b9c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2235,7 +2235,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "510363ed2e2726a0",
+      "checksum": "3f1d4ff0adf4e8cc",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2264,7 +2264,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c47581581ec0fe71",
+      "checksum": "74934fd8a9e236fd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2293,7 +2293,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "192defe05f4341f2",
+      "checksum": "115f9b2596706066",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2322,7 +2322,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "188729a3b2f32a63",
+      "checksum": "585efa8213bf5f93",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2351,7 +2351,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d69a58eb9e69052e",
+      "checksum": "8621c59d50655fdd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2380,7 +2380,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f918833e05bad24d",
+      "checksum": "4a8f9545505c6f37",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2409,7 +2409,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "20d137158e4f5b5a",
+      "checksum": "3f1b9e95bae3b3f8",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2438,7 +2438,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7d00f73a5239ad56",
+      "checksum": "efecdb4382a171ba",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2467,7 +2467,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "38b12cc6484aeeac",
+      "checksum": "c2f576089d736563",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2496,7 +2496,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d4a882557fa04a43",
+      "checksum": "6d6b9662dfcc9579",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2525,7 +2525,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d059447f3bbda9aa",
+      "checksum": "fa72a4504c75ccce",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2554,7 +2554,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "fb51e5816f340513",
+      "checksum": "a4cbd70ff5c78edc",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2583,7 +2583,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "fd0576701101ceb9",
+      "checksum": "fffb73b0a9d2353a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2641,7 +2641,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "62a9e511b48902bd",
+      "checksum": "03531a7b5f7839ec",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2670,7 +2670,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "75bb89040e439955",
+      "checksum": "c97003ee62e509db",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2699,7 +2699,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a6eb25aa42eb960e",
+      "checksum": "cce5fa28040f668f",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2728,7 +2728,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "83756762d305c0bf",
+      "checksum": "79c42f9ddc51bf7f",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2757,7 +2757,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "99a3e17801f854fb",
+      "checksum": "a33b9d614c572c81",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2786,7 +2786,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "391cf291ce737af7",
+      "checksum": "bce241bdbe9dae2c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2815,7 +2815,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "1176b753c4d50329",
+      "checksum": "ba238e8e3bf3a68c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2873,7 +2873,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8b456eb78094197f",
+      "checksum": "94f3624de6f26a61",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2902,7 +2902,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "3ec55fcae2f371e8",
+      "checksum": "36a9a2bcec11f9bd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2931,7 +2931,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7f8818c951290bb6",
+      "checksum": "91322b60d3834635",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2960,7 +2960,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "355e8ac3b42e9cca",
+      "checksum": "b189a278cb8eb881",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -2989,7 +2989,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b8e291ca51dfed7b",
+      "checksum": "3d6bf0f19a480068",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3018,7 +3018,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "413d2f805e0909be",
+      "checksum": "110b639709710618",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3047,7 +3047,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ab7b406879f73bf0",
+      "checksum": "0bdc2d2a8b52ad68",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3076,7 +3076,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5629b4877cf61c72",
+      "checksum": "b193336c860b300e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3105,7 +3105,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b898ed1ed6fc0c23",
+      "checksum": "f8d9109a187fc2ce",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3134,7 +3134,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d7052be711ad9e8f",
+      "checksum": "2ae347ad01bdbab0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3163,7 +3163,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "95783634e04778cf",
+      "checksum": "6566612f07493a32",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3192,7 +3192,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "06e71c428aa69446",
+      "checksum": "a014ae3419c88cb0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3221,7 +3221,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b078d97480a401d5",
+      "checksum": "0b6798881641c407",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3250,7 +3250,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bdeb8c6041f5b4db",
+      "checksum": "e932a4311d23f61e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3279,7 +3279,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "90353f039357f2e6",
+      "checksum": "6fc3eefebd9a6403",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3308,7 +3308,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9c5ef2c79a284c20",
+      "checksum": "218d68ea59902b22",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3337,7 +3337,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a3cbb106e18622fe",
+      "checksum": "450bd86d4c125c5a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3366,7 +3366,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "53a2047965e4fa06",
+      "checksum": "d764f12aaba4f122",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3395,7 +3395,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "60cc85bbf0a421c0",
+      "checksum": "0fb32d5e8bda5837",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3424,7 +3424,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "79aa2b78750c09a9",
+      "checksum": "27f704b8b496e45c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3453,7 +3453,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "21cda3166492f2b4",
+      "checksum": "b70b9eb84c876e4d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3511,7 +3511,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "73fab74c745a3606",
+      "checksum": "0bea5e9c866b7548",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3540,7 +3540,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b39e6e1c559ec40a",
+      "checksum": "6b3a69876ea9bf0b",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3569,7 +3569,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a4128bb644447275",
+      "checksum": "a0a3858cdcd80320",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3598,7 +3598,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e07cc39c294b01bb",
+      "checksum": "1dc85746dc253879",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3627,7 +3627,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6a84a3d01cc6c8a3",
+      "checksum": "9fcb41e58d1ea63a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3656,7 +3656,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7d07854e73278ba0",
+      "checksum": "94eda46ef95bd3f3",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3685,7 +3685,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ea09495096578acb",
+      "checksum": "116c8bbe1a80c1de",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3714,7 +3714,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "43f6a429dba491bb",
+      "checksum": "186ef8aa174511b9",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3743,7 +3743,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "255088e238cdbdb5",
+      "checksum": "d52d16eb4f6d3268",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3772,7 +3772,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bfafe7e7d62f8482",
+      "checksum": "63cefaf21c8d8969",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3801,7 +3801,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "3fc1481fbebcf3cb",
+      "checksum": "8be8da70f1afaa9d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3830,7 +3830,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0eb5a722de7d53fc",
+      "checksum": "5426846732eecd53",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3859,13 +3859,13 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "91b5cd568e1748e5",
+      "checksum": "95cf8af77687fe8d",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "unit-melee-gunpowder-hit",
       "category": "unit",
-      "file": "units/melee-gunpowder-hit.svg",
+      "file": "units/melee-gunpowder-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -3877,18 +3877,18 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": 4,
       "faction": "player",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a frontline melee warrior gripping a close-combat weapon and shield of the Gunpowder Age, wearing gear made of brick and timber with black iron fittings, gunports, powder-stained wood, staggering hit-reaction pose, flinching from a wound, full-body, facing right, grounded warrior silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "81ae3e4ab7286cc8",
+      "checksum": "9a22fdefe81476c7",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3917,7 +3917,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d61f6b8f8b6b21ce",
+      "checksum": "887ac47a0784db62",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3946,7 +3946,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7cedb83dc27aa7e8",
+      "checksum": "26bfc81f3b3e3d15",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -3975,7 +3975,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0cac5d6950234c59",
+      "checksum": "e34354d6c9d69640",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4004,7 +4004,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ba9ad51f1110db96",
+      "checksum": "0740157009249a3b",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4033,7 +4033,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "cba61a0dc7d82e27",
+      "checksum": "87ec2cd7bd0a49af",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4062,7 +4062,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "53f75413d4f35adb",
+      "checksum": "0d528dbec66d1609",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4091,7 +4091,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "295a2543d176eca9",
+      "checksum": "cbda2ec571f1c3ac",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4120,7 +4120,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d1f40167e7265211",
+      "checksum": "c7efc3cf4102cd6d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4149,7 +4149,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6a979b1229b3fa20",
+      "checksum": "3d07793d996a2182",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4178,7 +4178,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "65d8dd929b0ab8c2",
+      "checksum": "508d0d4b9e32d760",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4207,7 +4207,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7e98c24ace4e1cd0",
+      "checksum": "45b95adaa79c1333",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4236,7 +4236,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "aa9b4e7791fb788e",
+      "checksum": "1df34eb4aebc7024",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4265,7 +4265,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "56d29676a08b710f",
+      "checksum": "f734e36bcbb605b5",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4294,7 +4294,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c243e07ef0cd6ef3",
+      "checksum": "52113bd28e9ccaf5",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4323,7 +4323,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e3ca65dae9ffaea2",
+      "checksum": "d71d461d1b698096",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4439,7 +4439,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8ec63a903d64a2eb",
+      "checksum": "984c2d4277015c9c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4497,7 +4497,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "979d2f31cf4567d0",
+      "checksum": "44a1171fe36df2e2",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4526,7 +4526,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e254a6bf6c2d171c",
+      "checksum": "564bc0ec76061d81",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4555,7 +4555,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "315cc53891c190f0",
+      "checksum": "66262e7f61d5b67a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4584,7 +4584,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "841f61e035c8f980",
+      "checksum": "7c3df43a5c786a66",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4613,7 +4613,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d7586cd547b1f28f",
+      "checksum": "6de0d1a6d52a1ded",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4642,7 +4642,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bf6e06cbb27820ea",
+      "checksum": "f07462fa72c8e681",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4671,7 +4671,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ecd96a315a9140a8",
+      "checksum": "09ed94b562f8304c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4700,7 +4700,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "01a38ef2e0b33598",
+      "checksum": "50bb3d4bd4268bb2",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4729,7 +4729,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2633895ffdcd53c5",
+      "checksum": "e9bb13ee736fdfbd",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4758,7 +4758,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "35d4e0a80ba758c5",
+      "checksum": "9c165ea615728071",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4787,7 +4787,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "851776fead19b5ae",
+      "checksum": "d2f0f895e809fcc9",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4816,7 +4816,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2c068c3e304a5637",
+      "checksum": "bb1f0dbc6c8dd726",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4845,7 +4845,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6acab08be6f7594b",
+      "checksum": "56bcfc845e584d7f",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4874,7 +4874,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7fe534eb3acbd9c5",
+      "checksum": "27db80d64bd172f7",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4903,7 +4903,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8e38e21b800a0c3c",
+      "checksum": "9e0b23c57da345f0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4932,7 +4932,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8ae302da5e53caec",
+      "checksum": "a23e80513b31305b",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4961,7 +4961,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bb5ebc21668e7aa7",
+      "checksum": "f46e09bbc1aa762a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -4990,7 +4990,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "20e84c3968eea529",
+      "checksum": "6dda209bde8b13e6",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5019,7 +5019,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5009ebc80578bad4",
+      "checksum": "e25b6ad9e7ba5bbb",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5048,7 +5048,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "949eb9589dbf538b",
+      "checksum": "42b305a93b52c597",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5077,7 +5077,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b29825e7d188fdc7",
+      "checksum": "4294897c0f0014e7",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5106,7 +5106,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "100e754ee85d5417",
+      "checksum": "5761fe865f04f9b0",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5135,7 +5135,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "06c577df72816d70",
+      "checksum": "128bb57c9a086d46",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5164,7 +5164,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b3ab04b0a1959f85",
+      "checksum": "a71ec7575d93c5b9",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5193,7 +5193,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0f57179a6a85cba4",
+      "checksum": "eb67f5345b8aead2",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5222,7 +5222,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b39f3ca2547b88fb",
+      "checksum": "255c0942f0ba1d6c",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5251,7 +5251,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9a3dd27cd2b1486c",
+      "checksum": "a3515cb3f7500416",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5280,7 +5280,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "506e5e4851fa4146",
+      "checksum": "2dfcf3a3e2505c90",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5309,7 +5309,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "35d3a6567b337dc4",
+      "checksum": "7aaba8f4782dfecb",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5338,7 +5338,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "94e887dd7fb01559",
+      "checksum": "0e55dd17e98dbd38",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5367,7 +5367,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c18e4b493f401055",
+      "checksum": "dd0347543be4c850",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5396,7 +5396,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f792341dc2a3c05a",
+      "checksum": "a55779904a03a544",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5425,7 +5425,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "328be30397ffeb2c",
+      "checksum": "1a2cfed73aab256a",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5454,7 +5454,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "dd5be3583b2e4095",
+      "checksum": "65699df7db7e2556",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5483,7 +5483,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ab045a655f292bce",
+      "checksum": "2f69f9cd2c72be6d",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5512,7 +5512,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a7aa3997a8f02efe",
+      "checksum": "2692c862d13641be",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5541,7 +5541,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "1b51b60ec571078f",
+      "checksum": "6c0bc46e5c448036",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5570,7 +5570,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "faf7e08e8e55468d",
+      "checksum": "15b132e1ccc40e5e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5599,7 +5599,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "4ae18d108abd05b2",
+      "checksum": "973b05e35b1f1809",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5628,7 +5628,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "abadc32b7efce70c",
+      "checksum": "695c736ff5be863e",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5657,7 +5657,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f77e1c3e1564294d",
+      "checksum": "52e31c88f72ab427",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5686,7 +5686,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "12e0c8ba224fba4d",
+      "checksum": "b6a2d24e0d4976bc",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5715,7 +5715,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6e83bfe9f646f734",
+      "checksum": "801be3f6a41ca1aa",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5744,7 +5744,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ec2a605c4d00062b",
+      "checksum": "603bcd6fe6426389",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5773,7 +5773,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ce105f6bc636dfa4",
+      "checksum": "28ff5c189a641c17",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5802,7 +5802,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "806c062fb068ef15",
+      "checksum": "ae24a9d98e4b99ad",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5831,7 +5831,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5f03c1ae3f7bacca",
+      "checksum": "91099443baf3fcc3",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5860,7 +5860,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "86c6dd46f93cb059",
+      "checksum": "3743713e59399272",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5889,7 +5889,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "be819a318b57c272",
+      "checksum": "f81e8c7763ce0ccc",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5918,7 +5918,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bd0f2f84c1e9d8d3",
+      "checksum": "c68ddb62e9a4d7eb",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -5947,13 +5947,13 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8e5a72cbdbfd0036",
+      "checksum": "38627c5d904d71ce",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-lumber-modern",
       "category": "building",
-      "file": "buildings/lumber-modern.svg",
+      "file": "buildings/lumber-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -5965,18 +5965,18 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age a logging timber camp with a sawmill and stacked logs, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c7260d7fdbeefdbc",
+      "checksum": "1c8ee258b07c3f37",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -6005,7 +6005,7 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a179bb9f23cb879e",
+      "checksum": "bafee4b34fb00e03",
       "approvalStatus": "placeholder-ship"
     },
     {
@@ -6034,13 +6034,13 @@
       "generator": "vertex-ai:gemini-2.5-flash-image",
       "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "3fa294256505bd79",
+      "checksum": "dbac68b435bed4e1",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-barracks-modern",
       "category": "building",
-      "file": "buildings/barracks-modern.svg",
+      "file": "buildings/barracks-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6052,24 +6052,24 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age a garrisoned barracks with weapon racks and drilling yard, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e1cdcb548b6e86b2",
+      "checksum": "de6e40f5c58dda5b",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-workshop-modern",
       "category": "building",
-      "file": "buildings/workshop-modern.svg",
+      "file": "buildings/workshop-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6081,24 +6081,24 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age a siege engineers workshop with half-built war machines, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ebc258cac3002689",
+      "checksum": "d8753153fd8e7347",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-hall-modern",
       "category": "building",
-      "file": "buildings/hall-modern.svg",
+      "file": "buildings/hall-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6110,24 +6110,24 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age an ornate hero hall for champions, banners and trophies, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ab7a5b639d8507c4",
+      "checksum": "ba50dfcc9b3ebaa2",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-armory-modern",
       "category": "building",
-      "file": "buildings/armory-modern.svg",
+      "file": "buildings/armory-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6139,24 +6139,24 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age a blacksmith armory forge with glowing hearth and anvils, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2792cf3966cf6160",
+      "checksum": "5ee6909141c217f9",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "bld-walls-modern",
       "category": "building",
-      "file": "buildings/walls-modern.svg",
+      "file": "buildings/walls-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6168,24 +6168,24 @@
         96
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age a fortified defensive wall section with a gatehouse tower, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "31c14c2854b7608e",
+      "checksum": "af4cdffa47680f1c",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "tower-arrow-modern",
       "category": "tower",
-      "file": "towers/arrow-modern.svg",
+      "file": "towers/arrow-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6197,24 +6197,24 @@
         64
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age defensive tower \u2014 a projectile watchtower built to loose volleys down a besieged lane, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "77b74a4497c98977",
+      "checksum": "9949f330f7e6b999",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "tower-splash-modern",
       "category": "tower",
-      "file": "towers/splash-modern.svg",
+      "file": "towers/splash-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6226,24 +6226,24 @@
         64
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age defensive tower \u2014 a heavy siege engine tower hurling explosive area payloads, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "606759901e651327",
+      "checksum": "631b865a036b30aa",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "tower-slow-modern",
       "category": "tower",
-      "file": "towers/slow-modern.svg",
+      "file": "towers/slow-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6255,24 +6255,24 @@
         64
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age defensive tower \u2014 a control tower rigged with traps and snares to slow attackers, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e735f0def4ee3a39",
+      "checksum": "2ed53bb8cf2b1017",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "tower-support-modern",
       "category": "tower",
-      "file": "towers/support-modern.svg",
+      "file": "towers/support-modern.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6284,24 +6284,24 @@
         64
       ],
       "sourceSize": [
-        512,
-        512
+        1024,
+        1024
       ],
       "age": 6,
       "faction": "player",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Modern Age defensive tower \u2014 a signal/aura tower rallying nearby defenders, poured concrete, composite armor panels, exposed conduit, cold floodlit steel, 2:1 isometric perspective viewed from southeast. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f2ce353bf5629697",
+      "checksum": "a29aaf63ec4a6114",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wolf-idle",
       "category": "creature",
-      "file": "creatures/wolf-idle.svg",
+      "file": "creatures/wolf-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6313,24 +6313,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Dire Wolf, oversized feral predator with matted dark fur and glowing eyes, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "603b1ae7530c0054",
+      "checksum": "34c19522842bc280",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wolf-move",
       "category": "creature",
-      "file": "creatures/wolf-move.svg",
+      "file": "creatures/wolf-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6342,24 +6342,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Dire Wolf, oversized feral predator with matted dark fur and glowing eyes, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b1c061a6f2c3de5a",
+      "checksum": "d921ad4fe6e4ea4e",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wolf-attack",
       "category": "creature",
-      "file": "creatures/wolf-attack.svg",
+      "file": "creatures/wolf-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6371,24 +6371,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Dire Wolf, oversized feral predator with matted dark fur and glowing eyes, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ea4d55e9a25b6dcf",
+      "checksum": "aaf99bf23be0f129",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wolf-hit",
       "category": "creature",
-      "file": "creatures/wolf-hit.svg",
+      "file": "creatures/wolf-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6400,24 +6400,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Dire Wolf, oversized feral predator with matted dark fur and glowing eyes, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d7d2294daed5f8e8",
+      "checksum": "b9852c3266d7e85f",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wolf-death",
       "category": "creature",
-      "file": "creatures/wolf-death.svg",
+      "file": "creatures/wolf-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6429,24 +6429,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Dire Wolf, oversized feral predator with matted dark fur and glowing eyes, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "019b24cf89f34b1a",
+      "checksum": "d2c4b8e8ea596f10",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bandit-idle",
       "category": "creature",
-      "file": "creatures/bandit-idle.svg",
+      "file": "creatures/bandit-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6458,24 +6458,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a ragged Bandit raider in dark leathers wielding a crude blade, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f1f3ce3d9e2ef188",
+      "checksum": "f4ab927f51be99c1",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bandit-move",
       "category": "creature",
-      "file": "creatures/bandit-move.svg",
+      "file": "creatures/bandit-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6487,24 +6487,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a ragged Bandit raider in dark leathers wielding a crude blade, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9e9d3848cbfe8bc8",
+      "checksum": "5671025c2aff8a12",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bandit-attack",
       "category": "creature",
-      "file": "creatures/bandit-attack.svg",
+      "file": "creatures/bandit-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6516,24 +6516,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a ragged Bandit raider in dark leathers wielding a crude blade, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "47b7c2e129d58f87",
+      "checksum": "f962f443a1093a85",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bandit-hit",
       "category": "creature",
-      "file": "creatures/bandit-hit.svg",
+      "file": "creatures/bandit-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6545,24 +6545,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a ragged Bandit raider in dark leathers wielding a crude blade, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7b461e9fb9be5b8b",
+      "checksum": "2b5a31ab0b60a340",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bandit-death",
       "category": "creature",
-      "file": "creatures/bandit-death.svg",
+      "file": "creatures/bandit-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6574,24 +6574,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a ragged Bandit raider in dark leathers wielding a crude blade, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a38bec2e53af3cbd",
+      "checksum": "b72728d746bc03cf",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bear-idle",
       "category": "creature",
-      "file": "creatures/bear-idle.svg",
+      "file": "creatures/bear-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6603,24 +6603,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Cave Bear, matted fur, scarred hide, primal menace, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "169a9108f050ee63",
+      "checksum": "e893112a47100236",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bear-move",
       "category": "creature",
-      "file": "creatures/bear-move.svg",
+      "file": "creatures/bear-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6632,24 +6632,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Cave Bear, matted fur, scarred hide, primal menace, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a93601e2c142e758",
+      "checksum": "e25a04fc7309e4b4",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bear-attack",
       "category": "creature",
-      "file": "creatures/bear-attack.svg",
+      "file": "creatures/bear-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6661,24 +6661,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Cave Bear, matted fur, scarred hide, primal menace, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d6dbed4aaaebcb98",
+      "checksum": "aa4b020833d59210",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bear-hit",
       "category": "creature",
-      "file": "creatures/bear-hit.svg",
+      "file": "creatures/bear-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6690,24 +6690,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Cave Bear, matted fur, scarred hide, primal menace, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "fcffb55dc82eb53a",
+      "checksum": "35115d2eea395698",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-bear-death",
       "category": "creature",
-      "file": "creatures/bear-death.svg",
+      "file": "creatures/bear-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6719,24 +6719,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Cave Bear, matted fur, scarred hide, primal menace, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "74ab8b0462f47b66",
+      "checksum": "2c5ba24bdda87b14",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-harpy-idle",
       "category": "creature",
-      "file": "creatures/harpy-idle.svg",
+      "file": "creatures/harpy-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6748,24 +6748,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Harpy, winged half-bird half-woman monster with talons, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "356bd3fff3b80466",
+      "checksum": "a35c408cbb2082ec",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-harpy-move",
       "category": "creature",
-      "file": "creatures/harpy-move.svg",
+      "file": "creatures/harpy-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6777,24 +6777,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Harpy, winged half-bird half-woman monster with talons, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a72597873d0e6741",
+      "checksum": "ebfce37e3d103a00",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-harpy-attack",
       "category": "creature",
-      "file": "creatures/harpy-attack.svg",
+      "file": "creatures/harpy-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6806,24 +6806,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Harpy, winged half-bird half-woman monster with talons, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "eefdd928dc1e85cb",
+      "checksum": "58e64dd612ed2bf0",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-harpy-hit",
       "category": "creature",
-      "file": "creatures/harpy-hit.svg",
+      "file": "creatures/harpy-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6835,24 +6835,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Harpy, winged half-bird half-woman monster with talons, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "7fb9e7b342309667",
+      "checksum": "9aed1b0aac2e8cbc",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-harpy-death",
       "category": "creature",
-      "file": "creatures/harpy-death.svg",
+      "file": "creatures/harpy-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6864,24 +6864,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Harpy, winged half-bird half-woman monster with talons, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "16652addcc43918b",
+      "checksum": "bb25996d89032f30",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-golem-idle",
       "category": "creature",
-      "file": "creatures/golem-idle.svg",
+      "file": "creatures/golem-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6893,24 +6893,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Golem, hulking construct of carved rock and moss, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "4dca2ea66f1bdc54",
+      "checksum": "1e6f25d748c97b08",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-golem-move",
       "category": "creature",
-      "file": "creatures/golem-move.svg",
+      "file": "creatures/golem-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6922,24 +6922,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Golem, hulking construct of carved rock and moss, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "02f85d56fc31a553",
+      "checksum": "393ca529d5db6293",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-golem-attack",
       "category": "creature",
-      "file": "creatures/golem-attack.svg",
+      "file": "creatures/golem-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6951,24 +6951,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Golem, hulking construct of carved rock and moss, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e2f04b4a65b2c5f9",
+      "checksum": "da08e40b81fdeaf7",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-golem-hit",
       "category": "creature",
-      "file": "creatures/golem-hit.svg",
+      "file": "creatures/golem-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -6980,24 +6980,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Golem, hulking construct of carved rock and moss, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e30ba65060a09d9e",
+      "checksum": "86fc2c7b41aa477c",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-golem-death",
       "category": "creature",
-      "file": "creatures/golem-death.svg",
+      "file": "creatures/golem-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7009,24 +7009,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Stone Golem, hulking construct of carved rock and moss, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "db9a80464572d54c",
+      "checksum": "01bb188be638f01f",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-griffin-idle",
       "category": "creature",
-      "file": "creatures/griffin-idle.svg",
+      "file": "creatures/griffin-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7038,24 +7038,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Griffin, majestic winged lion-eagle beast, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "41eca41892bdf5c3",
+      "checksum": "712c7ddf7ef17d1b",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-griffin-move",
       "category": "creature",
-      "file": "creatures/griffin-move.svg",
+      "file": "creatures/griffin-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7067,24 +7067,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Griffin, majestic winged lion-eagle beast, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "8eeb214734cb2679",
+      "checksum": "0917b40a11f31ab1",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-griffin-attack",
       "category": "creature",
-      "file": "creatures/griffin-attack.svg",
+      "file": "creatures/griffin-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7096,24 +7096,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Griffin, majestic winged lion-eagle beast, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "840600c71e6af76f",
+      "checksum": "06a528da8f243f9e",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-griffin-hit",
       "category": "creature",
-      "file": "creatures/griffin-hit.svg",
+      "file": "creatures/griffin-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7125,24 +7125,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Griffin, majestic winged lion-eagle beast, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a51f0bc16c95f023",
+      "checksum": "922ffd1f9a75b1ea",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-griffin-death",
       "category": "creature",
-      "file": "creatures/griffin-death.svg",
+      "file": "creatures/griffin-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7154,24 +7154,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Griffin, majestic winged lion-eagle beast, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "31fc9c73d49f3bc8",
+      "checksum": "86b94b1248a8f3a1",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wyvern-idle",
       "category": "creature",
-      "file": "creatures/wyvern-idle.svg",
+      "file": "creatures/wyvern-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7183,24 +7183,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Wyvern, sinewy two-legged dragon with a barbed tail, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "652a33aec8124f72",
+      "checksum": "5735ea836827698b",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wyvern-move",
       "category": "creature",
-      "file": "creatures/wyvern-move.svg",
+      "file": "creatures/wyvern-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7212,24 +7212,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Wyvern, sinewy two-legged dragon with a barbed tail, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "515df4edb8491840",
+      "checksum": "04abff3829db77bc",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wyvern-attack",
       "category": "creature",
-      "file": "creatures/wyvern-attack.svg",
+      "file": "creatures/wyvern-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7241,24 +7241,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Wyvern, sinewy two-legged dragon with a barbed tail, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b64f3831308568b8",
+      "checksum": "c7a9b01720b653c1",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wyvern-hit",
       "category": "creature",
-      "file": "creatures/wyvern-hit.svg",
+      "file": "creatures/wyvern-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7270,24 +7270,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Wyvern, sinewy two-legged dragon with a barbed tail, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "2aa9575769fa5f73",
+      "checksum": "68793cbe22050695",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-wyvern-death",
       "category": "creature",
-      "file": "creatures/wyvern-death.svg",
+      "file": "creatures/wyvern-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7299,24 +7299,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Wyvern, sinewy two-legged dragon with a barbed tail, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "011e481412481b81",
+      "checksum": "74f13b6dc9a87aeb",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-drone-idle",
       "category": "creature",
-      "file": "creatures/drone-idle.svg",
+      "file": "creatures/drone-idle.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7328,24 +7328,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "idle",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Drone Swarm, cluster of ominous floating mechanical constructs, standing ready combat idle stance, weapon lowered but alert, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "a18e6c8f6020c170",
+      "checksum": "507e3c5aa6a6a23c",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-drone-move",
       "category": "creature",
-      "file": "creatures/drone-move.svg",
+      "file": "creatures/drone-move.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7357,24 +7357,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "move",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Drone Swarm, cluster of ominous floating mechanical constructs, mid-stride running/advancing pose, dynamic forward motion, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5d80141927122fbf",
+      "checksum": "a4727172a0633538",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-drone-attack",
       "category": "creature",
-      "file": "creatures/drone-attack.svg",
+      "file": "creatures/drone-attack.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7386,24 +7386,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "attack",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Drone Swarm, cluster of ominous floating mechanical constructs, mid-swing attacking pose, weapon at the peak of a strike, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "06587229b5cfdfba",
+      "checksum": "f9692bdbc2ff484c",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-drone-hit",
       "category": "creature",
-      "file": "creatures/drone-hit.svg",
+      "file": "creatures/drone-hit.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7415,24 +7415,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "hit",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Drone Swarm, cluster of ominous floating mechanical constructs, staggering hit-reaction pose, flinching from a wound, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ba314c77da185239",
+      "checksum": "e54c9754ce94022c",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "enemy-drone-death",
       "category": "creature",
-      "file": "creatures/drone-death.svg",
+      "file": "creatures/drone-death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7444,24 +7444,24 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a Drone Swarm, cluster of ominous floating mechanical constructs, collapsing death pose, falling backward, dramatic final moment, full-body monster silhouette. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f35ddcd69ab7a358",
+      "checksum": "bea143b353751501",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-enemy-brute",
       "category": "siege-enemy",
-      "file": "siege/enemy-brute.svg",
+      "file": "siege/enemy-brute.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7473,24 +7473,24 @@
         48
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a hulking Brute invader, oversized club, heavy armor plates, full-body invader silhouette advancing. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "108b6e953d91695a",
+      "checksum": "715c465ffa7d2cd6",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-enemy-runner",
       "category": "siege-enemy",
-      "file": "siege/enemy-runner.svg",
+      "file": "siege/enemy-runner.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7502,24 +7502,24 @@
         48
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a fast feral Runner beast, low-slung and sprinting, full-body invader silhouette advancing. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "4ea5108784795fe0",
+      "checksum": "7645a74bb4c9dfa0",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-enemy-archer",
       "category": "siege-enemy",
-      "file": "siege/enemy-archer.svg",
+      "file": "siege/enemy-archer.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7531,24 +7531,24 @@
         48
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: an enemy Archer raider drawing a bow at range, full-body invader silhouette advancing. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "94be988a4d565ffd",
+      "checksum": "c8232e3a3291ecb5",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-enemy-sapper",
       "category": "siege-enemy",
-      "file": "siege/enemy-sapper.svg",
+      "file": "siege/enemy-sapper.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7560,24 +7560,24 @@
         48
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a demolition Sapper laden with explosives, hunched and scheming, full-body invader silhouette advancing. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "bd02ea9728b8bc17",
+      "checksum": "7ec4a05900fbb238",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-enemy-shaman",
       "category": "siege-enemy",
-      "file": "siege/enemy-shaman.svg",
+      "file": "siege/enemy-shaman.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7589,24 +7589,24 @@
         48
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: an enemy Shaman caster wreathed in dark magic energy, full-body invader silhouette advancing. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "036acd5db75c77fe",
+      "checksum": "9829f704bfa50bbb",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "rival-portrait",
       "category": "rival",
-      "file": "rival/portrait.svg",
+      "file": "rival/portrait.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7618,24 +7618,24 @@
         256
       ],
       "sourceSize": [
-        768,
+        1024,
         1024
       ],
       "age": null,
       "faction": "enemy",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a menacing rival warlord antagonist, dark ornate armor, scarred face, heroic bust-up three-quarter portrait, cold hostile expression. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c9d457b025ddf2cc",
+      "checksum": "280294d6f44a5c71",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-lowlands",
       "category": "map",
-      "file": "map/lowlands.svg",
+      "file": "map/lowlands.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7653,18 +7653,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of rolling green lowland farmland dotted with hedgerows, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6de3a2222b8d9520",
+      "checksum": "1b52a62348a72ef2",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-lowlands",
       "category": "siege-lane",
-      "file": "siege/lane-lowlands.svg",
+      "file": "siege/lane-lowlands.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7682,18 +7682,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through rolling green lowland farmland dotted with hedgerows, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "28e74e4a009159cd",
+      "checksum": "cc301e29d299174d",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-forest",
       "category": "map",
-      "file": "map/forest.svg",
+      "file": "map/forest.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7711,18 +7711,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of a dense ancient forest with towering dark-canopy trees, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "e844e694561ba2a9",
+      "checksum": "057c1bf2c7386679",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-forest",
       "category": "siege-lane",
-      "file": "siege/lane-forest.svg",
+      "file": "siege/lane-forest.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7740,18 +7740,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through a dense ancient forest with towering dark-canopy trees, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "669b87ac786ecb4e",
+      "checksum": "dbe3cd184a0685e6",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-swamp",
       "category": "map",
-      "file": "map/swamp.svg",
+      "file": "map/swamp.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7769,18 +7769,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of a gloomy marshland with stagnant water and twisted roots, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "31c35fa12742cec4",
+      "checksum": "1a6336d9e22d92ba",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-swamp",
       "category": "siege-lane",
-      "file": "siege/lane-swamp.svg",
+      "file": "siege/lane-swamp.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7798,18 +7798,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through a gloomy marshland with stagnant water and twisted roots, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c32792959c1d9059",
+      "checksum": "f73f075623125e85",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-desert",
       "category": "map",
-      "file": "map/desert.svg",
+      "file": "map/desert.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7827,18 +7827,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of an arid sun-scorched desert with dunes and cracked earth, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c60fa2a368cdf3dd",
+      "checksum": "e2930084aaf614d8",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-desert",
       "category": "siege-lane",
-      "file": "siege/lane-desert.svg",
+      "file": "siege/lane-desert.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7856,18 +7856,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through an arid sun-scorched desert with dunes and cracked earth, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6447245c6cc54516",
+      "checksum": "47ac33be618ca604",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-snow",
       "category": "map",
-      "file": "map/snow.svg",
+      "file": "map/snow.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7885,18 +7885,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of a frozen tundra with deep snowdrifts and exposed dark rock, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "833ee15d6ad3e6bc",
+      "checksum": "d7e214e93531593d",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-snow",
       "category": "siege-lane",
-      "file": "siege/lane-snow.svg",
+      "file": "siege/lane-snow.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7914,18 +7914,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through a frozen tundra with deep snowdrifts and exposed dark rock, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b923895373ae2fb3",
+      "checksum": "8e572fa275a8130f",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "map-darklands",
       "category": "map",
-      "file": "map/darklands.svg",
+      "file": "map/darklands.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7943,18 +7943,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a top-down/overhead campaign map tile of a corrupted wasteland with ashen ground and eerie fog, muted dark-fantasy palette. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "6386d6ec9a5fd77e",
+      "checksum": "b323cf49b15ab5df",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "siege-lane-darklands",
       "category": "siege-lane",
-      "file": "siege/lane-darklands.svg",
+      "file": "siege/lane-darklands.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -7972,18 +7972,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a defensive siege lane corridor through a corrupted wasteland with ashen ground and eerie fog, winding path toward a besieged core. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "59bd8d34b24645c9",
+      "checksum": "3824a3246bb3bd3d",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-plains",
       "category": "battleground",
-      "file": "battle/plains.svg",
+      "file": "battle/plains.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8001,18 +8001,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a wide grassy tactical battlefield with rolling terrain. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c05cef83792079e6",
+      "checksum": "f6f7351cdb25c44e",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-forest",
       "category": "battleground",
-      "file": "battle/forest.svg",
+      "file": "battle/forest.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8030,18 +8030,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a woodland clearing battlefield bordered by ancient trees. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "dc4720c118cd6601",
+      "checksum": "82515ff84575a650",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-hills",
       "category": "battleground",
-      "file": "battle/hills.svg",
+      "file": "battle/hills.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8059,18 +8059,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a rugged hillside battlefield with rocky ridges. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "9258b468dbb95e5b",
+      "checksum": "6c0c44599d215fef",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-swamp",
       "category": "battleground",
-      "file": "battle/swamp.svg",
+      "file": "battle/swamp.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8088,18 +8088,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a gloomy marshland battlefield with dark stagnant water. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "95fcf2e92bb8bafe",
+      "checksum": "9790da828a1aafc9",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-desert",
       "category": "battleground",
-      "file": "battle/desert.svg",
+      "file": "battle/desert.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8117,18 +8117,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: an arid canyon battlefield with sandstone buttes. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "01135b3e218df999",
+      "checksum": "f0cba47035d86866",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-snow",
       "category": "battleground",
-      "file": "battle/snow.svg",
+      "file": "battle/snow.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8146,18 +8146,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a frozen tundra battlefield with snowdrifts and granite. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "1e574c22950f06ec",
+      "checksum": "5aaf7945f377e043",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-waste",
       "category": "battleground",
-      "file": "battle/waste.svg",
+      "file": "battle/waste.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8175,18 +8175,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a volcanic wasteland battlefield with scorched earth and embers. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "c64d7a2133bb6cc6",
+      "checksum": "df9b43a39949ab36",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "battle-ruins",
       "category": "battleground",
-      "file": "battle/ruins.svg",
+      "file": "battle/ruins.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8204,18 +8204,18 @@
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: an ancient ruined battlefield with broken stone columns. Full painted environment, wide isometric perspective, no units, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "07f7a064bdc3b55b",
+      "checksum": "ba7849c45d1d1b07",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-fire",
       "category": "vfx",
-      "file": "vfx/fire.svg",
+      "file": "vfx/fire.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8233,18 +8233,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "fire",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal fire/flame burst particle effect strip, glowing embers. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5cae0e61f7120425",
+      "checksum": "c9f3a853b2a6295d",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-ice",
       "category": "vfx",
-      "file": "vfx/ice.svg",
+      "file": "vfx/ice.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8262,18 +8262,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "ice",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal frost/ice shard particle effect strip, cold blue glow. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f238bee31fe4d1fc",
+      "checksum": "533109334cfde328",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-arrows",
       "category": "vfx",
-      "file": "vfx/arrows.svg",
+      "file": "vfx/arrows.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8291,18 +8291,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "arrows",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal flying arrows particle effect strip, motion streaks. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "458eb0791d01f7f8",
+      "checksum": "78c0445142093f01",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-melee",
       "category": "vfx",
-      "file": "vfx/melee.svg",
+      "file": "vfx/melee.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8320,18 +8320,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "melee",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal melee impact slash particle effect strip, sharp flash. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d4222ba34a3cb890",
+      "checksum": "8a532acefd215c70",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-heal",
       "category": "vfx",
-      "file": "vfx/heal.svg",
+      "file": "vfx/heal.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8349,18 +8349,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "heal",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal healing light particle effect strip, warm gold glow. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f3f1d7b5bdbea2f5",
+      "checksum": "a4d9e71b502b2b3e",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-smoke",
       "category": "vfx",
-      "file": "vfx/smoke.svg",
+      "file": "vfx/smoke.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8378,18 +8378,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "smoke",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal smoke plume particle effect strip, drifting haze. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "5dbcbbb6d9400f62",
+      "checksum": "2c1fff0b751a638f",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-lightning",
       "category": "vfx",
-      "file": "vfx/lightning.svg",
+      "file": "vfx/lightning.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8407,18 +8407,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "lightning",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal lightning bolt particle effect strip, electric arcs. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "437c9f075b790964",
+      "checksum": "dfa4554ff6ed68b6",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-death",
       "category": "vfx",
-      "file": "vfx/death.svg",
+      "file": "vfx/death.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8436,18 +8436,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "death",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal death/dissolve particle effect strip, fading dark motes. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "cfb0204726184512",
+      "checksum": "4ce779533a4c3687",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-dust",
       "category": "vfx",
-      "file": "vfx/dust.svg",
+      "file": "vfx/dust.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8465,18 +8465,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "dust",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal dust cloud particle effect strip, ground impact haze. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "32afe36769173689",
+      "checksum": "8781760f79173a9b",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-rain",
       "category": "vfx",
-      "file": "vfx/rain.svg",
+      "file": "vfx/rain.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8494,18 +8494,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "rain",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal rain splash particle effect strip, water droplets. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "cd94eb78b1fee6ef",
+      "checksum": "a09bcf1583a024bb",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "vfx-spell",
       "category": "vfx",
-      "file": "vfx/spell.svg",
+      "file": "vfx/spell.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8523,18 +8523,18 @@
       "age": null,
       "faction": "neutral",
       "animation": "spell",
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a horizontal arcane spell-light particle effect strip, violet glow. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "ef1231d9c5c5f387",
+      "checksum": "1b9c86de13b75895",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "ui-metal",
       "category": "ui",
-      "file": "ui/metal.svg",
+      "file": "ui/metal.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8546,24 +8546,24 @@
         64
       ],
       "sourceSize": [
-        128,
-        128
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: brushed charcoal gunmetal panel material with subtle gold hairline trim. Seamless tileable material swatch, flat-on view, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "48843a6d7f92b43a",
+      "checksum": "b12f8fd1277038da",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "ui-leather",
       "category": "ui",
-      "file": "ui/leather.svg",
+      "file": "ui/leather.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8575,24 +8575,24 @@
         64
       ],
       "sourceSize": [
-        128,
-        128
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: worn dark brown leather panel material with visible grain and stitching. Seamless tileable material swatch, flat-on view, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "f211694511c67daf",
+      "checksum": "f12557515ed1183a",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "ui-parchment",
       "category": "ui",
-      "file": "ui/parchment.svg",
+      "file": "ui/parchment.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8604,24 +8604,24 @@
         64
       ],
       "sourceSize": [
-        128,
-        128
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: aged parchment paper panel material, warm cream tone, soft creases. Seamless tileable material swatch, flat-on view, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "d9f50998b580e46d",
+      "checksum": "285a8d06af8a2c95",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "ui-glass",
       "category": "ui",
-      "file": "ui/glass.svg",
+      "file": "ui/glass.jpg",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8633,24 +8633,24 @@
         64
       ],
       "sourceSize": [
-        128,
-        128
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: dark smoked glass panel material with faint gold-edged reflections. Seamless tileable material swatch, flat-on view, no text, no watermark, no UI chrome.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "b49e7890d7273e9b",
+      "checksum": "6eb030162ba6798a",
       "approvalStatus": "placeholder-ship"
     },
     {
       "id": "fx-scaffold",
       "category": "prop",
-      "file": "props/scaffold.svg",
+      "file": "props/scaffold.png",
       "atlas": null,
       "frame": null,
       "pivot": {
@@ -8662,18 +8662,18 @@
         64
       ],
       "sourceSize": [
-        256,
-        256
+        1024,
+        1024
       ],
       "age": null,
       "faction": "neutral",
       "animation": null,
-      "prompt": "cinematic dark-fantasy placeholder",
+      "prompt": "Masterpiece cinematic dark-fantasy oil painting for a premium mobile strategy game. Realistic materials, stylized heroic proportions, dramatic rim lighting from upper-left, desaturated midtones, high-contrast readable silhouette, soft fog and ember dust. Subject: a wooden construction scaffold with dust and rope lashings, mid-build. Isolated on solid magenta #FF00FF background. No text, no watermark, no logo, no UI, no ground plane.",
       "seed": 0,
-      "generator": "scripts/generate-placeholders.mjs",
-      "humanEditor": "pending",
+      "generator": "vertex-ai:gemini-2.5-flash-image",
+      "humanEditor": "ai-generated-pending-review",
       "license": "proprietary-game-asset",
-      "checksum": "0f13a4b2dc15b989",
+      "checksum": "83bfdec443d89312",
       "approvalStatus": "placeholder-ship"
     },
     {

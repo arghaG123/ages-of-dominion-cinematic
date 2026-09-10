@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/lowlands.svg",
+      "source": "map/lowlands.jpg",
       "extruded": 2
     },
     "map-forest": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/forest.svg",
+      "source": "map/forest.jpg",
       "extruded": 2
     },
     "map-swamp": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/swamp.svg",
+      "source": "map/swamp.jpg",
       "extruded": 2
     },
     "map-desert": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/desert.svg",
+      "source": "map/desert.jpg",
       "extruded": 2
     },
     "map-snow": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/snow.svg",
+      "source": "map/snow.jpg",
       "extruded": 2
     },
     "map-darklands": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "map/darklands.svg",
+      "source": "map/darklands.jpg",
       "extruded": 2
     }
   }

@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/hero-knight.svg",
+      "source": "benchmarks/hero-knight.png",
       "extruded": 2
     },
     "bench-bld-townhall": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/bld-townhall.svg",
+      "source": "benchmarks/bld-townhall.png",
       "extruded": 2
     },
     "bench-battle-plains": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/battle-plains.svg",
+      "source": "benchmarks/battle-plains.jpg",
       "extruded": 2
     },
     "bench-unit-clubman": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/unit-clubman.svg",
+      "source": "benchmarks/unit-clubman.png",
       "extruded": 2
     },
     "bench-ui-panel": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/ui-panel.svg",
+      "source": "benchmarks/ui-panel.jpg",
       "extruded": 2
     }
   }

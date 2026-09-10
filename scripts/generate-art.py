@@ -285,6 +285,56 @@ def full_prompt(mode, subject):
     return f"{STYLE_PREFIX}Subject: {subject}. {TEXTURE_SUFFIX}"
 
 
+TARGET_SIZE = {
+    'hero-idle': (768, 512),
+    'hero-portrait': (768, 1024),
+    'hero-turn': (768, 1024),
+    'map': (768, 512),
+    'siege-lane': (1280, 720),
+    'battleground': (1280, 853),
+    'vfx': (256, 32),
+}
+BENCHMARK_TARGET_SIZE = {
+    'bench-hero-knight': (768, 1024),
+    'bench-bld-townhall': (512, 512),
+    'bench-battle-plains': (1280, 853),
+    'bench-unit-clubman': (256, 256),
+    'bench-ui-panel': (640, 160),
+}
+
+
+def target_size_for(asset):
+    if asset['id'] in BENCHMARK_TARGET_SIZE:
+        return BENCHMARK_TARGET_SIZE[asset['id']]
+    if asset['category'] == 'hero':
+        variant = asset['id'].split('-')[-1]
+        return TARGET_SIZE.get(f'hero-{variant}')
+    return TARGET_SIZE.get(asset['category'])
+
+
+def crop_resize_to_target(image, target):
+    """Center-crop the square generation to the asset's real aspect ratio, then
+    resize down to its exact target dimensions. Skipped for near-square targets
+    (within 15% of 1:1) where a plain resize is not worth the quality loss."""
+    from PIL import Image
+    if not target:
+        return image
+    tw, th = target
+    if 0.85 <= (tw / th) <= 1.15:
+        return image.resize((tw, th), Image.Resampling.LANCZOS) if image.size != (tw, th) else image
+    w, h = image.size
+    target_ratio = tw / th
+    if w / h > target_ratio:
+        new_w = int(h * target_ratio)
+        x0 = (w - new_w) // 2
+        image = image.crop((x0, 0, x0 + new_w, h))
+    else:
+        new_h = int(w / target_ratio)
+        y0 = (h - new_h) // 2
+        image = image.crop((0, y0, w, y0 + new_h))
+    return image.resize((tw, th), Image.Resampling.LANCZOS)
+
+
 def out_filename(asset, mode):
     if asset['id'] in BENCHMARK_PROMPTS:
         return BENCHMARK_PROMPTS[asset['id']][1]
@@ -312,17 +362,24 @@ def _is_magenta_hue(r, g, b, ratio=0.72):
     return g < mn * ratio
 
 
-def punch_alpha(img, feather=2):
+def punch_alpha(img, feather=2, halo_reach=18):
     """Remove the magenta background via flood-fill from the border using a
     hue-relative test — so a disconnected subject color that happens to be
     magenta-ish (a red cape, warm rim-light) never gets eaten, only the truly
-    connected background, regardless of the vignette the model painted."""
+    connected background, regardless of the vignette the model painted.
+
+    Two passes: a strict pass finds the solid background; a second pass grows
+    from it into softer glow/mist pixels but ONLY up to `halo_reach` pixels of
+    graph distance. Unbounded growth (plain hysteresis) leaks straight through
+    a smooth rim-light gradient into the subject's core on some paintings —
+    capping the depth is what stops that while still clearing the halo."""
     import collections
     from PIL import Image, ImageFilter
     img = img.convert("RGBA")
     w, h = img.size
     pixels = img.load()
 
+    # Pass 1 — strict flood fill from the border.
     visited = bytearray(w * h)
     bg_mask = bytearray(w * h)  # 1 = background
     q = collections.deque()
@@ -340,14 +397,12 @@ def punch_alpha(img, feather=2):
         seed(0, y)
         seed(w - 1, y)
 
-    # Hysteresis: a pixel already reached through solid background may pull in
-    # more marginal (softer glow/mist) neighbors than a fresh seed could on its own —
-    # this is what actually clears the rim-light halos without eating into the subject.
+    frontier = []
     while q:
         x, y = q.popleft()
         idx = y * w + x
         r, g, b, _a = pixels[x, y]
-        if not _is_magenta_hue(r, g, b, ratio=0.9):
+        if not _is_magenta_hue(r, g, b, ratio=0.72):
             continue
         bg_mask[idx] = 1
         for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
@@ -356,8 +411,38 @@ def punch_alpha(img, feather=2):
                 if not visited[nidx]:
                     visited[nidx] = 1
                     nr, ng, nb, _na = pixels[nx, ny]
-                    if _is_magenta_hue(nr, ng, nb, ratio=0.9):
+                    if _is_magenta_hue(nr, ng, nb, ratio=0.72):
                         q.append((nx, ny))
+
+    # Pass 2 — depth-bounded growth into the softer halo only.
+    depth = [0] * (w * h)
+    q2 = collections.deque()
+    for y in range(h):
+        for x in range(w):
+            idx = y * w + x
+            if bg_mask[idx]:
+                for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+                    if 0 <= nx < w and 0 <= ny < h:
+                        nidx = ny * w + nx
+                        if not bg_mask[nidx] and depth[nidx] == 0:
+                            depth[nidx] = 1
+                            q2.append((nx, ny, 1))
+
+    while q2:
+        x, y, d = q2.popleft()
+        idx = y * w + x
+        if bg_mask[idx] or d > halo_reach:
+            continue
+        r, g, b, _a = pixels[x, y]
+        if not _is_magenta_hue(r, g, b, ratio=0.9):
+            continue
+        bg_mask[idx] = 1
+        for nx, ny in ((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)):
+            if 0 <= nx < w and 0 <= ny < h:
+                nidx = ny * w + nx
+                if not bg_mask[nidx] and (depth[nidx] == 0 or depth[nidx] > d + 1):
+                    depth[nidx] = d + 1
+                    q2.append((nx, ny, d + 1))
 
     mask_img = Image.frombytes('L', (w, h), bytes(255 if not v else 0 for v in bg_mask))
     if feather:
@@ -374,7 +459,7 @@ def raw_path_for(out_path):
     return os.path.join(RAW_DIR, name + ".raw.png")
 
 
-def generate_one(client, prompt, out_path, mode, force=False):
+def generate_one(client, prompt, out_path, mode, force=False, target=None):
     if os.path.exists(out_path) and not force:
         print(f"  [SKIP] exists: {os.path.relpath(out_path, ROOT)}")
         return True
@@ -392,6 +477,7 @@ def generate_one(client, prompt, out_path, mode, force=False):
             if image is None:
                 print(f"  [FAIL] no image returned for {out_path}")
                 return False
+            image = crop_resize_to_target(image, target)
             if mode == 'alpha':
                 image.convert("RGB").save(raw_path_for(out_path), format="PNG")
                 processed = punch_alpha(image)
@@ -413,13 +499,14 @@ def generate_one(client, prompt, out_path, mode, force=False):
     return False
 
 
-def reprocess_alpha(out_path):
-    """Re-run punch_alpha on the cached raw image without calling the API again."""
+def reprocess_alpha(out_path, target=None):
+    """Re-run crop + punch_alpha on the cached raw image without calling the API again."""
     from PIL import Image
     rp = raw_path_for(out_path)
     if not os.path.exists(rp):
         return False
     img = Image.open(rp)
+    img = crop_resize_to_target(img, target)
     processed = punch_alpha(img)
     processed.save(out_path, format="PNG", optimize=True)
     return True
@@ -489,7 +576,7 @@ def main():
                 continue
             fname = out_filename(a, mode)
             out_path = os.path.join(APPROVED_DIR, fname)
-            if reprocess_alpha(out_path):
+            if reprocess_alpha(out_path, target=target_size_for(a)):
                 print(f"  [REPROCESSED] {fname}")
                 n += 1
         print(f"\n[DONE] reprocessed {n}")
@@ -502,7 +589,7 @@ def main():
         prompt = full_prompt(mode, subject)
         fname = out_filename(a, mode)
         out_path = os.path.join(APPROVED_DIR, fname)
-        success = generate_one(client, prompt, out_path, mode, force=args.force)
+        success = generate_one(client, prompt, out_path, mode, force=args.force, target=target_size_for(a))
         if success:
             ok += 1
             a['file'] = fname

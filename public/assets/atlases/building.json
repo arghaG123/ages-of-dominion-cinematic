@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-stone.svg",
+      "source": "buildings/townhall-stone.png",
       "extruded": 2
     },
     "bld-farm-stone": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-stone.svg",
+      "source": "buildings/farm-stone.png",
       "extruded": 2
     },
     "bld-lumber-stone": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-stone.svg",
+      "source": "buildings/lumber-stone.png",
       "extruded": 2
     },
     "bld-quarry-stone": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-stone.svg",
+      "source": "buildings/quarry-stone.png",
       "extruded": 2
     },
     "bld-mine-stone": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-stone.svg",
+      "source": "buildings/mine-stone.png",
       "extruded": 2
     },
     "bld-barracks-stone": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-stone.svg",
+      "source": "buildings/barracks-stone.png",
       "extruded": 2
     },
     "bld-workshop-stone": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-stone.svg",
+      "source": "buildings/workshop-stone.png",
       "extruded": 2
     },
     "bld-hall-stone": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-stone.svg",
+      "source": "buildings/hall-stone.png",
       "extruded": 2
     },
     "bld-armory-stone": {
@@ -111,7 +111,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-stone.svg",
+      "source": "buildings/armory-stone.png",
       "extruded": 2
     },
     "bld-walls-stone": {
@@ -123,7 +123,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-stone.svg",
+      "source": "buildings/walls-stone.png",
       "extruded": 2
     },
     "bld-townhall-bronze": {
@@ -135,7 +135,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-bronze.svg",
+      "source": "buildings/townhall-bronze.png",
       "extruded": 2
     },
     "bld-farm-bronze": {
@@ -147,7 +147,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-bronze.svg",
+      "source": "buildings/farm-bronze.png",
       "extruded": 2
     },
     "bld-lumber-bronze": {
@@ -159,7 +159,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-bronze.svg",
+      "source": "buildings/lumber-bronze.png",
       "extruded": 2
     },
     "bld-quarry-bronze": {
@@ -171,7 +171,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-bronze.svg",
+      "source": "buildings/quarry-bronze.png",
       "extruded": 2
     },
     "bld-mine-bronze": {
@@ -183,7 +183,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-bronze.svg",
+      "source": "buildings/mine-bronze.png",
       "extruded": 2
     },
     "bld-barracks-bronze": {
@@ -195,7 +195,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-bronze.svg",
+      "source": "buildings/barracks-bronze.png",
       "extruded": 2
     },
     "bld-workshop-bronze": {
@@ -207,7 +207,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-bronze.svg",
+      "source": "buildings/workshop-bronze.png",
       "extruded": 2
     },
     "bld-hall-bronze": {
@@ -219,7 +219,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-bronze.svg",
+      "source": "buildings/hall-bronze.png",
       "extruded": 2
     },
     "bld-armory-bronze": {
@@ -231,7 +231,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-bronze.svg",
+      "source": "buildings/armory-bronze.png",
       "extruded": 2
     },
     "bld-walls-bronze": {
@@ -243,7 +243,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-bronze.svg",
+      "source": "buildings/walls-bronze.png",
       "extruded": 2
     },
     "bld-townhall-iron": {
@@ -255,7 +255,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-iron.svg",
+      "source": "buildings/townhall-iron.png",
       "extruded": 2
     },
     "bld-farm-iron": {
@@ -267,7 +267,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-iron.svg",
+      "source": "buildings/farm-iron.png",
       "extruded": 2
     },
     "bld-lumber-iron": {
@@ -279,7 +279,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-iron.svg",
+      "source": "buildings/lumber-iron.png",
       "extruded": 2
     },
     "bld-quarry-iron": {
@@ -291,7 +291,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-iron.svg",
+      "source": "buildings/quarry-iron.png",
       "extruded": 2
     },
     "bld-mine-iron": {
@@ -303,7 +303,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-iron.svg",
+      "source": "buildings/mine-iron.png",
       "extruded": 2
     },
     "bld-barracks-iron": {
@@ -315,7 +315,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-iron.svg",
+      "source": "buildings/barracks-iron.png",
       "extruded": 2
     },
     "bld-workshop-iron": {
@@ -327,7 +327,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-iron.svg",
+      "source": "buildings/workshop-iron.png",
       "extruded": 2
     },
     "bld-hall-iron": {
@@ -339,7 +339,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-iron.svg",
+      "source": "buildings/hall-iron.png",
       "extruded": 2
     },
     "bld-armory-iron": {
@@ -351,7 +351,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-iron.svg",
+      "source": "buildings/armory-iron.png",
       "extruded": 2
     },
     "bld-walls-iron": {
@@ -363,7 +363,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-iron.svg",
+      "source": "buildings/walls-iron.png",
       "extruded": 2
     },
     "bld-townhall-medieval": {
@@ -375,7 +375,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-medieval.svg",
+      "source": "buildings/townhall-medieval.png",
       "extruded": 2
     },
     "bld-farm-medieval": {
@@ -387,7 +387,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-medieval.svg",
+      "source": "buildings/farm-medieval.png",
       "extruded": 2
     },
     "bld-lumber-medieval": {
@@ -399,7 +399,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-medieval.svg",
+      "source": "buildings/lumber-medieval.png",
       "extruded": 2
     },
     "bld-quarry-medieval": {
@@ -411,7 +411,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-medieval.svg",
+      "source": "buildings/quarry-medieval.png",
       "extruded": 2
     },
     "bld-mine-medieval": {
@@ -423,7 +423,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-medieval.svg",
+      "source": "buildings/mine-medieval.png",
       "extruded": 2
     },
     "bld-barracks-medieval": {
@@ -435,7 +435,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-medieval.svg",
+      "source": "buildings/barracks-medieval.png",
       "extruded": 2
     },
     "bld-workshop-medieval": {
@@ -447,7 +447,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-medieval.svg",
+      "source": "buildings/workshop-medieval.png",
       "extruded": 2
     },
     "bld-hall-medieval": {
@@ -459,7 +459,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-medieval.svg",
+      "source": "buildings/hall-medieval.png",
       "extruded": 2
     },
     "bld-armory-medieval": {
@@ -471,7 +471,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-medieval.svg",
+      "source": "buildings/armory-medieval.png",
       "extruded": 2
     },
     "bld-walls-medieval": {
@@ -483,7 +483,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-medieval.svg",
+      "source": "buildings/walls-medieval.png",
       "extruded": 2
     },
     "bld-townhall-gunpowder": {
@@ -495,7 +495,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-gunpowder.svg",
+      "source": "buildings/townhall-gunpowder.png",
       "extruded": 2
     },
     "bld-farm-gunpowder": {
@@ -507,7 +507,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-gunpowder.svg",
+      "source": "buildings/farm-gunpowder.png",
       "extruded": 2
     },
     "bld-lumber-gunpowder": {
@@ -519,7 +519,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-gunpowder.svg",
+      "source": "buildings/lumber-gunpowder.png",
       "extruded": 2
     },
     "bld-quarry-gunpowder": {
@@ -531,7 +531,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-gunpowder.svg",
+      "source": "buildings/quarry-gunpowder.png",
       "extruded": 2
     },
     "bld-mine-gunpowder": {
@@ -543,7 +543,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-gunpowder.svg",
+      "source": "buildings/mine-gunpowder.png",
       "extruded": 2
     },
     "bld-barracks-gunpowder": {
@@ -555,7 +555,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-gunpowder.svg",
+      "source": "buildings/barracks-gunpowder.png",
       "extruded": 2
     },
     "bld-workshop-gunpowder": {
@@ -567,7 +567,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-gunpowder.svg",
+      "source": "buildings/workshop-gunpowder.png",
       "extruded": 2
     },
     "bld-hall-gunpowder": {
@@ -579,7 +579,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-gunpowder.svg",
+      "source": "buildings/hall-gunpowder.png",
       "extruded": 2
     },
     "bld-armory-gunpowder": {
@@ -591,7 +591,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-gunpowder.svg",
+      "source": "buildings/armory-gunpowder.png",
       "extruded": 2
     },
     "bld-walls-gunpowder": {
@@ -603,7 +603,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-gunpowder.svg",
+      "source": "buildings/walls-gunpowder.png",
       "extruded": 2
     },
     "bld-townhall-industrial": {
@@ -615,7 +615,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-industrial.svg",
+      "source": "buildings/townhall-industrial.png",
       "extruded": 2
     },
     "bld-farm-industrial": {
@@ -627,7 +627,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-industrial.svg",
+      "source": "buildings/farm-industrial.png",
       "extruded": 2
     },
     "bld-lumber-industrial": {
@@ -639,7 +639,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-industrial.svg",
+      "source": "buildings/lumber-industrial.png",
       "extruded": 2
     },
     "bld-quarry-industrial": {
@@ -651,7 +651,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-industrial.svg",
+      "source": "buildings/quarry-industrial.png",
       "extruded": 2
     },
     "bld-mine-industrial": {
@@ -663,7 +663,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-industrial.svg",
+      "source": "buildings/mine-industrial.png",
       "extruded": 2
     },
     "bld-barracks-industrial": {
@@ -675,7 +675,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-industrial.svg",
+      "source": "buildings/barracks-industrial.png",
       "extruded": 2
     },
     "bld-workshop-industrial": {
@@ -687,7 +687,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-industrial.svg",
+      "source": "buildings/workshop-industrial.png",
       "extruded": 2
     },
     "bld-hall-industrial": {
@@ -699,7 +699,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-industrial.svg",
+      "source": "buildings/hall-industrial.png",
       "extruded": 2
     },
     "bld-armory-industrial": {
@@ -711,7 +711,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-industrial.svg",
+      "source": "buildings/armory-industrial.png",
       "extruded": 2
     },
     "bld-walls-industrial": {
@@ -723,7 +723,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-industrial.svg",
+      "source": "buildings/walls-industrial.png",
       "extruded": 2
     },
     "bld-townhall-modern": {
@@ -735,7 +735,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-modern.svg",
+      "source": "buildings/townhall-modern.png",
       "extruded": 2
     },
     "bld-farm-modern": {
@@ -747,7 +747,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-modern.svg",
+      "source": "buildings/farm-modern.png",
       "extruded": 2
     },
     "bld-lumber-modern": {
@@ -759,7 +759,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-modern.svg",
+      "source": "buildings/lumber-modern.png",
       "extruded": 2
     },
     "bld-quarry-modern": {
@@ -771,7 +771,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-modern.svg",
+      "source": "buildings/quarry-modern.png",
       "extruded": 2
     },
     "bld-mine-modern": {
@@ -783,7 +783,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-modern.svg",
+      "source": "buildings/mine-modern.png",
       "extruded": 2
     },
     "bld-barracks-modern": {
@@ -795,7 +795,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-modern.svg",
+      "source": "buildings/barracks-modern.png",
       "extruded": 2
     },
     "bld-workshop-modern": {
@@ -807,7 +807,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-modern.svg",
+      "source": "buildings/workshop-modern.png",
       "extruded": 2
     },
     "bld-hall-modern": {
@@ -819,7 +819,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-modern.svg",
+      "source": "buildings/hall-modern.png",
       "extruded": 2
     },
     "bld-armory-modern": {
@@ -831,7 +831,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-modern.svg",
+      "source": "buildings/armory-modern.png",
       "extruded": 2
     },
     "bld-walls-modern": {
@@ -843,7 +843,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-modern.svg",
+      "source": "buildings/walls-modern.png",
       "extruded": 2
     }
   }

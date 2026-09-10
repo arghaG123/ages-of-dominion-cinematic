@@ -15,7 +15,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/plains.svg",
+      "source": "battle/plains.jpg",
       "extruded": 2
     },
     "battle-forest": {
@@ -27,7 +27,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/forest.svg",
+      "source": "battle/forest.jpg",
       "extruded": 2
     },
     "battle-hills": {
@@ -39,7 +39,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/hills.svg",
+      "source": "battle/hills.jpg",
       "extruded": 2
     },
     "battle-swamp": {
@@ -51,7 +51,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/swamp.svg",
+      "source": "battle/swamp.jpg",
       "extruded": 2
     },
     "battle-desert": {
@@ -63,7 +63,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/desert.svg",
+      "source": "battle/desert.jpg",
       "extruded": 2
     },
     "battle-snow": {
@@ -75,7 +75,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/snow.svg",
+      "source": "battle/snow.jpg",
       "extruded": 2
     },
     "battle-waste": {
@@ -87,7 +87,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/waste.svg",
+      "source": "battle/waste.jpg",
       "extruded": 2
     },
     "battle-ruins": {
@@ -99,7 +99,7 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/ruins.svg",
+      "source": "battle/ruins.jpg",
       "extruded": 2
     }
   }
