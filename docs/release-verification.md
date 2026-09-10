@@ -5,7 +5,7 @@
 - [x] v6 save fixtures migrate to schema v7
 - [x] Damaged saves never create a new game
 - [x] Data parity tests vs `reference/game-data.json`
-- [x] Placeholder art pack + atlases validated (351 assets)
+- [x] Production art pack generated via Vertex AI (gemini-2.5-flash-image) + atlases rebuilt (351 assets: 299 real painterly art, 52 hand-authored SVG icons); known touch-ups: griffin/harpy idle poses retain a small residual background-glow patch (see `scripts/generate-art.py` halo_reach note)
 - [x] Style bible + UX wireframes frozen
 - [x] Visual shell: title, realm, host, map, war, battle, siege
 - [x] Quests, milestones, map payoffs, hero forge/skills, army XP, rival, market
