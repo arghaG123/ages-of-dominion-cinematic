@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { calcDamage, resolveBattle, encodeChallenge, decodeChallenge, replayChallenge } from '../src/rules/combat.js';
+import { createTacticalBattle } from '../src/rules/tactical.js';
 import { resolveSiege, genPath } from '../src/rules/siege.js';
 import { calcGridGeometry, needsResize } from '../src/render/canvas.js';
 import { rates, bcost, ageUpCost, canPay } from '../src/rules/economy.js';
@@ -37,6 +38,30 @@ describe('rules', () => {
     const b = resolveBattle({ seed: 42, player, enemy });
     expect(a.winner).toBe(b.winner);
     expect(a.events.length).toBe(b.events.length);
+  });
+
+  it('resolveBattle matches stepping the board engine', () => {
+    const player = [{ id: 'p1', kind: 'role', type: 'melee', count: 10, atk: 4, def: 5, hp: 11, uhp: 11, dmin: 2, dmax: 4, spd: 5, rng: 0, shots: 0 }];
+    const enemy = [{ id: 'e1', kind: 'creature', type: 'wolf', count: 6, atk: 6, def: 3, hp: 10, uhp: 10, dmin: 2, dmax: 5, spd: 7, rng: 0, shots: 0 }];
+    const input = { seed: 42, player, enemy };
+    const resolved = resolveBattle(input);
+    const sim = createTacticalBattle({ seed: 42, player, enemy });
+    const stepped = sim.runToEnd();
+    expect(stepped.winner).toBe(resolved.winner);
+    expect(stepped.player.map((p) => p.count)).toEqual(resolved.player.map((p) => p.count));
+    expect(stepped.enemy.map((e) => e.count)).toEqual(resolved.enemy.map((e) => e.count));
+    expect(stepped.events.length).toBe(resolved.events.length);
+  });
+
+  it('auto-play clone matches live auto-play from the same board', () => {
+    const player = [{ id: 'p1', kind: 'role', type: 'melee', count: 8, atk: 4, def: 5, hp: 11, uhp: 11, dmin: 2, dmax: 4, spd: 5, rng: 0, shots: 0 }];
+    const enemy = [{ id: 'e1', kind: 'creature', type: 'wolf', count: 5, atk: 6, def: 3, hp: 10, uhp: 10, dmin: 2, dmax: 5, spd: 7, rng: 0, shots: 0 }];
+    const live = createTacticalBattle({ seed: 9, player, enemy });
+    live.start();
+    const fromResolve = live.clone().runToEnd();
+    const fromLive = live.runToEnd();
+    expect(fromResolve.winner).toBe(fromLive.winner);
+    expect(fromResolve.player.map((p) => p.count)).toEqual(fromLive.player.map((p) => p.count));
   });
 
   it('challenge encode/replay', () => {

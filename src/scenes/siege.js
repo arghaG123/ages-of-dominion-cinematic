@@ -2,7 +2,13 @@ import { fitCanvas, calcGridGeometry, needsResize, cssPoint } from '../render/ca
 import { COLS, ROWS, genPath, ETYPES, FIXED_DT } from '../rules/siege.js';
 import { TOWERS } from '../data/index.js';
 import { coreHP } from '../rules/economy.js';
-import { drawSilhouette } from '../render/atlas.js';
+import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
+
+const AGE_KEYS = ['stone', 'bronze', 'iron', 'medieval', 'gunpowder', 'industrial', 'modern'];
+
+function ageKey(age) {
+  return AGE_KEYS[age] || 'stone';
+}
 
 export function createSiegeController(dom, api) {
   const canvas = dom.canvas;
@@ -12,6 +18,10 @@ export function createSiegeController(dom, api) {
   let raf = 0;
   let acc = 0;
   let last = 0;
+  let towerAtlas = null;
+  let enemyAtlas = null;
+  ensureAtlas('tower').then((a) => { towerAtlas = a; });
+  ensureAtlas('siege-enemy').then((a) => { enemyAtlas = a; });
 
   function bsize() {
     const st = dom.stage;
@@ -204,10 +214,15 @@ export function createSiegeController(dom, api) {
     });
     ctx.stroke();
 
+    const age = api.getState()?.age || 0;
     for (const t of B.towers) {
       const x = geo.offsetX + t.x * geo.cellSize;
       const y = geo.offsetY + t.y * geo.cellSize;
-      drawSilhouette(ctx, x + 2, y + 2, geo.cellSize - 4, geo.cellSize - 4, t.fam);
+      if (towerAtlas) {
+        drawFrame(ctx, towerAtlas, `tower-${t.fam}-${ageKey(age)}`, x + 2, y + 2, geo.cellSize - 4, geo.cellSize - 4);
+      } else {
+        drawSilhouette(ctx, x + 2, y + 2, geo.cellSize - 4, geo.cellSize - 4, t.fam);
+      }
       if (B.selTower === t) {
         const def = TOWERS[t.fam];
         ctx.strokeStyle = 'rgba(201,162,39,0.45)';
@@ -223,10 +238,15 @@ export function createSiegeController(dom, api) {
       const p = B.path[pi];
       const x = geo.offsetX + p.x * geo.cellSize;
       const y = geo.offsetY + p.y * geo.cellSize;
-      ctx.fillStyle = '#8a3a32';
-      ctx.beginPath();
-      ctx.arc(x + geo.cellSize / 2, y + geo.cellSize / 2, geo.cellSize * 0.28, 0, Math.PI * 2);
-      ctx.fill();
+      if (enemyAtlas) {
+        const size = geo.cellSize * 0.72;
+        drawFrame(ctx, enemyAtlas, `siege-enemy-${e.kind}`, x + geo.cellSize / 2 - size / 2, y + geo.cellSize / 2 - size / 2, size, size);
+      } else {
+        ctx.fillStyle = '#8a3a32';
+        ctx.beginPath();
+        ctx.arc(x + geo.cellSize / 2, y + geo.cellSize / 2, geo.cellSize * 0.28, 0, Math.PI * 2);
+        ctx.fill();
+      }
     }
 
     for (const p of B.projectiles) {

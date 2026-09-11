@@ -102,6 +102,18 @@ button:disabled {
   transform: translateX(-50%) translateY(0);
 }
 
+/* A bottom sheet covers up to 78dvh from the bottom; when one is open, move
+   the toast above it instead of letting the two overlap illegibly. */
+#toast.above-sheet {
+  bottom: auto;
+  top: calc(var(--header-h) + 10px);
+  transform: translateX(-50%) translateY(-12px);
+}
+
+#toast.above-sheet.on {
+  transform: translateX(-50%) translateY(0);
+}
+
 #app {
   height: 100dvh;
   display: flex;
@@ -414,10 +426,21 @@ nav button.on {
   flex: 0 0 100%;
   scroll-snap-align: center;
   min-height: 230px;
+  display: flex;
+  flex-direction: column;
   padding: 16px;
   border-radius: 14px;
   background: var(--panel);
   border: 1px solid rgba(201, 162, 39, 0.25);
+  overflow: hidden;
+}
+
+.class-portrait {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
 }
 
 .name-field {

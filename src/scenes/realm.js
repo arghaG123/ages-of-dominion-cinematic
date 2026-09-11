@@ -38,6 +38,19 @@ export function initRealmScene(canvas, api) {
     };
   }
 
+  // The realm host spans nearly the full viewport height (it sits outside
+  // #view, per CLAUDE.md), but a 7x7 iso board is width-bound on a narrow
+  // phone. Size tiles off the shorter axis, then center the board in the
+  // available height instead of pinning it near the top and leaving most
+  // of the screen an empty void below.
+  function geometry(w, h) {
+    const tw = Math.min(w, h) / 7.4;
+    const th = tw / 2;
+    const originX = w / 2;
+    const originY = Math.max(th * 2, Math.min(h * 0.32, h - th * 8));
+    return { tw, th, originX, originY };
+  }
+
   function resize() {
     const host = canvas.parentElement;
     return fitCanvas(canvas, host.clientWidth || 375, host.clientHeight || 600);
@@ -49,10 +62,7 @@ export function initRealmScene(canvas, api) {
     last = now;
     const { ctx, cssW: w, cssH: h } = resize();
     const state = api.getState();
-    const tw = Math.min(w, h) / 8.2;
-    const th = tw / 2;
-    const originX = w / 2;
-    const originY = h * 0.16;
+    const { tw, th, originX, originY } = geometry(w, h);
 
     // Ground
     const g = ctx.createLinearGradient(0, 0, 0, h);
@@ -167,10 +177,7 @@ export function initRealmScene(canvas, api) {
     const host = canvas.parentElement;
     const w = host.clientWidth || 375;
     const h = host.clientHeight || 600;
-    const tw = Math.min(w, h) / 8.2;
-    const th = tw / 2;
-    const originX = w / 2;
-    const originY = h * 0.16;
+    const { tw, th, originX, originY } = geometry(w, h);
     // Inverse iso approx
     const rx = x - originX;
     const ry = y - originY;

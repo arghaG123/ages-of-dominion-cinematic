@@ -87,13 +87,13 @@ export function renderHost(root, state, tab, api) {
   if (cv) drawHeroPreview(cv, state.hero.cls);
 }
 
-async function drawHeroPreview(canvas, cls) {
+export async function drawHeroPreview(canvas, cls) {
   const { ctx, cssW: w, cssH: h } = fitCanvas(canvas, canvas.clientWidth || 220, canvas.clientHeight || 280);
   ctx.fillStyle = '#12151b';
   ctx.fillRect(0, 0, w, h);
   try {
     const atlas = await ensureAtlas('hero');
-    drawFrame(ctx, atlas, `${cls}-portrait`, 16, 16, w - 32, h - 32);
+    drawFrame(ctx, atlas, `hero-${cls}-portrait`, 16, 16, w - 32, h - 32);
   } catch {
     ctx.fillStyle = cls === 'warlock' ? '#5a3a68' : cls === 'ranger' ? '#3a6a68' : '#4a4558';
     ctx.fillRect(w * 0.35, h * 0.35, w * 0.3, h * 0.4);
@@ -106,8 +106,11 @@ async function drawHeroPreview(canvas, cls) {
   ctx.strokeRect(8, 8, w - 16, h - 16);
 }
 
+let selectedMapNode = null;
+
 export function renderMap(root, state, api) {
   if (!state.map) {
+    selectedMapNode = null;
     root.innerHTML = `<div class="card"><h3>Region map</h3><p>Scout the valleys beyond your walls.</p>
       <button type="button" class="btn gold" id="genMap">March forth</button></div>`;
     root.querySelector('#genMap')?.addEventListener('click', () => api.dispatch({ type: 'gen-map' }));
@@ -120,6 +123,28 @@ export function renderMap(root, state, api) {
   const canvas = root.querySelector('#mapcv');
   const card = root.querySelector('#mapCard');
   drawMap(canvas, state, api, card);
+}
+
+function showNodeCard(card, state, api, index) {
+  const map = state.map;
+  const n = map.nodes[index];
+  if (!n) return;
+  selectedMapNode = index;
+  const hostP = calcHostPower(state.army, state.hero);
+  let verdict = '';
+  if (n.foes) {
+    const fp = n.power || 1;
+    verdict = verdictLabel(encounterVerdict(hostP, fp));
+  }
+  card.hidden = false;
+  card.innerHTML = `<strong>${n.type}</strong> · ${n.terrain || 'plains'}
+    <div class="verdict-${(verdict || 'even').toLowerCase()}">${n.foes ? `${n.foes[0].count} foes · ${verdict} fight` : 'Explore'}</div>
+    <button type="button" class="btn gold" id="doNode">Interact</button>`;
+  card.querySelector('#doNode').onclick = () => {
+    selectedMapNode = null;
+    card.hidden = true;
+    api.dispatch({ type: 'resolve-node' });
+  };
 }
 
 function drawMap(canvas, state, api, card) {
@@ -153,7 +178,6 @@ function drawMap(canvas, state, api, card) {
     ctx.stroke();
   }
 
-  const hostP = calcHostPower(state.army, state.hero);
   map.nodes.forEach((n, i) => {
     const x = n.x * w, y = n.y * h;
     ctx.beginPath();
@@ -177,24 +201,21 @@ function drawMap(canvas, state, api, card) {
       if (d < bestD) { bestD = d; best = i; }
     });
     if (best < 0) return;
-    const n = map.nodes[best];
     if (best !== map.at && map.links[map.at]?.includes(best)) {
+      selectedMapNode = null;
       api.dispatch({ type: 'travel', nodeIndex: best });
       return;
     }
-    if (best === map.at) {
-      let verdict = '';
-      if (n.foes) {
-        const fp = n.power || 1;
-        verdict = verdictLabel(encounterVerdict(hostP, fp));
-      }
-      card.hidden = false;
-      card.innerHTML = `<strong>${n.type}</strong> · ${n.terrain || 'plains'}
-        <div class="verdict-${(verdict || 'even').toLowerCase()}">${n.foes ? `${n.foes[0].count} foes · ${verdict} fight` : 'Explore'}</div>
-        <button type="button" class="btn gold" id="doNode">Interact</button>`;
-      card.querySelector('#doNode').onclick = () => api.dispatch({ type: 'resolve-node' });
-    }
+    if (best === map.at) showNodeCard(card, state, api, best);
   };
+
+  // Re-render (e.g. the once-a-second resource tick) rebuilds this DOM from
+  // scratch; restore an already-open card so it doesn't flicker shut mid-read.
+  if (selectedMapNode === map.at && map.nodes[map.at] && !map.nodes[map.at].cleared) {
+    showNodeCard(card, state, api, selectedMapNode);
+  } else if (selectedMapNode != null) {
+    selectedMapNode = null;
+  }
 }
 
 export function renderWar(root, state, api) {

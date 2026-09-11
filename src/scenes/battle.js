@@ -1,7 +1,8 @@
 import { fitCanvas, calcGridGeometry, needsResize, cssPoint } from '../render/canvas.js';
 import { createFx, spawnFloat, spawnBurst, updateFx, drawFx } from '../render/fx.js';
 import { unitStats } from '../rules/units.js';
-import { calcDamage, applyDamage, resolveBattle, createRng, FC, FR } from '../rules/combat.js';
+import { applyDamage, createRng, FC, FR } from '../rules/combat.js';
+import { createTacticalBattle, unitAt as cellUnit } from '../rules/tactical.js';
 import { heroLuck, heroStat, skillLevel, heroBonus } from '../rules/hero.js';
 import { SPELLS, AGES } from '../data/index.js';
 import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
@@ -23,7 +24,7 @@ function unitFrameId(u, age) {
 
 /**
  * Interactive battle UI.
- * Deployment → fight with seeded createRng(F.seed); Resolve shortcuts via resolveBattle.
+ * Deployment → fight. Live turns and Resolve both run through createTacticalBattle.
  */
 export function createBattleController(dom, api) {
   const canvas = dom.canvas;
@@ -76,59 +77,20 @@ export function createBattleController(dom, api) {
       skills: S.hero.skills,
       shootBon: bon.shootBon || 0,
       pow: heroStat(S.hero, 'pow'),
+      spdBon: bon.spdBon || 0,
     };
   }
 
-  function spdBon() {
-    return heroBonus(api.getState().hero).spdBon || 0;
-  }
-
-  function effSpd(u) {
-    return Math.max(1, (u.spd || 1) + (u.haste || 0) - (u.slowT || 0) + (u.side === 'p' ? spdBon() : 0));
-  }
-
-  function occupied(x, y) {
-    return F.units.some((u) => !u.dead && u.x === x && u.y === y);
-  }
-
   function unitAt(x, y) {
-    return F.units.find((u) => !u.dead && u.x === x && u.y === y);
+    return F.sim ? F.sim.unitAt(x, y) : cellUnit(F.units, x, y);
   }
 
   function reach(u) {
-    const dest = {};
-    const visited = {};
-    const q = [{ x: u.x, y: u.y, d: 0 }];
-    visited[`${u.x},${u.y}`] = 0;
-    const mv = Math.max(1, effSpd(u));
-    while (q.length) {
-      const c = q.shift();
-      if (c.d >= mv) continue;
-      for (let dx = -1; dx <= 1; dx++) {
-        for (let dy = -1; dy <= 1; dy++) {
-          if (!dx && !dy) continue;
-          const nx = c.x + dx;
-          const ny = c.y + dy;
-          const k = `${nx},${ny}`;
-          if (nx < 0 || ny < 0 || nx >= FC || ny >= FR) continue;
-          if (visited[k] !== undefined) continue;
-          const occ = occupied(nx, ny);
-          if (occ && !u.fly) continue;
-          visited[k] = c.d + 1;
-          if (!occ) dest[k] = c.d + 1;
-          q.push({ x: nx, y: ny, d: c.d + 1 });
-        }
-      }
-    }
-    return dest;
+    return F.sim.reach(u);
   }
 
-  function adj(a, b) {
-    return Math.max(Math.abs(a.x - b.x), Math.abs(a.y - b.y)) <= 1;
-  }
-
-  function hasAdjEnemy(u) {
-    return F.units.some((e) => !e.dead && e.side !== u.side && adj(u, e));
+  function strikeKind(u, t) {
+    return F.sim.strikeKind(u, t);
   }
 
   function start(foes, opts = {}) {
@@ -158,6 +120,7 @@ export function createBattleController(dom, api) {
       events: [],
       resolved: null,
       eventIdx: 0,
+      sim: null,
       age: S.age,
     };
     dom.root.hidden = false;
@@ -181,16 +144,18 @@ export function createBattleController(dom, api) {
   function renderOrder() {
     const oe = orderEl();
     if (!oe || !F) return;
-    if (F.phase !== 'fight' || !F.order?.length) {
+    const order = F.sim?.order || F.order;
+    const turn = F.sim ? F.sim.turn : F.turn;
+    if (F.phase !== 'fight' || !order?.length) {
       oe.innerHTML = '';
       return;
     }
-    const active = F.order[F.turn];
-    oe.innerHTML = F.order
+    const active = order[turn];
+    oe.innerHTML = order
       .filter((u) => !u.dead)
       .map((u) => {
         const now = u === active ? ' now' : '';
-        const spent = F.order.indexOf(u) < F.turn ? ' spent' : '';
+        const spent = order.indexOf(u) < turn ? ' spent' : '';
         return `<div class="forder-slot ${u.side}${now}${spent}" title="${u.n || u.type} ×${u.count}">${(u.n || u.type || '?').slice(0, 4)}<span class="count">${u.count}</span></div>`;
       })
       .join('');
@@ -213,7 +178,7 @@ export function createBattleController(dom, api) {
       dom.roster.innerHTML = '';
       dom.actions.innerHTML = `<button type="button" class="btn" id="fSkipRecap">Skip to result</button>`;
     } else {
-      const u = F.order[F.turn];
+      const u = F.sim ? F.sim.current() : F.order[F.turn];
       dom.roster.innerHTML = '';
       if (!u || u.dead) {
         dom.hint.textContent = '';
@@ -335,17 +300,24 @@ export function createBattleController(dom, api) {
     });
   }
 
-  function buildOrder() {
-    F.units.forEach((u) => {
-      u.retaliated = false;
-      u.defending = false;
-      u.waited = false;
+  function attachSim() {
+    const S = api.getState();
+    F.sim = createTacticalBattle({
+      units: F.units,
+      seed: F.seed,
+      rng: F.rng,
+      hero: heroCtx(S),
+      boss: F.boss,
+      placeRows: F.placeRows,
+      round: F.round || 1,
+      turn: F.turn || 0,
+      order: F.order,
+      events: F.events,
+      onRoundStart: () => { if (F) F.hero.castThisRound = false; },
     });
-    F.order = F.units
-      .filter((u) => !u.dead && u.count > 0)
-      .sort((a, b) => effSpd(b) - effSpd(a) || (F.rng() - 0.5));
-    F.turn = 0;
-    F.hero.castThisRound = false;
+    F.units = F.sim.units;
+    F.rng = F.sim.rng;
+    F.events = F.sim.events;
   }
 
   function beginFight() {
@@ -356,190 +328,74 @@ export function createBattleController(dom, api) {
     F.events = [];
     F.aim = null;
     F.cast = null;
-    F.units.filter((u) => u.side === 'p').forEach((u) => { u.maxCount = u.count; });
-    buildOrder();
+    attachSim();
+    F.sim.start();
     renderChrome();
     draw();
-    const u = F.order[F.turn];
+    const u = F.sim.current();
     if (u && u.side === 'e') turnTimer = setTimeout(aiTurn, 420);
   }
 
   function previewDmg(attacker, defender, ranged) {
-    const S = api.getState();
-    return calcDamage(attacker, defender, {
-      ranged,
-      hero: heroCtx(S),
-      adjacentEnemy: hasAdjEnemy(attacker),
-      boss: F.boss,
-      rng: () => 0.5,
-    });
+    if (F.sim) return F.sim.previewDamage(attacker, defender, ranged);
+    return { dmg: 1, lucky: false };
   }
 
-  function strikeKind(u, t) {
-    if (!u || !t || t.dead || t.side === u.side) return null;
-    if (u.rng > 0 && u.shots > 0 && !hasAdjEnemy(u)) return 'ranged';
-    if (adj(u, t)) return 'melee';
-    const rc = reach(u);
-    for (const k in rc) {
-      const [x, y] = k.split(',').map(Number);
-      if (Math.max(Math.abs(x - t.x), Math.abs(y - t.y)) <= 1) return 'melee';
-    }
-    return null;
-  }
-
-  function doAttack(a, t, ranged) {
-    const S = api.getState();
-    const hit = calcDamage(a, t, {
-      ranged,
-      hero: heroCtx(S),
-      adjacentEnemy: hasAdjEnemy(a),
-      boss: F.boss,
-      rng: F.rng,
-    });
-    const res = applyDamage(t, hit.dmg);
-    a.dealt = (a.dealt || 0) + hit.dmg;
-    if (ranged) a.shots = Math.max(0, (a.shots || 0) - 1);
-
-    const cx = geo.offsetX + (t.x + 0.5) * geo.cellSize;
-    const cy = geo.offsetY + (t.y + 0.5) * geo.cellSize;
-    spawnFloat(fx, cx, cy, String(hit.dmg), hit.lucky ? '#f0a92e' : '#e8e4d9');
-    spawnBurst(fx, cx, cy, 'hit');
-    if (res.killed) spawnFloat(fx, cx, cy - 14, `${res.killed} slain`, '#c45c4a');
-    if (res.dead) api.haptic?.('kill');
-
-    F.events.push({
-      type: 'strike', round: F.round, side: a.side, from: a.id, to: t.id,
-      actor: a.n || a.type, target: t.n || t.type, dmg: hit.dmg, slain: res.killed,
-      dead: res.dead, ranged, lucky: hit.lucky,
-    });
-
-    if (!ranged && !res.dead && !t.retaliated && t.count > 0) {
-      t.retaliated = true;
-      const back = calcDamage(t, a, {
-        ranged: false,
-        hero: heroCtx(S),
-        adjacentEnemy: hasAdjEnemy(t),
-        boss: F.boss,
-        rng: F.rng,
-      });
-      const backRes = applyDamage(a, back.dmg);
-      const ax = geo.offsetX + (a.x + 0.5) * geo.cellSize;
-      const ay = geo.offsetY + (a.y + 0.5) * geo.cellSize;
-      spawnFloat(fx, ax, ay, String(back.dmg), '#e8e4d9');
-      F.events.push({
-        type: 'retaliate', round: F.round, side: t.side, from: t.id, to: a.id,
-        actor: t.n || t.type, target: a.n || a.type, dmg: back.dmg, slain: backRes.killed, retal: true,
-      });
+  function playFx(evs) {
+    for (const ev of evs || []) {
+      const defender = unitById(ev.to);
+      if (!defender) continue;
+      const cx = geo.offsetX + (defender.x + 0.5) * geo.cellSize;
+      const cy = geo.offsetY + (defender.y + 0.5) * geo.cellSize;
+      spawnFloat(fx, cx, cy, String(ev.dmg), ev.lucky ? '#f0a92e' : '#e8e4d9');
+      spawnBurst(fx, cx, cy, 'hit');
+      if (ev.slain) spawnFloat(fx, cx, cy - 14, `${ev.slain} slain`, '#c45c4a');
+      if (ev.dead) api.haptic?.('kill');
     }
   }
 
-  function commitStrike(u, t, kind) {
-    F.aim = null;
-    if (kind === 'ranged') {
-      doAttack(u, t, true);
-    } else if (adj(u, t)) {
-      doAttack(u, t, false);
-    } else {
-      const rc = reach(u);
-      let best = null;
-      let bd = 1e9;
-      for (const k in rc) {
-        const [x, y] = k.split(',').map(Number);
-        const d = Math.max(Math.abs(x - t.x), Math.abs(y - t.y));
-        if (d <= 1 && rc[k] < bd) {
-          bd = rc[k];
-          best = k;
-        }
-      }
-      if (!best) return;
-      const [x, y] = best.split(',').map(Number);
-      u.x = x;
-      u.y = y;
-      doAttack(u, t, false);
-    }
-    renderChrome();
-    draw();
-    if (!checkEnd()) turnTimer = setTimeout(nextTurn, 360);
-  }
-
-  function nextTurn() {
-    if (!F || F.phase !== 'fight') return;
-    const cur = F.order[F.turn];
-    if (cur) {
-      if (cur.bless > 0) cur.bless--;
-      if (cur.haste > 0) cur.haste--;
-      if (cur.slowT > 0) cur.slowT--;
-    }
-    F.turn++;
-    while (F.turn < F.order.length && F.order[F.turn].dead) F.turn++;
-    if (F.turn >= F.order.length) {
-      F.round++;
-      buildOrder();
-      while (F.turn < F.order.length && F.order[F.turn].dead) F.turn++;
-    }
+  function afterAct() {
+    if (!F || F.phase !== 'fight' || !F.sim) return;
     if (checkEnd()) return;
     renderChrome();
     draw();
-    const u = F.order[F.turn];
-    if (u && u.side === 'e') turnTimer = setTimeout(aiTurn, 420);
+    const u = F.sim.current();
+    if (u && u.side === 'e') turnTimer = setTimeout(aiTurn, 400);
+  }
+
+  function commitStrike(u, t) {
+    F.aim = null;
+    const res = F.sim.strike(u, t);
+    if (!res.ok) {
+      api.toast('Cannot reach that foe');
+      return;
+    }
+    playFx(res.events);
+    if (checkEnd()) return;
+    F.sim.advanceTurn();
+    renderChrome();
+    draw();
+    turnTimer = setTimeout(afterAct, 360);
+  }
+
+  function nextTurn() {
+    if (!F || F.phase !== 'fight' || !F.sim) return;
+    F.sim.advanceTurn();
+    afterAct();
   }
 
   function checkEnd() {
-    const p = F.units.filter((u) => u.side === 'p' && !u.dead && u.count > 0);
-    const e = F.units.filter((u) => u.side === 'e' && !u.dead && u.count > 0);
-    if (!e.length) {
-      finishInteractive(true);
-      return true;
-    }
-    if (!p.length) {
-      finishInteractive(false);
-      return true;
-    }
-    return false;
+    if (!F?.sim) return false;
+    if (!F.sim.isOver()) return false;
+    finishInteractive();
+    return true;
   }
 
   function aiTurn() {
-    if (!F || F.phase !== 'fight') return;
-    const u = F.order[F.turn];
-    if (!u || u.dead) {
-      nextTurn();
-      return;
-    }
-    const foes = F.units.filter((x) => x.side === 'p' && !x.dead && x.count > 0);
-    if (!foes.length) {
-      checkEnd();
-      return;
-    }
-    const score = (t) => (t.count * (t.dmin + t.dmax)) / 2 / (1 + t.def * 0.05)
-      - Math.max(Math.abs(t.x - u.x), Math.abs(t.y - u.y)) * 2;
-    const target = foes.slice().sort((a, b) => score(b) - score(a))[0];
-    if (u.rng > 0 && u.shots > 0 && !hasAdjEnemy(u)) {
-      doAttack(u, target, true);
-      renderChrome();
-      draw();
-      if (!checkEnd()) turnTimer = setTimeout(nextTurn, 400);
-      return;
-    }
-    const rc = reach(u);
-    let best = null;
-    let bd = 1e9;
-    for (const k in rc) {
-      const [x, y] = k.split(',').map(Number);
-      const d = Math.max(Math.abs(x - target.x), Math.abs(y - target.y));
-      if (d < bd || (d === bd && (!best || rc[k] < rc[best]))) {
-        bd = d;
-        best = k;
-      }
-    }
-    if (best) {
-      const [x, y] = best.split(',').map(Number);
-      u.x = x;
-      u.y = y;
-    }
-    if (adj(u, target)) doAttack(u, target, false);
-    renderChrome();
-    draw();
-    if (!checkEnd()) turnTimer = setTimeout(nextTurn, 400);
+    if (!F || F.phase !== 'fight' || !F.sim) return;
+    const res = F.sim.autoAct();
+    playFx(res.events);
+    afterAct();
   }
 
   function castSpell(t) {
@@ -606,57 +462,28 @@ export function createBattleController(dom, api) {
     draw();
   }
 
-  function computeResolution() {
-    const S = api.getState();
-    const player = F.units
-      .filter((u) => u.side === 'p' && !u.dead && u.count > 0)
-      .map((u) => ({
-        id: u.id,
-        name: u.n || u.type,
-        type: u.type,
-        kind: u.kind,
-        atk: u.atk,
-        def: u.def,
-        dmin: u.dmin,
-        dmax: u.dmax,
-        spd: effSpd(u),
-        rng: u.rng,
-        shots: u.shots,
-        count: u.count,
-        maxCount: u.maxCount ?? u.count,
-        uhp: u.uhp,
-        top: u.top,
-        bless: !!u.bless,
-        defending: !!u.defending,
-      }));
-    const enemy = F.units
-      .filter((u) => u.side === 'e' && !u.dead && u.count > 0)
-      .map((u) => ({
-        id: u.id,
-        name: u.n || u.type,
-        type: u.type,
-        kind: u.kind,
-        atk: u.atk,
-        def: u.def,
-        dmin: u.dmin,
-        dmax: u.dmax,
-        spd: effSpd(u),
-        rng: u.rng,
-        shots: u.shots,
-        count: u.count,
-        maxCount: u.maxCount ?? u.count,
-        uhp: u.uhp,
-        top: u.top,
-        bless: !!u.bless,
-        defending: !!u.defending,
-      }));
-    return resolveBattle({
-      seed: F.seed,
-      player,
-      enemy,
-      boss: F.boss,
-      hero: heroCtx(S),
-    });
+  function beginResolveShortcut() {
+    if (!F || F.phase === 'recap') return;
+    if (F.phase === 'place') {
+      if (!F.units.some((u) => u.side === 'p')) deployAll();
+      if (!F.units.some((u) => u.side === 'p')) {
+        api.toast('Deploy at least one stack');
+        return;
+      }
+      spawnEnemies();
+      F.rng = createRng(F.seed);
+      attachSim();
+    }
+    if (!F.sim) {
+      attachSim();
+    }
+    clearTimeout(turnTimer);
+    F.resolved = F.sim.clone().runToEnd();
+    F.phase = 'recap';
+    F.eventIdx = 0;
+    renderChrome();
+    draw();
+    playRecapStep();
   }
 
   function unitById(id, side) {
@@ -716,24 +543,6 @@ export function createBattleController(dom, api) {
     turnTimer = setTimeout(playRecapStep, 220);
   }
 
-  function beginResolveShortcut() {
-    if (F.phase === 'place') {
-      if (!F.units.some((u) => u.side === 'p')) deployAll();
-      if (!F.units.some((u) => u.side === 'p')) {
-        api.toast('Deploy at least one stack');
-        return;
-      }
-      spawnEnemies();
-    }
-    clearTimeout(turnTimer);
-    F.resolved = computeResolution();
-    F.phase = 'recap';
-    F.eventIdx = 0;
-    renderChrome();
-    draw();
-    playRecapStep();
-  }
-
   function armyAfterFromUnits(playerUnits) {
     const S = api.getState();
     return playerUnits
@@ -755,20 +564,18 @@ export function createBattleController(dom, api) {
     end();
   }
 
-  function finishInteractive(win) {
+  function finishInteractive() {
     clearTimeout(turnTimer);
-    const player = F.units.filter((u) => u.side === 'p');
-    const enemy = F.units.filter((u) => u.side === 'e');
-    const result = {
-      win,
-      winner: win ? 'p' : 'e',
+    const result = F.sim ? F.sim.snapshot() : {
+      win: false,
+      winner: 'e',
       rounds: F.round,
-      player,
-      enemy,
+      player: F.units.filter((u) => u.side === 'p'),
+      enemy: F.units.filter((u) => u.side === 'e'),
       events: F.events,
       seed: F.seed,
     };
-    const armyAfter = armyAfterFromUnits(player);
+    const armyAfter = armyAfterFromUnits(result.player);
     api.onBattleEnd(result, armyAfter, { nodeIndex: F.nodeIndex });
     end();
   }
@@ -803,7 +610,7 @@ export function createBattleController(dom, api) {
     ctx.fillStyle = '#1a2230';
     ctx.fillRect(0, 0, w, h);
 
-    const active = F.phase === 'fight' ? F.order[F.turn] : null;
+    const active = F.phase === 'fight' && F.sim ? F.sim.current() : null;
     const moveReach = active && active.side === 'p' ? reach(active) : null;
 
     for (let r = 0; r < FR; r++) {
@@ -872,8 +679,8 @@ export function createBattleController(dom, api) {
       return;
     }
 
-    if (F.phase !== 'fight') return;
-    const u = F.order[F.turn];
+    if (F.phase !== 'fight' || !F.sim) return;
+    const u = F.sim.current();
     if (!u || u.side !== 'p') return;
     const t = unitAt(cell.c, cell.r);
 
@@ -889,7 +696,7 @@ export function createBattleController(dom, api) {
         return;
       }
       if (F.aim && F.aim.target === t) {
-        commitStrike(u, t, kind);
+        commitStrike(u, t);
         return;
       }
       F.aim = { target: t, kind };
@@ -900,23 +707,22 @@ export function createBattleController(dom, api) {
 
     if (!t) {
       F.aim = null;
-      const rc = reach(u);
-      if (rc[`${cell.c},${cell.r}`] === undefined) {
+      const moved = F.sim.move(u, cell.c, cell.r);
+      if (!moved.ok) {
         api.toast('Too far');
         renderChrome();
         return;
       }
-      u.x = cell.c;
-      u.y = cell.r;
+      F.sim.advanceTurn();
       renderChrome();
       draw();
-      turnTimer = setTimeout(nextTurn, 260);
+      turnTimer = setTimeout(afterAct, 260);
     }
   });
 
   canvas.addEventListener('pointermove', (e) => {
-    if (!F || F.phase !== 'fight') return;
-    const u = F.order[F.turn];
+    if (!F || F.phase !== 'fight' || !F.sim) return;
+    const u = F.sim.current();
     if (!u || u.side !== 'p' || F.cast) return;
     const pt = cssPoint(canvas, e.clientX, e.clientY);
     const cell = cellAt(pt.x, pt.y);
@@ -948,22 +754,19 @@ export function createBattleController(dom, api) {
       finishFromResolved();
       return;
     }
-    if (!F || F.phase !== 'fight') return;
+    if (!F || F.phase !== 'fight' || !F.sim) return;
     const btn = e.target.closest('[data-f]');
     if (!btn) return;
-    const u = F.order[F.turn];
+    const u = F.sim.current();
     if (!u || u.side !== 'p') return;
     F.aim = null;
     if (btn.dataset.f === 'wait') {
-      F.order.splice(F.turn, 1);
-      F.order.push(u);
-      u.waited = true;
-      F.turn--;
+      F.sim.wait(u);
       nextTurn();
       return;
     }
     if (btn.dataset.f === 'defend') {
-      u.defending = true;
+      F.sim.defend(u);
       nextTurn();
       return;
     }

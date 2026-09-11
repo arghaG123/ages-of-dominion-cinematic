@@ -82,39 +82,20 @@ export function killedByDamage(target, damage) {
   return Math.max(0, count - Math.ceil(pool / uhp));
 }
 
-function cloneFighter(s, side) {
-  const uhp = s.uhp || s.hp || 1;
-  return {
-    id: s.id,
-    name: s.name,
-    type: s.type,
-    kind: s.kind,
-    atk: s.atk,
-    def: s.def,
-    dmin: s.dmin,
-    dmax: s.dmax,
-    spd: s.spd || 1,
-    rng: s.rng || 0,
-    shots: s.shots || 0,
-    count: s.count,
-    maxCount: s.maxCount ?? s.count,
-    uhp,
-    top: s.top ?? uhp,
-    side,
-    dead: false,
-    retaliated: false,
-    defending: s.defending || false,
-    bless: s.bless || false,
-    dealt: 0,
-  };
-}
-
 export function createRng(seed = 123456789) {
   let s = seed >>> 0;
-  return () => {
+  const rng = () => {
     s = (Math.imul(1664525, s) + 1013904223) >>> 0;
     return s / 4294967296;
   };
+  rng.state = () => s;
+  rng.setState = (v) => { s = v >>> 0; };
+  rng.clone = () => {
+    const c = createRng(0);
+    c.setState(s);
+    return c;
+  };
+  return rng;
 }
 
 export function pickTurningPoint(events = []) {
@@ -126,83 +107,7 @@ export function pickTurningPoint(events = []) {
   });
 }
 
-/**
- * Headless fight. Accepts either {playerStacks,enemyStacks} or {player,enemy}.
- * Deterministic when given a seeded rng / seed.
- */
-export function resolveBattle(input = {}, rngArg) {
-  const playerStacks = input.playerStacks || input.player || [];
-  const enemyStacks = input.enemyStacks || input.enemy || [];
-  const hero = input.hero || null;
-  const mods = input.mods || {};
-  const maxRounds = input.maxRounds || 40;
-  const boss = input.boss || false;
-  const rng = typeof rngArg === 'function'
-    ? rngArg
-    : (typeof input.rng === 'function' ? input.rng : createRng(input.seed ?? 123456789));
-
-  const pUnits = playerStacks.map((s) => cloneFighter(s, 'p'));
-  const eUnits = enemyStacks.map((s) => cloneFighter(s, 'e'));
-  let round = 0;
-  const events = [];
-
-  while (round < maxRounds) {
-    const aliveP = pUnits.filter((u) => !u.dead && u.count > 0);
-    const aliveE = eUnits.filter((u) => !u.dead && u.count > 0);
-    if (!aliveP.length || !aliveE.length) break;
-    round++;
-    [...pUnits, ...eUnits].forEach((u) => {
-      u.retaliated = false;
-      u.defending = false;
-    });
-    const order = [...aliveP, ...aliveE].sort((a, b) => b.spd - a.spd || (rng() - 0.5));
-    for (const actor of order) {
-      if (actor.dead || actor.count <= 0) continue;
-      const foes = (actor.side === 'p' ? eUnits : pUnits).filter((u) => !u.dead && u.count > 0);
-      if (!foes.length) break;
-      const target = foes.slice().sort((a, b) => a.count * a.uhp - b.count * b.uhp)[0];
-      const ranged = actor.rng > 0 && actor.shots > 0;
-      const hit = calcDamage(actor, target, { ranged, hero, mods, rng, boss });
-      const res = applyDamage(target, hit.dmg);
-      actor.dealt = (actor.dealt || 0) + hit.dmg;
-      if (events.length < 48) {
-        events.push({
-          type: 'strike', round, side: actor.side, from: actor.id, to: target.id,
-          actor: actor.name, target: target.name, dmg: hit.dmg, slain: res.killed,
-          killed: res.killed, dead: res.dead, ranged, lucky: hit.lucky,
-        });
-      }
-      if (ranged) actor.shots--;
-      if (!ranged && !res.dead && !target.retaliated && target.count > 0) {
-        target.retaliated = true;
-        const back = calcDamage(target, actor, { ranged: false, hero, mods, rng, boss });
-        const backRes = applyDamage(actor, back.dmg);
-        if (events.length < 48) {
-          events.push({
-            type: 'retaliate', round, side: target.side, from: target.id, to: actor.id,
-            actor: target.name, target: actor.name, dmg: back.dmg, slain: backRes.killed, retal: true,
-          });
-        }
-      }
-    }
-  }
-
-  const survivingP = pUnits.filter((u) => !u.dead && u.count > 0);
-  const survivingE = eUnits.filter((u) => !u.dead && u.count > 0);
-  const win = survivingP.length > 0 && survivingE.length === 0;
-  const winner = win ? 'p' : (survivingP.length ? 'p' : 'e');
-
-  return {
-    win,
-    winner,
-    rounds: round,
-    player: pUnits,
-    enemy: eUnits,
-    events,
-    turningPoint: pickTurningPoint(events),
-    seed: input.seed,
-  };
-}
+export { resolveBattle, replayChallenge } from './tactical.js';
 
 function toB64(str) {
   if (typeof btoa === 'function') return btoa(str);
@@ -244,20 +149,6 @@ export function decodeChallenge(str) {
   } catch {
     return null;
   }
-}
-
-export function replayChallenge(challengeOrCode, options = {}) {
-  const challenge = typeof challengeOrCode === 'string'
-    ? decodeChallenge(challengeOrCode)
-    : challengeOrCode;
-  if (!challenge) throw new Error('invalid-challenge');
-  const rng = createRng(challenge.seed);
-  return resolveBattle({
-    playerStacks: challenge.playerStacks,
-    enemyStacks: challenge.enemyStacks,
-    rng,
-    ...options,
-  });
 }
 
 export const fdamage = calcDamage;

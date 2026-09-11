@@ -49,4 +49,4 @@ src/game/     dispatch() — sole mutation entry
 
 - Offline only — no network, CDN, analytics, ads, or accounts
 - No emoji / pixel art / cute low-poly in production UI
-- Art: AI draft → human cleanup; placeholders ship as `placeholder-ship` until approved
+- Art: AI draft → human cleanup; production pack approved 2026-09-11

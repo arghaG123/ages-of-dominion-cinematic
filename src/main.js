@@ -17,7 +17,7 @@ import { createBattleController } from './scenes/battle.js';
 import { createSiegeController } from './scenes/siege.js';
 import { paintNavIcons } from './ui/icons.js';
 import {
-  renderHost, renderMap, renderWar, renderMore, renderBuildingsSheet, agePrompt, resBarHtml,
+  renderHost, renderMap, renderWar, renderMore, renderBuildingsSheet, agePrompt, resBarHtml, drawHeroPreview,
 } from './ui/views.js';
 import { playSfx, playTheme, isMuted, setMuted, stopAll, setMusicEnabled, setSfxEnabled } from './audio/index.js';
 import { haptic, setHapticsEnabled } from './platform/haptics.js';
@@ -43,6 +43,7 @@ const el = (id) => document.getElementById(id);
 function toast(message) {
   const t = el('toast');
   t.textContent = message;
+  t.classList.toggle('above-sheet', !el('modal').hidden);
   t.classList.add('on');
   clearTimeout(toast._t);
   toast._t = setTimeout(() => t.classList.remove('on'), 2200);
@@ -233,10 +234,14 @@ function openClassPicker() {
   carousel.innerHTML = Object.keys(CLASSES).map((k) => {
     const C = CLASSES[k];
     return `<div class="class-card" role="tab" data-cls="${k}" tabindex="0">
+      <canvas class="class-portrait"></canvas>
       <h3>${C.n}</h3><p>${C.d}</p><p>Signature: ${C.spell}</p></div>`;
   }).join('');
   let selected = 'knight';
-  carousel.querySelectorAll('.class-card').forEach((c) => c.addEventListener('click', () => { selected = c.dataset.cls; }));
+  carousel.querySelectorAll('.class-card').forEach((c) => {
+    c.addEventListener('click', () => { selected = c.dataset.cls; });
+    drawHeroPreview(c.querySelector('.class-portrait'), c.dataset.cls);
+  });
   el('classChoose').onclick = () => {
     const name = el('heroName').value.trim() || 'Kael';
     ov.hidden = true;
