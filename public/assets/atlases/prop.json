@@ -1,10 +1,14 @@
 {
   "id": "prop",
-  "image": null,
+  "image": "prop.webp",
+  "images": [
+    "prop.webp"
+  ],
   "width": 68,
   "height": 68,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "0159da28b50c86f4",
   "frames": {
     "fx-scaffold": {
       "x": 2,
@@ -15,7 +19,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "props/scaffold.png",
       "extruded": 2
     }
   }

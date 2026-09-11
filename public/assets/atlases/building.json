@@ -1,849 +1,783 @@
 {
   "id": "building",
-  "image": null,
-  "width": 2040,
-  "height": 204,
+  "image": "building.webp",
+  "images": [
+    "building.webp"
+  ],
+  "width": 2000,
+  "height": 400,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "aed91be3a89cc085",
   "frames": {
     "bld-townhall-stone": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-stone.png",
       "extruded": 2
     },
     "bld-farm-stone": {
-      "x": 70,
+      "x": 102,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-stone.png",
       "extruded": 2
     },
     "bld-lumber-stone": {
-      "x": 138,
+      "x": 202,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-stone.png",
       "extruded": 2
     },
     "bld-quarry-stone": {
-      "x": 206,
+      "x": 302,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-stone.png",
       "extruded": 2
     },
     "bld-mine-stone": {
-      "x": 274,
+      "x": 402,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-stone.png",
       "extruded": 2
     },
     "bld-barracks-stone": {
-      "x": 342,
+      "x": 502,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-stone.png",
       "extruded": 2
     },
     "bld-workshop-stone": {
-      "x": 410,
+      "x": 602,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-stone.png",
       "extruded": 2
     },
     "bld-hall-stone": {
-      "x": 478,
+      "x": 702,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-stone.png",
       "extruded": 2
     },
     "bld-armory-stone": {
-      "x": 546,
+      "x": 802,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-stone.png",
       "extruded": 2
     },
     "bld-walls-stone": {
-      "x": 614,
+      "x": 902,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-stone.png",
       "extruded": 2
     },
     "bld-townhall-bronze": {
-      "x": 682,
+      "x": 1002,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-bronze.png",
       "extruded": 2
     },
     "bld-farm-bronze": {
-      "x": 750,
+      "x": 1102,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-bronze.png",
       "extruded": 2
     },
     "bld-lumber-bronze": {
-      "x": 818,
+      "x": 1202,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-bronze.png",
       "extruded": 2
     },
     "bld-quarry-bronze": {
-      "x": 886,
+      "x": 1302,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-bronze.png",
       "extruded": 2
     },
     "bld-mine-bronze": {
-      "x": 954,
+      "x": 1402,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-bronze.png",
       "extruded": 2
     },
     "bld-barracks-bronze": {
-      "x": 1022,
+      "x": 1502,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-bronze.png",
       "extruded": 2
     },
     "bld-workshop-bronze": {
-      "x": 1090,
+      "x": 1602,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-bronze.png",
       "extruded": 2
     },
     "bld-hall-bronze": {
-      "x": 1158,
+      "x": 1702,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-bronze.png",
       "extruded": 2
     },
     "bld-armory-bronze": {
-      "x": 1226,
+      "x": 1802,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-bronze.png",
       "extruded": 2
     },
     "bld-walls-bronze": {
-      "x": 1294,
+      "x": 1902,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-bronze.png",
       "extruded": 2
     },
     "bld-townhall-iron": {
-      "x": 1362,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 2,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-iron.png",
       "extruded": 2
     },
     "bld-farm-iron": {
-      "x": 1430,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 102,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-iron.png",
       "extruded": 2
     },
     "bld-lumber-iron": {
-      "x": 1498,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 202,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-iron.png",
       "extruded": 2
     },
     "bld-quarry-iron": {
-      "x": 1566,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 302,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-iron.png",
       "extruded": 2
     },
     "bld-mine-iron": {
-      "x": 1634,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 402,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-iron.png",
       "extruded": 2
     },
     "bld-barracks-iron": {
-      "x": 1702,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 502,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-iron.png",
       "extruded": 2
     },
     "bld-workshop-iron": {
-      "x": 1770,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 602,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-iron.png",
       "extruded": 2
     },
     "bld-hall-iron": {
-      "x": 1838,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 702,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-iron.png",
       "extruded": 2
     },
     "bld-armory-iron": {
-      "x": 1906,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 802,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-iron.png",
       "extruded": 2
     },
     "bld-walls-iron": {
-      "x": 1974,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 902,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-iron.png",
       "extruded": 2
     },
     "bld-townhall-medieval": {
-      "x": 2,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1002,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-medieval.png",
       "extruded": 2
     },
     "bld-farm-medieval": {
-      "x": 70,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1102,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-medieval.png",
       "extruded": 2
     },
     "bld-lumber-medieval": {
-      "x": 138,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1202,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-medieval.png",
       "extruded": 2
     },
     "bld-quarry-medieval": {
-      "x": 206,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1302,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-medieval.png",
       "extruded": 2
     },
     "bld-mine-medieval": {
-      "x": 274,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1402,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-medieval.png",
       "extruded": 2
     },
     "bld-barracks-medieval": {
-      "x": 342,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1502,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-medieval.png",
       "extruded": 2
     },
     "bld-workshop-medieval": {
-      "x": 410,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1602,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-medieval.png",
       "extruded": 2
     },
     "bld-hall-medieval": {
-      "x": 478,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1702,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-medieval.png",
       "extruded": 2
     },
     "bld-armory-medieval": {
-      "x": 546,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1802,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-medieval.png",
       "extruded": 2
     },
     "bld-walls-medieval": {
-      "x": 614,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1902,
+      "y": 102,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-medieval.png",
       "extruded": 2
     },
     "bld-townhall-gunpowder": {
-      "x": 682,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 2,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-gunpowder.png",
       "extruded": 2
     },
     "bld-farm-gunpowder": {
-      "x": 750,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 102,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-gunpowder.png",
       "extruded": 2
     },
     "bld-lumber-gunpowder": {
-      "x": 818,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 202,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-gunpowder.png",
       "extruded": 2
     },
     "bld-quarry-gunpowder": {
-      "x": 886,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 302,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-gunpowder.png",
       "extruded": 2
     },
     "bld-mine-gunpowder": {
-      "x": 954,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 402,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-gunpowder.png",
       "extruded": 2
     },
     "bld-barracks-gunpowder": {
-      "x": 1022,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 502,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-gunpowder.png",
       "extruded": 2
     },
     "bld-workshop-gunpowder": {
-      "x": 1090,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 602,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-gunpowder.png",
       "extruded": 2
     },
     "bld-hall-gunpowder": {
-      "x": 1158,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 702,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-gunpowder.png",
       "extruded": 2
     },
     "bld-armory-gunpowder": {
-      "x": 1226,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 802,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-gunpowder.png",
       "extruded": 2
     },
     "bld-walls-gunpowder": {
-      "x": 1294,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 902,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-gunpowder.png",
       "extruded": 2
     },
     "bld-townhall-industrial": {
-      "x": 1362,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1002,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-industrial.png",
       "extruded": 2
     },
     "bld-farm-industrial": {
-      "x": 1430,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1102,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-industrial.png",
       "extruded": 2
     },
     "bld-lumber-industrial": {
-      "x": 1498,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1202,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-industrial.png",
       "extruded": 2
     },
     "bld-quarry-industrial": {
-      "x": 1566,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1302,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-industrial.png",
       "extruded": 2
     },
     "bld-mine-industrial": {
-      "x": 1634,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1402,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-industrial.png",
       "extruded": 2
     },
     "bld-barracks-industrial": {
-      "x": 1702,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1502,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-industrial.png",
       "extruded": 2
     },
     "bld-workshop-industrial": {
-      "x": 1770,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1602,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-industrial.png",
       "extruded": 2
     },
     "bld-hall-industrial": {
-      "x": 1838,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1702,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-industrial.png",
       "extruded": 2
     },
     "bld-armory-industrial": {
-      "x": 1906,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1802,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-industrial.png",
       "extruded": 2
     },
     "bld-walls-industrial": {
-      "x": 1974,
-      "y": 70,
-      "w": 64,
-      "h": 64,
+      "x": 1902,
+      "y": 202,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-industrial.png",
       "extruded": 2
     },
     "bld-townhall-modern": {
       "x": 2,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/townhall-modern.png",
       "extruded": 2
     },
     "bld-farm-modern": {
-      "x": 70,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 102,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/farm-modern.png",
       "extruded": 2
     },
     "bld-lumber-modern": {
-      "x": 138,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 202,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/lumber-modern.png",
       "extruded": 2
     },
     "bld-quarry-modern": {
-      "x": 206,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 302,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/quarry-modern.png",
       "extruded": 2
     },
     "bld-mine-modern": {
-      "x": 274,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 402,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/mine-modern.png",
       "extruded": 2
     },
     "bld-barracks-modern": {
-      "x": 342,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 502,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/barracks-modern.png",
       "extruded": 2
     },
     "bld-workshop-modern": {
-      "x": 410,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 602,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/workshop-modern.png",
       "extruded": 2
     },
     "bld-hall-modern": {
-      "x": 478,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 702,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/hall-modern.png",
       "extruded": 2
     },
     "bld-armory-modern": {
-      "x": 546,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 802,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/armory-modern.png",
       "extruded": 2
     },
     "bld-walls-modern": {
-      "x": 614,
-      "y": 138,
-      "w": 64,
-      "h": 64,
+      "x": 902,
+      "y": 302,
+      "w": 96,
+      "h": 96,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "buildings/walls-modern.png",
       "extruded": 2
     }
   }

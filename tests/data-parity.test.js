@@ -26,6 +26,19 @@ const EXPECTED = {
   QUEST_TEMPLATES: 6,
 };
 
+function toJsonSafe(value) {
+  if (Array.isArray(value)) return value.map(toJsonSafe);
+  if (value && typeof value === 'object') {
+    const out = {};
+    for (const [k, v] of Object.entries(value)) {
+      if (typeof v === 'function') out[`_fn_${k}`] = v.toString();
+      else out[k] = toJsonSafe(v);
+    }
+    return out;
+  }
+  return value;
+}
+
 describe('data parity', () => {
   it('has expected table sizes', () => {
     expect(DATA.AGES.length).toBe(EXPECTED.AGES);
@@ -54,10 +67,8 @@ describe('data parity', () => {
     const path = resolve('reference/game-data.json');
     if (!existsSync(path)) return;
     const ref = JSON.parse(readFileSync(path, 'utf8'));
-    expect(ref.tables.AGES.length).toBe(DATA.AGES.length);
-    expect(Object.keys(ref.tables.BUILDINGS).sort()).toEqual(Object.keys(DATA.BUILDINGS).sort());
-    expect(DATA.AGES[0].n).toBe(ref.tables.AGES[0].n);
-    expect(DATA.ROLES.melee.atk).toBe(ref.tables.ROLES.melee.atk);
-    expect(DATA.BUILDINGS.farm.g).toBe(ref.tables.BUILDINGS.farm.g);
+    for (const key of Object.keys(EXPECTED)) {
+      expect(toJsonSafe(DATA[key])).toEqual(ref.tables[key]);
+    }
   });
 });

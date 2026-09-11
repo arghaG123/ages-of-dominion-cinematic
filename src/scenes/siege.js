@@ -1,5 +1,5 @@
-import { fitCanvas, calcGridGeometry, needsResize, cssPoint } from '../render/canvas.js';
-import { COLS, ROWS, genPath, ETYPES, FIXED_DT } from '../rules/siege.js';
+import { fitCanvas, calcGridGeometry, needsResize, cssPoint, observeCanvasHost } from '../render/canvas.js';
+import { COLS, ROWS, genPath, ETYPES, FIXED_DT, liveWaveRoster, waveIsClear } from '../rules/siege.js';
 import { TOWERS } from '../data/index.js';
 import { coreHP } from '../rules/economy.js';
 import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
@@ -20,8 +20,11 @@ export function createSiegeController(dom, api) {
   let last = 0;
   let towerAtlas = null;
   let enemyAtlas = null;
+  let laneAtlas = null;
+  let stopObserve = () => {};
   ensureAtlas('tower').then((a) => { towerAtlas = a; });
   ensureAtlas('siege-enemy').then((a) => { enemyAtlas = a; });
+  ensureAtlas('siege-lane').then((a) => { laneAtlas = a; });
 
   function bsize() {
     const st = dom.stage;
@@ -56,9 +59,14 @@ export function createSiegeController(dom, api) {
       mode: opts.mode || 'skirmish',
       nodeIndex: opts.nodeIndex,
       spawnTimer: 0,
+      queue: [],
+      spawned: 0,
+      spawnGap: 1,
       paused: false,
     };
     dom.root.hidden = false;
+    stopObserve();
+    stopObserve = observeCanvasHost(dom.stage, () => { bsize(); draw(); });
     bsize();
     scheduleSizing();
     renderChrome();
@@ -66,7 +74,20 @@ export function createSiegeController(dom, api) {
     loop(last);
   }
 
+  function beginWave() {
+    if (!B) return;
+    const S = api.getState();
+    const roster = liveWaveRoster(B.wave, S.age || 0, Math.random);
+    B.queue = (roster.mix || []).slice();
+    B.spawned = 0;
+    B.spawnGap = roster.gap || 1;
+    B.spawnTimer = 0.15;
+    B.enemies = [];
+  }
+
   function end() {
+    stopObserve();
+    stopObserve = () => {};
     cancelAnimationFrame(raf);
     dom.root.hidden = true;
     B = null;
@@ -99,7 +120,7 @@ export function createSiegeController(dom, api) {
           }
           B.awaitingNext = false;
           B.running = true;
-          B.spawnTimer = 0.2;
+          beginWave();
           renderChrome();
         };
         dom.roster.appendChild(btn);
@@ -112,21 +133,24 @@ export function createSiegeController(dom, api) {
   function step(dt) {
     if (!B?.running || B.paused) return;
     B.spawnTimer -= dt;
-    if (B.spawnTimer <= 0 && B.enemies.filter((e) => !e.dead).length < 8 + B.wave) {
-      B.spawnTimer = 1.1 / B.speed;
-      const kinds = Object.keys(ETYPES);
-      const kind = kinds[B.wave % kinds.length];
+    if (B.queue.length && B.spawnTimer <= 0) {
+      const kind = B.queue.shift();
       const def = ETYPES[kind];
-      B.enemies.push({
-        id: `e${Date.now()}${Math.random()}`,
-        kind,
-        hp: def.hp * (1 + B.wave * 0.15),
-        max: def.hp * (1 + B.wave * 0.15),
-        spd: def.spd,
-        dmg: def.dmg,
-        pi: 0,
-        dead: false,
-      });
+      if (def) {
+        const hp = def.hp * (1 + B.wave * 0.15);
+        B.enemies.push({
+          id: `e${B.spawned}-${B.wave}`,
+          kind,
+          hp,
+          max: hp,
+          spd: def.spd,
+          dmg: def.dmg,
+          pi: 0,
+          dead: false,
+        });
+        B.spawned += 1;
+      }
+      B.spawnTimer = B.spawnGap / Math.max(0.25, B.speed);
     }
 
     for (const e of B.enemies) {
@@ -136,8 +160,10 @@ export function createSiegeController(dom, api) {
         B.core -= e.dmg;
         e.dead = true;
         if (B.core <= 0) {
-          api.onSiegeEnd({ won: false, waves: B.wave, gold: B.pendingGold || 0 }, { nodeIndex: B.nodeIndex });
+          const result = { won: false, waves: B.wave, gold: B.pendingGold || 0 };
+          const meta = { nodeIndex: B.nodeIndex };
           end();
+          api.onSiegeEnd(result, meta);
           return;
         }
       }
@@ -175,9 +201,11 @@ export function createSiegeController(dom, api) {
     }
     B.projectiles = B.projectiles.filter((p) => p.life > 0);
 
-    if (B.enemies.length && B.enemies.every((e) => e.dead) && B.spawnTimer < -2) {
+    if (waveIsClear(B.queue, B.enemies, B.spawned)) {
       B.wave += 1;
       B.enemies = [];
+      B.queue = [];
+      B.spawned = 0;
       const winAt = B.mode === 'site' ? 3 : B.mode === 'skirmish' ? 4 : 5;
       if (B.mode === 'endless') {
         B.awaitingNext = true;
@@ -187,9 +215,13 @@ export function createSiegeController(dom, api) {
         return;
       }
       if (B.wave >= winAt) {
-        api.onSiegeEnd({ won: true, waves: B.wave, gold: 40 + B.wave * 10 }, { nodeIndex: B.nodeIndex });
+        const result = { won: true, waves: B.wave, gold: 40 + B.wave * 10 };
+        const meta = { nodeIndex: B.nodeIndex };
         end();
+        api.onSiegeEnd(result, meta);
+        return;
       }
+      beginWave();
     }
   }
 
@@ -201,6 +233,9 @@ export function createSiegeController(dom, api) {
     ctx.clearRect(0, 0, prev.w, prev.h);
     ctx.fillStyle = '#141820';
     ctx.fillRect(0, 0, prev.w, prev.h);
+    if (laneAtlas) {
+      drawFrame(ctx, laneAtlas, 'siege-lane-lowlands', 0, 0, prev.w, prev.h);
+    }
 
     // Lane
     ctx.strokeStyle = '#3a2e24';
@@ -329,6 +364,7 @@ export function createSiegeController(dom, api) {
     if (!B) return;
     B.running = true;
     B.wave = 1;
+    beginWave();
     renderChrome();
   });
 

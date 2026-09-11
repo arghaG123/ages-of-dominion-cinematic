@@ -1,141 +1,134 @@
 {
   "id": "vfx",
-  "image": null,
-  "width": 748,
-  "height": 68,
+  "image": "vfx.webp",
+  "images": [
+    "vfx.webp"
+  ],
+  "width": 1820,
+  "height": 72,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "4fae126aa063eeaf",
   "frames": {
     "vfx-fire": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/fire.png",
       "extruded": 2
     },
     "vfx-ice": {
-      "x": 70,
+      "x": 262,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/ice.png",
       "extruded": 2
     },
     "vfx-arrows": {
-      "x": 138,
+      "x": 522,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/arrows.png",
       "extruded": 2
     },
     "vfx-melee": {
-      "x": 206,
+      "x": 782,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/melee.png",
       "extruded": 2
     },
     "vfx-heal": {
-      "x": 274,
+      "x": 1042,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/heal.png",
       "extruded": 2
     },
     "vfx-smoke": {
-      "x": 342,
+      "x": 1302,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/smoke.png",
       "extruded": 2
     },
     "vfx-lightning": {
-      "x": 410,
+      "x": 1562,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/lightning.png",
       "extruded": 2
     },
     "vfx-death": {
-      "x": 478,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 2,
+      "y": 38,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/death.png",
       "extruded": 2
     },
     "vfx-dust": {
-      "x": 546,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 262,
+      "y": 38,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/dust.png",
       "extruded": 2
     },
     "vfx-rain": {
-      "x": 614,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 522,
+      "y": 38,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/rain.png",
       "extruded": 2
     },
     "vfx-spell": {
-      "x": 682,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 782,
+      "y": 38,
+      "w": 256,
+      "h": 32,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "vfx/spell.png",
       "extruded": 2
     }
   }

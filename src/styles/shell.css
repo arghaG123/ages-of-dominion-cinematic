@@ -59,7 +59,8 @@ button:disabled {
 }
 
 .btn.sm {
-  min-height: 36px;
+  min-height: var(--tap);
+  min-width: var(--tap);
   padding: 0 10px;
   font-size: var(--fs-secondary);
 }
@@ -119,6 +120,8 @@ button:disabled {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  padding-left: env(safe-area-inset-left, 0px);
+  padding-right: env(safe-area-inset-right, 0px);
   background:
     radial-gradient(120% 80% at 50% -10%, rgba(201, 162, 39, 0.08), transparent 55%),
     var(--bg);
@@ -153,7 +156,7 @@ header {
 }
 
 .reschip {
-  min-height: 36px;
+  min-height: var(--tap);
   padding: 4px 8px;
   border-radius: 8px;
   background: var(--glass);
@@ -359,7 +362,7 @@ nav button.on {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: calc(20px + env(safe-area-inset-top, 0px)) 18px calc(28px + env(safe-area-inset-bottom, 0px));
+  padding: calc(20px + env(safe-area-inset-top, 0px)) calc(18px + env(safe-area-inset-right, 0px)) calc(28px + env(safe-area-inset-bottom, 0px)) calc(18px + env(safe-area-inset-left, 0px));
   background: #0b0d12;
 }
 
@@ -403,7 +406,7 @@ nav button.on {
   display: flex;
   align-items: stretch;
   justify-content: center;
-  padding: calc(16px + env(safe-area-inset-top, 0px)) 14px calc(16px + env(safe-area-inset-bottom, 0px));
+  padding: calc(16px + env(safe-area-inset-top, 0px)) calc(14px + env(safe-area-inset-right, 0px)) calc(16px + env(safe-area-inset-bottom, 0px)) calc(14px + env(safe-area-inset-left, 0px));
   background: rgba(8, 10, 14, 0.94);
 }
 

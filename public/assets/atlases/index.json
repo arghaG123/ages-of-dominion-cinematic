@@ -3,86 +3,114 @@
     {
       "id": "benchmark",
       "frames": 5,
-      "width": 340,
-      "height": 68
+      "sheets": 1,
+      "width": 916,
+      "height": 260,
+      "bytes": 23358
     },
     {
       "id": "hero",
       "frames": 9,
-      "width": 612,
-      "height": 68
+      "sheets": 1,
+      "width": 1764,
+      "height": 260,
+      "bytes": 94180
     },
     {
       "id": "unit",
       "frames": 105,
+      "sheets": 1,
       "width": 2040,
-      "height": 272
+      "height": 272,
+      "bytes": 206720
     },
     {
       "id": "building",
       "frames": 70,
-      "width": 2040,
-      "height": 204
+      "sheets": 1,
+      "width": 2000,
+      "height": 400,
+      "bytes": 192448
     },
     {
       "id": "tower",
       "frames": 28,
+      "sheets": 1,
       "width": 1904,
-      "height": 68
+      "height": 68,
+      "bytes": 44724
     },
     {
       "id": "creature",
       "frames": 40,
+      "sheets": 1,
       "width": 2040,
-      "height": 136
+      "height": 136,
+      "bytes": 83142
     },
     {
       "id": "siege-enemy",
       "frames": 5,
-      "width": 340,
-      "height": 68
+      "sheets": 1,
+      "width": 260,
+      "height": 52,
+      "bytes": 6912
     },
     {
       "id": "rival",
       "frames": 1,
-      "width": 68,
-      "height": 68
+      "sheets": 1,
+      "width": 196,
+      "height": 260,
+      "bytes": 8926
     },
     {
       "id": "map",
       "frames": 6,
-      "width": 408,
-      "height": 68
+      "sheets": 1,
+      "width": 1560,
+      "height": 175,
+      "bytes": 38402
     },
     {
       "id": "siege-lane",
       "frames": 6,
-      "width": 408,
-      "height": 68
+      "sheets": 1,
+      "width": 1176,
+      "height": 260,
+      "bytes": 22358
     },
     {
       "id": "battleground",
       "frames": 8,
-      "width": 544,
-      "height": 68
+      "sheets": 1,
+      "width": 1820,
+      "height": 350,
+      "bytes": 40656
     },
     {
       "id": "vfx",
       "frames": 11,
-      "width": 748,
-      "height": 68
+      "sheets": 1,
+      "width": 1820,
+      "height": 72,
+      "bytes": 36264
     },
     {
       "id": "ui",
       "frames": 4,
+      "sheets": 1,
       "width": 272,
-      "height": 68
+      "height": 68,
+      "bytes": 2604
     },
     {
       "id": "prop",
       "frames": 1,
+      "sheets": 1,
       "width": 68,
-      "height": 68
+      "height": 68,
+      "bytes": 2322
     }
   ]
 }

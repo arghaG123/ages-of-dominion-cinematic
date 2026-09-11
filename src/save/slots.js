@@ -7,6 +7,25 @@ export const slotKey = (id) => `aod.slot.${id}`;
 export const tmpKey = (id) => `aod.slot.${id}.tmp`;
 export const bakKey = (id) => `aod.slot.${id}.bak`;
 
+const RES_KEYS = ['food', 'wood', 'stone', 'gold'];
+
+/** A migrated blob is only playable if the core campaign fields exist. `{v:6}` is not. */
+export function isViableSave(s) {
+  if (!s || typeof s !== 'object') return false;
+  const hero = s.hero;
+  if (!hero || typeof hero !== 'object') return false;
+  if (typeof hero.cls !== 'string' || !hero.cls) return false;
+  if (typeof hero.name !== 'string' || !hero.name) return false;
+  const res = s.res;
+  if (!res || typeof res !== 'object') return false;
+  for (const k of RES_KEYS) {
+    if (typeof res[k] !== 'number' || !Number.isFinite(res[k])) return false;
+  }
+  if (!s.bld || typeof s.bld !== 'object') return false;
+  if (!Array.isArray(s.army)) return false;
+  return true;
+}
+
 function parseRaw(raw) {
   if (raw == null || raw === '') return { status: 'empty' };
   let data;
@@ -20,6 +39,7 @@ function parseRaw(raw) {
   if (ver > SCHEMA_VERSION) return { status: 'newer-version', version: ver };
   try {
     const state = migrateSave(data);
+    if (!isViableSave(state)) return { status: 'damaged', reason: 'incomplete' };
     return { status: 'ok', state };
   } catch (e) {
     if (e?.code === 'newer-version') return { status: 'newer-version', version: e.version };

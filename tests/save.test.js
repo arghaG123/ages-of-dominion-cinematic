@@ -3,6 +3,7 @@ import { resolve } from 'node:path';
 import { describe, it, expect } from 'vitest';
 import { createMemoryStorage, loadSlot, saveSlot, migrateSave, exportBackup, importBackup } from '../src/save/index.js';
 import { newGame, SCHEMA_VERSION } from '../src/state/factory.js';
+import { fnv1a } from '../src/util.js';
 
 describe('save system', () => {
   it('roundtrips through memory storage', async () => {
@@ -57,5 +58,34 @@ describe('save system', () => {
     const doc = exportBackup(state);
     const imported = importBackup(doc);
     expect(imported.hero.cls).toBe('warlock');
+  });
+
+  it('imports legacy v6 backup envelope (state + schemaVersion)', () => {
+    const raw = JSON.parse(readFileSync(resolve('reference/save-fixtures/healthy-v6.json'), 'utf8'));
+    const envelope = JSON.stringify({
+      format: 'ages-of-dominion-save',
+      formatVersion: 1,
+      schemaVersion: 6,
+      exportedAt: 1700000000000,
+      checksum: fnv1a(JSON.stringify(raw)),
+      state: raw,
+    });
+    const imported = importBackup(envelope);
+    expect(imported.hero.name).toBe('Kael');
+    expect(imported.v).toBe(SCHEMA_VERSION);
+  });
+
+  it('imports a bare v6 save object', () => {
+    const raw = readFileSync(resolve('reference/save-fixtures/healthy-v6.json'), 'utf8');
+    const imported = importBackup(raw);
+    expect(imported.hero.cls).toBe('ranger');
+  });
+
+  it('classifies a malformed {v:6} slot as damaged, not ok', async () => {
+    const storage = createMemoryStorage();
+    await storage.set('aod.slot.auto', JSON.stringify({ v: 6 }));
+    const loaded = await loadSlot(storage, 'auto');
+    expect(loaded.status).toBe('damaged');
+    expect(loaded.state).toBeUndefined();
   });
 });

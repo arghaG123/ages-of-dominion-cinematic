@@ -1,10 +1,11 @@
-import { fitCanvas } from '../render/canvas.js';
+import { fitCanvas, observeCanvasHost } from '../render/canvas.js';
 import { reducedMotion } from '../util.js';
 
 export function initTitleScene(canvas) {
   let raf = 0;
   let t0 = performance.now();
   let pointer = { x: 0.5, y: 0.5 };
+  let stopObserve = () => {};
 
   function resize() {
     const w = canvas.parentElement?.clientWidth || window.innerWidth || 375;
@@ -63,11 +64,13 @@ export function initTitleScene(canvas) {
   }
 
   canvas.addEventListener('pointermove', onPointer);
+  stopObserve = observeCanvasHost(canvas.parentElement || canvas, () => { resize(); });
   raf = requestAnimationFrame(draw);
 
   return {
     stop() {
       cancelAnimationFrame(raf);
+      stopObserve();
       canvas.removeEventListener('pointermove', onPointer);
     },
   };

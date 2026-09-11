@@ -1,10 +1,14 @@
 {
   "id": "creature",
-  "image": null,
+  "image": "creature.webp",
+  "images": [
+    "creature.webp"
+  ],
   "width": 2040,
   "height": 136,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "52f15c4aa3ec608e",
   "frames": {
     "enemy-wolf-idle": {
       "x": 2,
@@ -15,7 +19,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wolf-idle.png",
       "extruded": 2
     },
     "enemy-wolf-move": {
@@ -27,7 +30,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wolf-move.png",
       "extruded": 2
     },
     "enemy-wolf-attack": {
@@ -39,7 +41,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wolf-attack.png",
       "extruded": 2
     },
     "enemy-wolf-hit": {
@@ -51,7 +52,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wolf-hit.png",
       "extruded": 2
     },
     "enemy-wolf-death": {
@@ -63,7 +63,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wolf-death.png",
       "extruded": 2
     },
     "enemy-bandit-idle": {
@@ -75,7 +74,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bandit-idle.png",
       "extruded": 2
     },
     "enemy-bandit-move": {
@@ -87,7 +85,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bandit-move.png",
       "extruded": 2
     },
     "enemy-bandit-attack": {
@@ -99,7 +96,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bandit-attack.png",
       "extruded": 2
     },
     "enemy-bandit-hit": {
@@ -111,7 +107,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bandit-hit.png",
       "extruded": 2
     },
     "enemy-bandit-death": {
@@ -123,7 +118,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bandit-death.png",
       "extruded": 2
     },
     "enemy-bear-idle": {
@@ -135,7 +129,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bear-idle.png",
       "extruded": 2
     },
     "enemy-bear-move": {
@@ -147,7 +140,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bear-move.png",
       "extruded": 2
     },
     "enemy-bear-attack": {
@@ -159,7 +151,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bear-attack.png",
       "extruded": 2
     },
     "enemy-bear-hit": {
@@ -171,7 +162,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bear-hit.png",
       "extruded": 2
     },
     "enemy-bear-death": {
@@ -183,7 +173,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/bear-death.png",
       "extruded": 2
     },
     "enemy-harpy-idle": {
@@ -195,7 +184,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/harpy-idle.png",
       "extruded": 2
     },
     "enemy-harpy-move": {
@@ -207,7 +195,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/harpy-move.png",
       "extruded": 2
     },
     "enemy-harpy-attack": {
@@ -219,7 +206,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/harpy-attack.png",
       "extruded": 2
     },
     "enemy-harpy-hit": {
@@ -231,7 +217,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/harpy-hit.png",
       "extruded": 2
     },
     "enemy-harpy-death": {
@@ -243,7 +228,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/harpy-death.png",
       "extruded": 2
     },
     "enemy-golem-idle": {
@@ -255,7 +239,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/golem-idle.png",
       "extruded": 2
     },
     "enemy-golem-move": {
@@ -267,7 +250,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/golem-move.png",
       "extruded": 2
     },
     "enemy-golem-attack": {
@@ -279,7 +261,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/golem-attack.png",
       "extruded": 2
     },
     "enemy-golem-hit": {
@@ -291,7 +272,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/golem-hit.png",
       "extruded": 2
     },
     "enemy-golem-death": {
@@ -303,7 +283,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/golem-death.png",
       "extruded": 2
     },
     "enemy-griffin-idle": {
@@ -315,7 +294,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/griffin-idle.png",
       "extruded": 2
     },
     "enemy-griffin-move": {
@@ -327,7 +305,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/griffin-move.png",
       "extruded": 2
     },
     "enemy-griffin-attack": {
@@ -339,7 +316,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/griffin-attack.png",
       "extruded": 2
     },
     "enemy-griffin-hit": {
@@ -351,7 +327,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/griffin-hit.png",
       "extruded": 2
     },
     "enemy-griffin-death": {
@@ -363,7 +338,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/griffin-death.png",
       "extruded": 2
     },
     "enemy-wyvern-idle": {
@@ -375,7 +349,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wyvern-idle.png",
       "extruded": 2
     },
     "enemy-wyvern-move": {
@@ -387,7 +360,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wyvern-move.png",
       "extruded": 2
     },
     "enemy-wyvern-attack": {
@@ -399,7 +371,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wyvern-attack.png",
       "extruded": 2
     },
     "enemy-wyvern-hit": {
@@ -411,7 +382,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wyvern-hit.png",
       "extruded": 2
     },
     "enemy-wyvern-death": {
@@ -423,7 +393,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/wyvern-death.png",
       "extruded": 2
     },
     "enemy-drone-idle": {
@@ -435,7 +404,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/drone-idle.png",
       "extruded": 2
     },
     "enemy-drone-move": {
@@ -447,7 +415,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/drone-move.png",
       "extruded": 2
     },
     "enemy-drone-attack": {
@@ -459,7 +426,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/drone-attack.png",
       "extruded": 2
     },
     "enemy-drone-hit": {
@@ -471,7 +437,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/drone-hit.png",
       "extruded": 2
     },
     "enemy-drone-death": {
@@ -483,7 +448,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "creatures/drone-death.png",
       "extruded": 2
     }
   }

@@ -5,7 +5,7 @@ import { newGame } from './state/factory.js';
 import { tutorialPending } from './state/tutorial.js';
 import {
   createPreferredStorage,
-  inspectContinue, loadSlot, SLOT_AUTO, MANUAL_SLOTS,
+  inspectContinue, loadSlot, deleteSlot, SLOT_AUTO, MANUAL_SLOTS,
   exportBackup, importBackup,
   configureAutosave, requestSave, saveNow, registerLifecycle,
 } from './save/index.js';
@@ -75,11 +75,23 @@ function applyEffects(effects) {
         <button type="button" class="btn gold" id="collect">Collect</button>`);
       el('sheet').querySelector('#collect').onclick = () => closeSheet();
     }
-    if (e.type === 'start-fight') battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex });
-    if (e.type === 'start-siege') siege.start({ mode: e.mode || 'site', nodeIndex: e.nodeIndex });
+    if (e.type === 'start-fight') {
+      battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex });
+      playTheme('battle');
+    }
+    if (e.type === 'start-siege') {
+      siege.start({ mode: e.mode || 'site', nodeIndex: e.nodeIndex });
+      playTheme('siege');
+    }
     if (e.type === 'chapter') openChapter(e.index);
-    if (e.type === 'victory') toast('Victory');
-    if (e.type === 'defeat') toast('Defeat');
+    if (e.type === 'victory') {
+      toast('Victory');
+      playSfx('victory');
+    }
+    if (e.type === 'defeat') {
+      toast('Defeat');
+      playSfx('defeat');
+    }
     if (e.type === 'tutorial') {
       openSheet(`<h3>${esc(e.title)}</h3><p>${esc(e.text)}</p>
         <button type="button" class="btn gold" id="tutOk">Continue</button>`);
@@ -122,6 +134,7 @@ function applyEffects(effects) {
 
 function doDispatch(action) {
   if (!S) return;
+  const prev = S;
   const { state, effects } = dispatch(S, action);
   S = state;
   if (action.type === 'set-pref') {
@@ -130,7 +143,7 @@ function doDispatch(action) {
     if (action.key === 'haptics') setHapticsEnabled(action.value);
   }
   applyEffects(effects);
-  requestSave();
+  if (state !== prev) requestSave();
   render();
 }
 
@@ -198,7 +211,7 @@ async function boot() {
 
   wireChrome();
   initMobileLifecycle();
-  playTheme();
+  playTheme('title');
 }
 
 async function renderTitle() {
@@ -210,11 +223,16 @@ async function renderTitle() {
     html += `<button type="button" class="btn gold" id="btnContinue">Continue — ${esc(st.hero?.name || 'Commander')} · Day ${st.day}</button>`;
     if (cont.status === 'recovered') html += `<p class="tagline">Recovered from backup.</p>`;
   } else if (cont.status === 'damaged') {
-    html += `<p class="tagline">Autosave damaged. Load a backup or start carefully.</p>`;
+    html += `<p class="tagline">Autosave damaged. Load a backup — this slot will not start a new game by itself.</p>`;
+    html += `<button type="button" class="btn" id="btnWipe">Wipe damaged save…</button>`;
   } else if (cont.status === 'newer-version') {
     html += `<p class="tagline">Save is from a newer build (v${cont.version}). Update the app.</p>`;
   }
-  html += `<button type="button" class="btn" id="btnNew">New Game</button>`;
+  if (cont.status === 'empty') {
+    html += `<button type="button" class="btn gold" id="btnNew">New Game</button>`;
+  } else if (cont.status === 'ok' || cont.status === 'recovered') {
+    html += `<button type="button" class="btn" id="btnNew">New Game</button>`;
+  }
   html += `<button type="button" class="btn" id="btnLoad">Load Game</button>`;
   html += `<button type="button" class="btn" id="btnSaves">Saves & Backups</button>`;
   actions.innerHTML = html;
@@ -222,7 +240,17 @@ async function renderTitle() {
   el('btnContinue')?.addEventListener('click', () => {
     if (cont.status === 'ok' || cont.status === 'recovered') enterGame(cont.state);
   });
-  el('btnNew')?.addEventListener('click', () => openClassPicker());
+  el('btnNew')?.addEventListener('click', () => {
+    if (cont.status === 'ok' || cont.status === 'recovered') {
+      if (!confirm('Start a new game? The current autosave will be overwritten when you begin.')) return;
+    }
+    openClassPicker();
+  });
+  el('btnWipe')?.addEventListener('click', async () => {
+    if (!confirm('Erase the damaged autosave and start over? This cannot be undone.')) return;
+    await deleteSlot(storage, SLOT_AUTO);
+    openClassPicker();
+  });
   el('btnLoad')?.addEventListener('click', () => openLoadSheet());
   el('btnSaves')?.addEventListener('click', () => openSavesSheet());
 }
@@ -331,6 +359,13 @@ function ensureTick() {
   if (S && !tickTimer) startTick();
 }
 
+function syncTheme() {
+  if (!el('title').hidden) playTheme('title');
+  else if (battle?.active()) playTheme('battle');
+  else if (siege?.active()) playTheme('siege');
+  else playTheme('realm');
+}
+
 function render() {
   if (!S) return;
   const C = CLASSES[S.hero.cls];
@@ -388,7 +423,7 @@ function render() {
     if (tab === 'war') {
       renderWar(view, S, {
         dispatch: doDispatch,
-        startSiege: (o) => siege.start(o),
+        startSiege: (o) => { siege.start(o); playTheme('siege'); },
         startDuel: () => {
           const rng = makeRng(Date.now());
           const keys = Object.keys(CREATURES);
@@ -397,6 +432,7 @@ function render() {
             age: S.age, count: 6 + S.age, rank: 0, xp: 0,
           }];
           battle.start(foes);
+          playTheme('battle');
         },
         shareDuel: async (code) => {
           const ok = await shareText('Ages of Dominion duel', `AOD1.${code}`);
@@ -429,6 +465,7 @@ function render() {
       });
     }
   }
+  syncTheme();
 }
 
 function wireChrome() {
@@ -470,6 +507,7 @@ async function returnToTitle() {
   el('title').hidden = false;
   titleScene = initTitleScene(el('titlecv'));
   await renderTitle();
+  playTheme('title');
 }
 
 function initMobileLifecycle() {

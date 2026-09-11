@@ -1,4 +1,4 @@
-import { fitCanvas, calcGridGeometry, needsResize, cssPoint } from '../render/canvas.js';
+import { fitCanvas, calcGridGeometry, needsResize, cssPoint, observeCanvasHost } from '../render/canvas.js';
 import { createFx, spawnFloat, spawnBurst, updateFx, drawFx } from '../render/fx.js';
 import { unitStats } from '../rules/units.js';
 import { applyDamage, createRng, FC, FR } from '../rules/combat.js';
@@ -37,9 +37,11 @@ export function createBattleController(dom, api) {
   let turnTimer = 0;
   let unitAtlas = null;
   let creatureAtlas = null;
-
+  let groundAtlas = null;
+  let stopObserve = () => {};
   ensureAtlas('unit').then((a) => { unitAtlas = a; });
   ensureAtlas('creature').then((a) => { creatureAtlas = a; });
+  ensureAtlas('battleground').then((a) => { groundAtlas = a; });
 
   function placeRows() {
     return 1 + skillLevel(api.getState().hero, 'tactics');
@@ -125,6 +127,8 @@ export function createBattleController(dom, api) {
     };
     dom.root.hidden = false;
     dom.root.classList.add('on');
+    stopObserve();
+    stopObserve = observeCanvasHost(dom.stage, () => { fsize(); draw(); });
     fsize();
     renderChrome();
     scheduleSizing();
@@ -132,6 +136,8 @@ export function createBattleController(dom, api) {
   }
 
   function end() {
+    stopObserve();
+    stopObserve = () => {};
     cancelAnimationFrame(raf);
     clearTimeout(turnTimer);
     const oe = orderEl();
@@ -560,8 +566,9 @@ export function createBattleController(dom, api) {
     syncBoardToResult();
     const result = F.resolved;
     const armyAfter = armyAfterFromUnits(result.player);
-    api.onBattleEnd(result, armyAfter, { nodeIndex: F.nodeIndex });
+    const meta = { nodeIndex: F.nodeIndex };
     end();
+    api.onBattleEnd(result, armyAfter, meta);
   }
 
   function finishInteractive() {
@@ -576,8 +583,9 @@ export function createBattleController(dom, api) {
       seed: F.seed,
     };
     const armyAfter = armyAfterFromUnits(result.player);
-    api.onBattleEnd(result, armyAfter, { nodeIndex: F.nodeIndex });
+    const meta = { nodeIndex: F.nodeIndex };
     end();
+    api.onBattleEnd(result, armyAfter, meta);
   }
 
   function drawUnit(ctx, u) {
@@ -609,6 +617,9 @@ export function createBattleController(dom, api) {
     ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = '#1a2230';
     ctx.fillRect(0, 0, w, h);
+    if (groundAtlas) {
+      drawFrame(ctx, groundAtlas, 'battle-plains', 0, 0, w, h);
+    }
 
     const active = F.phase === 'fight' && F.sim ? F.sim.current() : null;
     const moveReach = active && active.side === 'p' ? reach(active) : null;

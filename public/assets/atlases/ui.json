@@ -1,10 +1,14 @@
 {
   "id": "ui",
-  "image": null,
+  "image": "ui.webp",
+  "images": [
+    "ui.webp"
+  ],
   "width": 272,
   "height": 68,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "7dd379007bc2a23a",
   "frames": {
     "ui-metal": {
       "x": 2,
@@ -15,7 +19,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/metal.jpg",
       "extruded": 2
     },
     "ui-leather": {
@@ -27,7 +30,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/leather.jpg",
       "extruded": 2
     },
     "ui-parchment": {
@@ -39,7 +41,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/parchment.jpg",
       "extruded": 2
     },
     "ui-glass": {
@@ -51,7 +52,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "ui/glass.jpg",
       "extruded": 2
     }
   }

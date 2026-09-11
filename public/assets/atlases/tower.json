@@ -1,10 +1,14 @@
 {
   "id": "tower",
-  "image": null,
+  "image": "tower.webp",
+  "images": [
+    "tower.webp"
+  ],
   "width": 1904,
   "height": 68,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "e4c3bcc554d9bde6",
   "frames": {
     "tower-arrow-stone": {
       "x": 2,
@@ -15,7 +19,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-stone.png",
       "extruded": 2
     },
     "tower-splash-stone": {
@@ -27,7 +30,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-stone.png",
       "extruded": 2
     },
     "tower-slow-stone": {
@@ -39,7 +41,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-stone.png",
       "extruded": 2
     },
     "tower-support-stone": {
@@ -51,7 +52,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-stone.png",
       "extruded": 2
     },
     "tower-arrow-bronze": {
@@ -63,7 +63,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-bronze.png",
       "extruded": 2
     },
     "tower-splash-bronze": {
@@ -75,7 +74,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-bronze.png",
       "extruded": 2
     },
     "tower-slow-bronze": {
@@ -87,7 +85,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-bronze.png",
       "extruded": 2
     },
     "tower-support-bronze": {
@@ -99,7 +96,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-bronze.png",
       "extruded": 2
     },
     "tower-arrow-iron": {
@@ -111,7 +107,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-iron.png",
       "extruded": 2
     },
     "tower-splash-iron": {
@@ -123,7 +118,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-iron.png",
       "extruded": 2
     },
     "tower-slow-iron": {
@@ -135,7 +129,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-iron.png",
       "extruded": 2
     },
     "tower-support-iron": {
@@ -147,7 +140,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-iron.png",
       "extruded": 2
     },
     "tower-arrow-medieval": {
@@ -159,7 +151,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-medieval.png",
       "extruded": 2
     },
     "tower-splash-medieval": {
@@ -171,7 +162,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-medieval.png",
       "extruded": 2
     },
     "tower-slow-medieval": {
@@ -183,7 +173,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-medieval.png",
       "extruded": 2
     },
     "tower-support-medieval": {
@@ -195,7 +184,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-medieval.png",
       "extruded": 2
     },
     "tower-arrow-gunpowder": {
@@ -207,7 +195,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-gunpowder.png",
       "extruded": 2
     },
     "tower-splash-gunpowder": {
@@ -219,7 +206,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-gunpowder.png",
       "extruded": 2
     },
     "tower-slow-gunpowder": {
@@ -231,7 +217,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-gunpowder.png",
       "extruded": 2
     },
     "tower-support-gunpowder": {
@@ -243,7 +228,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-gunpowder.png",
       "extruded": 2
     },
     "tower-arrow-industrial": {
@@ -255,7 +239,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-industrial.png",
       "extruded": 2
     },
     "tower-splash-industrial": {
@@ -267,7 +250,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-industrial.png",
       "extruded": 2
     },
     "tower-slow-industrial": {
@@ -279,7 +261,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-industrial.png",
       "extruded": 2
     },
     "tower-support-industrial": {
@@ -291,7 +272,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-industrial.png",
       "extruded": 2
     },
     "tower-arrow-modern": {
@@ -303,7 +283,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/arrow-modern.png",
       "extruded": 2
     },
     "tower-splash-modern": {
@@ -315,7 +294,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/splash-modern.png",
       "extruded": 2
     },
     "tower-slow-modern": {
@@ -327,7 +305,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/slow-modern.png",
       "extruded": 2
     },
     "tower-support-modern": {
@@ -339,7 +316,6 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "towers/support-modern.png",
       "extruded": 2
     }
   }

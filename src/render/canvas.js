@@ -40,6 +40,19 @@ export function needsResize(prevW, prevH, stageW, stageH) {
   return prevW !== stageW || prevH !== stageH;
 }
 
+/** Observe a canvas host for CSS size changes (ResizeObserver with window fallback). */
+export function observeCanvasHost(host, onSize) {
+  if (!host || typeof onSize !== 'function') return () => {};
+  onSize();
+  if (typeof ResizeObserver === 'function') {
+    const ro = new ResizeObserver(() => onSize());
+    ro.observe(host);
+    return () => ro.disconnect();
+  }
+  window.addEventListener('resize', onSize);
+  return () => window.removeEventListener('resize', onSize);
+}
+
 /** CSS-space point from a pointer event relative to the canvas element. */
 export function cssPoint(canvas, clientX, clientY) {
   const r = canvas.getBoundingClientRect();

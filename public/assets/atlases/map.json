@@ -1,81 +1,79 @@
 {
   "id": "map",
-  "image": null,
-  "width": 408,
-  "height": 68,
+  "image": "map.webp",
+  "images": [
+    "map.webp"
+  ],
+  "width": 1560,
+  "height": 175,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "f91066a5776d3029",
   "frames": {
     "map-lowlands": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/lowlands.jpg",
       "extruded": 2
     },
     "map-forest": {
-      "x": 70,
+      "x": 262,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/forest.jpg",
       "extruded": 2
     },
     "map-swamp": {
-      "x": 138,
+      "x": 522,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/swamp.jpg",
       "extruded": 2
     },
     "map-desert": {
-      "x": 206,
+      "x": 782,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/desert.jpg",
       "extruded": 2
     },
     "map-snow": {
-      "x": 274,
+      "x": 1042,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/snow.jpg",
       "extruded": 2
     },
     "map-darklands": {
-      "x": 342,
+      "x": 1302,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "map/darklands.jpg",
       "extruded": 2
     }
   }

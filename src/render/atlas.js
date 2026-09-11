@@ -16,14 +16,22 @@ export async function loadAtlas(atlasId, url = `./assets/atlases/${atlasId}.json
       const meta = await res.json();
       const frames = meta.frames || {};
       const frameImages = {};
-      let img = null;
+      const images = [];
 
-      if (meta.image != null) {
-        const src = meta.image.startsWith('.') || meta.image.startsWith('/')
-          ? meta.image
-          : `./assets/atlases/${meta.image}`;
-        img = await loadImage(src);
-      } else {
+      const names = Array.isArray(meta.images) && meta.images.length
+        ? meta.images
+        : (meta.image != null ? [meta.image] : []);
+      for (const name of names) {
+        const src = name.startsWith('.') || name.startsWith('/')
+          ? name
+          : `./assets/atlases/${name}`;
+        try {
+          images.push(await loadImage(src));
+        } catch {
+          /* silhouette fallback in drawFrame */
+        }
+      }
+      if (!images.length) {
         await Promise.all(
           Object.entries(frames).map(async ([id, frame]) => {
             if (!frame?.source) return;
@@ -36,7 +44,7 @@ export async function loadAtlas(atlasId, url = `./assets/atlases/${atlasId}.json
         );
       }
 
-      const atlas = { id: atlasId, meta, img, frames, frameImages };
+      const atlas = { id: atlasId, meta, img: images[0] || null, images, frames, frameImages };
       cache.set(atlasId, atlas);
       return atlas;
     } catch (err) {
@@ -93,18 +101,23 @@ export function drawFrame(ctx, atlas, frameId, dx, dy, dw, dh, opts = {}) {
     return;
   }
 
-  if (!atlas?.img || !frame) {
+  if (!frame) {
     drawSilhouette(ctx, dx, dy, dw, dh, frameId || 'missing');
     return;
   }
   const { x, y, w, h } = frame;
+  const srcImg = atlas.images?.[frame.sheet || 0] || atlas.img;
+  if (!srcImg) {
+    drawSilhouette(ctx, dx, dy, dw, dh, frameId || 'missing');
+    return;
+  }
   ctx.save();
   if (opts.flipX) {
     ctx.translate(dx + dw, dy);
     ctx.scale(-1, 1);
-    ctx.drawImage(atlas.img, x, y, w, h, 0, 0, dw, dh);
+    ctx.drawImage(srcImg, x, y, w, h, 0, 0, dw, dh);
   } else {
-    ctx.drawImage(atlas.img, x, y, w, h, dx, dy, dw, dh);
+    ctx.drawImage(srcImg, x, y, w, h, dx, dy, dw, dh);
   }
   ctx.restore();
 }

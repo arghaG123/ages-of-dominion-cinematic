@@ -9,7 +9,7 @@ import { checkMilestones } from '../state/milestones.js';
 import { encodeChallenge } from '../rules/combat.js';
 import { iconMarkup } from './icons.js';
 import { esc } from '../util.js';
-import { fitCanvas } from '../render/canvas.js';
+import { fitCanvas, observeCanvasHost } from '../render/canvas.js';
 import { ensureAtlas, drawFrame } from '../render/atlas.js';
 import { AGES } from '../data/index.js';
 
@@ -107,8 +107,12 @@ export async function drawHeroPreview(canvas, cls) {
 }
 
 let selectedMapNode = null;
+let stopMapObserve = () => {};
+let mapAtlas = null;
+ensureAtlas('map').then((a) => { mapAtlas = a; });
 
 export function renderMap(root, state, api) {
+  stopMapObserve();
   if (!state.map) {
     selectedMapNode = null;
     root.innerHTML = `<div class="card"><h3>Region map</h3><p>Scout the valleys beyond your walls.</p>
@@ -122,7 +126,10 @@ export function renderMap(root, state, api) {
   </div>`;
   const canvas = root.querySelector('#mapcv');
   const card = root.querySelector('#mapCard');
-  drawMap(canvas, state, api, card);
+  const host = canvas.parentElement;
+  const paint = () => drawMap(canvas, state, api, card);
+  paint();
+  stopMapObserve = observeCanvasHost(host, paint);
 }
 
 function showNodeCard(card, state, api, index) {
@@ -153,6 +160,9 @@ function drawMap(canvas, state, api, card) {
   const map = state.map;
   ctx.fillStyle = '#1a2230';
   ctx.fillRect(0, 0, w, h);
+  if (mapAtlas) {
+    drawFrame(ctx, mapAtlas, 'map-lowlands', 0, 0, w, h);
+  }
 
   ctx.strokeStyle = 'rgba(154,163,178,0.35)';
   ctx.lineWidth = 2;

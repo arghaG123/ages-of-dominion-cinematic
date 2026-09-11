@@ -1,21 +1,24 @@
 {
   "id": "rival",
-  "image": null,
-  "width": 68,
-  "height": 68,
+  "image": "rival.webp",
+  "images": [
+    "rival.webp"
+  ],
+  "width": 196,
+  "height": 260,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "c39036ef932087f8",
   "frames": {
     "rival-portrait": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 192,
+      "h": 256,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "rival/portrait.png",
       "extruded": 2
     }
   }

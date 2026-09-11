@@ -32,6 +32,26 @@ for (const a of manifest.assets) {
 
 const atlasIndex = resolve(root, 'public/assets/atlases/index.json');
 if (!existsSync(atlasIndex)) errors.push('missing atlases — run assets:atlas');
+else {
+  const idx = JSON.parse(readFileSync(atlasIndex, 'utf8'));
+  for (const a of idx.atlases || []) {
+    const jsonPath = resolve(root, 'public/assets/atlases', `${a.id}.json`);
+    if (!existsSync(jsonPath)) {
+      errors.push(`missing atlas json ${a.id}`);
+      continue;
+    }
+    const atlas = JSON.parse(readFileSync(jsonPath, 'utf8'));
+    const imgs = Array.isArray(atlas.images) && atlas.images.length
+      ? atlas.images
+      : (atlas.image ? [atlas.image] : []);
+    if (!imgs.length) errors.push(`atlas ${a.id} has no packed image`);
+    for (const im of imgs) {
+      const p = resolve(root, 'public/assets/atlases', im);
+      if (!existsSync(p)) errors.push(`missing packed sheet ${im}`);
+    }
+    if (atlas.width > 2048 || atlas.height > 2048) errors.push(`atlas ${a.id} exceeds 2048`);
+  }
+}
 
 if (errors.length) {
   console.error('Asset validation failed:');

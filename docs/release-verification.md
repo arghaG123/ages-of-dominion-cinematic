@@ -10,7 +10,11 @@
 - [x] Visual shell: title, realm, host, map, war, battle, siege
 - [x] Quests, milestones, map payoffs, hero forge/skills, army XP, rival, market
 - [x] Interactive seeded battle + Resolve shortcut; siege modes + call-next-wave
-- [x] Independent music / SFX / haptics prefs; bundled WAV stubs
+- [x] Live siege waves use a finite roster so waves can complete
+- [x] Independent music / SFX / haptics prefs; bundled WAV stubs wired per scene
+- [x] Production WebP atlases packed from approved art (`npm run assets:atlas`)
+- [x] Legacy v6 backup envelope + viable-save gate (`{v:6}` is damaged, not ok)
+- [x] Title New Game only for empty storage (damaged/newer never offer immediate New Game)
 - [x] `INTERNET` permission removed from AndroidManifest
 - [x] `npm test` passing
 - [x] Playwright viewport smoke (`npm run test:e2e`)
@@ -49,9 +53,9 @@ siege → more on the dev build and fixed everything found:
   now sized/centered against the actual available height.
   [src/scenes/realm.js](../src/scenes/realm.js).
 
-All fixes verified live in the browser preview; `npm test` (34/34),
-`npm run test:e2e` (4/4), `npm run assets:validate` (351/351), and
-`npm run build` all still pass after the changes.
+All fixes verified live in the browser preview; `npm test` (40/40),
+`npm run assets:validate` (351/351), and `npm run build` (dist includes
+packed WebP atlases; `dist/assets/approved` is not shipped).
 
 ## Battle authority (2026-09-11)
 
@@ -63,6 +67,15 @@ Animations only observe those events.
 ## Art approval (2026-09-11)
 
 Human review of the production pack; all 351 manifest records marked `approved`.
+
+## Verification-report fixes (2026-09-11)
+
+- Save: legacy v6 backup envelope (`state` + `schemaVersion`) imports; `{v:6}` is damaged, not ok; title New Game is immediate only on empty storage.
+- Art: Sharp packs approved rasters into ≤2048 WebP atlases with 2px extrusion; runtime draws sheets instead of `assets/approved`.
+- Siege: live waves spawn a finite roster and can complete when all enemies are dead.
+- Audio: title/realm/battle/siege themes loop; remaining SFX mapped.
+- Layout: ResizeObserver on canvas hosts; left/right safe-area; 44px tap targets on `.btn.sm` / resource chips.
+- Autosave skips refused actions that return the same state object.
 
 ## Commands
 

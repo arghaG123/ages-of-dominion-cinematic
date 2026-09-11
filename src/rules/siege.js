@@ -99,6 +99,18 @@ export function wavePreview(w) {
   return `Incoming: ${parts.join(', ')}`;
 }
 
+/** Finite mix for live siege wave `wave` (1-based). */
+export function liveWaveRoster(wave, age = 0, rng = Math.random) {
+  const n = Math.max(1, wave | 0);
+  const waves = genWaves({ waves: n }, age, rng);
+  return waves[n - 1] || waves[waves.length - 1];
+}
+
+/** True when this wave's roster is spent and every spawned enemy is dead. */
+export function waveIsClear(queue, enemies, spawned) {
+  return spawned > 0 && !(queue && queue.length) && (enemies || []).every((e) => e.dead);
+}
+
 export function towerDef(fam) {
   return TOWERS[fam] || null;
 }

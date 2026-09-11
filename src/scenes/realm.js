@@ -1,4 +1,4 @@
-import { fitCanvas, cssPoint } from '../render/canvas.js';
+import { fitCanvas, cssPoint, needsResize, observeCanvasHost } from '../render/canvas.js';
 import { reducedMotion } from '../util.js';
 import { blOf } from '../rules/economy.js';
 import { remainingMs } from '../rules/builds.js';
@@ -27,6 +27,7 @@ export function initRealmScene(canvas, api) {
   let last = performance.now();
   let running = true;
   let buildingAtlas = null;
+  let stopObserve = () => {};
   const TILE = 7;
 
   ensureAtlas('building').then((a) => { buildingAtlas = a; });
@@ -51,9 +52,17 @@ export function initRealmScene(canvas, api) {
     return { tw, th, originX, originY };
   }
 
+  let fitted = { ctx: null, cssW: 0, cssH: 0 };
+  let prev = { w: 0, h: 0 };
+
   function resize() {
     const host = canvas.parentElement;
-    return fitCanvas(canvas, host.clientWidth || 375, host.clientHeight || 600);
+    const w = host.clientWidth || 375;
+    const h = host.clientHeight || 600;
+    if (!needsResize(prev.w, prev.h, w, h) && fitted.ctx) return fitted;
+    prev = { w, h };
+    fitted = fitCanvas(canvas, w, h);
+    return fitted;
   }
 
   function draw(now) {
@@ -189,6 +198,7 @@ export function initRealmScene(canvas, api) {
   }
 
   canvas.addEventListener('click', onClick);
+  stopObserve = observeCanvasHost(canvas.parentElement || canvas, () => { resize(); });
   raf = requestAnimationFrame(draw);
 
   return {
@@ -197,6 +207,7 @@ export function initRealmScene(canvas, api) {
     destroy() {
       running = false;
       cancelAnimationFrame(raf);
+      stopObserve();
       canvas.removeEventListener('click', onClick);
     },
   };

@@ -1,49 +1,50 @@
 {
   "id": "benchmark",
-  "image": null,
-  "width": 340,
-  "height": 68,
+  "image": "benchmark.webp",
+  "images": [
+    "benchmark.webp"
+  ],
+  "width": 916,
+  "height": 260,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "87dcd51a9270521c",
   "frames": {
     "bench-hero-knight": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 192,
+      "h": 256,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/hero-knight.png",
       "extruded": 2
     },
     "bench-bld-townhall": {
-      "x": 70,
+      "x": 198,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 128,
+      "h": 128,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/bld-townhall.png",
       "extruded": 2
     },
     "bench-battle-plains": {
-      "x": 138,
+      "x": 330,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/battle-plains.jpg",
       "extruded": 2
     },
     "bench-unit-clubman": {
-      "x": 206,
+      "x": 590,
       "y": 2,
       "w": 64,
       "h": 64,
@@ -51,19 +52,17 @@
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/unit-clubman.png",
       "extruded": 2
     },
     "bench-ui-panel": {
-      "x": 274,
+      "x": 658,
       "y": 2,
-      "w": 64,
+      "w": 256,
       "h": 64,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "benchmarks/ui-panel.jpg",
       "extruded": 2
     }
   }

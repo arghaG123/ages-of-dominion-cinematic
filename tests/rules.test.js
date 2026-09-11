@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { calcDamage, resolveBattle, encodeChallenge, decodeChallenge, replayChallenge } from '../src/rules/combat.js';
 import { createTacticalBattle } from '../src/rules/tactical.js';
-import { resolveSiege, genPath } from '../src/rules/siege.js';
+import { resolveSiege, genPath, liveWaveRoster, waveIsClear } from '../src/rules/siege.js';
 import { calcGridGeometry, needsResize } from '../src/render/canvas.js';
 import { rates, bcost, ageUpCost, canPay } from '../src/rules/economy.js';
 import { buildDurationMs, resolveBuilds, startBuild } from '../src/rules/builds.js';
@@ -79,6 +79,14 @@ describe('rules', () => {
     const r = resolveSiege({ towers: [{ fam: 'arrow', rank: 0 }], waves: 3, seed: 3, bld: { walls: { l: 1 } }, age: 0 });
     expect(r.pathLen).toBe(15);
     expect(typeof r.won).toBe('boolean');
+  });
+
+  it('live siege waves are finite and can clear', () => {
+    const roster = liveWaveRoster(1, 0, () => 0.5);
+    expect(roster.mix.length).toBeGreaterThan(0);
+    expect(waveIsClear(['brute'], [{ dead: true }], 1)).toBe(false);
+    expect(waveIsClear([], [], 0)).toBe(false);
+    expect(waveIsClear([], [{ dead: true }, { dead: true }], 2)).toBe(true);
   });
 
   it('verdicts and host power', () => {

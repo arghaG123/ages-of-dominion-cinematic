@@ -1,69 +1,68 @@
 {
   "id": "siege-enemy",
-  "image": null,
-  "width": 340,
-  "height": 68,
+  "image": "siege-enemy.webp",
+  "images": [
+    "siege-enemy.webp"
+  ],
+  "width": 260,
+  "height": 52,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "0d15db93f8c5bc2a",
   "frames": {
     "siege-enemy-brute": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 48,
+      "h": 48,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-brute.png",
       "extruded": 2
     },
     "siege-enemy-runner": {
-      "x": 70,
+      "x": 54,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 48,
+      "h": 48,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-runner.png",
       "extruded": 2
     },
     "siege-enemy-archer": {
-      "x": 138,
+      "x": 106,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 48,
+      "h": 48,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-archer.png",
       "extruded": 2
     },
     "siege-enemy-sapper": {
-      "x": 206,
+      "x": 158,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 48,
+      "h": 48,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-sapper.png",
       "extruded": 2
     },
     "siege-enemy-shaman": {
-      "x": 274,
+      "x": 210,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 48,
+      "h": 48,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "siege/enemy-shaman.png",
       "extruded": 2
     }
   }

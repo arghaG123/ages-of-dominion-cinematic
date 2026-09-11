@@ -1,105 +1,101 @@
 {
   "id": "battleground",
-  "image": null,
-  "width": 544,
-  "height": 68,
+  "image": "battleground.webp",
+  "images": [
+    "battleground.webp"
+  ],
+  "width": 1820,
+  "height": 350,
   "maxSize": 2048,
   "extrusion": 2,
+  "checksum": "1a80ba2c9c21ba28",
   "frames": {
     "battle-plains": {
       "x": 2,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/plains.jpg",
       "extruded": 2
     },
     "battle-forest": {
-      "x": 70,
+      "x": 262,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/forest.jpg",
       "extruded": 2
     },
     "battle-hills": {
-      "x": 138,
+      "x": 522,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/hills.jpg",
       "extruded": 2
     },
     "battle-swamp": {
-      "x": 206,
+      "x": 782,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/swamp.jpg",
       "extruded": 2
     },
     "battle-desert": {
-      "x": 274,
+      "x": 1042,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/desert.jpg",
       "extruded": 2
     },
     "battle-snow": {
-      "x": 342,
+      "x": 1302,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/snow.jpg",
       "extruded": 2
     },
     "battle-waste": {
-      "x": 410,
+      "x": 1562,
       "y": 2,
-      "w": 64,
-      "h": 64,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/waste.jpg",
       "extruded": 2
     },
     "battle-ruins": {
-      "x": 478,
-      "y": 2,
-      "w": 64,
-      "h": 64,
+      "x": 2,
+      "y": 177,
+      "w": 256,
+      "h": 171,
       "pivot": {
         "x": 0.5,
         "y": 1
       },
-      "source": "battle/ruins.jpg",
       "extruded": 2
     }
   }

@@ -3,6 +3,8 @@ let ctx = null;
 let muted = false;
 let musicOn = true;
 let sfxOn = true;
+let themeAudio = null;
+let themeScene = 'title';
 
 function ac() {
   if (!ctx) {
@@ -14,9 +16,31 @@ function ac() {
 }
 
 export function isMuted() { return muted; }
-export function setMuted(v) { muted = !!v; }
-export function setMusicEnabled(v) { musicOn = !!v; }
+export function setMuted(v) {
+  muted = !!v;
+  if (muted) stopTheme();
+  else if (themeScene) playTheme(themeScene);
+}
+export function setMusicEnabled(v) {
+  musicOn = !!v;
+  if (!musicOn) stopTheme();
+  else if (themeScene) playTheme(themeScene);
+}
 export function setSfxEnabled(v) { sfxOn = !!v; }
+
+const THEMES = {
+  title: 'theme-title',
+  realm: 'theme-realm',
+  battle: 'theme-battle',
+  siege: 'theme-siege',
+};
+
+function stopTheme() {
+  if (!themeAudio) return;
+  themeAudio.pause();
+  themeAudio.src = '';
+  themeAudio = null;
+}
 
 export async function playSample(name, { music = false } = {}) {
   if (muted) return;
@@ -48,15 +72,31 @@ export function playSfx(kind) {
   const map = {
     upgrade: 'sfx-upgrade', recruit: 'sfx-recruit', ageup: 'sfx-ageup',
     kill: 'sfx-kill', hammer: 'sfx-hammer', coin: 'sfx-upgrade',
+    attack: 'sfx-attack', death: 'sfx-death', spell: 'sfx-spell',
+    victory: 'sfx-victory', defeat: 'sfx-defeat',
   };
   if (map[kind]) playSample(map[kind]);
   else beep(kind);
 }
 
-export function playTheme() {
-  playSample('theme-title', { music: true });
+export function playTheme(scene = 'title') {
+  const key = THEMES[scene] ? scene : 'title';
+  themeScene = key;
+  if (muted || !musicOn) {
+    stopTheme();
+    return;
+  }
+  const file = THEMES[key];
+  if (themeAudio && themeAudio.dataset?.file === file && !themeAudio.paused) return;
+  stopTheme();
+  const audio = new Audio(`./audio/${file}.wav`);
+  audio.loop = true;
+  audio.volume = 0.35;
+  audio.dataset.file = file;
+  themeAudio = audio;
+  audio.play().catch(() => {});
 }
 
 export function stopAll() {
-  // Sample Audio elements are fire-and-forget; procedural oscillators are short.
+  stopTheme();
 }
