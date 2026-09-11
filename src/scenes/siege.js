@@ -44,6 +44,15 @@ export function createSiegeController(dom, api) {
 
   function start(opts = {}) {
     const S = api.getState();
+    const biome = opts.biome
+      || S.map?.nodes?.[opts.nodeIndex]?.terrain
+      || (S.map?.weather === 'blizz' ? 'snow' : null)
+      || 'lowlands';
+    const laneBiome = ({
+      plains: 'lowlands', forest: 'forest', hills: 'lowlands', swamp: 'swamp',
+      desert: 'desert', snow: 'snow', waste: 'darklands', ruins: 'darklands',
+      lowlands: 'lowlands',
+    })[biome] || 'lowlands';
     B = {
       path: genPath(COLS, ROWS, (S.day || 1) * 17),
       towers: [],
@@ -55,14 +64,18 @@ export function createSiegeController(dom, api) {
       running: false,
       speed: 1,
       sel: null,
+      selTower: null,
+      hoverSlot: null,
       roster: (S.towers || []).map((t, i) => ({ ...t, i, used: false })),
       mode: opts.mode || 'skirmish',
       nodeIndex: opts.nodeIndex,
+      laneBiome,
       spawnTimer: 0,
       queue: [],
       spawned: 0,
       spawnGap: 1,
       paused: false,
+      // ponytail: army stacks on the lane omitted — upgrade: place S.army ghosts on path cells
     };
     dom.root.hidden = false;
     stopObserve();
@@ -215,7 +228,8 @@ export function createSiegeController(dom, api) {
         return;
       }
       if (B.wave >= winAt) {
-        const result = { won: true, waves: B.wave, gold: 40 + B.wave * 10 };
+        const gold = B.mode === 'skirmish' ? 0 : (40 + B.wave * 10 + (B.pendingGold || 0));
+        const result = { won: true, waves: B.wave, gold, skirmish: B.mode === 'skirmish' };
         const meta = { nodeIndex: B.nodeIndex };
         end();
         api.onSiegeEnd(result, meta);
@@ -234,7 +248,7 @@ export function createSiegeController(dom, api) {
     ctx.fillStyle = '#141820';
     ctx.fillRect(0, 0, prev.w, prev.h);
     if (laneAtlas) {
-      drawFrame(ctx, laneAtlas, 'siege-lane-lowlands', 0, 0, prev.w, prev.h);
+      drawFrame(ctx, laneAtlas, `siege-lane-${B.laneBiome || 'lowlands'}`, 0, 0, prev.w, prev.h);
     }
 
     // Lane
@@ -250,6 +264,33 @@ export function createSiegeController(dom, api) {
     ctx.stroke();
 
     const age = api.getState()?.age || 0;
+
+    // Placeable gold tint + range preview before spend
+    if (!B.running && B.sel != null) {
+      const entry = B.roster[B.sel];
+      const def = entry ? TOWERS[entry.fam] : null;
+      for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+          if (B.path.some((p) => p.x === c && p.y === r)) continue;
+          if (B.towers.some((t) => t.x === c && t.y === r)) continue;
+          const x = geo.offsetX + c * geo.cellSize;
+          const y = geo.offsetY + r * geo.cellSize;
+          ctx.fillStyle = 'rgba(201,162,39,0.12)';
+          ctx.fillRect(x, y, geo.cellSize - 1, geo.cellSize - 1);
+        }
+      }
+      if (def?.rng && B.hoverSlot) {
+        const hx = geo.offsetX + (B.hoverSlot.x + 0.5) * geo.cellSize;
+        const hy = geo.offsetY + (B.hoverSlot.y + 0.5) * geo.cellSize;
+        ctx.fillStyle = 'rgba(201,162,39,0.12)';
+        ctx.strokeStyle = 'rgba(201,162,39,0.55)';
+        ctx.beginPath();
+        ctx.arc(hx, hy, def.rng * geo.cellSize, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      }
+    }
+
     for (const t of B.towers) {
       const x = geo.offsetX + t.x * geo.cellSize;
       const y = geo.offsetY + t.y * geo.cellSize;
@@ -320,6 +361,22 @@ export function createSiegeController(dom, api) {
     raf = requestAnimationFrame(loop);
   }
 
+  canvas.addEventListener('pointermove', (e) => {
+    if (!B || B.running || B.sel == null) return;
+    const pt = cssPoint(canvas, e.clientX, e.clientY);
+    const c = Math.floor((pt.x - geo.offsetX) / geo.cellSize);
+    const r = Math.floor((pt.y - geo.offsetY) / geo.cellSize);
+    if (c < 0 || r < 0 || c >= COLS || r >= ROWS) {
+      B.hoverSlot = null;
+      return;
+    }
+    if (B.path.some((p) => p.x === c && p.y === r)) {
+      B.hoverSlot = null;
+      return;
+    }
+    B.hoverSlot = { x: c, y: r };
+  });
+
   canvas.addEventListener('click', (e) => {
     if (!B || B.running) {
       if (!B) return;
@@ -348,6 +405,7 @@ export function createSiegeController(dom, api) {
     entry.used = true;
     B.sel = B.roster.findIndex((t) => !t.used);
     if (B.sel < 0) B.sel = null;
+    B.hoverSlot = null;
     renderChrome();
   });
 

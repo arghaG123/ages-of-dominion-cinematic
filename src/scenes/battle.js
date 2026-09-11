@@ -9,17 +9,29 @@ import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
 
 const AGE_KEYS = ['stone', 'bronze', 'iron', 'medieval', 'gunpowder', 'industrial', 'modern'];
 
+const TERRAIN_BATTLE = {
+  plains: 'battle-plains',
+  forest: 'battle-forest',
+  hills: 'battle-hills',
+  swamp: 'battle-swamp',
+  desert: 'battle-desert',
+  snow: 'battle-snow',
+  waste: 'battle-waste',
+  ruins: 'battle-ruins',
+};
+
 function ageKey(age) {
   return AGE_KEYS[age] || (AGES[age]?.n || 'stone').split(' ')[0].toLowerCase();
 }
 
-function unitFrameId(u, age) {
+function unitFrameId(u, age, pose = 'idle') {
+  const p = pose || u.pose || 'idle';
   if (u.kind === 'creature' || u.side === 'e') {
     const t = u.type || u.stackType;
-    return t ? `enemy-${t}-idle` : null;
+    return t ? `enemy-${t}-${p}` : null;
   }
   const role = u.type || u.stackType || 'melee';
-  return `unit-${role}-${ageKey(age ?? u.age ?? 0)}-idle`;
+  return `unit-${role}-${ageKey(age ?? u.age ?? 0)}-${p}`;
 }
 
 /**
@@ -38,10 +50,12 @@ export function createBattleController(dom, api) {
   let unitAtlas = null;
   let creatureAtlas = null;
   let groundAtlas = null;
+  let vfxAtlas = null;
   let stopObserve = () => {};
   ensureAtlas('unit').then((a) => { unitAtlas = a; });
   ensureAtlas('creature').then((a) => { creatureAtlas = a; });
   ensureAtlas('battleground').then((a) => { groundAtlas = a; });
+  ensureAtlas('vfx').then((a) => { vfxAtlas = a; });
 
   function placeRows() {
     return 1 + skillLevel(api.getState().hero, 'tactics');
@@ -119,11 +133,16 @@ export function createBattleController(dom, api) {
       },
       cast: null,
       aim: null,
+      inspect: null,
       events: [],
       resolved: null,
       eventIdx: 0,
       sim: null,
       age: S.age,
+      terrain: opts.terrain || 'plains',
+      reward: opts.reward,
+      rival: opts.rival,
+      foeType: opts.foeType || foes?.[0]?.type,
     };
     dom.root.hidden = false;
     dom.root.classList.add('on');
@@ -162,7 +181,11 @@ export function createBattleController(dom, api) {
       .map((u) => {
         const now = u === active ? ' now' : '';
         const spent = order.indexOf(u) < turn ? ' spent' : '';
-        return `<div class="forder-slot ${u.side}${now}${spent}" title="${u.n || u.type} ×${u.count}">${(u.n || u.type || '?').slice(0, 4)}<span class="count">${u.count}</span></div>`;
+        const label = (u.n || u.type || '?').slice(0, 8);
+        return `<div class="forder-slot ${u.side}${now}${spent}" title="${u.n || u.type} ×${u.count}">
+          <span class="glyph">${u.side === 'e' ? '◆' : '●'}</span>
+          <span class="name">${label}</span><span class="count">×${u.count}</span>
+        </div>`;
       })
       .join('');
   }
@@ -350,11 +373,24 @@ export function createBattleController(dom, api) {
   function playFx(evs) {
     for (const ev of evs || []) {
       const defender = unitById(ev.to);
+      const attacker = unitById(ev.from);
+      if (attacker) {
+        attacker.pose = 'attack';
+        attacker.poseUntil = performance.now() + 280;
+      }
       if (!defender) continue;
+      defender.pose = ev.dead ? 'death' : 'hit';
+      defender.poseUntil = performance.now() + (ev.dead ? 600 : 280);
       const cx = geo.offsetX + (defender.x + 0.5) * geo.cellSize;
       const cy = geo.offsetY + (defender.y + 0.5) * geo.cellSize;
       spawnFloat(fx, cx, cy, String(ev.dmg), ev.lucky ? '#f0a92e' : '#e8e4d9');
-      spawnBurst(fx, cx, cy, 'hit');
+      spawnBurst(fx, cx, cy, ev.ranged ? 'arrow' : 'hit');
+      if (vfxAtlas) {
+        const fid = ev.ranged ? 'vfx-arrows' : (ev.spell ? 'vfx-spell' : 'vfx-melee');
+        if (vfxAtlas.frameImages?.[fid] || vfxAtlas.frames?.[fid]) {
+          fx.bursts.push({ x: cx, y: cy, kind: 'atlas', frame: fid, life: 0.4, r: 8 });
+        }
+      }
       if (ev.slain) spawnFloat(fx, cx, cy - 14, `${ev.slain} slain`, '#c45c4a');
       if (ev.dead) api.haptic?.('kill');
     }
@@ -566,7 +602,12 @@ export function createBattleController(dom, api) {
     syncBoardToResult();
     const result = F.resolved;
     const armyAfter = armyAfterFromUnits(result.player);
-    const meta = { nodeIndex: F.nodeIndex };
+    const meta = {
+      nodeIndex: F.nodeIndex,
+      reward: F.reward,
+      rival: F.rival,
+      foeType: F.foeType,
+    };
     end();
     api.onBattleEnd(result, armyAfter, meta);
   }
@@ -583,7 +624,12 @@ export function createBattleController(dom, api) {
       seed: F.seed,
     };
     const armyAfter = armyAfterFromUnits(result.player);
-    const meta = { nodeIndex: F.nodeIndex };
+    const meta = {
+      nodeIndex: F.nodeIndex,
+      reward: F.reward,
+      rival: F.rival,
+      foeType: F.foeType,
+    };
     end();
     api.onBattleEnd(result, armyAfter, meta);
   }
@@ -594,9 +640,19 @@ export function createBattleController(dom, api) {
     const s = geo.cellSize * 0.82;
     const ox = x + (geo.cellSize - s) / 2;
     const oy = y + (geo.cellSize - s) / 2;
-    const fid = unitFrameId(u, F.age);
+    if (u.poseUntil && performance.now() > u.poseUntil) {
+      u.pose = u.dead ? 'death' : 'idle';
+      u.poseUntil = 0;
+    }
+    let pose = u.pose || 'idle';
+    let fid = unitFrameId(u, F.age, pose);
     const atlas = (u.side === 'e' || u.kind === 'creature') ? creatureAtlas : unitAtlas;
-    if (atlas && fid && (atlas.frameImages?.[fid] || atlas.frames?.[fid])) {
+    const has = (id) => atlas && (atlas.frameImages?.[id] || atlas.frames?.[id]);
+    if (!has(fid) && pose !== 'idle') {
+      pose = 'idle';
+      fid = unitFrameId(u, F.age, 'idle');
+    }
+    if (atlas && fid && has(fid)) {
       drawFrame(ctx, atlas, fid, ox, oy, s, s, { flipX: u.side === 'e' });
     } else {
       drawSilhouette(ctx, ox, oy, s, s, u.n || u.type);
@@ -605,6 +661,14 @@ export function createBattleController(dom, api) {
     ctx.font = 'bold 11px sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText(`×${u.count}`, x + geo.cellSize / 2, y + geo.cellSize - 4);
+    const tags = [];
+    if (u.shots != null && u.rng > 0) tags.push(`${u.shots ?? 0}`);
+    if (u.fly) tags.push('✈');
+    if (tags.length) {
+      ctx.fillStyle = '#9aa3b2';
+      ctx.font = '9px sans-serif';
+      ctx.fillText(tags.join(' '), x + geo.cellSize / 2, y + 10);
+    }
   }
 
   function draw() {
@@ -617,12 +681,26 @@ export function createBattleController(dom, api) {
     ctx.clearRect(0, 0, w, h);
     ctx.fillStyle = '#1a2230';
     ctx.fillRect(0, 0, w, h);
+    const groundId = TERRAIN_BATTLE[F.terrain] || 'battle-plains';
     if (groundAtlas) {
-      drawFrame(ctx, groundAtlas, 'battle-plains', 0, 0, w, h);
+      drawFrame(ctx, groundAtlas, groundId, 0, 0, w, h);
     }
 
     const active = F.phase === 'fight' && F.sim ? F.sim.current() : null;
     const moveReach = active && active.side === 'p' ? reach(active) : null;
+    // Red threat: inspected enemy reach (original). Else mark active cell if any
+    // living enemy can strike it next — not every enemy move tile.
+    let threatReach = null;
+    if (F.inspect && !F.inspect.dead && F.inspect.side === 'e') {
+      threatReach = { ...(reach(F.inspect) || {}) };
+    } else if (F.phase === 'fight' && F.sim && active?.side === 'p') {
+      threatReach = {};
+      for (const e of F.units) {
+        if (e.dead || e.side !== 'e') continue;
+        if (strikeKind(e, active)) threatReach[`${active.x},${active.y}`] = true;
+      }
+      if (!Object.keys(threatReach).length) threatReach = null;
+    }
 
     for (let r = 0; r < FR; r++) {
       for (let c = 0; c < FC; c++) {
@@ -630,24 +708,39 @@ export function createBattleController(dom, api) {
         const y = geo.offsetY + r * geo.cellSize;
         const deploy = F.phase === 'place' && r >= FR - F.placeRows;
         const move = moveReach && moveReach[`${c},${r}`] !== undefined;
+        const threat = threatReach && threatReach[`${c},${r}`];
         ctx.fillStyle = deploy
           ? 'rgba(201,162,39,0.18)'
-          : move
-            ? 'rgba(74,168,255,0.18)'
-            : (((c + r) % 2) ? '#243044' : '#1e2838');
+          : threat
+            ? 'rgba(224,90,90,0.16)'
+            : move
+              ? 'rgba(74,168,255,0.18)'
+              : (((c + r) % 2) ? 'rgba(36,48,68,0.35)' : 'rgba(30,40,56,0.35)');
         ctx.fillRect(x, y, geo.cellSize - 1, geo.cellSize - 1);
+        if (threat) {
+          ctx.strokeStyle = 'rgba(224,90,90,0.45)';
+          ctx.strokeRect(x + 1, y + 1, geo.cellSize - 3, geo.cellSize - 3);
+        }
       }
     }
 
     for (const u of F.units) {
-      if (u.dead) continue;
+      if (u.dead && u.pose !== 'death') continue;
+      if (u.dead && (!u.poseUntil || performance.now() > u.poseUntil)) continue;
       drawUnit(ctx, u);
-      if (active === u) {
+      if (active === u || F.inspect === u) {
         const x = geo.offsetX + u.x * geo.cellSize;
         const y = geo.offsetY + u.y * geo.cellSize;
-        ctx.strokeStyle = '#ffe699';
+        ctx.strokeStyle = F.inspect === u ? '#e05a5a' : '#ffe699';
         ctx.lineWidth = 2;
         ctx.strokeRect(x + 2, y + 2, geo.cellSize - 5, geo.cellSize - 5);
+      }
+    }
+    // Atlas VFX bursts
+    for (const b of fx.bursts) {
+      if (b.kind === 'atlas' && vfxAtlas && b.frame) {
+        const size = geo.cellSize * 0.7;
+        drawFrame(ctx, vfxAtlas, b.frame, b.x - size / 2, b.y - size / 2, size, size);
       }
     }
     drawFx(ctx, fx);
@@ -701,9 +794,12 @@ export function createBattleController(dom, api) {
     }
 
     if (t && t.side === 'e') {
+      F.inspect = t;
       const kind = strikeKind(u, t);
       if (!kind) {
         api.toast('Cannot reach that foe');
+        renderChrome();
+        draw();
         return;
       }
       if (F.aim && F.aim.target === t) {
@@ -711,6 +807,10 @@ export function createBattleController(dom, api) {
         return;
       }
       F.aim = { target: t, kind };
+      const prev = previewDmg(u, t, kind === 'ranged');
+      const shots = u.shots != null ? ` · ${u.shots} shots` : '';
+      const adj = kind === 'melee' && Math.abs(u.x - t.x) + Math.abs(u.y - t.y) > 1 ? '' : '';
+      dom.hint.textContent = `${t.n || t.type} ×${t.count} — ~${prev.dmg} dmg${prev.lucky ? ' (lucky?)' : ''}${shots}${adj}. Tap again to strike.`;
       renderChrome();
       draw();
       return;
@@ -718,6 +818,9 @@ export function createBattleController(dom, api) {
 
     if (!t) {
       F.aim = null;
+      F.inspect = null;
+      u.pose = 'move';
+      u.poseUntil = performance.now() + 220;
       const moved = F.sim.move(u, cell.c, cell.r);
       if (!moved.ok) {
         api.toast('Too far');

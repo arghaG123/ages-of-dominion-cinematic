@@ -9,15 +9,15 @@ import {
   exportBackup, importBackup,
   configureAutosave, requestSave, saveNow, registerLifecycle,
 } from './save/index.js';
-import { dispatch, nextAction } from './game/dispatch.js';
-import { replayChallenge } from './rules/combat.js';
+import { dispatch, nextAction, decodeChallenge } from './game/dispatch.js';
 import { initTitleScene } from './scenes/title.js';
 import { initRealmScene } from './scenes/realm.js';
 import { createBattleController } from './scenes/battle.js';
 import { createSiegeController } from './scenes/siege.js';
 import { paintNavIcons } from './ui/icons.js';
 import {
-  renderHost, renderMap, renderWar, renderMore, renderBuildingsSheet, agePrompt, resBarHtml, drawHeroPreview,
+  renderHost, renderMap, renderWar, renderMore, renderBuildingsSheet, renderBuildingPanel,
+  agePrompt, resBarHtml, drawHeroPreview,
 } from './ui/views.js';
 import { playSfx, playTheme, isMuted, setMuted, stopAll, setMusicEnabled, setSfxEnabled } from './audio/index.js';
 import { haptic, setHapticsEnabled } from './platform/haptics.js';
@@ -73,14 +73,19 @@ function applyEffects(effects) {
       openSheet(`<h3>While you were away</h3>
         <p>Food +${g.food || 0}, Wood +${g.wood || 0}, Stone +${g.stone || 0}, Gold +${g.gold || 0}</p>
         <button type="button" class="btn gold" id="collect">Collect</button>`);
-      el('sheet').querySelector('#collect').onclick = () => closeSheet();
+      el('sheet').querySelector('#collect').onclick = () => {
+        closeSheet();
+        doDispatch({ type: 'collect-harvest' });
+      };
     }
     if (e.type === 'start-fight') {
-      battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex });
+      const terrain = S?.map?.nodes?.[e.nodeIndex]?.terrain || e.terrain || 'plains';
+      battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex, terrain, reward: e.reward, rival: e.rival, foeType: e.foes?.[0]?.type });
       playTheme('battle');
     }
     if (e.type === 'start-siege') {
-      siege.start({ mode: e.mode || 'site', nodeIndex: e.nodeIndex });
+      const biome = S?.map?.nodes?.[e.nodeIndex]?.terrain;
+      siege.start({ mode: e.mode || 'site', nodeIndex: e.nodeIndex, biome });
       playTheme('siege');
     }
     if (e.type === 'chapter') openChapter(e.index);
@@ -183,12 +188,35 @@ async function boot() {
     getState: () => S,
     toast,
     haptic,
-    onBattleEnd: (result, armyAfter, meta = {}) => doDispatch({
-      type: 'apply-battle-result',
-      result,
-      armyAfter,
-      nodeIndex: meta.nodeIndex,
-    }),
+    onBattleEnd: (result, armyAfter, meta = {}) => {
+      const won = result.winner === 'p' || result.win;
+      const gold = meta.reward?.gold ?? (120 + (S?.age || 0) * 40);
+      const casualties = (result.player || []).reduce((n, u) => {
+        const before = (S?.army || []).find((a) => a.id === u.id)?.count || u.count;
+        return n + Math.max(0, before - (u.count || 0));
+      }, 0);
+      const tp = result.turningPoint;
+      const tpLine = !tp ? ''
+        : typeof tp === 'string' ? tp
+          : `${tp.slain || 0} slain · ${tp.dmg || 0} dmg${tp.lucky ? ' (lucky)' : ''}`;
+      openSheet(`<h3>${won ? 'Victory' : 'Defeat'}</h3>
+        <p>${won ? `Spoils ~${gold} gold` : 'Your host falls back.'}</p>
+        <p class="dim">Casualties ~${casualties} · Rounds ${result.rounds || '—'}</p>
+        ${tpLine ? `<p class="dim">Turning point: ${esc(tpLine)}</p>` : ''}
+        <button type="button" class="btn gold" id="claimBattle">Continue</button>`);
+      el('sheet').querySelector('#claimBattle').onclick = () => {
+        closeSheet();
+        doDispatch({
+          type: 'apply-battle-result',
+          result,
+          armyAfter,
+          nodeIndex: meta.nodeIndex,
+          reward: meta.reward,
+          rival: meta.rival,
+          foeType: meta.foeType,
+        });
+      };
+    },
   });
 
   siege = createSiegeController({
@@ -395,10 +423,12 @@ function render() {
       realmScene = initRealmScene(el('realmcv'), {
         getState: () => S,
         onPlot: (id) => {
-          openSheet(`${renderBuildingsSheet(S)}<p class="dim">Selected ${id}</p>`);
-          el('sheet').querySelectorAll('[data-build]').forEach((b) => {
+          openSheet(renderBuildingPanel(S, id));
+          const sheet = el('sheet');
+          sheet.querySelectorAll('[data-build]').forEach((b) => {
             b.onclick = () => { closeSheet(); doDispatch({ type: 'build', buildingId: b.dataset.build }); };
           });
+          sheet.querySelector('[data-close-sheet]')?.addEventListener('click', closeSheet);
         },
       });
     } else realmScene.resume();
@@ -419,19 +449,21 @@ function render() {
         dispatch: doDispatch,
       });
     }
-    if (tab === 'map') renderMap(view, S, { dispatch: doDispatch });
+    if (tab === 'map') renderMap(view, S, { dispatch: doDispatch, toast });
     if (tab === 'war') {
       renderWar(view, S, {
         dispatch: doDispatch,
+        goMap: () => { tab = 'map'; render(); },
         startSiege: (o) => { siege.start(o); playTheme('siege'); },
         startDuel: () => {
+          if (!S.army.length) { toast('Recruit troops first'); return; }
           const rng = makeRng(Date.now());
           const keys = Object.keys(CREATURES);
           const foes = [{
             id: uid(), kind: 'creature', type: keys[Math.floor(rng() * keys.length)],
             age: S.age, count: 6 + S.age, rank: 0, xp: 0,
           }];
-          battle.start(foes);
+          battle.start(foes, { terrain: 'plains' });
           playTheme('battle');
         },
         shareDuel: async (code) => {
@@ -440,8 +472,22 @@ function render() {
         },
         replaySeed: (code) => {
           try {
-            const result = replayChallenge(code);
-            toast(`Replay winner: ${result.winner === 'p' ? 'Challenger' : 'Opponent'}`);
+            const raw = code.replace(/^AOD1\./i, '');
+            const ch = decodeChallenge(raw);
+            if (!ch?.enemy?.length) {
+              toast('Invalid seed');
+              return;
+            }
+            battle.start(ch.enemy.map((e) => ({
+              id: uid(),
+              kind: e.kind || 'creature',
+              type: e.type || 'wolf',
+              age: ch.age ?? S.age,
+              count: e.count || 5,
+              rank: 0,
+              xp: 0,
+            })), { terrain: 'plains', seed: ch.seed });
+            playTheme('battle');
           } catch {
             toast('Invalid seed');
           }
@@ -462,6 +508,8 @@ function render() {
           toast(ok ? 'Shared' : 'Could not share');
         },
         toTitle: () => returnToTitle(),
+        goWar: () => { tab = 'war'; render(); },
+        openChapter: () => openChapter(S.story?.ch || 0),
       });
     }
   }
@@ -488,7 +536,20 @@ function wireChrome() {
   el('realmNext').onclick = () => {
     ensureTick();
     const na = nextAction(S);
-    if (na.action) doDispatch(na.action);
+    if (na.action === 'collect') {
+      doDispatch({ type: 'collect-harvest' });
+      return;
+    }
+    if (na.action?.type === 'open-building') {
+      openSheet(renderBuildingPanel(S, na.action.buildingId || na.buildingId));
+      const sheet = el('sheet');
+      sheet.querySelectorAll('[data-build]').forEach((b) => {
+        b.onclick = () => { closeSheet(); doDispatch({ type: 'build', buildingId: b.dataset.build }); };
+      });
+      sheet.querySelector('[data-close-sheet]')?.addEventListener('click', closeSheet);
+      return;
+    }
+    if (na.action && typeof na.action === 'object' && na.action.type) doDispatch(na.action);
     else if (na.tab) { tab = na.tab; render(); }
   };
   el('muteBtn').onclick = () => {

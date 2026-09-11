@@ -1,9 +1,9 @@
 import {
   AGES, BUILDINGS, ROLES, CLASSES, STORY, QUEST_TEMPLATES, TERRAIN, WEATHER,
-  CREATURES, GEAR, QUAL, SKILLS, PRIMARIES,
+  CREATURES, GEAR, QUAL, SKILLS, PRIMARIES, TOWERS,
 } from '../data/index.js';
 import {
-  rates, bcost, canPay, pay, ageUpCost, calcAgeUpPrompt, armySlots, scaleCost, blOf,
+  rates, bcost, canPay, pay, ageUpCost, calcAgeUpPrompt, armySlots, scaleCost, blOf, towerSlots,
 } from '../rules/economy.js';
 import { startBuild, resolveBuilds, hasBuildInProgress } from '../rules/builds.js';
 import { calculateOfflineProgress } from '../state/offline.js';
@@ -55,8 +55,13 @@ export function dispatch(state, action) {
 
     case 'offline': {
       const result = calculateOfflineProgress(state, action.now || Date.now());
-      if (result.grant) effects.push({ type: 'offline-grant', grant: result.grant });
-      return { state: withProgress(result.state, effects), effects };
+      let next = result.state;
+      if (result.grant) {
+        // Bank acknowledgement so Realm next-beat can point at Collect.
+        next = { ...next, pendingHarvest: result.grant };
+        effects.push({ type: 'offline-grant', grant: result.grant });
+      }
+      return { state: withProgress(next, effects), effects };
     }
 
     case 'build': {
@@ -225,9 +230,33 @@ export function dispatch(state, action) {
         map = {
           ...map,
           nodes: map.nodes.map((n) => (n.cleared && n.type === 'creature' ? { ...n, cleared: false } : n)),
+          weather,
         };
+      } else if (map) {
+        map = { ...map, weather };
       }
-      return { state: { ...state, res, day: state.day + 1, map, weather }, effects: [{ type: 'day', day: state.day + 1 }] };
+      const mpMax = heroMovesSafe(state);
+      const hero = {
+        ...state.hero,
+        mp: mpMax,
+        mpMax,
+        mana: Math.min((state.hero.kno || 1) * 10, Math.floor((state.hero.mana || 0) + (state.hero.kno || 1) * 5)),
+      };
+      return {
+        state: { ...state, res, day: state.day + 1, map, weather, hero },
+        effects: [{ type: 'day', day: state.day + 1 }, { type: 'toast', message: `Day ${state.day + 1} · moves restored` }],
+      };
+    }
+
+    case 'camp': {
+      if ((state.hero.mp || 0) < 1) return refuse(state, effects, 'No moves');
+      const manaMax = (state.hero.kno || 1) * 10;
+      const hero = { ...state.hero, mp: state.hero.mp - 1, mana: manaMax };
+      return { state: { ...state, hero }, effects: [{ type: 'toast', message: 'Camp — mana restored' }] };
+    }
+
+    case 'collect-harvest': {
+      return { state: { ...state, pendingHarvest: null }, effects: [] };
     }
 
     case 'forge': {
@@ -260,6 +289,39 @@ export function dispatch(state, action) {
       next = withProgress(next, effects);
       effects.push({ type: 'equipped', slot, item });
       return { state: next, effects };
+    }
+
+    case 'unequip': {
+      const slot = action.slot;
+      const equip = { ...state.hero.equip };
+      const item = equip[slot];
+      if (!item) return refuse(state, effects, 'Empty slot');
+      equip[slot] = null;
+      const bag = [...(state.hero.bag || []), item];
+      return { state: { ...state, hero: { ...state.hero, equip, bag } }, effects };
+    }
+
+    case 'disband': {
+      const army = (state.army || []).filter((s) => s.id !== action.stackId);
+      if (army.length === (state.army || []).length) return refuse(state, effects, 'No stack');
+      effects.push({ type: 'toast', message: 'Stack disbanded' });
+      return { state: { ...state, army }, effects };
+    }
+
+    case 'buy-tower': {
+      const fam = action.fam;
+      if (!TOWERS[fam]) return refuse(state, effects, 'Unknown tower');
+      if (blOf(state.bld, 'workshop') < 1) return refuse(state, effects, 'Build a Workshop');
+      const towers = state.towers || [];
+      if (towers.length >= towerSlots(state.bld)) return refuse(state, effects, 'No tower slots');
+      const cost = scaleCost(TOWERS[fam].cost, state.age);
+      if (!canPay(state.res, cost)) return refuse(state, effects, 'Cannot afford');
+      const tower = { id: uid(), fam, tier: state.age, rank: 0, xp: 0 };
+      effects.push({ type: 'toast', message: `${TOWERS[fam].n} ready` });
+      return {
+        state: { ...state, res: pay(state.res, cost), towers: [...towers, tower] },
+        effects,
+      };
     }
 
     case 'spend-stat': {
@@ -632,7 +694,13 @@ export function genMap(state, seed = (state.day || 1) * 997 + (state.age || 0) *
       if (r < rows - 1) { links[i].push(i + cols); links[i + cols].push(i); }
     }
   }
-  return { cols, rows, nodes, links, at: 1, seed };
+  const weatherKeys = Object.keys(WEATHER);
+  const weather = weatherKeys[Math.floor(rng() * weatherKeys.length)] || 'clear';
+  const regions = ['Lowlands', 'Verdant March', 'Border Marches', 'River Vale', 'High Moors'];
+  return {
+    cols, rows, nodes, links, at: 1, seed, weather,
+    region: regions[Math.floor(rng() * regions.length)],
+  };
 }
 
 function makeFoes(age, boss, rng) {
@@ -747,15 +815,13 @@ function heroMovesSafe(state) {
   return 5 + (state.hero.skills?.logistics || 0);
 }
 
+import { getTodayBeat } from '../ui/beat.js';
+
+export { getTodayBeat };
+
+/** @deprecated Prefer getTodayBeat — kept as alias for existing imports. */
 export function nextAction(state) {
-  if (!state) return { title: 'Begin', sub: 'Start a realm' };
-  if ((state.builds || []).length) {
-    return { title: 'Building…', sub: 'Scaffolding at work' };
-  }
-  if (blOf(state.bld, 'quarry') === 0) return { title: 'Build Quarry', sub: 'Stone for the ages', action: { type: 'build', buildingId: 'quarry' } };
-  if (state.army.length < 3) return { title: 'Recruit', sub: 'Muster the host', tab: 'host' };
-  if (!state.map) return { title: 'Open Map', sub: 'Walk the region', tab: 'map' };
-  return { title: 'Fight', sub: 'Clear the next camp', tab: 'map' };
+  return getTodayBeat(state);
 }
 
 export function hostPower(state) {
