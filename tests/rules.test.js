@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
-import { calcDamage, resolveBattle, encodeChallenge, decodeChallenge, replayChallenge } from '../src/rules/combat.js';
-import { createTacticalBattle } from '../src/rules/tactical.js';
+import { calcDamage, resolveBattle, encodeChallenge, decodeChallenge, replayChallenge, fmods } from '../src/rules/combat.js';
+import { createTacticalBattle, reach } from '../src/rules/tactical.js';
 import { resolveSiege, genPath, liveWaveRoster, waveIsClear } from '../src/rules/siege.js';
 import { calcGridGeometry, needsResize } from '../src/render/canvas.js';
 import { rates, bcost, ageUpCost, canPay } from '../src/rules/economy.js';
@@ -9,6 +9,7 @@ import { encounterVerdict, calcHostPower } from '../src/rules/encounters.js';
 import { newGame } from '../src/state/factory.js';
 import { calculateOfflineProgress } from '../src/state/offline.js';
 import { dispatch } from '../src/game/dispatch.js';
+import { TERRAIN, WEATHER } from '../src/data/index.js';
 
 describe('rules', () => {
   it('economy rates and costs', () => {
@@ -267,5 +268,32 @@ describe('geometry', () => {
       { rng: () => 0.5 },
     );
     expect(dmg).toBeGreaterThan(0);
+  });
+
+  it('fmods merges terrain and weather', () => {
+    const m = fmods('swamp', 'fog', TERRAIN, WEATHER);
+    expect(m.moveMinus).toBe(1);
+    expect(m.shootPen).toBeGreaterThan(0);
+    expect(m.enemySpd).toBeLessThan(0);
+  });
+
+  it('moveMinus shrinks reach', () => {
+    const u = { x: 3, y: 5, side: 'p', spd: 4, haste: 0, slowT: 0, fly: 0, dead: false, count: 1 };
+    const full = Object.keys(reach([], u, 0, 0)).length;
+    const slowed = Object.keys(reach([], u, 0, 1)).length;
+    expect(slowed).toBeLessThan(full);
+  });
+
+  it('scrap sells bag gear for gold', () => {
+    let s = newGame('Kael', 'banner', 'knight');
+    s = {
+      ...s,
+      age: 1,
+      hero: { ...s.hero, bag: [{ id: 'g1', slot: 'weapon', q: 1, name: 'Test Blade' }] },
+      res: { ...s.res, gold: 10 },
+    };
+    const r = dispatch(s, { type: 'scrap', index: 0 });
+    expect(r.state.hero.bag).toHaveLength(0);
+    expect(r.state.res.gold).toBe(10 + ((1 + 1) * 60 * (1 + 1 * 0.4)) | 0);
   });
 });

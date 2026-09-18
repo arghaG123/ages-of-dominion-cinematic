@@ -80,7 +80,11 @@ function applyEffects(effects) {
     }
     if (e.type === 'start-fight') {
       const terrain = S?.map?.nodes?.[e.nodeIndex]?.terrain || e.terrain || 'plains';
-      battle.start(e.foes, { boss: e.boss, nodeIndex: e.nodeIndex, terrain, reward: e.reward, rival: e.rival, foeType: e.foes?.[0]?.type });
+      const weather = S?.map?.weather || S?.weather || e.weather || 'clear';
+      battle.start(e.foes, {
+        boss: e.boss, nodeIndex: e.nodeIndex, terrain, weather,
+        reward: e.reward, rival: e.rival, foeType: e.foes?.[0]?.type,
+      });
       playTheme('battle');
     }
     if (e.type === 'start-siege') {
@@ -184,6 +188,8 @@ async function boot() {
     go: el('fGo'),
     resolve: el('fResolve'),
     quit: el('fQuit'),
+    log: el('flog'),
+    info: el('fInfo'),
   }, {
     getState: () => S,
     toast,

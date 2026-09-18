@@ -6,6 +6,18 @@
 export const FC = 7;
 export const FR = 10;
 
+/** Merge TERRAIN + WEATHER mod tables for a fight (presentation data already ships these). */
+export function fmods(terrain, weather, TERRAIN, WEATHER) {
+  const m = {};
+  const add = (o) => {
+    if (!o) return;
+    for (const k in o) m[k] = (m[k] || 0) + o[k];
+  };
+  add(TERRAIN?.[terrain]?.mods);
+  add(WEATHER?.[weather]?.mods);
+  return m;
+}
+
 export function calcDamage(attacker, defender, {
   ranged = false,
   hero = null,
@@ -47,6 +59,7 @@ export function calcDamage(attacker, defender, {
     if (adjacentEnemy || attacker.adjacentEnemy) mul *= 0.5;
     mul *= 1 - (mods.shootPen || 0) + (mods.shootBon || 0);
   }
+  if (attacker.side === 'e' && mods.enemyDmg) mul *= 1 + mods.enemyDmg;
   if (defender.defending) mul *= 0.85;
 
   let lucky = false;

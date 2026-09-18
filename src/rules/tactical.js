@@ -24,12 +24,12 @@ export function effSpd(u, spdBon = 0) {
   return Math.max(1, (u.spd || 1) + (u.haste || 0) - (u.slowT || 0) + (u.side === 'p' ? spdBon : 0));
 }
 
-export function reach(units, u, spdBon = 0) {
+export function reach(units, u, spdBon = 0, moveMinus = 0) {
   const dest = {};
   const visited = {};
   const q = [{ x: u.x, y: u.y, d: 0 }];
   visited[`${u.x},${u.y}`] = 0;
-  const mv = Math.max(1, effSpd(u, spdBon));
+  const mv = Math.max(1, effSpd(u, spdBon) - (moveMinus || 0));
   while (q.length) {
     const c = q.shift();
     if (c.d >= mv) continue;
@@ -52,11 +52,11 @@ export function reach(units, u, spdBon = 0) {
   return dest;
 }
 
-export function strikeKind(units, u, t, spdBon = 0) {
+export function strikeKind(units, u, t, spdBon = 0, moveMinus = 0) {
   if (!u || !t || t.dead || t.side === u.side) return null;
   if (u.rng > 0 && u.shots > 0 && !hasAdjEnemy(units, u)) return 'ranged';
   if (adj(u, t)) return 'melee';
-  const rc = reach(units, u, spdBon);
+  const rc = reach(units, u, spdBon, moveMinus);
   for (const k in rc) {
     const [x, y] = k.split(',').map(Number);
     if (Math.max(Math.abs(x - t.x), Math.abs(y - t.y)) <= 1) return 'melee';
@@ -141,6 +141,7 @@ export function createTacticalBattle(input = {}, rngArg) {
   const spdBon = hero?.spdBon || input.spdBon || 0;
   const boss = !!input.boss;
   const mods = input.mods || {};
+  const moveMinus = mods.moveMinus || 0;
   const maxRounds = input.maxRounds || 40;
   const placeRows = input.placeRows || 1;
   const seed = input.seed;
@@ -272,7 +273,7 @@ export function createTacticalBattle(input = {}, rngArg) {
   }
 
   function closeIn(u, t) {
-    const rc = reach(units, u, spdBon);
+    const rc = reach(units, u, spdBon, moveMinus);
     let best = null;
     let bd = 1e9;
     for (const k in rc) {
@@ -291,7 +292,7 @@ export function createTacticalBattle(input = {}, rngArg) {
   }
 
   function strike(u, t) {
-    const kind = strikeKind(units, u, t, spdBon);
+    const kind = strikeKind(units, u, t, spdBon, moveMinus);
     if (!kind) return { ok: false, events: [] };
     if (kind === 'ranged') return { ok: true, events: applyStrike(u, t, true), kind };
     if (!adj(u, t) && !closeIn(u, t)) return { ok: false, events: [] };
@@ -299,7 +300,7 @@ export function createTacticalBattle(input = {}, rngArg) {
   }
 
   function move(u, x, y) {
-    const rc = reach(units, u, spdBon);
+    const rc = reach(units, u, spdBon, moveMinus);
     if (rc[`${x},${y}`] === undefined) return { ok: false };
     u.x = x;
     u.y = y;
@@ -343,7 +344,7 @@ export function createTacticalBattle(input = {}, rngArg) {
       if (u.rng > 0 && u.shots > 0 && !hasAdjEnemy(units, u)) {
         evs = applyStrike(u, target, true);
       } else {
-        const rc = reach(units, u, spdBon);
+        const rc = reach(units, u, spdBon, moveMinus);
         let best = null;
         let bd = 1e9;
         for (const k in rc) {
@@ -426,12 +427,13 @@ export function createTacticalBattle(input = {}, rngArg) {
     current,
     isOver,
     alive,
-    reach: (u) => reach(units, u, spdBon),
+    reach: (u) => reach(units, u, spdBon, moveMinus),
     occupied: (x, y) => occupied(units, x, y),
     unitAt: (x, y) => unitAt(units, x, y),
     hasAdjEnemy: (u) => hasAdjEnemy(units, u),
-    strikeKind: (u, t) => strikeKind(units, u, t, spdBon),
+    strikeKind: (u, t) => strikeKind(units, u, t, spdBon, moveMinus),
     effSpd: (u) => effSpd(u, spdBon),
+    mods,
     strike,
     move,
     wait,

@@ -1,11 +1,12 @@
 import { fitCanvas, calcGridGeometry, needsResize, cssPoint, observeCanvasHost } from '../render/canvas.js';
 import { createFx, spawnFloat, spawnBurst, updateFx, drawFx } from '../render/fx.js';
 import { unitStats } from '../rules/units.js';
-import { applyDamage, createRng, FC, FR } from '../rules/combat.js';
+import { applyDamage, createRng, FC, FR, fmods } from '../rules/combat.js';
 import { createTacticalBattle, unitAt as cellUnit } from '../rules/tactical.js';
 import { heroLuck, heroStat, skillLevel, heroBonus } from '../rules/hero.js';
-import { SPELLS, AGES } from '../data/index.js';
+import { SPELLS, AGES, TERRAIN, WEATHER } from '../data/index.js';
 import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
+import { esc } from '../util.js';
 
 const AGE_KEYS = ['stone', 'bronze', 'iron', 'medieval', 'gunpowder', 'industrial', 'modern'];
 
@@ -84,11 +85,11 @@ export function createBattleController(dom, api) {
     return { c, r };
   }
 
-  function heroCtx(S) {
+  function heroCtx(S, mods = {}) {
     const bon = heroBonus(S.hero);
     return {
-      atk: heroStat(S.hero, 'atk'),
-      def: heroStat(S.hero, 'def'),
+      atk: heroStat(S.hero, 'atk') + (mods.atkBon || 0),
+      def: heroStat(S.hero, 'def') + (mods.defBon || 0),
       luck: heroLuck(S.hero),
       skills: S.hero.skills,
       shootBon: bon.shootBon || 0,
@@ -109,9 +110,32 @@ export function createBattleController(dom, api) {
     return F.sim.strikeKind(u, t);
   }
 
+  function logEl() {
+    return dom.log || (typeof document !== 'undefined' ? document.getElementById('flog') : null);
+  }
+
+  function infoEl() {
+    return dom.info || (typeof document !== 'undefined' ? document.getElementById('fInfo') : null);
+  }
+
+  function pushLog(line) {
+    if (!F || !line) return;
+    F.log = [...(F.log || []), line].slice(-12);
+    const el = logEl();
+    if (el) el.innerHTML = F.log.slice(-3).map((s) => esc(s)).join('<br>');
+  }
+
+  function clearLog() {
+    const el = logEl();
+    if (el) el.innerHTML = '';
+  }
+
   function start(foes, opts = {}) {
     const S = api.getState();
     clearTimeout(turnTimer);
+    const terrain = opts.terrain || S.map?.nodes?.[opts.nodeIndex]?.terrain || 'plains';
+    const weather = opts.weather || S.map?.weather || S.weather || 'clear';
+    const mods = fmods(terrain, weather, TERRAIN, WEATHER);
     F = {
       phase: 'place',
       units: [],
@@ -121,7 +145,7 @@ export function createBattleController(dom, api) {
       foes,
       boss: !!opts.boss,
       nodeIndex: opts.nodeIndex,
-      seed: (S.profile.battles || 1) * 31337 + S.age * 1013 + (opts.nodeIndex || 0) * 17,
+      seed: opts.seed ?? ((S.profile.battles || 1) * 31337 + S.age * 1013 + (opts.nodeIndex || 0) * 17),
       rng: null,
       order: [],
       turn: 0,
@@ -135,15 +159,19 @@ export function createBattleController(dom, api) {
       aim: null,
       inspect: null,
       events: [],
+      log: [],
       resolved: null,
       eventIdx: 0,
       sim: null,
       age: S.age,
-      terrain: opts.terrain || 'plains',
+      terrain,
+      weather,
+      mods,
       reward: opts.reward,
       rival: opts.rival,
       foeType: opts.foeType || foes?.[0]?.type,
     };
+    clearLog();
     dom.root.hidden = false;
     dom.root.classList.add('on');
     stopObserve();
@@ -161,6 +189,7 @@ export function createBattleController(dom, api) {
     clearTimeout(turnTimer);
     const oe = orderEl();
     if (oe) oe.innerHTML = '';
+    clearLog();
     dom.root.hidden = true;
     dom.root.classList.remove('on');
     F = null;
@@ -194,6 +223,12 @@ export function createBattleController(dom, api) {
     if (!F) return;
     const placed = F.units.filter((u) => u.side === 'p').length;
     dom.go.disabled = F.phase === 'place' && placed < 1;
+    const info = infoEl();
+    if (info) {
+      const t = TERRAIN[F.terrain]?.n || F.terrain;
+      const w = WEATHER[F.weather]?.n || F.weather;
+      info.textContent = `${t} · ${w}`;
+    }
 
     if (F.phase === 'place') {
       dom.hint.textContent = 'Deploy in the gold band. Place all available.';
@@ -300,10 +335,17 @@ export function createBattleController(dom, api) {
   }
 
   function spawnEnemies() {
+    const mods = F.mods || {};
+    const hpMul = 1 + (mods.enemyHp || 0);
+    const spdMul = 1 + (mods.enemySpd || 0);
     F.foes.forEach((stack, i) => {
       const st = unitStats(stack);
+      const hp = Math.max(1, Math.round(st.hp * hpMul));
+      const spd = Math.max(1, Math.round(st.spd * spdMul));
       F.units.push({
         ...st,
+        hp,
+        spd,
         id: stack.id || `e${i}`,
         type: stack.type,
         kind: stack.kind || 'creature',
@@ -311,8 +353,8 @@ export function createBattleController(dom, api) {
         side: 'e',
         count: stack.count,
         maxCount: stack.count,
-        uhp: st.hp,
-        top: st.hp,
+        uhp: hp,
+        top: hp,
         x: i % FC,
         y: Math.floor(i / FC),
         dead: false,
@@ -335,7 +377,8 @@ export function createBattleController(dom, api) {
       units: F.units,
       seed: F.seed,
       rng: F.rng,
-      hero: heroCtx(S),
+      hero: heroCtx(S, F.mods),
+      mods: F.mods || {},
       boss: F.boss,
       placeRows: F.placeRows,
       round: F.round || 1,
@@ -355,10 +398,13 @@ export function createBattleController(dom, api) {
     F.phase = 'fight';
     F.round = 1;
     F.events = [];
+    F.log = [];
+    clearLog();
     F.aim = null;
     F.cast = null;
     attachSim();
     F.sim.start();
+    pushLog(`${TERRAIN[F.terrain]?.n || F.terrain} · ${WEATHER[F.weather]?.n || F.weather}`);
     renderChrome();
     draw();
     const u = F.sim.current();
@@ -377,6 +423,12 @@ export function createBattleController(dom, api) {
       if (attacker) {
         attacker.pose = 'attack';
         attacker.poseUntil = performance.now() + 280;
+      }
+      if (ev.type === 'strike' || ev.type === 'retaliate' || ev.dmg != null) {
+        const aName = attacker?.n || attacker?.type || ev.actor || 'Stack';
+        const tName = defender?.n || defender?.type || ev.target || 'Foe';
+        const verb = ev.retal || ev.type === 'retaliate' ? 'retaliates' : 'hits';
+        pushLog(`${aName} ${verb} ${tName} for ${ev.dmg}${ev.slain ? ` (${ev.slain} slain)` : ''}${ev.lucky ? ' — lucky!' : ''}`);
       }
       if (!defender) continue;
       defender.pose = ev.dead ? 'death' : 'hit';
@@ -469,11 +521,13 @@ export function createBattleController(dom, api) {
     if (P.type === 'dmg') {
       const d = P.f(pow);
       const res = applyDamage(t, d);
+      pushLog(`${P.n} strikes ${t.n || t.type} for ${d}`);
       spawnFloat(fx, cx, cy, String(d), '#b06bff');
       spawnBurst(fx, cx, cy, 'hit');
       if (res.dead) api.haptic?.('kill');
     } else if (P.type === 'aoe') {
       const d = P.f(pow);
+      pushLog(`${P.n} bursts for ${d}`);
       F.units
         .filter((u) => u.side === 'e' && !u.dead && Math.max(Math.abs(u.x - t.x), Math.abs(u.y - t.y)) <= 1)
         .forEach((u) => {
@@ -485,9 +539,11 @@ export function createBattleController(dom, api) {
     } else if (P.type === 'buff') {
       if (k === 'bless') t.bless = pow + 1;
       else t.haste = 3;
+      pushLog(`${t.n || t.type} is ${k === 'bless' ? 'blessed' : 'hastened'}`);
       spawnBurst(fx, cx, cy, 'heal');
     } else if (P.type === 'debuff') {
       t.slowT = 3;
+      pushLog(`${t.n || t.type} is slowed`);
       spawnBurst(fx, cx, cy, 'hit');
     } else if (P.type === 'heal' || P.type === 'res') {
       const amt = P.f(pow);
@@ -496,6 +552,7 @@ export function createBattleController(dom, api) {
       const np = Math.min(pool, maxPool);
       t.count = Math.ceil(np / t.uhp);
       t.top = np - (t.count - 1) * t.uhp;
+      pushLog(`${P.n} restores ${amt} to ${t.n || t.type}`);
       spawnFloat(fx, cx, cy, `+${amt}`, '#5ec27a');
       spawnBurst(fx, cx, cy, 'heal');
     }
@@ -875,11 +932,13 @@ export function createBattleController(dom, api) {
     if (!u || u.side !== 'p') return;
     F.aim = null;
     if (btn.dataset.f === 'wait') {
+      pushLog(`${u.n || u.type} waits`);
       F.sim.wait(u);
       nextTurn();
       return;
     }
     if (btn.dataset.f === 'defend') {
+      pushLog(`${u.n || u.type} braces`);
       F.sim.defend(u);
       nextTurn();
       return;

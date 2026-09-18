@@ -301,6 +301,19 @@ export function dispatch(state, action) {
       return { state: { ...state, hero: { ...state.hero, equip, bag } }, effects };
     }
 
+    case 'scrap': {
+      const bag = [...(state.hero.bag || [])];
+      const idx = action.index != null ? Number(action.index) : -1;
+      if (idx < 0 || idx >= bag.length) return refuse(state, effects, 'No item');
+      const item = bag[idx];
+      bag.splice(idx, 1);
+      const q = item.q != null ? item.q : 0;
+      const gold = ((q + 1) * 60 * (1 + (state.age || 0) * 0.4)) | 0;
+      const res = { ...state.res, gold: (state.res.gold || 0) + gold };
+      effects.push({ type: 'toast', message: `Sold for ${gold} gold` });
+      return { state: { ...state, res, hero: { ...state.hero, bag } }, effects };
+    }
+
     case 'disband': {
       const army = (state.army || []).filter((s) => s.id !== action.stackId);
       if (army.length === (state.army || []).length) return refuse(state, effects, 'No stack');

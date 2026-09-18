@@ -13,7 +13,7 @@ import { esc, reducedMotion } from '../util.js';
 import { fitCanvas, observeCanvasHost, cssPoint } from '../render/canvas.js';
 import { ensureAtlas, drawFrame } from '../render/atlas.js';
 import { AGES } from '../data/index.js';
-import { costStr, renderBuildingPanel, getTodayBeat } from './beat.js';
+import { costStr, renderBuildingPanel, getTodayBeat, buildingDelta, timeToAfford } from './beat.js';
 import {
   createCamera, clampCamera, worldToScreen, screenToWorld, applyZoom, applyPan,
 } from './mapcamera.js';
@@ -93,8 +93,13 @@ export function renderHost(root, state, tab, api) {
     </div>
     <div class="card"><h3>Bag</h3>
       ${(H.bag || []).length
-        ? (H.bag || []).map((it, i) => `<div class="unit-card">${esc(it.name || it.n || it.id)}
-            <button type="button" class="btn sm" data-a="equip" data-i="${i}">Equip</button></div>`).join('')
+        ? (H.bag || []).map((it, i) => {
+          const q = it.q != null ? it.q : 0;
+          const sell = ((q + 1) * 60 * (1 + (state.age || 0) * 0.4)) | 0;
+          return `<div class="unit-card">${esc(it.name || it.n || it.id)}
+            <button type="button" class="btn sm" data-a="equip" data-i="${i}">Equip</button>
+            <button type="button" class="btn sm ghost" data-a="scrap" data-i="${i}">Sell · ${sell}g</button></div>`;
+        }).join('')
         : '<p class="dim">Empty bag</p>'}
     </div>`;
   } else {
@@ -165,6 +170,11 @@ export function renderHost(root, state, tab, api) {
   });
   root.querySelectorAll('[data-a="unequip"]').forEach((b) => {
     b.addEventListener('click', () => api.dispatch({ type: 'unequip', slot: b.dataset.slot }));
+  });
+  root.querySelectorAll('[data-a="scrap"]').forEach((b) => {
+    b.addEventListener('click', () => {
+      if (confirm('Sell this item for gold?')) api.dispatch({ type: 'scrap', index: Number(b.dataset.i) });
+    });
   });
   const cv = root.querySelector('#herocv');
   if (cv) drawHeroPreview(cv, state.hero.cls);
@@ -267,6 +277,7 @@ export function renderMap(root, state, api) {
       <div class="seg" style="margin-top:8px">
         <button type="button" class="btn sm" id="endDay">End day</button>
         <button type="button" class="btn sm" id="campBtn" ${mp < 1 ? 'disabled' : ''}>Camp</button>
+        <button type="button" class="btn sm ghost" id="newRegion">New region</button>
         <button type="button" class="btn sm" id="zoomIn">+</button>
         <button type="button" class="btn sm" id="zoomOut">−</button>
       </div>
@@ -283,6 +294,12 @@ export function renderMap(root, state, api) {
 
   root.querySelector('#endDay').onclick = () => api.dispatch({ type: 'end-day' });
   root.querySelector('#campBtn').onclick = () => api.dispatch({ type: 'camp' });
+  root.querySelector('#newRegion').onclick = () => {
+    if (!confirm('Scout a new region? Current map progress is lost.')) return;
+    selectedMapNode = null;
+    mapCam = createCamera();
+    api.dispatch({ type: 'gen-map' });
+  };
   root.querySelector('#zoomIn').onclick = () => {
     const bounds = mapBounds(host);
     applyZoom(mapCam, 1.2, { x: bounds.width / 2, y: bounds.height / 2 }, bounds);
@@ -661,13 +678,21 @@ export function renderMore(root, state, api) {
 }
 
 export function renderBuildingsSheet(state) {
+  const r = rates(state.bld);
   return `<h3>Your realm</h3>${Object.keys(BUILDINGS).map((id) => {
     const B = BUILDINGS[id];
     const lvl = blOf(state.bld, id);
     const cost = bcost(id, lvl);
     const ok = canPay(state.res, cost);
-    return `<div class="card"><strong>${B.n}</strong> Lv ${lvl}<div>${B.d}</div>
-      <button type="button" class="btn ${ok ? 'gold' : ''}" data-build="${id}" ${ok ? '' : 'disabled'}>${lvl ? 'Upgrade' : 'Build'}</button></div>`;
+    const delta = buildingDelta(id, lvl);
+    const wait = ok ? 'Ready' : timeToAfford(cost, state, r);
+    const building = (state.builds || []).find((b) => b.buildingId === id);
+    return `<div class="card"><strong>${B.n}</strong> Lv ${lvl}
+      <div class="dim">${B.d}</div>
+      ${delta ? `<div style="color:var(--gold2)">${esc(delta)}</div>` : ''}
+      <div class="cost">${esc(costStr(cost))}</div>
+      <div class="dim" style="color:var(--gold2)">${building ? 'Under construction…' : esc(wait)}</div>
+      <button type="button" class="btn ${ok && !building ? 'gold' : ''}" data-build="${id}" ${ok && !building ? '' : 'disabled'}>${lvl ? 'Upgrade' : 'Build'}</button></div>`;
   }).join('')}`;
 }
 

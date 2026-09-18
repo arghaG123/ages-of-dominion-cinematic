@@ -2,12 +2,18 @@ import { fitCanvas, calcGridGeometry, needsResize, cssPoint, observeCanvasHost }
 import { COLS, ROWS, genPath, ETYPES, FIXED_DT, liveWaveRoster, waveIsClear } from '../rules/siege.js';
 import { TOWERS } from '../data/index.js';
 import { coreHP } from '../rules/economy.js';
+import { unitStats } from '../rules/units.js';
 import { drawSilhouette, drawFrame, ensureAtlas } from '../render/atlas.js';
 
 const AGE_KEYS = ['stone', 'bronze', 'iron', 'medieval', 'gunpowder', 'industrial', 'modern'];
 
 function ageKey(age) {
   return AGE_KEYS[age] || 'stone';
+}
+
+function unitFrameId(stack, age) {
+  const role = stack.type || 'melee';
+  return `unit-${role}-${ageKey(age)}-idle`;
 }
 
 export function createSiegeController(dom, api) {
@@ -21,10 +27,12 @@ export function createSiegeController(dom, api) {
   let towerAtlas = null;
   let enemyAtlas = null;
   let laneAtlas = null;
+  let unitAtlas = null;
   let stopObserve = () => {};
   ensureAtlas('tower').then((a) => { towerAtlas = a; });
   ensureAtlas('siege-enemy').then((a) => { enemyAtlas = a; });
   ensureAtlas('siege-lane').then((a) => { laneAtlas = a; });
+  ensureAtlas('unit').then((a) => { unitAtlas = a; });
 
   function bsize() {
     const st = dom.stage;
@@ -56,6 +64,7 @@ export function createSiegeController(dom, api) {
     B = {
       path: genPath(COLS, ROWS, (S.day || 1) * 17),
       towers: [],
+      units: [],
       enemies: [],
       projectiles: [],
       core: coreHP(S.bld, S.age),
@@ -66,7 +75,10 @@ export function createSiegeController(dom, api) {
       sel: null,
       selTower: null,
       hoverSlot: null,
-      roster: (S.towers || []).map((t, i) => ({ ...t, i, used: false })),
+      roster: [
+        ...(S.towers || []).map((t, i) => ({ kind: 'tower', i, used: false, fam: t.fam, tier: t.tier })),
+        ...(S.army || []).map((a, i) => ({ kind: 'unit', i, used: false, stack: a })),
+      ],
       mode: opts.mode || 'skirmish',
       nodeIndex: opts.nodeIndex,
       laneBiome,
@@ -75,7 +87,6 @@ export function createSiegeController(dom, api) {
       spawned: 0,
       spawnGap: 1,
       paused: false,
-      // ponytail: army stacks on the lane omitted — upgrade: place S.army ghosts on path cells
     };
     dom.root.hidden = false;
     stopObserve();
@@ -110,6 +121,10 @@ export function createSiegeController(dom, api) {
     if (!B) return;
     dom.info.innerHTML = `Core <div class="core-bar"><span style="width:${Math.max(0, 100 * B.core / B.coreMax)}%"></span></div> Wave ${B.wave}`;
     dom.roster.innerHTML = B.roster.map((t, i) => {
+      if (t.kind === 'unit') {
+        const st = unitStats(t.stack);
+        return `<button type="button" class="rc ${t.used ? 'used' : ''} ${B.sel === i ? 'sel' : ''}" data-t="${i}">${st?.n || t.stack.type}<br>×${t.stack.count}</button>`;
+      }
       const d = TOWERS[t.fam];
       return `<button type="button" class="rc ${t.used ? 'used' : ''} ${B.sel === i ? 'sel' : ''}" data-t="${i}">${d?.names?.[t.tier || 0] || t.fam}</button>`;
     }).join('');
@@ -139,7 +154,9 @@ export function createSiegeController(dom, api) {
         dom.roster.appendChild(btn);
       }
     } else {
-      dom.hint.textContent = B.running ? 'Defend the core. Tap a tower to see range.' : 'Place towers beside the road, then Begin.';
+      dom.hint.textContent = B.running
+        ? 'Defend the core. Tap a tower or stack to see range.'
+        : 'Place towers and army beside the road, then Begin.';
     }
   }
 
@@ -198,6 +215,22 @@ export function createSiegeController(dom, api) {
         t.cd = def.rate;
         B.projectiles.push({
           x: t.x, y: t.y, tx: target.id, dmg: def.dmg, splash: def.splash || 0, life: 0.25,
+        });
+      }
+    }
+
+    for (const u of B.units) {
+      u.cd = (u.cd || 0) - dt * B.speed;
+      if (u.cd > 0) continue;
+      const target = B.enemies.find((e) => {
+        if (e.dead) return false;
+        const p = B.path[Math.min(B.path.length - 1, Math.floor(e.pi))];
+        return Math.hypot(p.x - u.x, p.y - u.y) <= u.rng;
+      });
+      if (target) {
+        u.cd = u.rate;
+        B.projectiles.push({
+          x: u.x, y: u.y, tx: target.id, dmg: u.dmg, splash: 0, life: 0.25,
         });
       }
     }
@@ -268,24 +301,30 @@ export function createSiegeController(dom, api) {
     // Placeable gold tint + range preview before spend
     if (!B.running && B.sel != null) {
       const entry = B.roster[B.sel];
-      const def = entry ? TOWERS[entry.fam] : null;
+      let previewRng = 0;
+      if (entry?.kind === 'tower') previewRng = TOWERS[entry.fam]?.rng || 0;
+      else if (entry?.kind === 'unit') {
+        const st = unitStats(entry.stack);
+        previewRng = st?.rng ? 2.7 : 1.2;
+      }
       for (let r = 0; r < ROWS; r++) {
         for (let c = 0; c < COLS; c++) {
           if (B.path.some((p) => p.x === c && p.y === r)) continue;
           if (B.towers.some((t) => t.x === c && t.y === r)) continue;
+          if (B.units.some((u) => u.x === c && u.y === r)) continue;
           const x = geo.offsetX + c * geo.cellSize;
           const y = geo.offsetY + r * geo.cellSize;
           ctx.fillStyle = 'rgba(201,162,39,0.12)';
           ctx.fillRect(x, y, geo.cellSize - 1, geo.cellSize - 1);
         }
       }
-      if (def?.rng && B.hoverSlot) {
+      if (previewRng && B.hoverSlot) {
         const hx = geo.offsetX + (B.hoverSlot.x + 0.5) * geo.cellSize;
         const hy = geo.offsetY + (B.hoverSlot.y + 0.5) * geo.cellSize;
         ctx.fillStyle = 'rgba(201,162,39,0.12)';
         ctx.strokeStyle = 'rgba(201,162,39,0.55)';
         ctx.beginPath();
-        ctx.arc(hx, hy, def.rng * geo.cellSize, 0, Math.PI * 2);
+        ctx.arc(hx, hy, previewRng * geo.cellSize, 0, Math.PI * 2);
         ctx.fill();
         ctx.stroke();
       }
@@ -304,6 +343,27 @@ export function createSiegeController(dom, api) {
         ctx.strokeStyle = 'rgba(201,162,39,0.45)';
         ctx.beginPath();
         ctx.arc(x + geo.cellSize / 2, y + geo.cellSize / 2, (def?.rng || 2) * geo.cellSize, 0, Math.PI * 2);
+        ctx.stroke();
+      }
+    }
+
+    for (const u of B.units) {
+      const x = geo.offsetX + u.x * geo.cellSize;
+      const y = geo.offsetY + u.y * geo.cellSize;
+      const fid = unitFrameId(u, age);
+      if (unitAtlas && (unitAtlas.frameImages?.[fid] || unitAtlas.frames?.[fid])) {
+        drawFrame(ctx, unitAtlas, fid, x + 2, y + 2, geo.cellSize - 4, geo.cellSize - 4);
+      } else {
+        drawSilhouette(ctx, x + 2, y + 2, geo.cellSize - 4, geo.cellSize - 4, u.type || 'melee');
+      }
+      ctx.fillStyle = 'rgba(232,228,217,0.9)';
+      ctx.font = `${Math.max(9, geo.cellSize * 0.28)}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.fillText(`×${u.count}`, x + geo.cellSize / 2, y + geo.cellSize - 3);
+      if (B.selTower === u) {
+        ctx.strokeStyle = 'rgba(201,162,39,0.45)';
+        ctx.beginPath();
+        ctx.arc(x + geo.cellSize / 2, y + geo.cellSize / 2, u.rng * geo.cellSize, 0, Math.PI * 2);
         ctx.stroke();
       }
     }
@@ -370,7 +430,9 @@ export function createSiegeController(dom, api) {
       B.hoverSlot = null;
       return;
     }
-    if (B.path.some((p) => p.x === c && p.y === r)) {
+    if (B.path.some((p) => p.x === c && p.y === r)
+      || B.towers.some((t) => t.x === c && t.y === r)
+      || B.units.some((u) => u.x === c && u.y === r)) {
       B.hoverSlot = null;
       return;
     }
@@ -384,11 +446,12 @@ export function createSiegeController(dom, api) {
       const c = Math.floor((pt.x - geo.offsetX) / geo.cellSize);
       const r = Math.floor((pt.y - geo.offsetY) / geo.cellSize);
       const tower = B.towers.find((t) => t.x === c && t.y === r);
-      B.selTower = tower || null;
+      const unit = B.units.find((u) => u.x === c && u.y === r);
+      B.selTower = tower || unit || null;
       return;
     }
     if (B.sel == null) {
-      api.toast('Select a tower from the tray');
+      api.toast('Select a tower or stack from the tray');
       return;
     }
     const pt = cssPoint(canvas, e.clientX, e.clientY);
@@ -399,9 +462,26 @@ export function createSiegeController(dom, api) {
       api.toast('Cannot place on the road');
       return;
     }
+    if (B.towers.some((t) => t.x === c && t.y === r) || B.units.some((u) => u.x === c && u.y === r)) return;
     const entry = B.roster[B.sel];
     if (!entry || entry.used) return;
-    B.towers.push({ fam: entry.fam, tier: entry.tier || 0, x: c, y: r, cd: 0, artFile: true });
+    if (entry.kind === 'unit') {
+      const st = unitStats(entry.stack);
+      const avg = ((st?.dmin || 1) + (st?.dmax || 1)) / 2;
+      B.units.push({
+        kind: 'unit',
+        type: entry.stack.type,
+        count: entry.stack.count,
+        x: c,
+        y: r,
+        dmg: Math.max(1, Math.round(avg * entry.stack.count * 0.35)),
+        rng: st?.rng ? 2.7 : 1.2,
+        rate: st?.rng ? 1.05 : 0.85,
+        cd: 0,
+      });
+    } else {
+      B.towers.push({ fam: entry.fam, tier: entry.tier || 0, x: c, y: r, cd: 0, artFile: true });
+    }
     entry.used = true;
     B.sel = B.roster.findIndex((t) => !t.used);
     if (B.sel < 0) B.sel = null;
